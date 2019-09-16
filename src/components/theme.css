@@ -1,0 +1,8 @@
+:root {
+    --verdecop: #061019;
+    --amarelocop: #FFBE04;
+}
+
+.bg-verdecop {
+    background-color: var(--verdecop);
+}
