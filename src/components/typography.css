@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "TilliumWeb";
+  src: url("../fonts/TitilliumWeb-Italic.ttf");
+}
+
+@font-face {
+  font-family: "TilliumWeb";
+  font-weight: bold;
+  src: url("../fonts/TitilliumWeb-BoldItalic.ttf");
+}
+
+@font-face {
+    font-family: "TTSupermolotNeue";
+    src: url("../fonts/TTSupermolotNeue-ExtraLightItalic.otf");
+}
+
+@font-face {
+    font-family: "TTSupermolotNeue";
+    font-weight: bold;
+    src: url("../fonts/TTSupermolotNeue-LightItalic.otf");
+}
+
+@font-face {
+    font-family: "TTSupermolotNeue";
+    font-weight: bolder;
+    src: url("../fonts/TTSupermolotNeue-BoldItalic.otf");
+}
+
+@font-face {
+    font-family: "Poll";
+    src: url("../fonts/TT\ Polls\ Italic.otf");
+}
+
+@font-face {
+    font-family: "Poll";
+    font-weight: bold;
+    src: url("../fonts/TT\ Polls\ Bold\ Italic.otf");
+}
+
+:root {
+    --letter-spacing-1: -2.5px;
+}

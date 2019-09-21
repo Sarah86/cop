@@ -1,6 +1,10 @@
 :root {
     --verdecop: #061019;
-    --amarelocop: #FFBE04;
+    --amber: #FFBE04;
+    --firefly: #1C2E30;
+    --blackpearl: #08141F;
+    --bunker: #061018;
+    --tapa: #70736C;
 }
 
 .bg-verdecop {

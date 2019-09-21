@@ -16,7 +16,7 @@ class Hamburger extends Component {
 
   render() {
     return (
-        <HamburgerSpin isActive={this.state.isActive} toggleButton={this.toggleButton} barColor="var(--amarelocop)" />
+        <HamburgerSpin isActive={this.state.isActive} toggleButton={this.toggleButton} barColor="var(--amber)" />
     )
   }
 }
