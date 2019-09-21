@@ -28,15 +28,17 @@
 
 @font-face {
     font-family: "Poll";
-    src: url("../fonts/TT\ Polls\ Italic.otf");
+    src: url("../fonts/TTPolls-Italic.otf");
 }
 
 @font-face {
     font-family: "Poll";
     font-weight: bold;
-    src: url("../fonts/TT\ Polls\ Bold\ Italic.otf");
+    src: url("../fonts/TTPolls-Black-Italic.otf");
 }
 
 :root {
-    --letter-spacing-1: -2.5px;
+    /*Letter Spacing*/
+    --lp1: -2.5px;
+    --lp2: -2px;
 }

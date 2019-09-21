@@ -1,0 +1,6 @@
+@keyframes slidebackground {
+    from {
+        left:0;
+    }
+    to {background-color: yellow;}
+  }

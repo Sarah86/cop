@@ -9,6 +9,7 @@ import { device } from "./device"
 import styled from "styled-components"
 import NavbarCollapse from "react-bootstrap/NavbarCollapse"
 import Logo from "./logo"
+import Botao from "./botao"
 
 const StyledNavbar = styled(Navbar)`
 && {
@@ -48,7 +49,7 @@ font-family: TTSupermolotNeue;
 font-weight: bold;
 text-transform: lowercase;
 font-size: 2.2em;
-letter-spacing: var(--letter-spacing-1);
+letter-spacing: var(--lp1);
 `;
 
 const LinksContainer = styled.ul`
@@ -89,7 +90,8 @@ const Header = ({ siteTitle }) => (
             <StyledLink to="/page-2/"><li>Palestrantes</li></StyledLink>
             <StyledLink to="/page-2/"><li>Expositores</li></StyledLink>
             <StyledLink to="/page-2/"><li>Contato</li></StyledLink>
-          </LinksContainer>      
+          </LinksContainer> 
+          <Botao texto="Inscreva-se Agora!" to="/page-2/" />
         </StyledNav>
       </StyledNavbarCollapse>
       <Navbar.Brand href="#home">C</Navbar.Brand>
