@@ -15,7 +15,7 @@
 /*Active Menu Links*/
 .active {
     background-color:var(--amber) !important;
-    color: var(--blackpearl);
+    color: var(--blackpearl) !important;
 }
 
 @media (min-width: 992px) {

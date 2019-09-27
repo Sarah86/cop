@@ -37,7 +37,7 @@ const StyledNavbarCollapse = styled(NavbarCollapse)`
     background-color: var(--verdecop);
     position: fixed;
     top:0;
-    bottom:55px;
+    bottom:52px;
     left:0;
     right:0;
     @media ${device.desktop} {
