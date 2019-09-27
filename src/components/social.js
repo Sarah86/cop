@@ -8,6 +8,9 @@ const SocialLink = styled.a`
     color: var(--tapa);
     font-size: 1.5em;
     padding: .4em;
+    &:hover, &:focus {
+        color:var(--amber);
+    }
 `;
 
 export const LinkedInstagramIcon = () => (

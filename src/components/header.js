@@ -40,9 +40,13 @@ const StyledNavbarCollapse = styled(NavbarCollapse)`
     bottom:52px;
     left:0;
     right:0;
-    @media ${device.desktop} {
+    @media ${device.landscapeMobile}{
+      overflow: scroll;
+    }
+    @media ${device.desktop}{
       height: auto;
       padding: .5em;
+      bottom: auto;
     } 
 `;
 
@@ -58,6 +62,9 @@ align-items: center;
 justify-content: space-evenly;
 height: 100%;
 overflow-y: scroll;
+@media ${device.landscapeMobile}{
+  min-height: 600px;
+}
 @media ${device.desktop} {
   justify-content: space-between;
   overflow-y: hidden;
