@@ -35,7 +35,11 @@ const StyledNavbar = styled(Navbar)`
 
 const StyledNavbarCollapse = styled(NavbarCollapse)`
     background-color: var(--verdecop);
-    height: calc(100vh - 55px);
+    position: fixed;
+    top:0;
+    bottom:55px;
+    left:0;
+    right:0;
     @media ${device.desktop} {
       height: auto;
       padding: .5em;
@@ -87,7 +91,7 @@ const StyledLink = styled(Link).attrs({ activeClassName: "active" })`
     text-transform: lowercase;
     width: 100%;
     && {
-        :hover, :focus {
+        &:hover, &:focus {
           color: var(--bunker);
           background-color: var(--amber);
         }
