@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Congresso Internacional de Operações Policiais`,
+    description: `O Maior evento de segurança e defesa da América Latina`,
+    author: `Alvaro Marques e Sarah Gonçalves`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

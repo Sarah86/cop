@@ -11,18 +11,32 @@
 
 @font-face {
     font-family: "TTSupermolotNeue";
+    font-weight: 200;
     src: url("../fonts/TTSupermolotNeue-ExtraLightItalic.otf");
 }
 
 @font-face {
     font-family: "TTSupermolotNeue";
-    font-weight: bold;
+    font-weight: 300;
     src: url("../fonts/TTSupermolotNeue-LightItalic.otf");
 }
 
 @font-face {
     font-family: "TTSupermolotNeue";
-    font-weight: bolder;
+    font-weight: 400;
+    src: url("../fonts/TTSupermolotNeue-Italic.otf");
+}
+
+@font-face {
+    font-family: "TTSupermolotNeue";
+    font-weight: 500;
+    src: url("../fonts/TTSupermolotNeue-MediumItalic.otf");
+}
+
+
+@font-face {
+    font-family: "TTSupermolotNeue";
+    font-weight: 500;
     src: url("../fonts/TTSupermolotNeue-BoldItalic.otf");
 }
 
@@ -41,4 +55,9 @@
     /*Letter Spacing*/
     --lp1: -2.5px;
     --lp2: -2px;
+    --lp3: -.5px;
+    /*Font*/
+    --font1: "TilliumWeb";
+    --font2: "TTSupermolotNeue";
+    --font3:  "Poll";
 }

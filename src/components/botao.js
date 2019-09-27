@@ -8,28 +8,54 @@ import "./typography.css"
 const StyledBotao = styled.button`
     background-color: var(--bunker);
     border: 5px solid var(--amber);
-    font-family: "Poll";
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: var(--lp2);
-    color: var(--amber);
-    line-height: .9em;
-    font-size: .6em;
-    width: 8em;
+    width: 11em;
+    padding: .4em;
+    position: relative;
+    &:hover {
+        span {
+                color: var(--bunker);
+        }
+        &:before {
+            transform: scaleX(1);   
+        }
+    }    
     transform: skewX(-10deg);
-    padding: .3em;
-    :hover, :focus {
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
         background-color: var(--amber);
-        color: var(--bunker);
+        z-index: -1;
+        transform: scaleX(0);
+        transform-origin: 0 50%;
+        transition: transform 0.5s ease-in-out;
     }
+`;
+
+const BotaoText = styled.span`
+    color: var(--amber);
+    display: block;
+    font-family: "Poll";
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: var(--lp2);
+    line-height: .9em;
+    margin-bottom: -.2em;
+    text-transform: uppercase;
+    transform: skewX(10deg);
 `;
 
 const Botao = ({ texto, style, to }) => (
     <Link to={to}>
         <StyledBotao style={style}>
-		{texto}
-	    </StyledBotao>
+            <BotaoText>
+                {texto}
+            </BotaoText>
+        </StyledBotao>
     </Link>
 );
 
-export default Botao;
+export default Botao

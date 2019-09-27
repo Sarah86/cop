@@ -1,8 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import { device } from "./device"
-import styled from "styled-components"
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -15,10 +13,10 @@ import styled from "styled-components"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Logo = () => {
+const LogoBranca = () => {
     const data = useStaticQuery(graphql`
     query {
-      logobranca: file(relativePath: { eq: "placeholder.com-logo1.png" }) {
+      logobranca: file(relativePath: { eq: "COP-SOMBREADA-BRANCO-COP.png" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
@@ -31,4 +29,4 @@ const Logo = () => {
     return <Img fluid={data.logobranca.childImageSharp.fluid} />
 }
 
-export default Logo
+export default LogoBranca
