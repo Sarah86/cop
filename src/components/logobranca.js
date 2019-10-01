@@ -18,7 +18,7 @@ const LogoBranca = () => {
     query {
       logobranca: file(relativePath: { eq: "COP-SOMBREADA-BRANCO-COP.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid
           }
         }

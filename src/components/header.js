@@ -41,7 +41,7 @@ const StyledNavbarCollapse = styled(NavbarCollapse)`
     left:0;
     right:0;
     @media ${device.landscapeMobile}{
-      overflow: scroll;
+      overflow-y: scroll;
     }
     @media ${device.desktop}{
       height: auto;
@@ -61,7 +61,6 @@ const StyledNav = styled(Nav)`
 align-items: center;
 justify-content: space-evenly;
 height: 100%;
-overflow-y: scroll;
 @media ${device.landscapeMobile}{
   min-height: 600px;
 }
@@ -227,6 +226,7 @@ const Header = ({ siteTitle }) => (
           <BarraContatosMobile />
           <SocialLinksContainer className="d-block d-lg-none" />
         </StyledNav>
+        <Shadow />
       </StyledNavbarCollapse>
       <NavbarButtonContainer>
         <IsotipoCop />
@@ -235,7 +235,6 @@ const Header = ({ siteTitle }) => (
         </Navbar.Toggle>
         <SubscribeButton />
       </NavbarButtonContainer>
-      <Shadow />
     </StyledNavbar>
   </header>
 )

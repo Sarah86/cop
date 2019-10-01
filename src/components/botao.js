@@ -7,6 +7,7 @@ import "./typography.css"
 
 const StyledBotao = styled.button`
     background-color: var(--bunker);
+    background-color: ${props => props.background};
     border: 5px solid var(--amber);
     width: 11em;
     padding: .4em;
@@ -48,9 +49,9 @@ const BotaoText = styled.span`
     transform: skewX(10deg);
 `;
 
-const Botao = ({ texto, style, to }) => (
+const Botao = ({ background, texto, style, to }) => (
     <Link to={to}>
-        <StyledBotao style={style}>
+        <StyledBotao background={background} style={style}>
             <BotaoText>
                 {texto}
             </BotaoText>

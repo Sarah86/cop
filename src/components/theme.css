@@ -5,11 +5,16 @@
     --blackpearl: #08141F;
     --bunker: #061018;
     --tapa: #70736C;
+    --lemongrass: #9DA295;
     --narvik: #EDF8F2;
 }
 
 .bg-verdecop {
     background-color: var(--verdecop);
+}
+
+body {
+    background-color: var(--verdecop) !important;
 }
 
 /*Active Menu Links*/
