@@ -24,7 +24,7 @@ const IconSize = styled.span`
 
 const Local = ( {style, fontSize, iconSize} ) => (
     <div style={style}>
-        <IconSize iconSize={iconSize}><FontAwesomeIcon icon={faMapMarkerAlt}/></IconSize>
+        <IconSize iconSize={iconSize} style={{maxWidth:"3em"}}><FontAwesomeIcon icon={faMapMarkerAlt}/></IconSize>
         <LocalTexto fontSize={fontSize}>{Infos.dataLocal}</LocalTexto>
     </div>
 );
