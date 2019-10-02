@@ -12,9 +12,10 @@ import LogoAmarela from "./logoamarela"
 import LogoBranca from "./logobranca"
 import Botao from "./botao"
 import Shadow from "./shadow"
-import { LinkedInstagramIcon, LinkedFacebookIcon, LinkedYoutubeIcon } from "./social"
 import IsotipoCop from "./isotipo"
 import SubscribeButton from "./subscribeButton"
+import { LinkedInstagramIcon, LinkedFacebookIcon, LinkedYoutubeIcon } from "./social"
+
 
 
 const StyledNavbar = styled(Navbar)`

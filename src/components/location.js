@@ -1,9 +1,9 @@
 import React from "react"
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 import {Infos} from "./data/infos"
 import {device} from "./device"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 
 
 const LocalTexto = styled.h2`
@@ -24,7 +24,7 @@ const IconSize = styled.span`
 
 const Local = ( {style, fontSize, iconSize} ) => (
     <div style={style}>
-        <IconSize iconSize={iconSize} style={{maxWidth:"3em"}}><FontAwesomeIcon icon={faMapMarkerAlt}/></IconSize>
+        <IconSize iconSize={iconSize}><FontAwesomeIcon icon={faMapMarkerAlt}/></IconSize>
         <LocalTexto fontSize={fontSize}>{Infos.dataLocal}</LocalTexto>
     </div>
 );
