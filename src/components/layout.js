@@ -10,11 +10,20 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import { device } from "./device"
+import styled from "styled-components"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "./layout.css"
 import "./theme.css"
 import "./typography.css"
 
+const Content = styled.div`
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 0px 1.0875rem 1.45rem;
+  padding-top: 1em;
+  color: var(--narvik);
+`;
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -30,22 +39,14 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: '1em',
-          color: "white"
-        }}
-      >
+      <Content>
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
-      </div>
+      </Content>
     </>
   )
 }

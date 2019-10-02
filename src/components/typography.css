@@ -47,12 +47,19 @@
 
 @font-face {
     font-family: "Poll";
+    font-weight: 500;
+    src: url("../fonts/TTPolls-BoldItalic.otf");
+}
+
+@font-face {
+    font-family: "Poll";
     font-weight: bold;
     src: url("../fonts/TTPolls-Black-Italic.otf");
 }
 
 :root {
     /*Letter Spacing*/
+    --lp0: -4px;
     --lp1: -2.5px;
     --lp2: -2px;
     --lp3: -.5px;
