@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+
 import { device } from "./device";
 import Local from "./location"
 import LogoConselho from "../images/CNCG.png"
