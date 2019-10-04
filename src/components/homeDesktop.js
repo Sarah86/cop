@@ -1,20 +1,15 @@
 import React from "react"
 import styled from "styled-components"
+import { Container, Row, Col } from "react-bootstrap"
 
-import { device } from "./device";
 import Local from "./location"
 import LogoConselho from "../images/CNCG.png"
 import Isotipo from "../images/COP-ISOTIPO-TEXTURADO.png"
 import ReactPlayer from "react-player";
-import Moldura from "./moldura";
-
-
-const HomeContainer = styled.div`
-    display: none;
-    @media ${device.desktop}{
-        display: block;
-    }
-`;
+import { MolduraTop, MolduraBottom } from "./moldura";
+import Shadow from "./shadow";
+import { ParagraphTitle, Paragraph, ParagraphLink } from "./typography"
+import { Quote } from "./typography"
 
 const Background = styled.div`
     position: absolute;
@@ -61,40 +56,71 @@ const Conselho = styled.img`
 
 const VideoContainer = styled.div`
     background-color: var(--firefly);
-    position: absolute;
-    width: 100%;
-    left:0;
-    right:0;
     display:flex;
     justify-content: center;
-    padding: .21em;
+    padding-bottom: .21em;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
 `;
 
 const BoasVindas = () => (
-    <div style={{position: "relative", paddingBottom: "3em"}}>
-        <Background/>
-        <BemVindo>Bem vindo ao <br/>Congresso Internacional de Operações Policiais</BemVindo>
+    <div style={{ position: "relative", paddingBottom: "3em" }}>
+        <Background />
+        <BemVindo>Bem vindo ao <br />Congresso Internacional de Operações Policiais</BemVindo>
         <Sublegenda>O maior evento de segurança e defesa da América Latina</Sublegenda>
-        <Local fontSize="1em" iconSize="1.2em"/>
+        <Local fontSize="1em" iconSize="1.2em" />
         <ApresentadoPor>Orgulhosamente apresentado pelo CNGC - Conselho Nacional de Comandantes Gerais</ApresentadoPor>
-        <Conselho src={LogoConselho}/>
+        <Conselho src={LogoConselho} />
     </div>
 );
 
 const Video = () => (
     <VideoContainer>
-        <div style={{position:"relative"}}>
-        <Moldura/>
-        <ReactPlayer url="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" controls width="910px" height="auto"/>
+        <div style={{ position: "relative" }}>
+            <MolduraTop />
+            <ReactPlayer url="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" controls width="910px" height="100%" />
+            <MolduraBottom />
+            <Shadow />
         </div>
     </VideoContainer>
 );
 
+const CongressoPalestrantes = () => (
+    <Container style={{ marginTop: "3em" }}>
+        <Row>
+            <Col className="text-justify pr-5">
+                <ParagraphTitle>o congresso</ParagraphTitle>
+                <Quote>Autoridades nacionais e internacionais, agentes de segurança pública,
+                as principais marcas do setor, e a sociedade civil. Em contato direto por 3 dias.</Quote>
+                <Paragraph>Depois do sucesso absoluto da estreia em 2018 o Congresso de Operações Policiais retorna mais abrangente, inclusivo, dinâmico, informativo e tecnológico.</Paragraph>
+                <Paragraph>Congresso se realizará de forma gratuita nos dias 17, 18 e 19 de Março de 2019 para um público diário de aproximadamente 2000 pessoas..
+</Paragraph>
+                <Paragraph>A cidade-sede escolhida é pelo segundo ano consecutivo a belíssima <ParagraphLink>Florianópolis</ParagraphLink>, que por sua vez abriga o moderno <ParagraphLink>
+                    Centro de Eventos Governador Luiz Henrique da Silveira
+                </ParagraphLink>.
+</Paragraph>
+            </Col>
+            <Col className="pl-5">
+                <ParagraphTitle>palestrantes</ParagraphTitle>
+                <Row>
+                    <Col>Foto1</Col>
+                    <Col>Foto1</Col>
+                </Row>
+                <Row>
+                    <Col>Foto1</Col>
+                    <Col>Foto1</Col>
+                </Row>
+            </Col>
+        </Row>
+    </Container>
+);
+
 const HomeDesktop = () => (
-    <HomeContainer>
+    <>
         <BoasVindas />
-        <Video/>
-    </HomeContainer>
+        <Video />
+        <CongressoPalestrantes />
+    </>
 );
 
 export default HomeDesktop;

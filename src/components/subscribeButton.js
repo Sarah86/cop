@@ -11,7 +11,7 @@ const IconSubscribeWrapper = styled.div`
 
 const SubscribeButton = () => (
     <IconSubscribeWrapper>
-            <Link href="/"><img src={IconSubscribe} alt="COP"/></Link>
+            <Link to="/"><img src={IconSubscribe} alt="COP"/></Link>
     </IconSubscribeWrapper>
 );
 

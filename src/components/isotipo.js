@@ -11,7 +11,7 @@ const IsotipoCopWrapper = styled.div`
 
 const IsotipoCop = () => (
     <IsotipoCopWrapper>
-            <Link href="/"><img src={Isotipo} alt="COP"/></Link>
+            <Link to="/"><img src={Isotipo} alt="COP"/></Link>
     </IsotipoCopWrapper>
 );
 

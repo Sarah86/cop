@@ -68,3 +68,11 @@
     --font2: "TTSupermolotNeue";
     --font3:  "Poll";
 }
+
+h1 {
+    font-family: var(--font2) !important;
+    font-weight: 300 !important;
+    color: var(--amber) !important;
+    font-size: 2.5em !important;
+    letter-spacing: var(--lp1);
+}

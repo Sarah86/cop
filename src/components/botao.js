@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from "gatsby"
+
 import "./theme.css"
 import "./typography.css"
 
@@ -50,13 +51,13 @@ const BotaoText = styled.span`
 `;
 
 const Botao = ({ background, texto, style, to }) => (
-    <Link to={to}>
+    <a href={to}>
         <StyledBotao background={background} style={style}>
             <BotaoText>
                 {texto}
             </BotaoText>
         </StyledBotao>
-    </Link>
+    </a>
 );
 
 export default Botao

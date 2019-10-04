@@ -1,12 +1,15 @@
 import React from "react"
 import "@babel/polyfill";
-import LogoBranca from "./logobranca"
 import styled from "styled-components"
+
+import LogoBranca from "./logobranca"
 import Botao from "./botao"
-import Paragraph from "./paragraph"
+import { Paragraph } from "./typography"
 import CNCGLogo from "../images/CNCG.png"
 import Video from "./bgvideo"
 import Local from "./location"
+import { navigate } from "@reach/router"
+
 
 const HomeContainer = styled.div`
     display: flex;
@@ -25,21 +28,35 @@ const LogoConselho = styled.img`
 
 const ConselhoNacional = () => (
     <>
-    <LogoConselho src={CNCGLogo} alt="Conselho Nacional de Comandantes Gerais PM/CBM"/>
-    <Paragraph className="text-center">Conselho Nacional <br/>de Comandantes Gerais PM/CBM apresenta:</Paragraph>
+        <LogoConselho src={CNCGLogo} alt="Conselho Nacional de Comandantes Gerais PM/CBM" />
+        <Paragraph className="text-center">Conselho Nacional <br />de Comandantes Gerais PM/CBM apresenta:</Paragraph>
     </>
 );
 
-const HomeMobile = () => (
-    <div className="d-lg-none">
-        <Video url="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"/>
-        <HomeContainer>
-            <ConselhoNacional/>
-            <div style={{width: "65vw"}}><LogoBranca/></div>
-            <Local fontSize="0.95em" style={{height:"auto", textAlign:"center"}}/>
-            <Botao texto="Inscreva-se Agora!" background="transparent"/>
-        </HomeContainer>
-    </div>
-);
 
-export default HomeMobile;
+class HomeMobile extends React.Component {
+     handleScroll() {
+            console.log("scrolled");
+            navigate(`/ocongresso/`)
+        }
+
+       componentDidMount() {
+        window.onscroll = () => this.handleScroll();
+      }
+
+    render() {
+        return (
+            <div style={{height:"100vh"}} onScroll={this.handleScroll}>
+                <Video url="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" />
+                <HomeContainer>
+                    <ConselhoNacional/>
+                    <div style={{ width: "65vw" }}><LogoBranca /></div>
+                    <Local fontSize="0.95em" style={{ height: "auto", textAlign: "center" }} />
+                    <Botao texto="Inscreva-se Agora!" background="transparent" />
+                </HomeContainer>
+            </div>
+        )
+    }
+}
+
+export default HomeMobile
