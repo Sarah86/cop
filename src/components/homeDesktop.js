@@ -9,7 +9,6 @@ import Isotipo from "../images/COP-ISOTIPO-TEXTURADO.png"
 import { MolduraTop, MolduraBottom } from "./moldura";
 import Shadow from "./shadow";
 import { ParagraphTitle, Paragraph, ParagraphLink, Quote } from "./typography"
-import Image from "./image";
 import Photo from "./photo";
 
 const Background = styled.div`

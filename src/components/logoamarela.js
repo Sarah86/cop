@@ -19,7 +19,7 @@ const LogoAmarela = () => {
       logoamarela: file(relativePath: { eq: "COP-SOMBREADA-BRANCO-COP.png" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

@@ -19,7 +19,7 @@ const LogoBranca = () => {
       logobranca: file(relativePath: { eq: "COP-SOMBREADA-BRANCO-COP.png" }) {
         childImageSharp {
           fluid(maxWidth: 800) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
