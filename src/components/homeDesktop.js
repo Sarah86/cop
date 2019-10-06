@@ -1,15 +1,16 @@
 import React from "react"
 import styled from "styled-components"
+import ReactPlayer from "react-player";
 import { Container, Row, Col } from "react-bootstrap"
 
 import Local from "./location"
 import LogoConselho from "../images/CNCG.png"
 import Isotipo from "../images/COP-ISOTIPO-TEXTURADO.png"
-import ReactPlayer from "react-player";
 import { MolduraTop, MolduraBottom } from "./moldura";
 import Shadow from "./shadow";
-import { ParagraphTitle, Paragraph, ParagraphLink } from "./typography"
-import { Quote } from "./typography"
+import { ParagraphTitle, Paragraph, ParagraphLink, Quote } from "./typography"
+import Image from "./image";
+import Photo from "./photo";
 
 const Background = styled.div`
     position: absolute;
@@ -51,7 +52,7 @@ const Conselho = styled.img`
     width: 200px;
     margin-left: 2em;
     bottom: -3em;
-    z-index: 1;
+    z-index: 2;
 `;
 
 const VideoContainer = styled.div`
@@ -103,12 +104,12 @@ const CongressoPalestrantes = () => (
             <Col className="pl-5">
                 <ParagraphTitle>palestrantes</ParagraphTitle>
                 <Row>
-                    <Col>Foto1</Col>
-                    <Col>Foto1</Col>
+                    <Col><Photo imgName="placeholder-photo.jpeg" title="Jair Messias Bolsonaro" subtitle="Presidente da República"/></Col>
+                    <Col><Photo imgName="placeholder-photo.jpeg" title="Hamilton Mourão" subtitle="Vice-Presidente e General do EB"/></Col>
                 </Row>
                 <Row>
-                    <Col>Foto1</Col>
-                    <Col>Foto1</Col>
+                    <Col><Photo imgName="placeholder-photo.jpeg" title="Sérgio Moro" subtitle="Ministro da Justiça"/></Col>
+                    <Col><Photo imgName="placeholder-photo.jpeg" title="Maurício Silveira" subtitle="Cmdte. Grupamento de Choque PMSC"/></Col>
                 </Row>
             </Col>
         </Row>
