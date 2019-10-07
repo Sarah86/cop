@@ -3,13 +3,15 @@ import styled from "styled-components"
 import ReactPlayer from "react-player";
 import { Container, Row, Col } from "react-bootstrap"
 
+import Botao from "./botao"
 import Local from "./location"
-import LogoConselho from "../images/CNCG.png"
 import Isotipo from "../images/COP-ISOTIPO-TEXTURADO.png"
 import { MolduraTop, MolduraBottom } from "./moldura";
 import Shadow from "./shadow";
-import { ParagraphTitle, Paragraph, ParagraphLink, Quote } from "./typography"
+import { ParagraphTitle, Paragraph, ParagraphLink, Quote, ReadMore } from "./typography"
+import Image from "./image"
 import Photo from "./photo";
+import ShadowedImage from "./shadowedimage";
 
 const Background = styled.div`
     position: absolute;
@@ -46,12 +48,12 @@ const ApresentadoPor = styled.div`
     margin-top: 1em;
 `;
 
-const Conselho = styled.img`
+const Conselho = styled.div`
     position: absolute;
     width: 200px;
-    margin-left: 2em;
     bottom: -3em;
     z-index: 2;
+    right: 7em;
 `;
 
 const VideoContainer = styled.div`
@@ -70,7 +72,9 @@ const BoasVindas = () => (
         <Sublegenda>O maior evento de segurança e defesa da América Latina</Sublegenda>
         <Local fontSize="1em" iconSize="1.2em" />
         <ApresentadoPor>Orgulhosamente apresentado pelo CNGC - Conselho Nacional de Comandantes Gerais</ApresentadoPor>
-        <Conselho src={LogoConselho} />
+        <Conselho>
+            <Image imgName="CNCG.png" />
+        </Conselho>
     </div>
 );
 
@@ -86,40 +90,91 @@ const Video = () => (
 );
 
 const CongressoPalestrantes = () => (
-    <Container style={{ marginTop: "3em" }}>
+    <Container className="mt-5">
         <Row>
-            <Col className="text-justify pr-5">
+            <Col className="text-justify pr-5 d-flex flex-column justify-content-between">
                 <ParagraphTitle>o congresso</ParagraphTitle>
                 <Quote>Autoridades nacionais e internacionais, agentes de segurança pública,
                 as principais marcas do setor, e a sociedade civil. Em contato direto por 3 dias.</Quote>
                 <Paragraph>Depois do sucesso absoluto da estreia em 2018 o Congresso de Operações Policiais retorna mais abrangente, inclusivo, dinâmico, informativo e tecnológico.</Paragraph>
                 <Paragraph>Congresso se realizará de forma gratuita nos dias 17, 18 e 19 de Março de 2019 para um público diário de aproximadamente 2000 pessoas..
-</Paragraph>
+                </Paragraph>
                 <Paragraph>A cidade-sede escolhida é pelo segundo ano consecutivo a belíssima <ParagraphLink>Florianópolis</ParagraphLink>, que por sua vez abriga o moderno <ParagraphLink>
-                    Centro de Eventos Governador Luiz Henrique da Silveira
-                </ParagraphLink>.
-</Paragraph>
+                    Centro de Eventos Governador Luiz Henrique da Silveira</ParagraphLink>.
+                </Paragraph>
+                <ReadMore className="align-self-end">leia mais</ReadMore>
             </Col>
-            <Col className="pl-5">
+            <Col className="pl-5 d-flex flex-column justify-content-between">
                 <ParagraphTitle>palestrantes</ParagraphTitle>
                 <Row>
-                    <Col><Photo imgName="placeholder-photo.jpeg" title="Jair Messias Bolsonaro" subtitle="Presidente da República"/></Col>
-                    <Col><Photo imgName="placeholder-photo.jpeg" title="Hamilton Mourão" subtitle="Vice-Presidente e General do EB"/></Col>
+                    <Col><Photo imgName="placeholder-photo.jpeg" title="Jair Messias Bolsonaro" subtitle="Presidente da República" /></Col>
+                    <Col><Photo imgName="placeholder-photo.jpeg" title="Hamilton Mourão" subtitle="Vice-Presidente e General do EB" /></Col>
                 </Row>
                 <Row>
-                    <Col><Photo imgName="placeholder-photo.jpeg" title="Sérgio Moro" subtitle="Ministro da Justiça"/></Col>
-                    <Col><Photo imgName="placeholder-photo.jpeg" title="Maurício Silveira" subtitle="Cmdte. Grupamento de Choque PMSC"/></Col>
+                    <Col><Photo imgName="placeholder-photo.jpeg" title="Sérgio Moro" subtitle="Ministro da Justiça" /></Col>
+                    <Col><Photo imgName="placeholder-photo.jpeg" title="Maurício Silveira" subtitle="Cmdte. Grupamento de Choque PMSC" /></Col>
                 </Row>
+                <ReadMore className="align-self-end">leia mais</ReadMore>
             </Col>
         </Row>
     </Container>
 );
+
+const Expositores = () => (
+    <Container className="mt-5 pt-5 d-flex flex-column justify-content-between">
+        <Row>
+            <Col>
+                <ParagraphTitle>expositores</ParagraphTitle>
+                <Paragraph>Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em segurança e defesa exporão seus produtos e soluções.</Paragraph>
+                <Paragraph>Será uma oportunidade única de se atualizar e se conectar con o que há de melhor e mais moderno no segmento.</Paragraph>
+            </Col>
+            <Col className="d-flex flex-column justify-content-center align-items-center">
+                <Botao texto="QUER EXPOR A SUA MARCA?" borderWidth="8px" width="12em"></Botao>
+            </Col>
+        </Row>
+        <Row noGutters className="mb-4">
+            <Col lg={6}><ShadowedImage imgName="placeholder-photo.jpeg"/></Col>
+            <Col lg={6}><ShadowedImage imgName="placeholder-photo.jpeg"/></Col>
+            <Col lg={6}><ShadowedImage imgName="placeholder-photo.jpeg"/></Col>
+            <Col lg={6}><ShadowedImage imgName="placeholder-photo.jpeg"/></Col>
+        </Row>
+        <ReadMore className="align-self-end">leia mais</ReadMore>
+    </Container>
+);
+
+const Espaco = () => (
+    <Container className="mt-5 pt-5 d-flex flex-column justify-content-between">
+        <Row>
+            <Col>
+                <ParagraphTitle size="2.5em" width="55%">espaço abopesp</ParagraphTitle>
+                <ShadowedImage imgName="placeholder-photo.jpeg"/>
+                <Paragraph>Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em segurança e defesa exporão seus produtos e soluções.</Paragraph>
+                <ReadMore className="align-self-end">leia mais</ReadMore>
+            </Col>
+            <Col>
+                <ParagraphTitle size="2.5em" width="55%">confira o programa</ParagraphTitle>
+                <ShadowedImage imgName="placeholder-photo.jpeg"/>
+                <Paragraph>Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em segurança e defesa exporão seus produtos e soluções.</Paragraph>
+                <ReadMore className="align-self-end">leia mais</ReadMore>
+            </Col>
+            <Col>
+                <ParagraphTitle size="2.5em" width="55%">ação social</ParagraphTitle>
+                <ShadowedImage imgName="placeholder-photo.jpeg"/>
+                <Paragraph>Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em segurança e defesa exporão seus produtos e soluções.</Paragraph>
+                <ReadMore className="align-self-end">leia mais</ReadMore>
+            </Col>
+        </Row>
+    </Container>
+);
+
 
 const HomeDesktop = () => (
     <>
         <BoasVindas />
         <Video />
         <CongressoPalestrantes />
+        <Expositores />
+        <Espaco/>
     </>
 );
 

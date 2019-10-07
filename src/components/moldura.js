@@ -23,7 +23,7 @@ const BarraTop = styled.div`
         content: "";
         background-color: var(--firefly);
         position: absolute;
-        left: -4px;
+        left: -3%;
         top: 0;
         height: 100%;
         width: 10%;
@@ -31,7 +31,7 @@ const BarraTop = styled.div`
     }
     @media ${device.desktop}{
         height: 3%;
-        left: 4px;
+        left: 1.2%;
         top: 0;
     }
 `;
@@ -66,7 +66,7 @@ const BarraBottom = styled.div`
         content: "";
         background-color: var(--firefly);
         position: absolute;
-        right: -3px;
+        right: -4%;
         bottom: 0;
         height: 100%;
         width: 10%;
@@ -75,7 +75,7 @@ const BarraBottom = styled.div`
     @media ${device.desktop}{
         height: 3%;
         bottom: 0;
-        right: 2px;
+        right: 1%;
     }
 `;
 

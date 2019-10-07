@@ -7,10 +7,12 @@ import "./typography.css"
 
 
 const StyledBotao = styled.button`
-    background-color: var(--bunker);
+    background-color: transparent;
     background-color: ${props => props.background};
     border: 5px solid var(--amber);
+    border-width: ${props => props.borderWidth};
     width: 11em;
+    width: ${props => props.width};
     padding: .4em;
     position: relative;
     &:hover {
@@ -21,7 +23,7 @@ const StyledBotao = styled.button`
             transform: scaleX(1);   
         }
     }    
-    transform: skewX(-10deg);
+    transform: skewX(-12deg);
     &:before {
         content: "";
         position: absolute;
@@ -47,12 +49,12 @@ const BotaoText = styled.span`
     line-height: .9em;
     margin-bottom: -.2em;
     text-transform: uppercase;
-    transform: skewX(10deg);
+    transform: skewX(12deg);
 `;
 
-const Botao = ({ background, texto, style, to }) => (
+const Botao = ({ background, texto, style, to, borderWidth, width }) => (
     <a href={to}>
-        <StyledBotao background={background} style={style}>
+        <StyledBotao background={background} borderWidth={borderWidth} width={width} style={style}>
             <BotaoText>
                 {texto}
             </BotaoText>
