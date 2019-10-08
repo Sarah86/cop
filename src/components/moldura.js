@@ -8,7 +8,7 @@ const BorderTop = styled.div`
     height: .6%;
     position: absolute;
     top:0;
-    z-index: 1;
+    z-index: 2;
 `;
 
 const BarraTop = styled.div`
@@ -18,7 +18,7 @@ const BarraTop = styled.div`
     left: -1.5px;
     position: absolute;
     transform: skewX(-50deg);
-    z-index: 1;
+    z-index: 2;
     :before {
         content: "";
         background-color: var(--firefly);

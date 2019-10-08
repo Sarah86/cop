@@ -1,5 +1,8 @@
+import { Link } from "gatsby"
 import styled from "styled-components"
-import { device } from "./device";
+
+import { device } from "./device"
+import target from "../images/target.png"
 
 export const Paragraph = styled.p`
     font-family: "TilliumWeb";
@@ -18,7 +21,7 @@ export const ParagraphLink = styled.a`
         text-decoration: underline;
         :hover {
             color: var(--amber);
-            cursor: cell;
+            cursor: pointer;
         }
     }
 `;
@@ -49,7 +52,7 @@ export const Quote = styled.p`
     }
 `;
 
-export const ReadMore = styled.a`
+export const ReadMore = styled(Link)`
     &&& {
         color: var(--amber);
         font-family: "TTSupermolotNeue";
@@ -58,7 +61,7 @@ export const ReadMore = styled.a`
         float: right;
         :hover {
             color: var(--amber);
-            cursor: cell;
+            cursor: pointer;
         }
         @media ${device.desktop}{
             font-size: .9em;

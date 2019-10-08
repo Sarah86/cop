@@ -1,17 +1,17 @@
 import React from "react"
 import styled from "styled-components"
-import ReactPlayer from "react-player";
+import ReactPlayer from "react-player"
 import { Container, Row, Col } from "react-bootstrap"
 
 import Botao from "./botao"
 import Local from "./location"
 import Isotipo from "../images/logo_cop_isotipo.png"
-import { MolduraTop, MolduraBottom } from "./moldura";
-import Shadow from "./shadow";
+import { MolduraTop, MolduraBottom } from "./moldura"
+import Shadow from "./shadow"
 import { ParagraphTitle, Paragraph, ParagraphLink, Quote, ReadMore } from "./typography"
 import Image from "./image"
-import Photo from "./photo";
-import ShadowedImage from "./shadowedimage";
+import LinkedPhoto from "./LinkedPhoto"
+import LinkedShadowedImage from "./LinkedShadowedImage"
 
 const Background = styled.div`
     position: absolute;
@@ -54,7 +54,7 @@ const Conselho = styled.div`
     position: absolute;
     width: 200px;
     bottom: -3em;
-    z-index: 2;
+    z-index: 3;
     right: 7em;
 `;
 
@@ -109,12 +109,12 @@ const CongressoPalestrantes = () => (
             <Col className="pl-5 d-flex flex-column justify-content-between">
                 <ParagraphTitle>palestrantes</ParagraphTitle>
                 <Row>
-                    <Col><Photo imgName="palestrante_p.jpg" title="Jair Messias Bolsonaro" subtitle="Presidente da República" /></Col>
-                    <Col><Photo imgName="palestrante_p.jpg" title="Hamilton Mourão" subtitle="Vice-Presidente e General do EB" /></Col>
+                    <Col><LinkedPhoto imgName="palestrante_p.jpg" title="Jair Messias Bolsonaro" subtitle="Presidente da República" /></Col>
+                    <Col><LinkedPhoto imgName="palestrante_p.jpg" title="Hamilton Mourão" subtitle="Vice-Presidente e General do EB" /></Col>
                 </Row>
                 <Row>
-                    <Col><Photo imgName="palestrante_p.jpg" title="Sérgio Moro" subtitle="Ministro da Justiça" /></Col>
-                    <Col><Photo imgName="palestrante_p.jpg" title="Maurício Silveira" subtitle="Cmdte. Grupamento de Choque PMSC" /></Col>
+                    <Col><LinkedPhoto imgName="palestrante_p.jpg" title="Sérgio Moro" subtitle="Ministro da Justiça" /></Col>
+                    <Col><LinkedPhoto imgName="palestrante_p.jpg" title="Maurício Silveira" subtitle="Cmdte. Grupamento de Choque PMSC" /></Col>
                 </Row>
                 <ReadMore className="align-self-end">leia mais</ReadMore>
             </Col>
@@ -136,10 +136,10 @@ const Expositores = () => (
             </Col>
         </Row>
         <Row noGutters className="mb-4">
-            <Col lg={6}><ShadowedImage imgName="expositor_diamante.jpg"/></Col>
-            <Col lg={6}><ShadowedImage imgName="expositor_diamante.jpg"/></Col>
-            <Col lg={6}><ShadowedImage imgName="expositor_diamante.jpg"/></Col>
-            <Col lg={6}><ShadowedImage imgName="expositor_diamante.jpg"/></Col>
+            <Col lg={6}><LinkedShadowedImage imgName="expositor_diamante.jpg"/></Col>
+            <Col lg={6}><LinkedShadowedImage imgName="expositor_diamante.jpg"/></Col>
+            <Col lg={6}><LinkedShadowedImage imgName="expositor_diamante.jpg"/></Col>
+            <Col lg={6}><LinkedShadowedImage imgName="expositor_diamante.jpg"/></Col>
         </Row>
         <ReadMore className="align-self-end">leia mais</ReadMore>
     </Container>
@@ -151,19 +151,19 @@ const Espaco = () => (
         <Row className="pt-5">
             <Col>
                 <ParagraphTitle size="2.5em" width="55%">espaço abopesp</ParagraphTitle>
-                <Photo imgName="destaque_triplo_home_1.jpg"/>
+                <LinkedPhoto imgName="destaque_triplo_home_1.jpg" to="/ocongresso/"/>
                 <Paragraph>Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em segurança e defesa exporão seus produtos e soluções.</Paragraph>
-                <ReadMore className="align-self-end">leia mais</ReadMore>
+                <ReadMore className="align-self-end" to="/ocongresso/">leia mais</ReadMore>
             </Col>
             <Col>
                 <ParagraphTitle size="2.5em" width="55%">confira o programa</ParagraphTitle>
-                <Photo imgName="destaque_triplo_home_2.jpg"/>
+                <LinkedPhoto imgName="destaque_triplo_home_2.jpg"/>
                 <Paragraph>Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em segurança e defesa exporão seus produtos e soluções.</Paragraph>
                 <ReadMore className="align-self-end">leia mais</ReadMore>
             </Col>
             <Col>
                 <ParagraphTitle size="2.5em" width="55%">ação social</ParagraphTitle>
-                <Photo imgName="destaque_triplo_home_3.jpg"/>
+                <LinkedPhoto imgName="destaque_triplo_home_3.jpg"/>
                 <Paragraph>Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em segurança e defesa exporão seus produtos e soluções.</Paragraph>
                 <ReadMore className="align-self-end">leia mais</ReadMore>
             </Col>
