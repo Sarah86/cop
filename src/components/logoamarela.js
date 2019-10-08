@@ -16,7 +16,7 @@ import Img from "gatsby-image"
 const LogoAmarela = () => {
     const data = useStaticQuery(graphql`
     query {
-      logoamarela: file(relativePath: { eq: "COP-SOMBREADA-BRANCO-COP.png" }) {
+      logoamarela: file(relativePath: { eq: "logo_cop_amarela.png" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid_withWebp

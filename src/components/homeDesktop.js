@@ -5,7 +5,7 @@ import { Container, Row, Col } from "react-bootstrap"
 
 import Botao from "./botao"
 import Local from "./location"
-import Isotipo from "../images/COP-ISOTIPO-TEXTURADO.png"
+import Isotipo from "../images/logo_cop_isotipo.png"
 import { MolduraTop, MolduraBottom } from "./moldura";
 import Shadow from "./shadow";
 import { ParagraphTitle, Paragraph, ParagraphLink, Quote, ReadMore } from "./typography"
@@ -15,13 +15,15 @@ import ShadowedImage from "./shadowedimage";
 
 const Background = styled.div`
     position: absolute;
-    width: 130%;
+    width: 128%;
     height: 118%;
     background-image: url(${Isotipo});
-    background-position: right;
+    background-position: top right;
+    background-position: ${props => props.position};
     background-repeat: no-repeat;
-    background-size: 55%;
+    background-size: 65%;
     z-index: -1;
+    left: ${props => props.left};
 `;
 
 const BemVindo = styled.h2`
@@ -73,7 +75,7 @@ const BoasVindas = () => (
         <Local fontSize="1em" iconSize="1.2em" />
         <ApresentadoPor>Orgulhosamente apresentado pelo CNGC - Conselho Nacional de Comandantes Gerais</ApresentadoPor>
         <Conselho>
-            <Image imgName="CNCG.png" />
+            <Image imgName="logo_cngc.png" />
         </Conselho>
     </div>
 );
@@ -107,12 +109,12 @@ const CongressoPalestrantes = () => (
             <Col className="pl-5 d-flex flex-column justify-content-between">
                 <ParagraphTitle>palestrantes</ParagraphTitle>
                 <Row>
-                    <Col><Photo imgName="placeholder-photo.jpeg" title="Jair Messias Bolsonaro" subtitle="Presidente da República" /></Col>
-                    <Col><Photo imgName="placeholder-photo.jpeg" title="Hamilton Mourão" subtitle="Vice-Presidente e General do EB" /></Col>
+                    <Col><Photo imgName="palestrante_p.jpg" title="Jair Messias Bolsonaro" subtitle="Presidente da República" /></Col>
+                    <Col><Photo imgName="palestrante_p.jpg" title="Hamilton Mourão" subtitle="Vice-Presidente e General do EB" /></Col>
                 </Row>
                 <Row>
-                    <Col><Photo imgName="placeholder-photo.jpeg" title="Sérgio Moro" subtitle="Ministro da Justiça" /></Col>
-                    <Col><Photo imgName="placeholder-photo.jpeg" title="Maurício Silveira" subtitle="Cmdte. Grupamento de Choque PMSC" /></Col>
+                    <Col><Photo imgName="palestrante_p.jpg" title="Sérgio Moro" subtitle="Ministro da Justiça" /></Col>
+                    <Col><Photo imgName="palestrante_p.jpg" title="Maurício Silveira" subtitle="Cmdte. Grupamento de Choque PMSC" /></Col>
                 </Row>
                 <ReadMore className="align-self-end">leia mais</ReadMore>
             </Col>
@@ -121,9 +123,10 @@ const CongressoPalestrantes = () => (
 );
 
 const Expositores = () => (
-    <Container className="mt-5 pt-5 d-flex flex-column justify-content-between">
+    <Container className="mt-5 d-flex flex-column justify-content-between position-relative">
+        <Background />
         <Row>
-            <Col>
+            <Col className="mt-5 pt-5">
                 <ParagraphTitle>expositores</ParagraphTitle>
                 <Paragraph>Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em segurança e defesa exporão seus produtos e soluções.</Paragraph>
                 <Paragraph>Será uma oportunidade única de se atualizar e se conectar con o que há de melhor e mais moderno no segmento.</Paragraph>
@@ -133,33 +136,34 @@ const Expositores = () => (
             </Col>
         </Row>
         <Row noGutters className="mb-4">
-            <Col lg={6}><ShadowedImage imgName="placeholder-photo.jpeg"/></Col>
-            <Col lg={6}><ShadowedImage imgName="placeholder-photo.jpeg"/></Col>
-            <Col lg={6}><ShadowedImage imgName="placeholder-photo.jpeg"/></Col>
-            <Col lg={6}><ShadowedImage imgName="placeholder-photo.jpeg"/></Col>
+            <Col lg={6}><ShadowedImage imgName="expositor_diamante.jpg"/></Col>
+            <Col lg={6}><ShadowedImage imgName="expositor_diamante.jpg"/></Col>
+            <Col lg={6}><ShadowedImage imgName="expositor_diamante.jpg"/></Col>
+            <Col lg={6}><ShadowedImage imgName="expositor_diamante.jpg"/></Col>
         </Row>
         <ReadMore className="align-self-end">leia mais</ReadMore>
     </Container>
 );
 
 const Espaco = () => (
-    <Container className="mt-5 pt-5 d-flex flex-column justify-content-between">
-        <Row>
+    <Container className="mt-5 d-flex flex-column justify-content-between position-relative">
+        <Background left="-45%" position="left top"/>
+        <Row className="pt-5">
             <Col>
                 <ParagraphTitle size="2.5em" width="55%">espaço abopesp</ParagraphTitle>
-                <ShadowedImage imgName="placeholder-photo.jpeg"/>
+                <Photo imgName="destaque_triplo_home_1.jpg"/>
                 <Paragraph>Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em segurança e defesa exporão seus produtos e soluções.</Paragraph>
                 <ReadMore className="align-self-end">leia mais</ReadMore>
             </Col>
             <Col>
                 <ParagraphTitle size="2.5em" width="55%">confira o programa</ParagraphTitle>
-                <ShadowedImage imgName="placeholder-photo.jpeg"/>
+                <Photo imgName="destaque_triplo_home_2.jpg"/>
                 <Paragraph>Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em segurança e defesa exporão seus produtos e soluções.</Paragraph>
                 <ReadMore className="align-self-end">leia mais</ReadMore>
             </Col>
             <Col>
                 <ParagraphTitle size="2.5em" width="55%">ação social</ParagraphTitle>
-                <ShadowedImage imgName="placeholder-photo.jpeg"/>
+                <Photo imgName="destaque_triplo_home_3.jpg"/>
                 <Paragraph>Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em segurança e defesa exporão seus produtos e soluções.</Paragraph>
                 <ReadMore className="align-self-end">leia mais</ReadMore>
             </Col>
