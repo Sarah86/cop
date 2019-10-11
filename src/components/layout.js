@@ -4,6 +4,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
+/* eslint-disable */
 
 import React from "react"
 import PropTypes from "prop-types"
@@ -23,6 +24,9 @@ const Content = styled.div`
   //padding: 0px 1.0875rem 1.45rem;
   padding-top: 1em;
   color: var(--narvik);
+  @media ${device.desktop}{
+    padding-top: 5em;
+  }
 `;
 
 const Layout = ({ children }) => {

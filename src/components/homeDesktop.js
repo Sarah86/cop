@@ -5,33 +5,21 @@ import { Container, Row, Col } from "react-bootstrap"
 
 import Botao from "./botao"
 import Local from "./location"
-import Isotipo from "../images/logo_cop_isotipo.png"
 import { MolduraTop, MolduraBottom } from "./moldura"
 import Shadow from "./shadow"
-import { ParagraphTitle, Paragraph, ParagraphLink, Quote, ReadMore } from "./typography"
+import { Paragraph, ParagraphLink, Quote, ReadMore } from "./typography"
+import { FadeParagraphTitle } from "./FadeElements"
 import Image from "./image"
 import LinkedPhoto from "./LinkedPhoto"
 import LinkedShadowedImage from "./LinkedShadowedImage"
-
-const Background = styled.div`
-    position: absolute;
-    width: 128%;
-    height: 118%;
-    background-image: url(${Isotipo});
-    background-position: top right;
-    background-position: ${props => props.position};
-    background-repeat: no-repeat;
-    background-size: 65%;
-    z-index: -1;
-    left: ${props => props.left};
-`;
+import Background from "./background"
 
 const BemVindo = styled.h2`
     font-size: 3em;
     font-family: var(--font2);
     font-weight: 300;
     letter-spacing: var(--lp0);
-    padding-top: 1.5em;
+    padding-top: .2em;
 `;
 
 const Sublegenda = styled.span`
@@ -95,7 +83,7 @@ const CongressoPalestrantes = () => (
     <Container className="mt-5">
         <Row>
             <Col className="text-justify pr-5 d-flex flex-column justify-content-between">
-                <ParagraphTitle>o congresso</ParagraphTitle>
+                <FadeParagraphTitle>o congresso</FadeParagraphTitle>
                 <Quote>Autoridades nacionais e internacionais, agentes de segurança pública,
                 as principais marcas do setor, e a sociedade civil. Em contato direto por 3 dias.</Quote>
                 <Paragraph>Depois do sucesso absoluto da estreia em 2018 o Congresso de Operações Policiais retorna mais abrangente, inclusivo, dinâmico, informativo e tecnológico.</Paragraph>
@@ -107,7 +95,7 @@ const CongressoPalestrantes = () => (
                 <ReadMore className="align-self-end">leia mais</ReadMore>
             </Col>
             <Col className="pl-5 d-flex flex-column justify-content-between">
-                <ParagraphTitle>palestrantes</ParagraphTitle>
+                <FadeParagraphTitle>palestrantes</FadeParagraphTitle>
                 <Row>
                     <Col><LinkedPhoto imgName="palestrante_p.jpg" title="Jair Messias Bolsonaro" subtitle="Presidente da República" /></Col>
                     <Col><LinkedPhoto imgName="palestrante_p.jpg" title="Hamilton Mourão" subtitle="Vice-Presidente e General do EB" /></Col>
@@ -127,7 +115,7 @@ const Expositores = () => (
         <Background />
         <Row>
             <Col className="mt-5 pt-5">
-                <ParagraphTitle>expositores</ParagraphTitle>
+                <FadeParagraphTitle>expositores</FadeParagraphTitle>
                 <Paragraph>Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em segurança e defesa exporão seus produtos e soluções.</Paragraph>
                 <Paragraph>Será uma oportunidade única de se atualizar e se conectar con o que há de melhor e mais moderno no segmento.</Paragraph>
             </Col>
@@ -150,19 +138,19 @@ const Espaco = () => (
         <Background left="-45%" position="left top"/>
         <Row className="pt-5">
             <Col>
-                <ParagraphTitle size="2.5em" width="55%">espaço abopesp</ParagraphTitle>
+                <FadeParagraphTitle size="2.5em" width="3.16em">espaço abopesp</FadeParagraphTitle>
                 <LinkedPhoto imgName="destaque_triplo_home_1.jpg" to="/ocongresso/"/>
                 <Paragraph>Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em segurança e defesa exporão seus produtos e soluções.</Paragraph>
                 <ReadMore className="align-self-end" to="/ocongresso/">leia mais</ReadMore>
             </Col>
             <Col>
-                <ParagraphTitle size="2.5em" width="55%">confira o programa</ParagraphTitle>
+                <FadeParagraphTitle size="2.5em" width="3.6em">confira o programa</FadeParagraphTitle>
                 <LinkedPhoto imgName="destaque_triplo_home_2.jpg"/>
                 <Paragraph>Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em segurança e defesa exporão seus produtos e soluções.</Paragraph>
                 <ReadMore className="align-self-end">leia mais</ReadMore>
             </Col>
             <Col>
-                <ParagraphTitle size="2.5em" width="55%">ação social</ParagraphTitle>
+                <FadeParagraphTitle size="2.5em" width="2.1em">ação social</FadeParagraphTitle>
                 <LinkedPhoto imgName="destaque_triplo_home_3.jpg"/>
                 <Paragraph>Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em segurança e defesa exporão seus produtos e soluções.</Paragraph>
                 <ReadMore className="align-self-end">leia mais</ReadMore>

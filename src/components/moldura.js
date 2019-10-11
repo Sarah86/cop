@@ -57,7 +57,7 @@ const BarraBottom = styled.div`
     background-color: var(--firefly);    
     height: 4px;
     width: 30%;
-    bottom: 8px;
+    bottom: 0;
     right: 0;
     position: absolute;
     transform: skewX(-50deg);

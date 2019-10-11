@@ -35,24 +35,23 @@ const ConselhoNacional = () => (
 
 
 class HomeMobile extends React.Component {
-     handleScroll() {
-            console.log("scrolled");
-            navigate(`/ocongresso/`)
-        }
-
-       componentDidMount() {
-        window.onscroll = () => this.handleScroll();
-      }
+    
+    handleScroll() {
+        if (window.location.pathname === "/") {
+            console.log("redirection to ocongresso");
+            navigate(`/ocongresso/`);
+        };
+    }
 
     render() {
         return (
-            <div style={{height:"100vh"}} onScroll={this.handleScroll}>
+            <div style={{ height: "100vh" }} onScroll={this.handleScroll}>
                 <Video url="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" />
                 <HomeContainer>
-                    <ConselhoNacional/>
+                    <ConselhoNacional />
                     <div style={{ width: "65vw" }}><LogoBranca /></div>
                     <Local fontSize="0.95em" style={{ height: "auto", textAlign: "center" }} />
-                    <Botao texto="Inscreva-se Agora!" background="transparent" />
+                    <Botao texto="Inscreva-se Agora!" background="transparent" to="/" />
                 </HomeContainer>
             </div>
         )

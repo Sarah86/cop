@@ -9,15 +9,18 @@ import "./typography.css"
 const StyledBotao = styled.button`
     background-color: transparent;
     background-color: ${props => props.background};
-    border: 5px solid var(--amber);
+    border-color: ${props => props.inverted ? "var(--bunker)" : "var(--amber)"};
+    border-style: solid;
+    border-width: 5px;
     border-width: ${props => props.borderWidth};
     width: 11em;
     width: ${props => props.width};
     padding: .4em;
+    padding: ${props => props.padding};
     position: relative;
     &:hover {
         span {
-                color: var(--bunker);
+                color: ${props => props.inverted ? "var(--amber)" : "var(--bunker)"};
         }
         &:before {
             transform: scaleX(1);   
@@ -31,7 +34,7 @@ const StyledBotao = styled.button`
         top: 0;
         right: 0;
         bottom: 0;
-        background-color: var(--amber);
+        background-color: ${props => props.inverted ? "var(--bunker)" : "var(--amber)"};
         z-index: -1;
         transform: scaleX(0);
         transform-origin: 0 50%;
@@ -40,10 +43,11 @@ const StyledBotao = styled.button`
 `;
 
 const BotaoText = styled.span`
-    color: var(--amber);
+    color: ${props => props.inverted ? "var(--bunker)" : "var(--amber)"};
     display: block;
     font-family: "Poll";
     font-size: 1.5em;
+    font-size:${props => props.fontSize};
     font-weight: bold;
     letter-spacing: var(--lp2);
     line-height: .9em;
@@ -52,14 +56,14 @@ const BotaoText = styled.span`
     transform: skewX(12deg);
 `;
 
-const Botao = ({ background, texto, style, to, borderWidth, width }) => (
-    <a href={to}>
-        <StyledBotao background={background} borderWidth={borderWidth} width={width} style={style}>
-            <BotaoText>
+const Botao = ({ background, borderWidth, fontSize, inverted, padding, texto, to, style, width }) => (
+    <Link to={to}>
+        <StyledBotao background={background} borderWidth={borderWidth} inverted={inverted} padding={padding} style={style} width={width} >
+            <BotaoText inverted={inverted} fontSize={fontSize}>
                 {texto}
             </BotaoText>
         </StyledBotao>
-    </a>
+    </Link>
 );
 
 export default Botao
