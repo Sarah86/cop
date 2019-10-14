@@ -35,12 +35,24 @@ const ConselhoNacional = () => (
 
 
 class HomeMobile extends React.Component {
-    
+
+    componentDidMount() {
+        window.addEventListener('scroll', this.handleScroll, true);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
+    }
+
+
     handleScroll() {
-        if (window.location.pathname === "/") {
-            console.log("redirection to ocongresso");
-            navigate(`/ocongresso/`);
-        };
+        if (window.location.pathname === "/" || "") {
+            setTimeout(function() {
+                console.log("redirection to ocongresso");
+                navigate(`/ocongresso/`);
+            }, 1000)
+
+        }
     }
 
     render() {

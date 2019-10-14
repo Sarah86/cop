@@ -14,7 +14,7 @@ const BorderTop = styled.div`
 const BarraTop = styled.div`
     background-color: var(--firefly);    
     height: 4px;
-    width: 40%;
+    width: 30%;
     left: -1.5px;
     position: absolute;
     transform: skewX(-50deg);
@@ -23,10 +23,10 @@ const BarraTop = styled.div`
         content: "";
         background-color: var(--firefly);
         position: absolute;
-        left: -3%;
+        left: -4.1%;
         top: 0;
         height: 100%;
-        width: 10%;
+        width: 20px;
         transform: skewX(50deg);
     }
     @media ${device.desktop}{
@@ -48,6 +48,7 @@ const BorderBottom = styled.div`
     background-color: var(--firefly);    
     width: 100%;
     height: .6%;
+    height: ${props => props.borderSize};
     position: absolute;
     bottom:0;
     z-index: 1;
@@ -57,6 +58,7 @@ const BarraBottom = styled.div`
     background-color: var(--firefly);    
     height: 4px;
     width: 30%;
+    width: ${props => props.width};
     bottom: 0;
     right: 0;
     position: absolute;
@@ -66,22 +68,26 @@ const BarraBottom = styled.div`
         content: "";
         background-color: var(--firefly);
         position: absolute;
-        right: -4%;
+        right: -3%;
         bottom: 0;
         height: 100%;
-        width: 10%;
+        width: 20px;
         transform: skewX(50deg);
     }
     @media ${device.desktop}{
         height: 3%;
+        height: ${props => props.height};
         bottom: 0;
-        right: 1%;
+        right: 9px;
+        :after {
+            right: -9px;
+        }
     }
 `;
 
-export const MolduraBottom = () => (
+export const MolduraBottom = ({ height, width, borderSize }) => (
     <>
-    <BarraBottom/>
-    <BorderBottom/>
+    <BarraBottom width={width} height={height}/>
+    <BorderBottom borderSize={borderSize}/>
     </>
 );

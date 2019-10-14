@@ -10,13 +10,15 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import { MolduraTop, MolduraBottom } from "../components/moldura";
-import { CarouselCaptionTitle, PaddedContentBox, ParagraphLink, ParagraphTitle, Paragraph, List } from "../components/typography";
+import { CarouselCaptionTitle, PaddedContentBox, ParagraphLink, ParagraphTitle, Paragraph, List, OlList, ListOl, PaddedText } from "../components/typography";
 import Photo from "../components/photo"
 import Shadow from "../components/shadow";
 import FramedVideo from "../components/framedVideo";
 import Botao from "../components/botao";
 import Background from "../components/background"
 import FullWidth from "../components/fullwidth"
+import Separador from "../components/separador"
+import { FadeParagraphTitle } from "../components/FadeElements"
 
 const StyledCarouselCaption = styled(CarouselCaption)`
   && {
@@ -41,14 +43,15 @@ const CongressoFirstBlock = () => (
 
 const CongressoSecondBlock = () => (
   <PaddedContentBox className="text-justify">
-    <Paragraph>Durante os três dias de evento, o COP colocará em contato direto:</Paragraph>
-    <List>
-      <li>Autoridades nacionais e internacionais;</li>
-      <li>Agentes de segurança pública;</li>
-      <li>As principais marcas do setor;</li>
-      <li>E a sociedade civil</li>
-    </List>
-    <Paragraph>A intensa programação de <ParagraphLink>Palestras</ParagraphLink> e <ParagraphLink>Exposições</ParagraphLink> será uma oportunidade única adquirir conhecimento, ter contato com o que existe de mais moderno em táticas e equipamentos de defesa e debater pontos críticos da segurança pública; sempre na direção de uma sociedade mais segura.</Paragraph>
+    <FadeParagraphTitle sm>o congresso</FadeParagraphTitle>
+    <PaddedText><Paragraph>Durante os três dias de evento, o COP colocará em contato direto:</Paragraph>
+      <List>
+        <li>Autoridades nacionais e internacionais;</li>
+        <li>Agentes de segurança pública;</li>
+        <li>As principais marcas do setor;</li>
+        <li>E a sociedade civil.</li>
+      </List>
+      <Paragraph>A intensa programação de <ParagraphLink>Palestras</ParagraphLink> e <ParagraphLink>Exposições</ParagraphLink> será uma oportunidade única adquirir conhecimento, ter contato com o que existe de mais moderno em táticas e equipamentos de defesa e debater pontos críticos da segurança pública; sempre na direção de uma sociedade mais segura.</Paragraph></PaddedText>
   </PaddedContentBox>
 );
 
@@ -112,7 +115,7 @@ const Assista = () => {
   return (
     <>
       <PaddedContentBox>
-        <ParagraphTitle>assista</ParagraphTitle>
+        <FadeParagraphTitle>assista</FadeParagraphTitle>
       </PaddedContentBox>
       <Container className="p-0">
         <Row noGutters>
@@ -159,7 +162,7 @@ const FullWidthInscricao = styled(FullWidth)`
 
 const OCongressoDesktopFirstBlock = () => (
   <>
-    <Container style={{ position: "relative", maxWidth: "86%" }}>
+    <Container style={{ position: "relative" }}>
       <Background />
       <Row>
         <Col className="pt-5">
@@ -176,9 +179,72 @@ const OCongressoDesktopFirstBlock = () => (
   </>
 );
 
+const TemasInteresse = () => (
+  <PaddedContentBox>
+    <FadeParagraphTitle sm>temas de interesse</FadeParagraphTitle>
+    <ListOl>
+      <li>Operações de Choque;</li>
+      <li>Operações Especiais;</li>
+      <li>Operações Aéreas;</li>
+      <li>Operações com emprego de animais;</li>
+      <li>Patrulhamento Tático Motorizado (2 e 4 Rodas);</li>
+      <li>Operações de Inteligência;</li>
+      <li>Operações Integradas (GAECO;)</li>
+      <li>Tecnologia aplicada a operações policiais;</li>
+      <li>Licitações Internacionais;</li>
+      <li>Operações Policiais em outros países.</li>
+    </ListOl>
+  </PaddedContentBox>
+);
+
+const OCongressoDesktopSecondBlock = () => (
+  <div className="mt-5">
+    <Photo imgName="teatro.jpg" />
+    <Container style={{ position: "relative" }}>
+      <Background position="left top" left="-40%" />
+      <Row>
+        <Col>
+          <CongressoSecondBlock />
+        </Col>
+        <Col>
+          <TemasInteresse />
+        </Col>
+      </Row>
+    </Container>
+  </div>
+);
+
+const OCongressoDesktopThirdBlock = () => (
+  <Container className="mt-5">
+    <Row>
+      <Col className="text-justify">
+        <Photo imgName="ocongresso_espaco-abopesp.jpg" />
+        <FadeParagraphTitle sm>espaço ABOpEsp</FadeParagraphTitle>
+        <PaddedText><Paragraph>As unidades de operações especiais terão <strong>um espaço exclusivo para proporcionar trocas e aproximar doutrinas</strong> entre agentes das diferentes esferas e membros da segurança pública.</Paragraph>
+          <Paragraph>A Associação Brasileira de Operações Especiais (ABOPESP) vai disponibilizar um estande no anfiteatro do Centro de Eventos Luiz Henrique da Silveira, com uma programação de clínicas e workshops para quem leva a atividade policial como um ofício de excelência.
+        </Paragraph>
+        </PaddedText>
+      </Col>
+      <Col>
+        <Photo imgName="ocongresso_acoes-sociais.jpg" />
+        <FadeParagraphTitle sm>ações sociais</FadeParagraphTitle>
+        <PaddedText>
+          <Paragraph>O COP Internacional fará a coleta de alimentos não-perecíveis  durante os 3 dias de evento.</Paragraph>
+          <Paragraph>Então ao participr do congresso você estará automaticamente ajudando duas instituições filantrópicas da cidade-sede do evento: A Igreja Bola de Neve e o SEOVE Caridade.</Paragraph>
+          <Paragraph><strong>A meta de arrecadação é de 4 toneladas de alimentos.</strong> Faça parte deste movimento!</Paragraph>
+        </PaddedText>
+      </Col>
+    </Row>
+  </Container>
+
+);
+
 const OCongressoDesktop = () => (
   <MediaQuery minWidth={992}>
     <OCongressoDesktopFirstBlock />
+    <OCongressoDesktopSecondBlock />
+    <Separador width="3%" border="1px" height="5px" />
+    <OCongressoDesktopThirdBlock />
   </MediaQuery>
 );
 

@@ -43,7 +43,7 @@ const Conselho = styled.div`
     width: 200px;
     bottom: -3em;
     z-index: 3;
-    right: 7em;
+    right: 1em;
 `;
 
 const VideoContainer = styled.div`
@@ -96,13 +96,13 @@ const CongressoPalestrantes = () => (
             </Col>
             <Col className="pl-5 d-flex flex-column justify-content-between">
                 <FadeParagraphTitle>palestrantes</FadeParagraphTitle>
-                <Row>
-                    <Col><LinkedPhoto imgName="palestrante_p.jpg" title="Jair Messias Bolsonaro" subtitle="Presidente da República" /></Col>
-                    <Col><LinkedPhoto imgName="palestrante_p.jpg" title="Hamilton Mourão" subtitle="Vice-Presidente e General do EB" /></Col>
+                <Row noGutters>
+                    <Col className="pl-1 pr-1"><LinkedPhoto imgName="palestrante_p.jpg" title="Jair Messias Bolsonaro" subtitle="Presidente da República" /></Col>
+                    <Col className="pl-1 pr-1"><LinkedPhoto imgName="palestrante_p.jpg" title="Hamilton Mourão" subtitle="Vice-Presidente e General do EB" /></Col>
                 </Row>
-                <Row>
-                    <Col><LinkedPhoto imgName="palestrante_p.jpg" title="Sérgio Moro" subtitle="Ministro da Justiça" /></Col>
-                    <Col><LinkedPhoto imgName="palestrante_p.jpg" title="Maurício Silveira" subtitle="Cmdte. Grupamento de Choque PMSC" /></Col>
+                <Row noGutters>
+                    <Col className="pl-1 pr-1"><LinkedPhoto imgName="palestrante_p.jpg" title="Sérgio Moro" subtitle="Ministro da Justiça" /></Col>
+                    <Col className="pl-1 pr-1"><LinkedPhoto imgName="palestrante_p.jpg" title="Maurício Silveira" subtitle="Cmdte. Grupamento de Choque PMSC" /></Col>
                 </Row>
                 <ReadMore className="align-self-end">leia mais</ReadMore>
             </Col>

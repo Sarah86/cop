@@ -20,7 +20,7 @@ import "./typography.css"
 
 const Content = styled.div`
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 900px;
   //padding: 0px 1.0875rem 1.45rem;
   padding-top: 1em;
   color: var(--narvik);
