@@ -217,21 +217,28 @@ const OCongressoDesktopSecondBlock = () => (
 const OCongressoDesktopThirdBlock = () => (
   <Container className="mt-5">
     <Row>
-      <Col className="text-justify">
+      <Col className="text-justify d-flex flex-column">
         <Photo imgName="ocongresso_espaco-abopesp.jpg" />
         <FadeParagraphTitle sm>espaço ABOpEsp</FadeParagraphTitle>
         <PaddedText><Paragraph>As unidades de operações especiais terão <strong>um espaço exclusivo para proporcionar trocas e aproximar doutrinas</strong> entre agentes das diferentes esferas e membros da segurança pública.</Paragraph>
           <Paragraph>A Associação Brasileira de Operações Especiais (ABOPESP) vai disponibilizar um estande no anfiteatro do Centro de Eventos Luiz Henrique da Silveira, com uma programação de clínicas e workshops para quem leva a atividade policial como um ofício de excelência.
         </Paragraph>
+          <Image imgName="logo-aboe.jpg" style={{ width: "150px" }} />
+          <Separador sm widthTotal="100px" />
         </PaddedText>
       </Col>
-      <Col>
+      <Col className="text-justify" >
         <Photo imgName="ocongresso_acoes-sociais.jpg" />
         <FadeParagraphTitle sm>ações sociais</FadeParagraphTitle>
         <PaddedText>
           <Paragraph>O COP Internacional fará a coleta de alimentos não-perecíveis  durante os 3 dias de evento.</Paragraph>
           <Paragraph>Então ao participr do congresso você estará automaticamente ajudando duas instituições filantrópicas da cidade-sede do evento: A Igreja Bola de Neve e o SEOVE Caridade.</Paragraph>
           <Paragraph><strong>A meta de arrecadação é de 4 toneladas de alimentos.</strong> Faça parte deste movimento!</Paragraph>
+          <div className="d-flex justify-content-between" style={{width: "30%"}}>
+            <Image imgName="logo-seove.jpg" style={{ width: "50px" }} />
+            <Image imgName="logo-boladeneve.jpg" style={{ width: "50px" }} />
+          </div>
+          <Separador sm widthTotal="100px" />
         </PaddedText>
       </Col>
     </Row>
@@ -243,7 +250,7 @@ const OCongressoDesktop = () => (
   <MediaQuery minWidth={992}>
     <OCongressoDesktopFirstBlock />
     <OCongressoDesktopSecondBlock />
-    <Separador width="3%" border="1px" height="5px" />
+    <Separador sm widthTotal="80%" center/>
     <OCongressoDesktopThirdBlock />
   </MediaQuery>
 );

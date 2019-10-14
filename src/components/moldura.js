@@ -47,8 +47,7 @@ export const MolduraTop = () => (
 const BorderBottom = styled.div`
     background-color: var(--firefly);    
     width: 100%;
-    height: .6%;
-    height: ${props => props.borderSize};
+    height: ${props => props.sm ? "1px" : ".6%"};
     position: absolute;
     bottom:0;
     z-index: 1;
@@ -57,8 +56,7 @@ const BorderBottom = styled.div`
 const BarraBottom = styled.div`
     background-color: var(--firefly);    
     height: 4px;
-    width: 30%;
-    width: ${props => props.width};
+    width: ${props => props.sm ? "30px" : "30%"};
     bottom: 0;
     right: 0;
     position: absolute;
@@ -75,8 +73,7 @@ const BarraBottom = styled.div`
         transform: skewX(50deg);
     }
     @media ${device.desktop}{
-        height: 3%;
-        height: ${props => props.height};
+        height: ${props => props.sm ? "5px" : "3%"};
         bottom: 0;
         right: 9px;
         :after {
@@ -85,9 +82,9 @@ const BarraBottom = styled.div`
     }
 `;
 
-export const MolduraBottom = ({ height, width, borderSize }) => (
+export const MolduraBottom = ({ sm }) => (
     <>
-    <BarraBottom width={width} height={height}/>
-    <BorderBottom borderSize={borderSize}/>
+    <BarraBottom sm={sm}/>
+    <BorderBottom sm={sm}/>
     </>
 );
