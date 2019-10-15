@@ -66,6 +66,7 @@ export const PaddedContentBox = styled.div`
 `;
 
 export const PaddedText = styled.div`
+    padding: 0 1em;
     @media ${device.desktop}{
         padding: 0 1em;
     }

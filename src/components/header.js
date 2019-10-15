@@ -213,13 +213,13 @@ const Header = ({ siteTitle }) => (
     <StyledNavbar bg="verdecop" variant="dark" expand="lg">
       <StyledNavbarCollapse id="basic-navbar-nav">
         <StyledNav>
-          <LogoWrapper maxWidth="170px" className="d-lg-none"><Link to="/"><LogoBranca /></Link></LogoWrapper>
-          <LogoWrapper maxWidth="100px "className="d-none d-lg-block"><Link to="/"><LogoAmarela /></Link></LogoWrapper>
+          <LogoWrapper maxWidth="170px" className="d-lg-none"><Link to="/" alt={siteTitle} title={siteTitle}><LogoBranca /></Link></LogoWrapper>
+          <LogoWrapper maxWidth="100px "className="d-none d-lg-block"><Link to="/" alt={siteTitle} title={siteTitle}><LogoAmarela /></Link></LogoWrapper>
           <LinksWrapper>
             <LinksContainer>
               <StyledLink to="/">Home</StyledLink>
               <StyledLink to="/ocongresso/">O Congresso</StyledLink>
-              <StyledLink to="/page-2/">Agenda &amp; Palestrantes</StyledLink>
+              <StyledLink to="/agenda-e-palestrantes/">Agenda &amp; Palestrantes</StyledLink>
               <StyledLink to="/page-2/">Expositores</StyledLink>
             </LinksContainer>
             <BarraContatosDesktop />
@@ -246,7 +246,7 @@ Header.propTypes = {
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  siteTitle: `Congresso Internacional de Operações Policiais`,
 }
 
 export default Header
