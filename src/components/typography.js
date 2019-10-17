@@ -77,7 +77,8 @@ export const Paragraph = styled.p`
     font-family: "TilliumWeb";
     color: var(--lemongrass);
     letter-spacing: var(--lp3);
-    font-size: 1.1em;
+    //font-size: 1.1em;
+    font-size: 16px;
     line-height: 1.3em;
     strong {
         color: var(--amber);
@@ -104,7 +105,7 @@ export const ParagraphLink = styled.a`
 
 export const ParagraphTitle = styled.h2`
     font-family: var(--font2);
-    font-size: 3em;
+    font-size: ${props => props.sm ? "2.5em" : "3em" };
     font-weight: 300 ;
     color: var(--amber);
     letter-spacing: var(--lp1);

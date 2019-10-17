@@ -1,68 +1,99 @@
 import React from "react"
-import { Accordion, Card, Carousel, Container, Col, Row, Tab, Tabs } from "react-bootstrap"
-import CarouselCaption from "react-bootstrap/CarouselCaption"
+import { Accordion, Card, Tab, Tabs } from "react-bootstrap"
 import styled from "styled-components"
-import MediaQuery from 'react-responsive'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
 
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
-import { MolduraTop, MolduraBottom } from "../components/moldura";
-import { CarouselCaptionTitle, PaddedContentBox, ParagraphLink, ParagraphTitle, Paragraph, List, OlList, ListOl, PaddedText } from "../components/typography";
+import { ParagraphTitle, Paragraph, PaddedText, PaddedContentBox } from "../components/typography";
 import Photo from "../components/photo"
-import Shadow from "../components/shadow";
-import FramedVideo from "../components/framedVideo";
-import Botao from "../components/botao";
-import Background from "../components/background"
-import FullWidth from "../components/fullwidth"
-import Separador from "../components/separador"
 import { FadeParagraphTitle } from "../components/FadeElements"
-import { TabelaProgramacaoDia1 } from "../components/data/infos"
+import { Programacao } from "../components/data/infos"
 
-const AccordionDia1 = () => {
+const StyledTabs = styled(Tabs)`
+    background-color: var(--firefly);
+    display: flex;
+    font-family: "TTSupermolotNeue";
+    font-weight: 500;
+    margin-top: -1.5em;
+    text-align: center;
+    .nav-item {
+        border: none !important;
+        border-radius: 0 !important;
+        color: var(--tapa);
+        font-size: 1.5em;
+        flex-grow: 1;
+        margin: 1px;
+        padding: 0;
+        &.active {
+            font-weight: 700 !important;
+        }
+        &:first-child, &:last-child {
+            margin:0;
+        }
+    }
+`
 
-    const dia1Item = TabelaProgramacaoDia1.map((atividade) =>
-        <Card key={atividade.i}>
-            <Accordion.Toggle eventKey={atividade.i}>
-                <div>
-                    <span>{atividade.hora}</span><span>{atividade.titulo}</span>
-                </div>
-            </Accordion.Toggle>
-            {atividade.descricao == null ? null :
-                <Accordion.Collapse eventKey={atividade.i}>
-                    <div>
-                        <Photo imgName={atividade.imagem}/>
-                        <FadeParagraphTitle>{atividade.titulo}</FadeParagraphTitle>
-                        <h3>{atividade.hora}</h3>
-                        <PaddedText>
-                            {atividade.descricao}
-                        </PaddedText>
-                    </div>
-                </Accordion.Collapse>
+const StyledAccordion = styled(Accordion)`
+    color: var(--tapa);
+    font-family: "TTSupermolotNeue";
+    font-size: 1.2em;
+    background-color: var(--bunker);
+    border: none !important;
+    line-height: 1.5em;
+    &:nth-of-type(odd){
+        background-color: var(--blackpearl);
+    }
+    .has-content {
+        color: var(--amber);
+    }
+`
+
+const AgendaPalestrantes = () => {
+    const tabItem = Programacao.map(dia =>
+        <Tab eventKey={dia.dia} title={dia.dia} key={dia.i}>
+            {
+                dia.atividades.map(atividade =>
+                    <StyledAccordion defaultActiveKey="0">
+                        {atividade.descricao == null
+                            ? <Accordion.Toggle as="div" eventKey={atividade.i} key={atividade.i} className="d-flex justify-content-between">
+                                <span style={{textAlign:"right", flexBasis:"30%"}}>{atividade.hora}</span><span style={{flexBasis:"65%"}}>{atividade.titulo}</span>
+                            </Accordion.Toggle>
+                            : <Accordion.Toggle as="div" eventKey={atividade.i} key={atividade.i} className="d-flex justify-content-between has-content">
+                                <span style={{textAlign:"right", flexBasis:"30%"}}>{atividade.hora}</span><div className="d-flex justify-content-between" style={{flexBasis:"65%"}}><span>{atividade.titulo}</span><FontAwesomeIcon size="xs" icon={faCaretDown} style={{ alignSelf: "center", marginRight:"1em" }}/></div>
+                            </Accordion.Toggle>
+                        }
+                        {atividade.descricao == null ? null :
+                            <Accordion.Collapse eventKey={atividade.i}>
+                                <div>
+                                    <Photo imgName={atividade.imagem} />
+                                    <PaddedContentBox>
+                                        <FadeParagraphTitle sm>{atividade.titulo}</FadeParagraphTitle>
+                                        <h3>{atividade.hora}</h3>
+                                        <PaddedText>
+                                            {
+                                                atividade.descricao.map(paragrafo =>
+                                                    <Paragraph>{paragrafo}</Paragraph>)
+                                            }
+                                        </PaddedText>
+                                    </PaddedContentBox>
+                                </div>
+                            </Accordion.Collapse>
+                        }
+                    </StyledAccordion>
+                )
             }
-        </Card>
+        </Tab>
     );
-    return (
-        <Accordion defaultActiveKey="0">
-            {dia1Item}
-        </Accordion>
-    )
-};
 
-const AgendaPalestrantes = () => (
-    <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
-        <Tab eventKey="17" title="17.mar">
-            <AccordionDia1 />
-        </Tab>
-        <Tab eventKey="18" title="18.mar">
-            <Paragraph>Texto</Paragraph>
-        </Tab>
-        <Tab eventKey="19" title="19.mar">
-            <Paragraph>Texto</Paragraph>
-        </Tab>
-    </Tabs>
-);
+    return (
+        <StyledTabs defaultActiveKey="17.mar" id="cronograma">
+            {tabItem}
+        </StyledTabs>
+    )
+}
 
 const Palestrantes = () => (
     <Layout>

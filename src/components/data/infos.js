@@ -55,19 +55,99 @@ export const Palestrantes = [
     }
 ];
 
-export const TabelaProgramacaoDia1 = [
-    {
-        hora: "07:30h",
-        titulo: "Credenciamento",
-    },
-    {
-        hora: "08:30h",
-        titulo: "Abertura dos Trabalhos",
-    },
-    {
-        hora: "09:00h",
-        titulo: "Palestra Magna",
-        imagem: "palestrante_placeholder.jpg",
-        descricao: "<p>Lorem ipsum nullam feugiat platea non praesent at tincidunt tortor, sem commodo vivamus at egestas commodo praesent accumsan senectus, sagittis porta sagittis habitant torquent habitasse metus platea. </p>"
-    },
+export const Programacao = [
+        {
+            dia: "17.mar",
+            atividades: [
+                {
+                    hora: "07:30h",
+                    titulo: "Credenciamento",
+                },
+                {
+                    hora: "08:30h",
+                    titulo: "Abertura dos Trabalhos",
+                },
+                {
+                    hora: "09:00h",
+                    titulo: "Palestra Magna",
+                    imagem: "palestrante_placeholder.jpg",
+                    descricao: [
+                        "Lorem ipsum cubilia m velit pulvinar proin cras nulla.", 
+                        "Dapibus sed aliquam sem famessse maecenas eleifend enim etiam hac semper tellus. ", 
+                        "Ornare vivamus cursus curabitur fur nibh. ",
+                    ]
+                },
+                {
+                    hora: "11:00h",
+                    titulo: "Almoço & Exposição",
+                },
+                {
+                    hora: "13:30h",
+                    titulo: "2a. Palestra",
+                    imagem: "palestrante_placeholder.jpg",
+                    descricao: [
+                        "Lorem ipsum cubilia m velit pulvinar proin cras nulla.", 
+                        "Dapibus sed aliquam sem famessse maecenas eleifend enim etiam hac semper tellus. ", 
+                        "Ornare vivamus cursus curabitur fur nibh. ",
+                    ]
+                },
+                {
+                    hora: "15:00h",
+                    titulo: "3a. Palestra",
+                    imagem: "palestrante_placeholder.jpg",
+                    descricao: [
+                        "Lorem ipsum cubilia m velit pulvinar proin cras nulla.", 
+                        "Dapibus sed aliquam sem famessse maecenas eleifend enim etiam hac semper tellus. ", 
+                        "Ornare vivamus cursus curabitur fur nibh. ",
+                    ]
+                },
+            ]
+        },
+        {
+            dia: "18.mar",
+            atividades: [
+                {
+                    hora: "07:30h",
+                    titulo: "Credenciamento",
+                },
+                {
+                    hora: "08:30h",
+                    titulo: "Abertura dos Trabalhos",
+                },
+                {
+                    hora: "09:00h",
+                    titulo: "Palestra Magna",
+                    imagem: "palestrante_placeholder.jpg",
+                    descricao: [
+                        "Lorem ipsum cubilia m velit pulvinar proin cras nulla.", 
+                        "Dapibus sed aliquam sem famessse maecenas eleifend enim etiam hac semper tellus. ", 
+                        "Ornare vivamus cursus curabitur fur nibh. ",
+                    ]
+                },
+            ]
+        },
+        {
+            dia: "19.mar",
+            atividades: [
+                {
+                    hora: "07:30h",
+                    titulo: "Credenciamento",
+                },
+                {
+                    hora: "08:30h",
+                    titulo: "Abertura dos Trabalhos",
+                },
+                {
+                    hora: "09:00h",
+                    titulo: "Palestra Magna",
+                    imagem: "palestrante_placeholder.jpg",
+                    descricao: [
+                        "Lorem ipsum cubilia m velit pulvinar proin cras nulla.", 
+                        "Dapibus sed aliquam sem famessse maecenas eleifend enim etiam hac semper tellus. ", 
+                        "Ornare vivamus cursus curabitur fur nibh. ",
+                    ]
+                },
+            ]
+        },
+        
 ]

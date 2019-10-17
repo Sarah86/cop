@@ -33,11 +33,16 @@
     src: url("../fonts/TTSupermolotNeue-MediumItalic.otf");
 }
 
+@font-face {
+    font-family: "TTSupermolotNeue";
+    font-weight: 600;
+    src: url("../fonts/TTSupermolotNeue-BoldItalic.otf");
+}
 
 @font-face {
     font-family: "TTSupermolotNeue";
-    font-weight: 500;
-    src: url("../fonts/TTSupermolotNeue-BoldItalic.otf");
+    font-weight: 700;
+    src: url("../fonts/TTSupermolotNeue-BlackItalic.otf");
 }
 
 @font-face {

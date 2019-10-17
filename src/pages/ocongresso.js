@@ -94,7 +94,7 @@ const CongressoCarousel = () => {
     }
   ];
 
-  const CarouselItem = Slides.map((slide) => 
+  const CarouselItem = Slides.map(slide => 
     <Carousel.Item key={slide.i}>
       <Image imgName={slide.imagem} />
       <StyledCarouselCaption>
@@ -129,7 +129,7 @@ const Assista = () => {
       title: "Cobertura Completa Ao Vivo",
     },
   ];
-  const VideoContainer = Videos.map((video) =>
+  const VideoContainer = Videos.map(video =>
     <Col xs={6}>
       <FramedVideo 
         url={video.url} 
@@ -308,7 +308,7 @@ const OCongressoDesktopThirdBlock = () => (
 );
 
 const OCongressoDesktopForthBlock = () => {
-  const PalestranteContainer = Palestrantes.slice(0, 8).map((palestrante) => 
+  const PalestranteContainer = Palestrantes.slice(0, 8).map(palestrante => 
     <Col lg={3} className="p-1">
     <LinkedPhoto imgName={palestrante.foto} title={palestrante.nome} subtitle={palestrante.titulo} to={palestrante.link}/>
     </Col>
