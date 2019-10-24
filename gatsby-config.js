@@ -14,11 +14,11 @@ module.exports = {
       },
     },
     //{
-      //resolve: `gatsby-source-filesystem`,
-      //options: {
-        //name: `markdown-pages`,
-        //path: `${__dirname}/src/data`,
-      //},
+    //resolve: `gatsby-source-filesystem`,
+    //options: {
+    //name: `markdown-pages`,
+    //path: `${__dirname}/src/data`,
+    //},
     //},
     //`gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,

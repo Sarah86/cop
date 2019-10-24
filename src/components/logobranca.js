@@ -14,7 +14,7 @@ import Img from "gatsby-image"
  */
 
 const LogoBranca = () => {
-    const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     query {
       logobranca: file(relativePath: { eq: "COP-SOMBREADA-BRANCO-COP.png" }) {
         childImageSharp {
@@ -26,7 +26,7 @@ const LogoBranca = () => {
     }
   `)
 
-    return <Img fluid={data.logobranca.childImageSharp.fluid} />
+  return <Img fluid={data.logobranca.childImageSharp.fluid} />
 }
 
 export default LogoBranca

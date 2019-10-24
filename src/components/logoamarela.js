@@ -14,7 +14,7 @@ import Img from "gatsby-image"
  */
 
 const LogoAmarela = () => {
-    const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     query {
       logoamarela: file(relativePath: { eq: "logo_cop_amarela.png" }) {
         childImageSharp {
@@ -26,7 +26,7 @@ const LogoAmarela = () => {
     }
   `)
 
-    return <Img fluid={data.logoamarela.childImageSharp.fluid} />
+  return <Img fluid={data.logoamarela.childImageSharp.fluid} />
 }
 
 export default LogoAmarela

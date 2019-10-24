@@ -13,7 +13,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import { device } from "./device"
 import styled from "styled-components"
-import 'bootstrap/dist/css/bootstrap.min.css'
+import "bootstrap/dist/css/bootstrap.min.css"
 import "./layout.css"
 import "./theme.css"
 import "./typography.css"
@@ -24,10 +24,10 @@ const Content = styled.div`
   //padding: 0px 1.0875rem 1.45rem;
   padding-top: 1em;
   color: var(--narvik);
-  @media ${device.desktop}{
+  @media ${device.desktop} {
     padding-top: 5em;
   }
-`;
+`
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -45,7 +45,7 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <Content>
         <main>{children}</main>
-        <footer style={{minHeight:"5em"}}>
+        <footer style={{ minHeight: "5em" }}>
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>

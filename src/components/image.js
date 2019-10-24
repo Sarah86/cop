@@ -13,8 +13,7 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
- /* Optimized by Sarah on October with this solution https://spectrum.chat/gatsby-js/general/using-variables-in-a-staticquery~abee4d1d-6bc4-4202-afb2-38326d91bd05?m=MTU1MjY0MTA1NTE3Ng== */
-
+/* Optimized by Sarah on October with this solution https://spectrum.chat/gatsby-js/general/using-variables-in-a-staticquery~abee4d1d-6bc4-4202-afb2-38326d91bd05?m=MTU1MjY0MTA1NTE3Ng== */
 
 const Image = ({ imgName, style }) => (
   <StaticQuery

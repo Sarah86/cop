@@ -25,20 +25,19 @@ const StyledLink = styled(Link)`
         z-index: 1;
         transition: opacity 1s;
     }
-`;
+`
 
 const StyledImage = styled(Image)`
-    
-    &:hover{
-        filter: grayscale(1);
-        transition: all .3s;
-    }
-`;
+  &:hover {
+    filter: grayscale(1);
+    transition: all 0.3s;
+  }
+`
 
-const LinkedImage = ({imgName, to}) => (
-    <StyledLink to={to}>
-        <StyledImage imgName={imgName}/>
-    </StyledLink>
-);
+const LinkedImage = ({ imgName, to }) => (
+  <StyledLink to={to}>
+    <StyledImage imgName={imgName} />
+  </StyledLink>
+)
 
 export default LinkedImage
