@@ -95,48 +95,70 @@ const GreyDivisor = styled.hr`
 
 const Body = ({ children }) => (
   <Layout>
-  <SEO title="Agenda e Palestrantes" />
-  <StyledPaddedText>
-    <ParagraphTitle>agenda & palestrantes</ParagraphTitle>
-  </StyledPaddedText>
-  <FullWidth>
-    <PhotoWrapper>
-      <Photo imgName="programacao_capa.jpg" />
-    </PhotoWrapper>
-  </FullWidth>
+    <SEO title="Agenda e Palestrantes" />
+    <StyledPaddedText>
+      <ParagraphTitle>agenda & palestrantes</ParagraphTitle>
+    </StyledPaddedText>
+    <FullWidth>
+      <PhotoWrapper>
+        <Photo imgName="programacao_capa.jpg" />
+      </PhotoWrapper>
+    </FullWidth>
     {children}
-</Layout>
+  </Layout>
 )
 
-export default ({ pageContext: { dataContext, atividadeContext } }) => {
-  const NavItem = Programacao.map(dia => (
-    <Nav.Item>
-      <Nav.Link eventKey={dia.dia}>{dia.dia}</Nav.Link>
-    </Nav.Item>
-  ))
-  const TabPane = Programacao.map(dia => (
-    <Tab.Pane eventKey={dia.dia}>
-      {dia.atividades.map(atividade => (
-        <StyledAccordion defaultActiveKey={atividadeContext.slug}>
-          {atividade.descricao == null ? (
-            <Accordion.Toggle
-              as="div"
-              eventKey={atividade.slug}
-              key={atividade.slug}
-              className="d-flex justify-content-between"
-            >
-              <span style={{ textAlign: "right", flexBasis: "30%" }}>
-                {atividade.hora}
-              </span>
-              <span style={{ flexBasis: "65%" }}>{atividade.titulo}</span>
-            </Accordion.Toggle>
-          ) : (
+export default class Palestrante extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+
+  componentDidMount(){
+    this.handleAutoScroll();
+  }
+
+  componentDidUpdate(){
+    this.handleAutoScroll();
+  }
+
+  handleAutoScroll = () => {
+    setTimeout(() => {
+      document.querySelector(".opened-accordion").scrollIntoView({block: "start", behavior: "smooth"});
+      console.log("componentmount");
+    }, 500)
+  }
+
+  render() {
+    const { dataContext, atividadeContext } = this.props.pageContext
+    
+    const NavItem = Programacao.map(dia => (
+      <Nav.Item>
+        <Nav.Link eventKey={dia.dia}>{dia.dia}</Nav.Link>
+      </Nav.Item>
+    ))
+    const TabPane = Programacao.map(dia => (
+      <Tab.Pane eventKey={dia.dia}>
+        {dia.atividades.map(atividade => (
+          <StyledAccordion defaultActiveKey={atividadeContext.slug}>
+            {atividade.descricao == null ? (
               <Accordion.Toggle
                 as="div"
                 eventKey={atividade.slug}
                 key={atividade.slug}
+                className="d-flex justify-content-between"
               >
-                <Link to={`/agenda-e-palestrantes/${atividade.slug}`} activeClassName="opened-accordion" className="d-flex justify-content-between has-content">
+                <span style={{ textAlign: "right", flexBasis: "30%" }}>
+                  {atividade.hora}
+                </span>
+                <span style={{ flexBasis: "65%" }}>{atividade.titulo}</span>
+              </Accordion.Toggle>
+            ) : (
+                <Accordion.Toggle
+                  as="div"
+                  eventKey={atividade.slug}
+                  key={atividade.slug}
+                >
+                  <Link to={`/agenda-e-palestrantes/${atividade.slug}`} activeClassName="opened-accordion" className="d-flex justify-content-between has-content">
                     <span style={{ textAlign: "right", flexBasis: "30%" }}>
                       {atividade.hora}
                     </span>
@@ -151,49 +173,51 @@ export default ({ pageContext: { dataContext, atividadeContext } }) => {
                         style={{ alignSelf: "center", marginRight: "1em" }}
                       />
                     </div>
-                </Link>
-              </Accordion.Toggle>
+                  </Link>
+                </Accordion.Toggle>
+              )}
+            {atividade.descricao == null ? null : (
+              <Accordion.Collapse eventKey={atividade.slug} style={{ position: "relative" }}>
+                <div>
+                  <Photo imgName={atividade.imagem} />
+                  <PaddedContentBox className="pt-0">
+                    <FadeParagraphTitle sm>{atividade.titulo}</FadeParagraphTitle>
+                    <Hora>{atividade.hora}</Hora>
+                    <PaddedText>
+                      {atividade.descricao.map(paragrafo => (
+                        <Paragraph dangerouslySetInnerHTML={{ __html: `${paragrafo}` }} />
+                      ))}
+                      <GreyDivisor />
+                    </PaddedText>
+                  </PaddedContentBox>
+                </div>
+              </Accordion.Collapse>
             )}
-          {atividade.descricao == null ? null : (
-            <Accordion.Collapse eventKey={atividade.slug} style={{ position: "relative" }}>
-              <div>
-                <Photo imgName={atividade.imagem} />
-                <PaddedContentBox className="pt-0">
-                  <FadeParagraphTitle sm>{atividade.titulo}</FadeParagraphTitle>
-                  <Hora>{atividade.hora}</Hora>
-                  <PaddedText>
-                    {atividade.descricao.map(paragrafo => (
-                      <Paragraph dangerouslySetInnerHTML={{ __html: `${paragrafo}` }} />
-                    ))}
-                    <GreyDivisor />
-                  </PaddedText>
-                </PaddedContentBox>
-              </div>
-            </Accordion.Collapse>
-          )}
-        </StyledAccordion>
-      ))}
-    </Tab.Pane>
-  ))
-  return (
-    <Body>
-    <Tab.Container defaultActiveKey={dataContext.dia} id="cronograma">
-      <div style={{ marginTop: "-1.5em" }}>
-        <div>
+          </StyledAccordion>
+        ))}
+      </Tab.Pane>
+    ))
+
+    return (
+      <Body>
+        <Tab.Container defaultActiveKey={dataContext.dia} id="cronograma">
+          <div style={{ marginTop: "-1.5em" }}>
+            <div>
+              <StyledNav>
+                {NavItem}
+              </StyledNav>
+            </div>
+            <div>
+              <Tab.Content style={{ paddingTop: "2em", paddingBottom: "2em" }}>
+                {TabPane}
+              </Tab.Content>
+            </div>
+          </div>
           <StyledNav>
             {NavItem}
           </StyledNav>
-        </div>
-        <div>
-          <Tab.Content style={{ paddingTop: "2em", paddingBottom: "2em" }}>
-            {TabPane}
-          </Tab.Content>
-        </div>
-      </div>
-      <StyledNav>
-        {NavItem}
-      </StyledNav>
-    </Tab.Container>
-    </Body>
-  )
+        </Tab.Container>
+      </Body>
+    )
+  }
 }
