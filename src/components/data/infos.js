@@ -78,7 +78,7 @@ export const Programacao = [
           "Dapibus sed aliquam sem famessse maecenas eleifend enim etiam hac semper tellus. ",
           "Ornare vivamus cursus curabitur fur nibh. ",
         ],
-        slug: "sergio-moro"
+        slug: "sergio-moro",
       },
       {
         hora: "11:00h",

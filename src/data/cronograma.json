@@ -1,42 +1,42 @@
 [
   {
-    "dia":"17.mar",
-    "diaLongo":"ter17.mar",
-    "atividades":[
-      {"hora":"07:30h","titulo":"Credenciamento"},
-      {"hora":"08:30h","titulo":"Abertura dos Trabalhos"},
+    "dia": "17.mar",
+    "diaLongo": "ter.17.mar",
+    "atividades": [
+      { "hora": "07:30h", "titulo": "Credenciamento" },
+      { "hora": "08:30h", "titulo": "Abertura dos Trabalhos" },
       {
-        "hora":"09:00h",
-        "palestrante":"Sergio Moro",
-        "slug":"sergio-moro",
-        "titulo":"Palestra Magna",
-        "imagem":"palestrante_placeholder.jpg",
-        "descricao":[
+        "hora": "09:00h",
+        "palestrante": "Sergio Moro",
+        "slug": "sergio-moro",
+        "titulo": "Palestra Magna",
+        "imagem": "palestrante_placeholder.jpg",
+        "descricao": [
           "Lorem ipsum cubilia m velit pulvinar proin cras nulla.",
           "Dapibus sed aliquam sem famessse maecenas eleifend enim etiam hac semper tellus. ",
           "Ornare vivamus cursus curabitur fur nibh. "
         ]
-        },
-      {"hora":"11:00h","titulo":"Almoço & Exposição"},
+      },
+      { "hora": "11:00h", "titulo": "Almoço & Exposição" },
       {
-        "hora":"13:30h",
-        "titulo":"2a. Palestra",
-        "slug":"rei-da-persia",
-        "palestrante":"Rei da Persia",
-        "imagem":"palestrante_placeholder.jpg",
-        "descricao":[
+        "hora": "13:30h",
+        "titulo": "2a. Palestra",
+        "slug": "rei-da-persia",
+        "palestrante": "Rei da Persia",
+        "imagem": "palestrante_placeholder.jpg",
+        "descricao": [
           "Lorem ipsum cubilia m velit pulvinar proin cras nulla.",
           "Dapibus sed aliquam sem famessse maecenas eleifend enim etiam hac semper tellus. ",
           "Ornare vivamus cursus curabitur fur nibh. "
         ]
-        },
+      },
       {
-        "hora":"15:00h",
-        "titulo":"3a. Palestra",
-        "palestrante":"Papa Joao Paulo",
-        "slug":"papa-joao-paulo",
-        "imagem":"palestrante_placeholder.jpg",
-        "descricao":[
+        "hora": "15:00h",
+        "titulo": "3a. Palestra",
+        "palestrante": "Papa Joao Paulo",
+        "slug": "papa-joao-paulo",
+        "imagem": "palestrante_placeholder.jpg",
+        "descricao": [
           "Lorem ipsum cubilia m velit pulvinar proin cras nulla.",
           "Dapibus sed aliquam sem famessse maecenas eleifend enim etiam hac semper tellus. ",
           "Ornare vivamus cursus curabitur fur nibh. "
@@ -45,18 +45,18 @@
     ]
   },
   {
-    "dia":"18.mar",
-    "diaLongo":"qua18.mar",
-    "atividades":[
-      {"hora":"07:30h","titulo":"Credenciamento"},
-      {"hora":"08:30h","titulo":"Abertura dos Trabalhos"},
+    "dia": "18.mar",
+    "diaLongo": "qua.18.mar",
+    "atividades": [
+      { "hora": "07:30h", "titulo": "Credenciamento" },
+      { "hora": "08:30h", "titulo": "Abertura dos Trabalhos" },
       {
-        "hora":"09:00h",
-        "titulo":"Palestra Magna",
-        "palestrante":"Ze da banca",
-        "slug":"ze-da-banca",
-        "imagem":"palestrante_placeholder.jpg",
-        "descricao":[
+        "hora": "09:00h",
+        "titulo": "Palestra Magna",
+        "palestrante": "Ze da banca",
+        "slug": "ze-da-banca",
+        "imagem": "palestrante_placeholder.jpg",
+        "descricao": [
           "Lorem ipsum cubilia m velit pulvinar proin cras nulla.",
           "Dapibus sed aliquam sem famessse maecenas <a href=/>eleifend</a> enim etiam hac semper tellus. ",
           "Ornare vivamus cursus curabitur fur nibh. "
@@ -65,18 +65,18 @@
     ]
   },
   {
-    "dia":"19.mar",
-    "diaLongo":"qui19.mar",
-    "atividades":[
-      {"hora":"07:30h","titulo":"Credenciamento"},
-      {"hora":"08:30h","titulo":"Abertura dos Trabalhos"},
+    "dia": "19.mar",
+    "diaLongo": "qui.19.mar",
+    "atividades": [
+      { "hora": "07:30h", "titulo": "Credenciamento" },
+      { "hora": "08:30h", "titulo": "Abertura dos Trabalhos" },
       {
-        "hora":"09:00h",
-        "titulo":"Palestra Magna",
-        "palestrante":"Silvio Santos",
-        "slug":"silvio-santos",
-        "imagem":"palestrante_placeholder.jpg",
-        "descricao":[
+        "hora": "09:00h",
+        "titulo": "Palestra Magna",
+        "palestrante": "Silvio Santos",
+        "slug": "silvio-santos",
+        "imagem": "palestrante_placeholder.jpg",
+        "descricao": [
           "Lorem ipsum cubilia m velit pulvinar proin cras nulla.",
           "Dapibus sed aliquam sem famessse maecenas eleifend enim etiam hac semper tellus. ",
           "Ornare vivamus cursus curabitur fur nibh. "

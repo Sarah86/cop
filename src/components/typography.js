@@ -126,6 +126,18 @@ export const ParagraphTitle = styled.h2`
   }
 `
 
+export const TitleH3 = styled.h3`
+  font-family: var(--font2);
+  font-weight: 300;
+  color: var(--amber);
+  letter-spacing: var(--lp1);
+  line-height: 0.95em;
+  margin-bottom: 0.4em;
+  @media ${device.desktop} {
+    font-size: 2.5em;
+  }
+`
+
 export const Quote = styled.p`
   color: var(--lemongrass);
   font-family: "TilliumWeb";

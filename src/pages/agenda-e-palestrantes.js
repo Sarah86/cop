@@ -5,20 +5,17 @@ import MediaQuery from "react-responsive"
 import Layout from "../components/layout"
 import { device } from "../components/device"
 import SEO from "../components/seo"
-import {
-  ParagraphTitle,
-  PaddedText,
-} from "../components/typography"
+import { ParagraphTitle, PaddedText } from "../components/typography"
 import Photo from "../components/photo"
-import { AgendaMobile, AgendaDesktop } from "../components/agenda"
+import { AgendaMobile, AgendaDesktop, AgendaTabelaDesktop } from "../components/agenda"
 import FullWidth from "../components/fullwidth"
 
 const StyledPaddedText = styled(PaddedText)`
-  @media ${device.desktop}{
-    top:8em;
+  @media ${device.desktop} {
+    top: 8em;
     position: absolute;
     z-index: 2;
-  }  
+  }
 `
 const PhotoWrapper = styled.div`
   .gatsby-image-wrapper {
@@ -38,10 +35,13 @@ const Palestrantes = () => (
       </PhotoWrapper>
     </FullWidth>
     <MediaQuery maxWidth={991}>
-      <AgendaMobile />
+      <AgendaMobile
+        defaultActiveKeyAccordion="0"
+        defaultActiveKeyTab="17.mar"
+      />
     </MediaQuery>
     <MediaQuery minWidth={992}>
-      <AgendaDesktop />
+      <AgendaTabelaDesktop />
     </MediaQuery>
   </Layout>
 ) //sem efeito de fade para nao precisar limitar o tamanho
