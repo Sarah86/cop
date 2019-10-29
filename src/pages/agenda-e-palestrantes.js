@@ -7,7 +7,7 @@ import { device } from "../components/device"
 import SEO from "../components/seo"
 import { ParagraphTitle, PaddedText } from "../components/typography"
 import Photo from "../components/photo"
-import { AgendaMobile, AgendaDesktop, AgendaTabelaDesktop } from "../components/agenda"
+import { AgendaMobile, AgendaTabelaDesktop } from "../components/agenda"
 import FullWidth from "../components/fullwidth"
 
 const StyledPaddedText = styled(PaddedText)`

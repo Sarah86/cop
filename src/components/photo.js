@@ -20,14 +20,21 @@ const Subtitle = styled.div`
   letter-spacing: var(--lp2a);
 `
 
+const ImageWrapper = styled.div`
+  position: relative;
+  margin-bottom: .5em;
+  }
+  
+`
+
 const Photo = ({ imgName, title, subtitle }) => (
   <div style={{ paddingBottom: "1em" }}>
-    <div style={{ position: "relative", marginBottom: ".5em" }}>
+    <ImageWrapper>
       <MolduraTop />
       <Image imgName={imgName} />
       <MolduraBottom />
       <Shadow />
-    </div>
+    </ImageWrapper>
     <Title>{title}</Title>
     <Subtitle>{subtitle}</Subtitle>
   </div>

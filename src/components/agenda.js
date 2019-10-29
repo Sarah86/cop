@@ -5,6 +5,7 @@ import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons"
 
+import { device } from "../components/device"
 import Photo from "./photo"
 import {
     PaddedContentBox,
@@ -34,8 +35,25 @@ const StyledNav = styled(Nav)`
       color: var(--tapa);
       font-size: 1.5em;
       padding: 0;
+      @media ${device.desktop}{
+        font-size: 1.1em;
+        padding: .2em;
+        font-weight: 600;
+        letter-spacing: var(--lp2);
+        &:first-of-type{
+            padding-left: .8em;
+        }
+        &:last-of-type{
+            padding-right: .8em;
+        }
+    }
       &.active {
         font-weight: 700 !important;
+        @media ${device.desktop}{
+            background-color: var(--amber) !important;
+            color: var(--bunker) !important;
+            font-weight: 600 !important;
+        }
       }
     }
     &:first-child,
@@ -211,47 +229,57 @@ export const AgendaTabelaDesktop = () => {
         <StyledCol>
             <DataHeader>{dia.diaLongo}</DataHeader>
             {dia.atividades.map(atividade => (
-                   <StyledRow>
-                   <Col lg={4}>
-                   {atividade.descricao == null
-                   ? (<>{atividade.hora}</>)
-                   : (<Link
-                    to={`/agenda-e-palestrantes/${atividade.slug}`}
-                    style={{color:"var(--narvik"}}
-                    >
-                    {atividade.hora}
-                    </Link>)
-                   }   
-                   </Col>
-                   <Col lg={8} style={{marginLeft:"-1em"}}>
-                       {atividade.descricao == null 
-                       ? (<>{atividade.titulo}</>)
-                       : (<Link
-                        to={`/agenda-e-palestrantes/${atividade.slug}`}
-                        style={{color:"var(--narvik"}}
-                        >
-                        {atividade.palestrante}
-                        </Link>)
+                <StyledRow>
+                    <Col lg={4}>
+                        {atividade.descricao == null
+                            ? (<>{atividade.hora}</>)
+                            : (<Link
+                                to={`/agenda-e-palestrantes/${atividade.slug}`}
+                                style={{ color: "var(--narvik" }}
+                            >
+                                {atividade.hora}
+                            </Link>)
                         }
                     </Col>
-               </StyledRow>
+                    <Col lg={8} style={{ marginLeft: "-1em" }}>
+                        {atividade.descricao == null
+                            ? (<>{atividade.titulo}</>)
+                            : (<Link
+                                to={`/agenda-e-palestrantes/${atividade.slug}`}
+                                style={{ color: "var(--narvik" }}
+                            >
+                                {atividade.palestrante}
+                            </Link>)
+                        }
+                    </Col>
+                </StyledRow>
             ))}
         </StyledCol>
     ))
     return (
         <Container>
             <TitleH3>datas</TitleH3>
-            <div style={{position:"relative"}}>
-            <FullWidth style={{backgroundColor:"var(--firefly)", height:"2em", position:"absolute", width:"100vw", top:"0"}}/>
-            <Row>
-               {DataMap}
-            </Row>
+            <div style={{ position: "relative" }}>
+                <FullWidth style={{ backgroundColor: "var(--firefly)", height: "2em", position: "absolute", width: "100vw", top: "0" }} />
+                <Row>
+                    {DataMap}
+                </Row>
             </div>
         </Container>
     )
 }
 
-export const AgendaDesktop = () => {
+const StyledPhoto = styled.div`
+    .gatsby-image-wrapper {
+        max-height: 250px !important;
+    }
+    
+`
+
+export const AgendaDesktop = ({
+    defaultActiveKeyTabContainer,
+    defaultActiveKeyTabContainerPalestrante,
+}) => {
 
     //active do palestrante deve ser igual ao slug
     const NavItem = Programacao.map(dia => (
@@ -262,26 +290,44 @@ export const AgendaDesktop = () => {
 
     const TabPane = Programacao.map(dia => (
         <Tab.Pane eventKey={dia.dia}>
-            <Tab.Container id="palestrantes" defaultActiveKey="">
+            <Tab.Container id="palestrantes" defaultActiveKey={defaultActiveKeyTabContainerPalestrante}>
                 <Row>
-                    <Col sm={3}>
-                        <Nav variant="pills" className="flex-column">
-                            <Nav.Item>
-                                <Nav.Link eventKey="first">Tab 1</Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item>
-                                <Nav.Link eventKey="second">Tab 2</Nav.Link>
-                            </Nav.Item>
-                        </Nav>
+                    <Col sm={4} style={{paddingTop:"6em"}}>
+                        <div>
+                        {dia.atividades.map(atividade => (
+                            <Nav variant="pills" className="flex-column">
+                                <Nav.Item>
+                                    <Nav.Link eventKey={atividade.slug}>{atividade.hora} | {atividade.titulo}</Nav.Link>
+                                </Nav.Item>
+                            </Nav>
+                        ))}
+                        </div>
+                        <div>
+                        {dia.atividades.map(atividade => (
+                            <Nav variant="pills" className="flex-column">
+                                <Nav.Item>
+                                    <Nav.Link eventKey={atividade.slug}>{atividade.palestrante}</Nav.Link>
+                                </Nav.Item>
+                            </Nav>
+                        ))}
+                        </div>
                     </Col>
-                    <Col sm={9}>
+                    <Col sm={8} className="p-0" style={{marginLeft:"-4px"}}>
                         <Tab.Content>
-                            <Tab.Pane eventKey="first">
-                                <div>teste</div>
-                            </Tab.Pane>
-                            <Tab.Pane eventKey="second">
-                                <div>teste</div>
-                            </Tab.Pane>
+                            {dia.atividades.map(atividade => (
+                                <Tab.Pane eventKey={atividade.slug}>
+                                    <div>
+                                        <StyledPhoto>
+                                        <Photo imgName={atividade.imagem} />
+                                        </StyledPhoto>
+                                        <FadeParagraphTitle sm>{atividade.titulo}</FadeParagraphTitle>
+                                        <Hora>{atividade.hora}</Hora>
+                                        <PaddedText>
+                                            teste
+                                        </PaddedText>
+                                     </div>
+                                </Tab.Pane>
+                            ))}
                         </Tab.Content>
                     </Col>
                 </Row>
@@ -290,19 +336,14 @@ export const AgendaDesktop = () => {
     ))
     return (
         <>
-            <ParagraphTitle>datas</ParagraphTitle>
-            <Tab.Container defaultActiveKey="17.mar" id="cronograma">
-                <Row style={{ marginTop: "-1.5em" }}>
-                    <Col md={4}>
-                        <StyledNav>{NavItem}</StyledNav>
-                        <Tab.Content style={{ paddingTop: "2em", paddingBottom: "2em" }}>
-                            {TabPane}
-                        </Tab.Content>
-                    </Col>
-                    <Col md={8}>
-                        <div>conteudo do palestrante</div>
-                    </Col>
-                </Row>
+            <Tab.Container defaultActiveKey={defaultActiveKeyTabContainer} id="cronograma">
+                <div style={{position:"absolute", zIndex:"2"}}>
+                    <ParagraphTitle className="opened-accordion">datas</ParagraphTitle>
+                    <StyledNav>{NavItem}</StyledNav>
+                </div>
+                <Tab.Content style={{ paddingTop: "2em", paddingBottom: "2em" }}>
+                    {TabPane}
+                </Tab.Content>
             </Tab.Container>
         </>
     )

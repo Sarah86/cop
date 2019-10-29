@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import MediaQuery from "react-responsive"
 
 import Layout from "../components/layout"
 import { device } from "../components/device"
@@ -10,7 +11,7 @@ import {
   ParagraphTitle,
 } from "../components/typography"
 import FullWidth from "../components/fullwidth"
-import { AgendaMobile } from "../components/agenda"
+import { AgendaMobile, AgendaDesktop } from "../components/agenda"
 
 const StyledPaddedText = styled(PaddedText)`
   @media ${device.desktop} {
@@ -62,10 +63,17 @@ export default class Palestrante extends React.Component {
     const { dataContext, atividadeContext } = this.props.pageContext
     return (
       <Body>
-        <AgendaMobile
-          defaultActiveKeyAccordion={atividadeContext.slug}
-          defaultActiveKeyTab={dataContext.dia}
-        />
+        <MediaQuery maxWidth={991}>
+          <AgendaMobile
+            defaultActiveKeyAccordion={atividadeContext.slug}
+            defaultActiveKeyTab={dataContext.dia}
+          />
+        </MediaQuery>
+        <MediaQuery minWidth={992}>
+        <AgendaDesktop   
+            defaultActiveKeyTabContainer={dataContext.dia}
+            defaultActiveKeyTabContainerPalestrante={atividadeContext.slug} />
+        </MediaQuery>
       </Body>
     )
   }
