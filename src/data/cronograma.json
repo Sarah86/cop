@@ -2,6 +2,7 @@
   {
     "dia": "17.mar",
     "diaLongo": "ter.17.mar",
+    "diaCompleto": "Terça, 17 de Março",
     "atividades": [
       { "hora": "07:30h", "titulo": "Credenciamento" },
       { "hora": "08:30h", "titulo": "Abertura dos Trabalhos" },
@@ -10,6 +11,7 @@
         "palestrante": "Sergio Moro",
         "slug": "sergio-moro",
         "titulo": "Palestra Magna",
+        "qualificacao": "Ministro da Justiça",
         "imagem": "palestrante_placeholder.jpg",
         "descricao": [
           "Lorem ipsum cubilia m velit pulvinar proin cras nulla.",
@@ -73,7 +75,8 @@
       {
         "hora": "09:00h",
         "titulo": "Palestra Magna",
-        "palestrante": "Silvio Santos",
+        "palestrante": "Sílvio Santos",
+        "qualificacao": "Apresentador de Televisão",
         "slug": "silvio-santos",
         "imagem": "palestrante_placeholder.jpg",
         "descricao": [

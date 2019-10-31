@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import Isotipo from "../images/logo_cop_isotipo.png"
+import styled from 'styled-components'
+import Isotipo from '../images/logo_cop_isotipo.png'
 
 const Background = styled.div`
   position: absolute;

@@ -1,18 +1,18 @@
-import React from "react"
-import styled from "styled-components"
-import ReactPlayer from "react-player"
-import { Container, Row, Col } from "react-bootstrap"
+import React from 'react'
+import styled from 'styled-components'
+import ReactPlayer from 'react-player'
+import { Container, Row, Col } from 'react-bootstrap'
 
-import Botao from "./botao"
-import Local from "./location"
-import { MolduraTop, MolduraBottom } from "./moldura"
-import Shadow from "./shadow"
-import { Paragraph, ParagraphLink, Quote, ReadMore } from "./typography"
-import { FadeParagraphTitle } from "./FadeElements"
-import Image from "./image"
-import LinkedPhoto from "./LinkedPhoto"
-import LinkedShadowedImage from "./LinkedShadowedImage"
-import Background from "./background"
+import Botao from './botao'
+import Local from './location'
+import { MolduraTop, MolduraBottom } from './moldura'
+import Shadow from './shadow'
+import { Paragraph, ParagraphLink, Quote, ReadMore } from './typography'
+import { FadeParagraphTitle } from './FadeElements'
+import Image from './image'
+import LinkedPhoto from './LinkedPhoto'
+import LinkedShadowedImage from './LinkedShadowedImage'
+import Background from './background'
 
 const BemVindo = styled.h2`
   font-size: 3em;
@@ -56,19 +56,16 @@ const VideoContainer = styled.div`
 `
 
 const BoasVindas = () => (
-  <div style={{ position: "relative", paddingBottom: "3em" }}>
+  <div style={{ position: 'relative', paddingBottom: '3em' }}>
     <Background />
     <BemVindo>
       Bem vindo ao <br />
       Congresso Internacional de Operações Policiais
     </BemVindo>
-    <Sublegenda>
-      O maior evento de segurança e defesa da América Latina
-    </Sublegenda>
+    <Sublegenda>O maior evento de segurança e defesa da América Latina</Sublegenda>
     <Local fontSize="1em" iconSize="1.2em" />
     <ApresentadoPor>
-      Orgulhosamente apresentado pelo CNGC - Conselho Nacional de Comandantes
-      Gerais
+      Orgulhosamente apresentado pelo CNGC - Conselho Nacional de Comandantes Gerais
     </ApresentadoPor>
     <Conselho>
       <Image imgName="logo_cngc.png" />
@@ -78,7 +75,7 @@ const BoasVindas = () => (
 
 const Video = () => (
   <VideoContainer>
-    <div style={{ position: "relative" }}>
+    <div style={{ position: 'relative' }}>
       <MolduraTop />
       <ReactPlayer
         url="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
@@ -98,27 +95,21 @@ const CongressoPalestrantes = () => (
       <Col className="text-justify pr-5 d-flex flex-column justify-content-between">
         <FadeParagraphTitle>o congresso</FadeParagraphTitle>
         <Quote>
-          Autoridades nacionais e internacionais, agentes de segurança pública,
-          as principais marcas do setor, e a sociedade civil. Em contato direto
-          por 3 dias.
+          Autoridades nacionais e internacionais, agentes de segurança pública, as principais marcas
+          do setor, e a sociedade civil. Em contato direto por 3 dias.
         </Quote>
         <Paragraph>
-          Depois do sucesso absoluto da estreia em 2018 o Congresso de Operações
-          Policiais retorna mais abrangente, inclusivo, dinâmico, informativo e
-          tecnológico.
+          Depois do sucesso absoluto da estreia em 2018 o Congresso de Operações Policiais retorna
+          mais abrangente, inclusivo, dinâmico, informativo e tecnológico.
         </Paragraph>
         <Paragraph>
-          Congresso se realizará de forma gratuita nos dias 17, 18 e 19 de Março
-          de 2019 para um público diário de aproximadamente 2000 pessoas..
+          Congresso se realizará de forma gratuita nos dias 17, 18 e 19 de Março de 2019 para um
+          público diário de aproximadamente 2000 pessoas..
         </Paragraph>
         <Paragraph>
-          A cidade-sede escolhida é pelo segundo ano consecutivo a belíssima{" "}
-          <ParagraphLink>Florianópolis</ParagraphLink>, que por sua vez abriga o
-          moderno{" "}
-          <ParagraphLink>
-            Centro de Eventos Governador Luiz Henrique da Silveira
-          </ParagraphLink>
-          .
+          A cidade-sede escolhida é pelo segundo ano consecutivo a belíssima{' '}
+          <ParagraphLink>Florianópolis</ParagraphLink>, que por sua vez abriga o moderno{' '}
+          <ParagraphLink>Centro de Eventos Governador Luiz Henrique da Silveira</ParagraphLink>.
         </Paragraph>
         <ReadMore className="align-self-end">leia mais</ReadMore>
       </Col>
@@ -169,20 +160,16 @@ const Expositores = () => (
       <Col className="mt-5 pt-5">
         <FadeParagraphTitle>expositores</FadeParagraphTitle>
         <Paragraph>
-          Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em
-          segurança e defesa exporão seus produtos e soluções.
+          Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em segurança e defesa
+          exporão seus produtos e soluções.
         </Paragraph>
         <Paragraph>
-          Será uma oportunidade única de se atualizar e se conectar con o que há
-          de melhor e mais moderno no segmento.
+          Será uma oportunidade única de se atualizar e se conectar con o que há de melhor e mais
+          moderno no segmento.
         </Paragraph>
       </Col>
       <Col className="d-flex flex-column justify-content-center align-items-center">
-        <Botao
-          texto="QUER EXPOR A SUA MARCA?"
-          borderWidth="8px"
-          width="12em"
-        ></Botao>
+        <Botao texto="QUER EXPOR A SUA MARCA?" borderWidth="8px" width="12em"></Botao>
       </Col>
     </Row>
     <Row noGutters className="mb-4">
@@ -213,8 +200,8 @@ const Espaco = () => (
         </FadeParagraphTitle>
         <LinkedPhoto imgName="destaque_triplo_home_1.jpg" to="/ocongresso/" />
         <Paragraph>
-          Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em
-          segurança e defesa exporão seus produtos e soluções.
+          Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em segurança e defesa
+          exporão seus produtos e soluções.
         </Paragraph>
         <ReadMore className="align-self-end" to="/ocongresso/">
           leia mais
@@ -226,8 +213,8 @@ const Espaco = () => (
         </FadeParagraphTitle>
         <LinkedPhoto imgName="destaque_triplo_home_2.jpg" />
         <Paragraph>
-          Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em
-          segurança e defesa exporão seus produtos e soluções.
+          Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em segurança e defesa
+          exporão seus produtos e soluções.
         </Paragraph>
         <ReadMore className="align-self-end">leia mais</ReadMore>
       </Col>
@@ -237,8 +224,8 @@ const Espaco = () => (
         </FadeParagraphTitle>
         <LinkedPhoto imgName="destaque_triplo_home_3.jpg" />
         <Paragraph>
-          Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em
-          segurança e defesa exporão seus produtos e soluções.
+          Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em segurança e defesa
+          exporão seus produtos e soluções.
         </Paragraph>
         <ReadMore className="align-self-end">leia mais</ReadMore>
       </Col>

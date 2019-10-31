@@ -1,13 +1,9 @@
-import React from "react"
-import styled from "styled-components"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {
-  faFacebookF,
-  faInstagram,
-  faYoutube,
-} from "@fortawesome/free-brands-svg-icons"
+import React from 'react'
+import styled from 'styled-components'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebookF, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons'
 
-import "./theme.css"
+import './theme.css'
 
 const SocialLink = styled.a`
   color: var(--tapa);

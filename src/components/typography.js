@@ -1,17 +1,17 @@
-import { Link } from "gatsby"
-import styled from "styled-components"
+import { Link } from 'gatsby'
+import styled from 'styled-components'
 
-import { device } from "./device"
+import { device } from './device'
 
 export const CarouselCaptionTitle = styled.h3`
-  font-family: "TilliumWeb";
+  font-family: 'TilliumWeb';
   font-size: 1.2em;
   margin-bottom: 0.5em;
 `
 
 export const List = styled.ul`
   color: var(--lemongrass);
-  font-family: "TilliumWeb";
+  font-family: 'TilliumWeb';
   font-size: 1.1em;
   letter-spacing: var(--lp3);
   list-style-type: square;
@@ -27,7 +27,7 @@ export const List = styled.ul`
 
 export const ListOl = styled.ol`
   color: var(--lemongrass);
-  font-family: "TilliumWeb";
+  font-family: 'TilliumWeb';
   font-size: 1.1em;
   letter-spacing: var(--lp3);
   text-align: left;
@@ -38,8 +38,8 @@ export const ListOl = styled.ol`
     margin-bottom: 0;
   }
   li:before {
-    font-family: "TTSupermolotNeue";
-    content: ". " counter(li);
+    font-family: 'TTSupermolotNeue';
+    content: '. ' counter(li);
     color: var(--amber);
     display: inline-block;
     width: 1.6em;
@@ -60,7 +60,7 @@ export const PaddedContentBox = styled.div`
   padding-left: 1em;
   padding-right: 1em;
   @media ${device.desktop} {
-    transform: ${props => (props.skewedOnDesktop ? "skewX(-12deg)" : "")};
+    transform: ${props => (props.skewedOnDesktop ? 'skewX(-12deg)' : '')};
   }
 `
 
@@ -72,7 +72,7 @@ export const PaddedText = styled.div`
 `
 
 export const Paragraph = styled.p`
-  font-family: "TilliumWeb";
+  font-family: 'TilliumWeb';
   color: var(--lemongrass);
   letter-spacing: var(--lp3);
   //font-size: 1.1em;
@@ -93,8 +93,8 @@ export const Paragraph = styled.p`
   @media ${device.desktop} {
     font-size: 0.87em;
     letter-spacing: initial;
-    text-align-last: ${props => (props.lastLineRightDesktop ? "end" : "")};
-    transform: ${props => (props.reversedSkew ? "skewX(7deg)" : "")};
+    text-align-last: ${props => (props.lastLineRightDesktop ? 'end' : '')};
+    transform: ${props => (props.reversedSkew ? 'skewX(7deg)' : '')};
   }
 `
 // o a é necessario para o dangerouslySetInnerHTML usado no render do data.js
@@ -113,15 +113,15 @@ export const ParagraphLink = styled.a`
 
 export const ParagraphTitle = styled.h2`
   font-family: var(--font2);
-  font-size: ${props => (props.sm ? "2.5em" : "3em")};
+  font-size: ${props => (props.sm ? '2.5em' : '3em')};
   font-weight: 300;
   color: var(--amber);
   letter-spacing: var(--lp1);
   line-height: 0.95em;
   width: ${props => props.width};
-  transform: ${props => (props.reversedSkew ? "skewX(7deg)" : "")};
+  transform: ${props => (props.reversedSkew ? 'skewX(7deg)' : '')};
   @media ${device.desktop} {
-    font-size: ${props => (props.sm ? "2.5em" : "3.5em")};
+    font-size: ${props => (props.sm ? '2.5em' : '3.5em')};
     font-size: ${props => props.size};
   }
 `
@@ -140,11 +140,11 @@ export const TitleH3 = styled.h3`
 
 export const Quote = styled.p`
   color: var(--lemongrass);
-  font-family: "TilliumWeb";
+  font-family: 'TilliumWeb';
   font-weight: 600;
   position: relative;
   &:before {
-    content: " ˮ ";
+    content: ' ˮ ';
     font-size: 2.5em;
     transform: rotateX(180deg) rotateY(180deg);
     position: absolute;
@@ -156,7 +156,7 @@ export const Quote = styled.p`
 export const ReadMore = styled(Link)`
   &&& {
     color: var(--amber);
-    font-family: "TTSupermolotNeue";
+    font-family: 'TTSupermolotNeue';
     font-weight: 600;
     text-decoration: underline;
     float: right;

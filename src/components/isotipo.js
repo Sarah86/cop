@@ -1,7 +1,7 @@
-import React from "react"
-import styled from "styled-components"
-import { Link } from "gatsby"
-import Isotipo from "../images/COP-ISOTIPO-TEXTURADO.png"
+import React from 'react'
+import styled from 'styled-components'
+import { Link } from 'gatsby'
+import Isotipo from '../images/COP-ISOTIPO-TEXTURADO.png'
 
 const IsotipoCopWrapper = styled.div`
   width: 2em;

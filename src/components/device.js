@@ -1,10 +1,10 @@
 const size = {
-  upXS: "",
-  upSM: "576px",
-  underMD: "767.58px",
-  upMD: "768px",
-  upLG: "992px",
-  upXL: "1200px",
+  upXS: '',
+  upSM: '576px',
+  underMD: '767.58px',
+  upMD: '768px',
+  upLG: '992px',
+  upXL: '1200px',
 }
 
 export const device = {

@@ -1,8 +1,8 @@
-import React from "react"
-import Image from "./image"
-import styled from "styled-components"
-import Shadow from "./shadow"
-import { MolduraTop, MolduraBottom } from "./moldura"
+import React from 'react'
+import Image from './image'
+import styled from 'styled-components'
+import Shadow from './shadow'
+import { MolduraTop, MolduraBottom } from './moldura'
 
 const Title = styled.div`
   color: var(--amber);
@@ -28,7 +28,7 @@ const ImageWrapper = styled.div`
 `
 
 const Photo = ({ imgName, title, subtitle }) => (
-  <div style={{ paddingBottom: "1em" }}>
+  <div style={{ paddingBottom: '1em' }}>
     <ImageWrapper>
       <MolduraTop />
       <Image imgName={imgName} />

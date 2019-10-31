@@ -1,12 +1,12 @@
-import React from "react"
-import ReactPlayer from "react-player"
-import styled from "styled-components"
+import React from 'react'
+import ReactPlayer from 'react-player'
+import styled from 'styled-components'
 
 const FullWidthBackgroundVideo = styled(ReactPlayer)`
   position: absolute;
   z-index: -1;
   :after {
-    content: "";
+    content: '';
     background-color: rgba(0, 0, 0, 0.8);
     position: absolute;
     left: 0;
@@ -21,15 +21,8 @@ const FullWidthBackgroundVideo = styled(ReactPlayer)`
 `
 
 const Video = ({ url }) => (
-  <div style={{ marginTop: "-1em" }}>
-    <FullWidthBackgroundVideo
-      url={url}
-      muted
-      loop
-      playing
-      width="100%"
-      height="100vh"
-    />
+  <div style={{ marginTop: '-1em' }}>
+    <FullWidthBackgroundVideo url={url} muted loop playing width="100%" height="100vh" />
   </div>
 )
 

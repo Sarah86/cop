@@ -1,17 +1,14 @@
-import React from "react"
-import styled from "styled-components"
-import MediaQuery from "react-responsive"
+import React from 'react'
+import styled from 'styled-components'
+import MediaQuery from 'react-responsive'
 
-import Layout from "../components/layout"
-import { device } from "../components/device"
-import SEO from "../components/seo"
-import Photo from "../components/photo"
-import {
-  PaddedText,
-  ParagraphTitle,
-} from "../components/typography"
-import FullWidth from "../components/fullwidth"
-import { AgendaMobile, AgendaDesktop } from "../components/agenda"
+import Layout from '../components/layout'
+import { device } from '../components/device'
+import SEO from '../components/seo'
+import Photo from '../components/photo'
+import { PaddedText, ParagraphTitle } from '../components/typography'
+import FullWidth from '../components/fullwidth'
+import { AgendaMobile, AgendaDesktop } from '../components/agenda'
 
 const StyledPaddedText = styled(PaddedText)`
   @media ${device.desktop} {
@@ -22,7 +19,7 @@ const StyledPaddedText = styled(PaddedText)`
 `
 const PhotoWrapper = styled.div`
   .gatsby-image-wrapper {
-    max-height: 340px;
+    max-height: 300px;
   }
 `
 
@@ -53,8 +50,8 @@ export default class Palestrante extends React.Component {
   handleAutoScroll = () => {
     setTimeout(() => {
       document
-        .querySelector(".opened-accordion")
-        .scrollIntoView({ block: "start", behavior: "smooth" })
+        .querySelector('.opened-accordion')
+        .scrollIntoView({ block: 'start', behavior: 'smooth' })
       //console.log("Scrolled to opened accordion")
     }, 50)
   }
@@ -70,9 +67,10 @@ export default class Palestrante extends React.Component {
           />
         </MediaQuery>
         <MediaQuery minWidth={992}>
-        <AgendaDesktop   
+          <AgendaDesktop
             defaultActiveKeyTabContainer={dataContext.dia}
-            defaultActiveKeyTabContainerPalestrante={atividadeContext.slug} />
+            defaultActiveKeyTabContainerPalestrante={atividadeContext.slug}
+          />
         </MediaQuery>
       </Body>
     )

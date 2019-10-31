@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 const Shadow = styled.div`
   box-shadow: 0px 50px 57px -41px rgba(0, 0, 0, 1);

@@ -1,6 +1,6 @@
-import React from "react"
-import styled from "styled-components"
-import { device } from "./device"
+import React from 'react'
+import styled from 'styled-components'
+import { device } from './device'
 
 const BorderTop = styled.div`
   background-color: var(--firefly);
@@ -20,7 +20,7 @@ const BarraTop = styled.div`
   transform: skewX(-50deg);
   z-index: 2;
   :before {
-    content: "";
+    content: '';
     background-color: var(--firefly);
     position: absolute;
     left: -4.1%;
@@ -46,7 +46,7 @@ export const MolduraTop = () => (
 const BorderBottom = styled.div`
   background-color: var(--firefly);
   width: 100%;
-  height: ${props => (props.sm ? "1px" : ".6%")};
+  height: ${props => (props.sm ? '1px' : '.6%')};
   position: absolute;
   bottom: 0;
   z-index: 1;
@@ -55,14 +55,14 @@ const BorderBottom = styled.div`
 const BarraBottom = styled.div`
   background-color: var(--firefly);
   height: 4px;
-  width: ${props => (props.sm ? "30px" : "30%")};
+  width: ${props => (props.sm ? '30px' : '30%')};
   bottom: 0;
   right: 0;
   position: absolute;
   transform: skewX(-50deg);
   z-index: 1;
   :after {
-    content: "";
+    content: '';
     background-color: var(--firefly);
     position: absolute;
     right: -3%;
@@ -72,7 +72,7 @@ const BarraBottom = styled.div`
     transform: skewX(50deg);
   }
   @media ${device.desktop} {
-    height: ${props => (props.sm ? "5px" : "3%")};
+    height: ${props => (props.sm ? '5px' : '3%')};
     bottom: 0;
     right: 9px;
     :after {

@@ -1,25 +1,21 @@
-import React from "react"
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import styled from "styled-components"
-import Nav from "react-bootstrap/Nav"
-import Navbar from "react-bootstrap/Navbar"
-import NavbarCollapse from "react-bootstrap/NavbarCollapse"
+import React from 'react'
+import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
+import Nav from 'react-bootstrap/Nav'
+import Navbar from 'react-bootstrap/Navbar'
+import NavbarCollapse from 'react-bootstrap/NavbarCollapse'
 
-import "./theme.css"
-import { device } from "./device"
-import Hamburger from "./hamburger"
-import LogoAmarela from "./logoamarela"
-import LogoBranca from "./logobranca"
-import Botao from "./botao"
-import Shadow from "./shadow"
-import IsotipoCop from "./isotipo"
-import SubscribeButton from "./subscribeButton"
-import {
-  LinkedInstagramIcon,
-  LinkedFacebookIcon,
-  LinkedYoutubeIcon,
-} from "./social"
+import './theme.css'
+import { device } from './device'
+import Hamburger from './hamburger'
+import LogoAmarela from './logoamarela'
+import LogoBranca from './logobranca'
+import Botao from './botao'
+import Shadow from './shadow'
+import IsotipoCop from './isotipo'
+import SubscribeButton from './subscribeButton'
+import { LinkedInstagramIcon, LinkedFacebookIcon, LinkedYoutubeIcon } from './social'
 
 const StyledNavbar = styled(Navbar)`
   && {
@@ -90,7 +86,7 @@ const LinksContainer = styled.div`
   }
 `
 
-const StyledLink = styled(Link).attrs({ activeClassName: "active" })`
+const StyledLink = styled(Link).attrs({ activeClassName: 'active' })`
   color: var(--tapa);
   display: block;
   font-family: TTSupermolotNeue;
@@ -161,8 +157,7 @@ const StyledBarraContato = styled.div`
 
 const BarraContato = ({ email, telefone }) => (
   <StyledBarraContato>
-    <a href={"mailto:" + email}>{email}</a> <Divisor />{" "}
-    <a href={"tel:" + telefone}>{telefone}</a>
+    <a href={'mailto:' + email}>{email}</a> <Divisor /> <a href={'tel:' + telefone}>{telefone}</a>
   </StyledBarraContato>
 )
 
@@ -179,29 +174,20 @@ const NavbarButtonContainer = styled.div`
 `
 
 const BarraContatosDesktop = () => (
-  <div className="d-none d-lg-block" style={{ textAlign: "right" }}>
-    <BarraContato
-      email="contato@copinternacional.com"
-      telefone="+55 49 9932 3454"
-    />
+  <div className="d-none d-lg-block" style={{ textAlign: 'right' }}>
+    <BarraContato email="contato@copinternacional.com" telefone="+55 49 9932 3454" />
     <Divisor />
     <SocialLinksContainer
       className="d-inline-block"
-      style={{ fontSize: ".5em", marginLeft: "-.5em" }}
+      style={{ fontSize: '.5em', marginLeft: '-.5em' }}
     />
   </div>
 )
 
 const BarraContatosMobile = () => (
   <div className="d-lg-none">
-    <BarraContato
-      email="contato@copinternacional.com"
-      telefone="+55 49 9932 3454"
-    />
-    <BarraContato
-      email="imprensa@copinternacional.com"
-      telefone="+55 21 3434 3454"
-    />
+    <BarraContato email="contato@copinternacional.com" telefone="+55 49 9932 3454" />
+    <BarraContato email="imprensa@copinternacional.com" telefone="+55 21 3434 3454" />
   </div>
 )
 
@@ -242,9 +228,7 @@ const Header = ({ siteTitle }) => (
             <LinksContainer>
               <StyledLink to="/">Home</StyledLink>
               <StyledLink to="/ocongresso/">O Congresso</StyledLink>
-              <StyledLink to="/agenda-e-palestrantes/">
-                Agenda &amp; Palestrantes
-              </StyledLink>
+              <StyledLink to="/agenda-e-palestrantes/">Agenda &amp; Palestrantes</StyledLink>
               <StyledLink to="/page-2/">Expositores</StyledLink>
             </LinksContainer>
             <BarraContatosDesktop />
@@ -259,11 +243,8 @@ const Header = ({ siteTitle }) => (
       </StyledNavbarCollapse>
       <NavbarButtonContainer>
         <IsotipoCop />
-        <Navbar.Toggle
-          aria-controls="basic-navbar-nav"
-          style={{ border: "none" }}
-        >
-          <Hamburger style={{ border: "none" }} />
+        <Navbar.Toggle aria-controls="basic-navbar-nav" style={{ border: 'none' }}>
+          <Hamburger style={{ border: 'none' }} />
         </Navbar.Toggle>
         <SubscribeButton />
       </NavbarButtonContainer>

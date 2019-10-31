@@ -1,11 +1,11 @@
-import React from "react"
-import ReactPlayer from "react-player"
+import React from 'react'
+import ReactPlayer from 'react-player'
 
-import { MolduraTop, MolduraBottom } from "../components/moldura"
-import Shadow from "../components/shadow"
+import { MolduraTop, MolduraBottom } from '../components/moldura'
+import Shadow from '../components/shadow'
 
 const FramedVideo = props => (
-  <div style={{ position: "relative" }}>
+  <div style={{ position: 'relative' }}>
     <MolduraTop />
     <ReactPlayer {...props} />
     <MolduraBottom />

@@ -1,14 +1,14 @@
-import React from "react"
-import styled from "styled-components"
-import { Link } from "gatsby"
+import React from 'react'
+import styled from 'styled-components'
+import { Link } from 'gatsby'
 
-import "./theme.css"
-import "./typography.css"
+import './theme.css'
+import './typography.css'
 
 const StyledBotao = styled.button`
   background-color: transparent;
   background-color: ${props => props.background};
-  border-color: ${props => (props.inverted ? "var(--bunker)" : "var(--amber)")};
+  border-color: ${props => (props.inverted ? 'var(--bunker)' : 'var(--amber)')};
   border-style: solid;
   border-width: 5px;
   border-width: ${props => props.borderWidth};
@@ -19,7 +19,7 @@ const StyledBotao = styled.button`
   position: relative;
   &:hover {
     span {
-      color: ${props => (props.inverted ? "var(--amber)" : "var(--bunker)")};
+      color: ${props => (props.inverted ? 'var(--amber)' : 'var(--bunker)')};
     }
     &:before {
       transform: scaleX(1);
@@ -27,14 +27,13 @@ const StyledBotao = styled.button`
   }
   transform: skewX(-12deg);
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
-    background-color: ${props =>
-      props.inverted ? "var(--bunker)" : "var(--amber)"};
+    background-color: ${props => (props.inverted ? 'var(--bunker)' : 'var(--amber)')};
     z-index: -1;
     transform: scaleX(0);
     transform-origin: 0 50%;
@@ -43,9 +42,9 @@ const StyledBotao = styled.button`
 `
 
 const BotaoText = styled.span`
-  color: ${props => (props.inverted ? "var(--bunker)" : "var(--amber)")};
+  color: ${props => (props.inverted ? 'var(--bunker)' : 'var(--amber)')};
   display: block;
-  font-family: "Poll";
+  font-family: 'Poll';
   font-size: 1.5em;
   font-size: ${props => props.fontSize};
   font-weight: bold;

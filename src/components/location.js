@@ -1,9 +1,9 @@
-import React from "react"
-import styled from "styled-components"
-import { Infos } from "./data/infos"
-import { device } from "./device"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons"
+import React from 'react'
+import styled from 'styled-components'
+import { Infos } from './data/infos'
+import { device } from './device'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 
 const LocalTexto = styled.h2`
   font-family: var(--font3);

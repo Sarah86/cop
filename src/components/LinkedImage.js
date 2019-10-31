@@ -1,9 +1,9 @@
-import React from "react"
-import { Link } from "gatsby"
-import styled from "styled-components"
+import React from 'react'
+import { Link } from 'gatsby'
+import styled from 'styled-components'
 
-import Image from "./image"
-import target from "../images/target.png"
+import Image from './image'
+import target from '../images/target.png'
 
 const StyledLink = styled(Link)`
     &:hover {

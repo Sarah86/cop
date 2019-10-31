@@ -1,6 +1,6 @@
-import React, { Component } from "react"
-import { HamburgerSpin } from "react-animated-burgers"
-import "./theme.css"
+import React, { Component } from 'react'
+import { HamburgerSpin } from 'react-animated-burgers'
+import './theme.css'
 
 class Hamburger extends Component {
   state = {

@@ -1,13 +1,13 @@
-import React from "react"
-import { Carousel, Container, Col, Row } from "react-bootstrap"
-import CarouselCaption from "react-bootstrap/CarouselCaption"
-import styled from "styled-components"
-import MediaQuery from "react-responsive"
+import React from 'react'
+import { Carousel, Container, Col, Row } from 'react-bootstrap'
+import CarouselCaption from 'react-bootstrap/CarouselCaption'
+import styled from 'styled-components'
+import MediaQuery from 'react-responsive'
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
-import { MolduraTop, MolduraBottom } from "../components/moldura"
+import Layout from '../components/layout'
+import Image from '../components/image'
+import SEO from '../components/seo'
+import { MolduraTop, MolduraBottom } from '../components/moldura'
 import {
   CarouselCaptionTitle,
   PaddedContentBox,
@@ -18,17 +18,17 @@ import {
   ListOl,
   PaddedText,
   ReadMore,
-} from "../components/typography"
-import Photo from "../components/photo"
-import LinkedPhoto from "../components/LinkedPhoto"
-import Shadow from "../components/shadow"
-import FramedVideo from "../components/framedVideo"
-import Botao from "../components/botao"
-import Background from "../components/background"
-import FullWidth from "../components/fullwidth"
-import { Palestrantes } from "../components/data/infos"
-import Separador from "../components/separador"
-import { FadeParagraphTitle } from "../components/FadeElements"
+} from '../components/typography'
+import Photo from '../components/photo'
+import LinkedPhoto from '../components/LinkedPhoto'
+import Shadow from '../components/shadow'
+import FramedVideo from '../components/framedVideo'
+import Botao from '../components/botao'
+import Background from '../components/background'
+import FullWidth from '../components/fullwidth'
+import { Palestrantes } from '../components/data/infos'
+import Separador from '../components/separador'
+import { FadeParagraphTitle } from '../components/FadeElements'
 
 const StyledCarouselCaption = styled(CarouselCaption)`
   && {
@@ -46,22 +46,17 @@ const CongressoFirstBlock = () => (
       o congresso
     </ParagraphTitle>
     <Paragraph lastLineRightDesktop reversedSkew>
-      Depois do sucesso absoluto da estreia em 2018 o Congresso de Operações
-      Policiais retorna mais abrangente, inclusivo, dinâmico, informativo e
-      tecnológico.
+      Depois do sucesso absoluto da estreia em 2018 o Congresso de Operações Policiais retorna mais
+      abrangente, inclusivo, dinâmico, informativo e tecnológico.
     </Paragraph>
     <Paragraph lastLineRightDesktop reversedSkew>
-      Congresso se realizará de forma gratuita nos dias 17, 18 e 19 de Março de
-      2019 para um público diário de aproximadamente 2000 pessoas.
+      Congresso se realizará de forma gratuita nos dias 17, 18 e 19 de Março de 2019 para um público
+      diário de aproximadamente 2000 pessoas.
     </Paragraph>
     <Paragraph lastLineRightDesktop reversedSkew>
-      A cidade-sede escolhida é pelo segundo ano consecutivo a belíssima{" "}
-      <ParagraphLink>Florianópolis</ParagraphLink>, que por sua vez abriga o
-      moderno{" "}
-      <ParagraphLink>
-        Centro de Eventos Governador Luiz Henrique da Silveira
-      </ParagraphLink>
-      .
+      A cidade-sede escolhida é pelo segundo ano consecutivo a belíssima{' '}
+      <ParagraphLink>Florianópolis</ParagraphLink>, que por sua vez abriga o moderno{' '}
+      <ParagraphLink>Centro de Eventos Governador Luiz Henrique da Silveira</ParagraphLink>.
     </Paragraph>
   </PaddedContentBox>
 )
@@ -70,9 +65,7 @@ const CongressoSecondBlock = () => (
   <PaddedContentBox className="text-justify">
     <FadeParagraphTitle sm>o congresso</FadeParagraphTitle>
     <PaddedText>
-      <Paragraph>
-        Durante os três dias de evento, o COP colocará em contato direto:
-      </Paragraph>
+      <Paragraph>Durante os três dias de evento, o COP colocará em contato direto:</Paragraph>
       <List>
         <li>Autoridades nacionais e internacionais;</li>
         <li>Agentes de segurança pública;</li>
@@ -80,11 +73,10 @@ const CongressoSecondBlock = () => (
         <li>E a sociedade civil.</li>
       </List>
       <Paragraph>
-        A intensa programação de <ParagraphLink>Palestras</ParagraphLink> e{" "}
-        <ParagraphLink>Exposições</ParagraphLink> será uma oportunidade única
-        adquirir conhecimento, ter contato com o que existe de mais moderno em
-        táticas e equipamentos de defesa e debater pontos críticos da segurança
-        pública; sempre na direção de uma sociedade mais segura.
+        A intensa programação de <ParagraphLink>Palestras</ParagraphLink> e{' '}
+        <ParagraphLink>Exposições</ParagraphLink> será uma oportunidade única adquirir conhecimento,
+        ter contato com o que existe de mais moderno em táticas e equipamentos de defesa e debater
+        pontos críticos da segurança pública; sempre na direção de uma sociedade mais segura.
       </Paragraph>
     </PaddedText>
   </PaddedContentBox>
@@ -93,16 +85,16 @@ const CongressoSecondBlock = () => (
 const CongressoCarousel = () => {
   const Slides = [
     {
-      imagem: "destaque_triplo_home_1.jpg",
-      caption: "Cobertura Televisiva do Stand Taurus",
+      imagem: 'destaque_triplo_home_1.jpg',
+      caption: 'Cobertura Televisiva do Stand Taurus',
     },
     {
-      imagem: "destaque_triplo_home_2.jpg",
-      caption: "destaque_triplo_home_2.jpg",
+      imagem: 'destaque_triplo_home_2.jpg',
+      caption: 'destaque_triplo_home_2.jpg',
     },
     {
-      imagem: "destaque_triplo_home_3.jpg",
-      caption: "destaque_triplo_home_3.jpg",
+      imagem: 'destaque_triplo_home_3.jpg',
+      caption: 'destaque_triplo_home_3.jpg',
     },
   ]
 
@@ -115,7 +107,7 @@ const CongressoCarousel = () => {
     </Carousel.Item>
   ))
   return (
-    <div style={{ position: "relative" }}>
+    <div style={{ position: 'relative' }}>
       <MolduraTop />
       <Carousel indicators={false}>{CarouselItem}</Carousel>
       <MolduraBottom />
@@ -127,16 +119,16 @@ const CongressoCarousel = () => {
 const Assista = () => {
   const Videos = [
     {
-      url: "https://youtu.be/qpF-_5foMyc",
-      title: "Cobertura da Edição Anterior",
+      url: 'https://youtu.be/qpF-_5foMyc',
+      title: 'Cobertura da Edição Anterior',
     },
     {
-      url: "https://youtu.be/qpF-_5foMyc",
-      title: "Institucional CIOC",
+      url: 'https://youtu.be/qpF-_5foMyc',
+      title: 'Institucional CIOC',
     },
     {
-      url: "https://youtu.be/qpF-_5foMyc",
-      title: "Cobertura Completa Ao Vivo",
+      url: 'https://youtu.be/qpF-_5foMyc',
+      title: 'Cobertura Completa Ao Vivo',
     },
   ]
   const VideoContainer = Videos.map(video => (
@@ -146,13 +138,13 @@ const Assista = () => {
         light
         width="100%"
         height="100%"
-        style={{ marginBottom: "1em" }}
+        style={{ marginBottom: '1em' }}
       />
       <Paragraph
         style={{
-          textAlign: "center",
-          paddingLeft: ".5em",
-          paddingRight: ".5em",
+          textAlign: 'center',
+          paddingLeft: '.5em',
+          paddingRight: '.5em',
         }}
       >
         {video.title}
@@ -174,7 +166,7 @@ const Assista = () => {
 const Botoes = () => (
   <div
     className="mt-5 mb-5 d-flex flex-column justify-content-between align-items-center w-100"
-    style={{ height: "9em" }}
+    style={{ height: '9em' }}
   >
     <Botao texto="Inscreva-se Agora!" width="12em" to="/" />
     <Botao texto="Confira  a Programação" width="12em" to="/" />
@@ -214,7 +206,7 @@ const FullWidthInscricao = styled(FullWidth)`
 
 const OCongressoDesktopFirstBlock = () => (
   <>
-    <Container style={{ position: "relative" }}>
+    <Container style={{ position: 'relative' }}>
       <Background />
       <Row>
         <Col className="pt-5">
@@ -260,7 +252,7 @@ const TemasInteresse = () => (
 const OCongressoDesktopSecondBlock = () => (
   <div className="mt-5">
     <Photo imgName="teatro.jpg" />
-    <Container style={{ position: "relative" }}>
+    <Container style={{ position: 'relative' }}>
       <Background position="left top" left="-40%" />
       <Row>
         <Col>
@@ -282,19 +274,16 @@ const OCongressoDesktopThirdBlock = () => (
         <FadeParagraphTitle sm>espaço ABOpEsp</FadeParagraphTitle>
         <PaddedText>
           <Paragraph>
-            As unidades de operações especiais terão{" "}
-            <strong>
-              um espaço exclusivo para proporcionar trocas e aproximar doutrinas
-            </strong>{" "}
+            As unidades de operações especiais terão{' '}
+            <strong>um espaço exclusivo para proporcionar trocas e aproximar doutrinas</strong>{' '}
             entre agentes das diferentes esferas e membros da segurança pública.
           </Paragraph>
           <Paragraph>
-            A Associação Brasileira de Operações Especiais (ABOPESP) vai
-            disponibilizar um estande no anfiteatro do Centro de Eventos Luiz
-            Henrique da Silveira, com uma programação de clínicas e workshops
-            para quem leva a atividade policial como um ofício de excelência.
+            A Associação Brasileira de Operações Especiais (ABOPESP) vai disponibilizar um estande
+            no anfiteatro do Centro de Eventos Luiz Henrique da Silveira, com uma programação de
+            clínicas e workshops para quem leva a atividade policial como um ofício de excelência.
           </Paragraph>
-          <Image imgName="logo-aboe.jpg" style={{ width: "150px" }} />
+          <Image imgName="logo-aboe.jpg" style={{ width: '150px' }} />
           <Separador sm widthTotal="100px" />
         </PaddedText>
       </Col>
@@ -303,26 +292,20 @@ const OCongressoDesktopThirdBlock = () => (
         <FadeParagraphTitle sm>ações sociais</FadeParagraphTitle>
         <PaddedText>
           <Paragraph>
-            O COP Internacional fará a coleta de alimentos não-perecíveis
-            durante os 3 dias de evento.
+            O COP Internacional fará a coleta de alimentos não-perecíveis durante os 3 dias de
+            evento.
           </Paragraph>
           <Paragraph>
-            Então ao participr do congresso você estará automaticamente ajudando
-            duas instituições filantrópicas da cidade-sede do evento: A Igreja
-            Bola de Neve e o SEOVE Caridade.
+            Então ao participr do congresso você estará automaticamente ajudando duas instituições
+            filantrópicas da cidade-sede do evento: A Igreja Bola de Neve e o SEOVE Caridade.
           </Paragraph>
           <Paragraph>
-            <strong>
-              A meta de arrecadação é de 4 toneladas de alimentos.
-            </strong>{" "}
-            Faça parte deste movimento!
+            <strong>A meta de arrecadação é de 4 toneladas de alimentos.</strong> Faça parte deste
+            movimento!
           </Paragraph>
-          <div
-            className="d-flex justify-content-between"
-            style={{ width: "30%" }}
-          >
-            <Image imgName="logo-seove.jpg" style={{ width: "50px" }} />
-            <Image imgName="logo-boladeneve.jpg" style={{ width: "50px" }} />
+          <div className="d-flex justify-content-between" style={{ width: '30%' }}>
+            <Image imgName="logo-seove.jpg" style={{ width: '50px' }} />
+            <Image imgName="logo-boladeneve.jpg" style={{ width: '50px' }} />
           </div>
           <Separador sm widthTotal="100px" />
         </PaddedText>

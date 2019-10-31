@@ -1,14 +1,14 @@
-import React from "react"
-import styled from "styled-components"
-import MediaQuery from "react-responsive"
+import React from 'react'
+import styled from 'styled-components'
+import MediaQuery from 'react-responsive'
 
-import Layout from "../components/layout"
-import { device } from "../components/device"
-import SEO from "../components/seo"
-import { ParagraphTitle, PaddedText } from "../components/typography"
-import Photo from "../components/photo"
-import { AgendaMobile, AgendaTabelaDesktop } from "../components/agenda"
-import FullWidth from "../components/fullwidth"
+import Layout from '../components/layout'
+import { device } from '../components/device'
+import SEO from '../components/seo'
+import { ParagraphTitle, PaddedText } from '../components/typography'
+import Photo from '../components/photo'
+import { AgendaMobile, AgendaTabelaDesktop } from '../components/agenda'
+import FullWidth from '../components/fullwidth'
 
 const StyledPaddedText = styled(PaddedText)`
   @media ${device.desktop} {
@@ -19,7 +19,7 @@ const StyledPaddedText = styled(PaddedText)`
 `
 const PhotoWrapper = styled.div`
   .gatsby-image-wrapper {
-    max-height: 340px;
+    max-height: 300px;
   }
 `
 
@@ -35,10 +35,7 @@ const Palestrantes = () => (
       </PhotoWrapper>
     </FullWidth>
     <MediaQuery maxWidth={991}>
-      <AgendaMobile
-        defaultActiveKeyAccordion="0"
-        defaultActiveKeyTab="17.mar"
-      />
+      <AgendaMobile defaultActiveKeyAccordion="0" defaultActiveKeyTab="17.mar" />
     </MediaQuery>
     <MediaQuery minWidth={992}>
       <AgendaTabelaDesktop />

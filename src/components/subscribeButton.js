@@ -1,7 +1,7 @@
-import React from "react"
-import styled from "styled-components"
-import { Link } from "gatsby"
-import IconSubscribe from "../images/ICON-INSCREVA-SE.png"
+import React from 'react'
+import styled from 'styled-components'
+import { Link } from 'gatsby'
+import IconSubscribe from '../images/ICON-INSCREVA-SE.png'
 
 const IconSubscribeWrapper = styled.div`
   width: 2em;

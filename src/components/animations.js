@@ -1,6 +1,6 @@
-import React from "react"
-import { Controller, Scene } from "react-scrollmagic"
-import { Tween, Timeline, SplitLetters } from "react-gsap"
+import React from 'react'
+import { Controller, Scene } from 'react-scrollmagic'
+import { Tween, Timeline, SplitLetters } from 'react-gsap'
 
 const LetterTransitions = ({ children }) => (
   <div>
@@ -13,11 +13,11 @@ const LetterTransitions = ({ children }) => (
             left: -2000,
             rotation: -720,
             opacity: 0,
-            ease: "Expo.easeOut",
+            ease: 'Expo.easeOut',
           }}
           stagger={0.15}
           onCompleteAll={() => {
-            console.log("on complete all")
+            console.log('on complete all')
           }}
         >
           <div className="text">

@@ -1,7 +1,7 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
-import { MolduraBottom } from "./moldura"
+import { MolduraBottom } from './moldura'
 
 const SeparadorWrapper = styled.div`
   margin-top: 2em;
@@ -9,7 +9,7 @@ const SeparadorWrapper = styled.div`
   height: 1em;
   position: relative;
   width: ${props => props.width};
-  margin: ${props => (props.center ? "auto" : "")};
+  margin: ${props => (props.center ? 'auto' : '')};
 `
 
 const Separador = ({ center, sm, widthTotal }) => (
