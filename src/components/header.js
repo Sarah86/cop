@@ -120,8 +120,8 @@ const StyledLink = styled(Link).attrs({ activeClassName: 'active' })`
   }
 `
 
-const SocialLinksContainer = ({ className, style }) => (
-  <div className={className} style={style}>
+const SocialLinksContainer = (props) => (
+  <div {...props}>
     <LinkedFacebookIcon />
     <LinkedInstagramIcon />
     <LinkedYoutubeIcon />

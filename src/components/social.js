@@ -7,7 +7,6 @@ import './theme.css'
 
 const SocialLink = styled.a`
   color: var(--tapa);
-  font-size: 1.5em;
   padding: 0.4em;
   &:hover,
   &:focus {
@@ -15,20 +14,22 @@ const SocialLink = styled.a`
   }
 `
 
+const fontSize = "1.5em"; // inline para aparecer nos primeiros segundos de carregamento de forma correta
+
 export const LinkedInstagramIcon = () => (
   <SocialLink href="http://www.instagram.com">
-    <FontAwesomeIcon icon={faFacebookF} />
+    <FontAwesomeIcon icon={faFacebookF} style={{fontSize:`${fontSize}`}}/>
   </SocialLink>
 )
 
 export const LinkedFacebookIcon = () => (
   <SocialLink href="http://www.facebook.com">
-    <FontAwesomeIcon icon={faInstagram} />
+    <FontAwesomeIcon icon={faInstagram} style={{fontSize:`${fontSize}`}}/>
   </SocialLink>
 )
 
 export const LinkedYoutubeIcon = () => (
   <SocialLink href="http://www.youtube.com">
-    <FontAwesomeIcon icon={faYoutube} />
+    <FontAwesomeIcon icon={faYoutube} style={{fontSize:`${fontSize}`}}/>
   </SocialLink>
 )
