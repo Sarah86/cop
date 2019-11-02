@@ -6,6 +6,7 @@ import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import NavbarCollapse from 'react-bootstrap/NavbarCollapse'
 
+import { LinkedInstagramIcon, LinkedFacebookIcon, LinkedYoutubeIcon } from './social'
 import './theme.css'
 import { device } from './device'
 import Hamburger from './hamburger'
@@ -15,7 +16,6 @@ import Botao from './botao'
 import Shadow from './shadow'
 import IsotipoCop from './isotipo'
 import SubscribeButton from './subscribeButton'
-import { LinkedInstagramIcon, LinkedFacebookIcon, LinkedYoutubeIcon } from './social'
 
 const StyledNavbar = styled(Navbar)`
   && {
