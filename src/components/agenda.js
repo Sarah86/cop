@@ -4,10 +4,16 @@ import { Accordion, Tab, Row, Col, Nav, Container } from 'react-bootstrap'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
+import {
+  faFacebookF,
+  faInstagram,
+  faLinkedinIn,
+  faYoutube,
+} from '@fortawesome/free-brands-svg-icons'
 
 import { device } from '../components/device'
 import Photo from './photo'
-import { PaddedContentBox, Paragraph, PaddedText, ParagraphTitle, TitleH3 } from './typography'
+import { PaddedContentBox, Paragraph, PaddedText, TitleH3 } from './typography'
 import { FadeParagraphTitle } from './FadeElements'
 import FullWidth from './fullwidth'
 
@@ -112,24 +118,24 @@ export const AgendaMobile = ({ defaultActiveKeyAccordion, defaultActiveKeyTab })
               <span style={{ flexBasis: '65%' }}>{atividade.titulo}</span>
             </Accordion.Toggle>
           ) : (
-              <Accordion.Toggle as="div" eventKey={atividade.slug} key={atividade.slug}>
-                <Link
-                  to={`/agenda-e-palestrantes/${atividade.slug}`}
-                  activeClassName="opened-accordion"
-                  className="d-flex justify-content-between has-content"
-                >
-                  <span style={{ textAlign: 'right', flexBasis: '30%' }}>{atividade.hora}</span>
-                  <div className="d-flex justify-content-between" style={{ flexBasis: '65%' }}>
-                    <span>{atividade.palestrante}</span>
-                    <FontAwesomeIcon
-                      size="xs"
-                      icon={faCaretDown}
-                      style={{ alignSelf: 'center', marginRight: '1em' }}
-                    />
-                  </div>
-                </Link>
-              </Accordion.Toggle>
-            )}
+            <Accordion.Toggle as="div" eventKey={atividade.slug} key={atividade.slug}>
+              <Link
+                to={`/agenda-e-palestrantes/${atividade.slug}`}
+                activeClassName="opened-accordion"
+                className="d-flex justify-content-between has-content"
+              >
+                <span style={{ textAlign: 'right', flexBasis: '30%' }}>{atividade.hora}</span>
+                <div className="d-flex justify-content-between" style={{ flexBasis: '65%' }}>
+                  <span>{atividade.palestrante}</span>
+                  <FontAwesomeIcon
+                    size="xs"
+                    icon={faCaretDown}
+                    style={{ alignSelf: 'center', marginRight: '1em' }}
+                  />
+                </div>
+              </Link>
+            </Accordion.Toggle>
+          )}
           {atividade.descricao == null ? null : (
             <Accordion.Collapse eventKey={atividade.slug} style={{ position: 'relative' }}>
               <div>
@@ -181,7 +187,7 @@ const StyledRow = styled(Row)`
   background-color: var(--bunker);
   border: none !important;
   line-height: 1.5em;
-  letter-spacing:var(--lp2a);
+  letter-spacing: var(--lp2a);
   &:nth-of-type(odd) {
     background: linear-gradient(90deg, rgba(8, 20, 31, 0) 0%, rgba(8, 20, 31, 1) 100%);
   }
@@ -207,25 +213,25 @@ export const AgendaTabelaDesktop = () => {
             {atividade.descricao == null ? (
               <>{atividade.hora}</>
             ) : (
-                <Link
-                  to={`/agenda-e-palestrantes/${atividade.slug}`}
-                  style={{ color: 'var(--narvik' }}
-                >
-                  {atividade.hora}
-                </Link>
-              )}
+              <Link
+                to={`/agenda-e-palestrantes/${atividade.slug}`}
+                style={{ color: 'var(--narvik' }}
+              >
+                {atividade.hora}
+              </Link>
+            )}
           </Col>
           <Col lg={8} style={{ marginLeft: '-1em' }}>
             {atividade.descricao == null ? (
               <>{atividade.titulo}</>
             ) : (
-                <Link
-                  to={`/agenda-e-palestrantes/${atividade.slug}`}
-                  style={{ color: 'var(--narvik' }}
-                >
-                  {atividade.palestrante}
-                </Link>
-              )}
+              <Link
+                to={`/agenda-e-palestrantes/${atividade.slug}`}
+                style={{ color: 'var(--narvik' }}
+              >
+                {atividade.palestrante}
+              </Link>
+            )}
           </Col>
         </StyledRow>
       ))}
@@ -267,16 +273,33 @@ const StyledLink = styled(Link)`
   &.palestranteActive {
     color: var(--amber);
   }
-  
 `
 
 const Qualificacao = styled.div`
   color: var(--tapa);
-  font-size: .9em;
-  line-height: .9em;
-  &:hover{
+  font-size: 0.9em;
+  line-height: 0.9em;
+  &:hover {
     color: var(--tapa);
   }
+`
+
+const SocialPalestrante = styled.div`
+  color: var(--narvik);
+  font-family:"TilliumWeb";
+  font-size: 0.8em;
+  a {
+    color: var(--amber);
+    padding: .5em;
+    text-decoration: underline;
+    &:hover {
+      color: var(--amber);
+    }
+`
+
+const SocialIcons = styled.div`
+  display: inline-flex;
+  padding: 0 1em;
 `
 
 export const AgendaDesktop = ({
@@ -285,7 +308,7 @@ export const AgendaDesktop = ({
 }) => {
   //active do palestrante deve ser igual ao slug
   const NavItem = Programacao.map(dia => (
-    <div style={{ border: ".5px solid var(--bunker" }}>
+    <div style={{ border: '.5px solid var(--bunker' }}>
       <Nav.Item>
         <Nav.Link eventKey={dia.dia}>{dia.diaLongo}</Nav.Link>
       </Nav.Item>
@@ -296,30 +319,39 @@ export const AgendaDesktop = ({
     <Tab.Pane eventKey={dia.dia}>
       <Tab.Container id="palestrantes" defaultActiveKey={defaultActiveKeyTabContainerPalestrante}>
         <Row>
-          <Col sm={4} style={{ paddingTop: '9em', paddingRight: "0" }}>
-            <div style={{ marginBottom: "2em" }}>
+          <Col sm={4} style={{ paddingTop: '9em', paddingRight: '0' }}>
+            <div style={{ marginBottom: '2em' }}>
               {dia.atividades.map(atividade => (
-                <Nav className="flex-column" style={{ flexWrap: "nowrap" }}>
+                <Nav className="flex-column" style={{ flexWrap: 'nowrap' }}>
                   <Nav.Item>
-                    <Nav.Link style={{ paddingTop: "0", paddingBottom: "0" }} eventKey={atividade.slug}>
+                    <Nav.Link
+                      style={{ paddingTop: '0', paddingBottom: '0' }}
+                      eventKey={atividade.slug}
+                    >
                       <StyledRow>
                         <Col lg={4}>
                           {atividade.descricao == null ? (
                             <>{atividade.hora}</>
                           ) : (
-                              <StyledLink to={`/agenda-e-palestrantes/${atividade.slug}`} activeClassName="atividadeActive">
-                                {atividade.hora}
-                              </StyledLink>
-                            )}
+                            <StyledLink
+                              to={`/agenda-e-palestrantes/${atividade.slug}`}
+                              activeClassName="atividadeActive"
+                            >
+                              {atividade.hora}
+                            </StyledLink>
+                          )}
                         </Col>
                         <Col lg={8} style={{ marginLeft: '-1em' }}>
                           {atividade.descricao == null ? (
                             <>{atividade.titulo}</>
                           ) : (
-                              <StyledLink to={`/agenda-e-palestrantes/${atividade.slug}`} activeClassName="atividadeActive">
-                                {atividade.palestrante}
-                              </StyledLink>
-                            )}
+                            <StyledLink
+                              to={`/agenda-e-palestrantes/${atividade.slug}`}
+                              activeClassName="atividadeActive"
+                            >
+                              {atividade.palestrante}
+                            </StyledLink>
+                          )}
                         </Col>
                       </StyledRow>
                     </Nav.Link>
@@ -328,28 +360,31 @@ export const AgendaDesktop = ({
               ))}
             </div>
             <div>
-              <TitleH3 style={{marginBottom:"1em"}}>palestrantes</TitleH3>
+              <TitleH3 style={{ marginBottom: '1em' }}>palestrantes</TitleH3>
               {dia.atividades.map(atividade => (
                 <>
-                  {atividade.palestrante == null 
-                  ? null
-                  : (
+                  {atividade.palestrante == null ? null : (
                     <StyledRow className="m-0">
-                    <Col className="p-0">
-                      <Nav className="flex-column">
-                        <Nav.Item>
-                          <Nav.Link eventKey={atividade.slug} style={{paddingTop:".5em", paddingBottom:".5em"}}>
-                            <StyledLink to={`/agenda-e-palestrantes/${atividade.slug}`} activeClassName="palestranteActive">
-                              {atividade.palestrante}
-                              <Qualificacao>{atividade.qualificacao}</Qualificacao>
-                            </StyledLink>
-                          </Nav.Link>
-                        </Nav.Item>
-                      </Nav>
-                    </Col>
-                  </StyledRow>
-                  )
-                }
+                      <Col className="p-0">
+                        <Nav className="flex-column">
+                          <Nav.Item>
+                            <Nav.Link
+                              eventKey={atividade.slug}
+                              style={{ paddingTop: '.5em', paddingBottom: '.5em' }}
+                            >
+                              <StyledLink
+                                to={`/agenda-e-palestrantes/${atividade.slug}`}
+                                activeClassName="palestranteActive"
+                              >
+                                {atividade.palestrante}
+                                <Qualificacao>{atividade.qualificacao}</Qualificacao>
+                              </StyledLink>
+                            </Nav.Link>
+                          </Nav.Item>
+                        </Nav>
+                      </Col>
+                    </StyledRow>
+                  )}
                 </>
               ))}
             </div>
@@ -362,11 +397,68 @@ export const AgendaDesktop = ({
                     <StyledPhoto>
                       <Photo imgName={atividade.imagem} />
                     </StyledPhoto>
-                    <div style={{padding:"2em", paddingTop:"0"}}>
-                    <FadeParagraphTitle sm>{atividade.palestrante}</FadeParagraphTitle>
-                    <Qualificacao>{atividade.qualificacao}</Qualificacao>
-                    <div>Palestra: {atividade.titulo} | {dia.diaCompleto} - {atividade.hora} </div>
-                    <PaddedText>teste</PaddedText>
+                    <div style={{ padding: '2em', paddingTop: '0' }}>
+                      <FadeParagraphTitle sm style={{ marginBottom: '.2em' }}>
+                        {atividade.palestrante}
+                      </FadeParagraphTitle>
+                      <div
+                        style={{
+                          fontFamily: 'TTSupermolotNeue',
+                          color: 'var(--lemongrass)',
+                          fontSize: '1.1em',
+                        }}
+                      >
+                        {atividade.qualificacao}
+                      </div>
+                      <div
+                        style={{
+                          fontFamily: 'TilliumWeb',
+                          fontSize: '.9em',
+                          margin: '1em 0 2em 0',
+                        }}
+                      >
+                        Palestra: <strong>{atividade.titulo}</strong> | {dia.diaCompleto} -{' '}
+                        {atividade.hora}{' '}
+                      </div>
+                      <PaddedText style={{ padding: '0', textAlign: 'justify' }}>
+                        {atividade.descricao == null ? null : (
+                          <>
+                            {atividade.descricao.map(paragrafo => (
+                              <Paragraph dangerouslySetInnerHTML={{ __html: `${paragrafo}` }} />
+                            ))}
+                          </>
+                        )}
+                      </PaddedText>
+                      <SocialPalestrante>
+                        Siga o palestrante:
+                        <SocialIcons>
+                          {atividade.facebook == null ? null : (
+                            <a href={atividade.facebook}>
+                              <FontAwesomeIcon icon={faFacebookF} />
+                            </a>
+                          )}
+                          {atividade.instagram == null ? null : (
+                            <a href={atividade.instagram}>
+                              <FontAwesomeIcon icon={faInstagram} />
+                            </a>
+                          )}
+                          {atividade.linkedin == null ? null : (
+                            <a href={atividade.linkedin}>
+                              <FontAwesomeIcon icon={faLinkedinIn} />
+                            </a>
+                          )}
+                          {atividade.youtube == null ? null : (
+                            <a href={atividade.youtube}>
+                              <FontAwesomeIcon icon={faYoutube} />
+                            </a>
+                          )}
+                        </SocialIcons>
+                        {atividade.site == null ? null : (
+                          <div style={{ display: 'block' }}>
+                            Site: <a href={atividade.site}>{atividade.site}</a>
+                          </div>
+                        )}
+                      </SocialPalestrante>
                     </div>
                   </div>
                 </Tab.Pane>
@@ -384,9 +476,9 @@ export const AgendaDesktop = ({
           <TitleH3>datas</TitleH3>
           <StyledNav>{NavItem}</StyledNav>
         </div>
-        <Tab.Content style={{ paddingTop: '0', paddingBottom: '2em', marginTop: "-1.5em" }}>
-        <div className="opened-accordion" style={{marginTop:"-5em", paddingTop:"4em"}}></div>
-        {TabPane}
+        <Tab.Content style={{ paddingTop: '0', paddingBottom: '2em', marginTop: '-1.5em' }}>
+          <div className="opened-accordion" style={{ marginTop: '-5em', paddingTop: '4em' }}></div>
+          {TabPane}
         </Tab.Content>
       </Tab.Container>
     </>

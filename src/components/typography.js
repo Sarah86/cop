@@ -115,7 +115,7 @@ export const ParagraphTitle = styled.h2`
   font-family: var(--font2);
   font-size: ${props => (props.sm ? '2.5em' : '3em')};
   font-weight: 300;
-  color: var(--amber);
+  color: ${props => (props.color ? `${props.color}` : 'var(--amber)')};
   letter-spacing: var(--lp1);
   line-height: 0.95em;
   width: ${props => props.width};

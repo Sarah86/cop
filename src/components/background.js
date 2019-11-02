@@ -10,8 +10,10 @@ const Background = styled.div`
   background-position: ${props => props.position};
   background-repeat: no-repeat;
   background-size: 65%;
+  background-size: ${props => props.size};
   z-index: -1;
   left: ${props => props.left};
+  top: ${props => props.top};
 `
 
 export default Background

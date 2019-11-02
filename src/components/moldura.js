@@ -45,8 +45,10 @@ export const MolduraTop = () => (
 
 const BorderBottom = styled.div`
   background-color: var(--firefly);
+  background-color: ${props => props.color};
   width: 100%;
   height: ${props => (props.sm ? '1px' : '.6%')};
+  height: ${props => props.border};
   position: absolute;
   bottom: 0;
   z-index: 1;
@@ -54,6 +56,7 @@ const BorderBottom = styled.div`
 
 const BarraBottom = styled.div`
   background-color: var(--firefly);
+  background-color: ${props => props.color};
   height: 4px;
   width: ${props => (props.sm ? '30px' : '30%')};
   bottom: 0;
@@ -64,6 +67,7 @@ const BarraBottom = styled.div`
   :after {
     content: '';
     background-color: var(--firefly);
+    background-color: ${props => props.color};
     position: absolute;
     right: -3%;
     bottom: 0;
@@ -81,9 +85,9 @@ const BarraBottom = styled.div`
   }
 `
 
-export const MolduraBottom = ({ sm }) => (
+export const MolduraBottom = ({ sm, color, border }) => (
   <>
-    <BarraBottom sm={sm} />
-    <BorderBottom sm={sm} />
+    <BarraBottom sm={sm} color={color} />
+    <BorderBottom sm={sm} color={color} border={border} />
   </>
 )

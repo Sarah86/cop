@@ -10,14 +10,19 @@
         "hora": "09:00h",
         "palestrante": "Sergio Moro",
         "slug": "sergio-moro",
-        "titulo": "Palestra Magna",
+        "titulo": "Lava-Jato",
         "qualificacao": "Ministro da Justiça",
         "imagem": "palestrante_placeholder.jpg",
         "descricao": [
-          "Lorem ipsum cubilia m velit pulvinar proin cras nulla.",
-          "Dapibus sed aliquam sem famessse maecenas eleifend enim etiam hac semper tellus. ",
-          "Ornare vivamus cursus curabitur fur nibh. "
-        ]
+          "Sérgio Fernando Moro GCRB • GOMM • DMJM[7] (Maringá, 1 de agosto de 1972) é um jurista, ex-magistrado, professor universitário e atual ministro da Justiça e Segurança Pública do Brasil.[8] Foi juiz federal da 13ª Vara Criminal Federal de Curitiba[9][10] e professor de direito processual penal na Universidade Federal do Paraná (UFPR).[11][12]",
+          "Graduado em Direito pela Universidade Estadual de Maringá em 1995, concluiu o mestrado e o doutorado na Universidade Federal do Paraná.[6] Especializou-se em crimes financeiros e tornou-se juiz federal em 1996.[6][9] Nessa função, trabalhou em casos como o escândalo do Banestado e a Operação Farol da Colina. Também auxiliou, no Supremo Tribunal Federal, a ministra Rosa Weber durante o julgamento dos crimes relativos ao escândalo do Mensalão.[13][14][15] ",
+          "Moro ganhou enorme notoriedade nacional e internacional por comandar, entre março de 2014 e novembro de 2018, o julgamento em primeira instância dos crimes identificados na Operação Lava Jato que, segundo o Ministério Público Federal, é o maior caso de corrupção e lavagem de dinheiro já apurado no Brasil, envolvendo grande número de políticos, empreiteiros e empresas, como a Petrobras, a Odebrecht, entre outras.[6][16][17] Em 12 de julho de 2017, condenou o ex-presidente Lula a nove anos e seis meses de prisão, sendo essa a primeira vez na história do Brasil em que se condenou criminalmente um ex-presidente da República,[18] decisão esta mantida em segunda instância.[19] Sua atuação na condução da Lava-Jato rendeu-lhe prêmios e críticas. "
+        ],
+        "linkedin": "http://www.linkedin.com",
+        "instagram": "http://www.instagram.com",
+        "facebook": "http://www.facebook.com",
+        "youtube": "http://www.youtube.com",
+        "site": "https://www.sergiomoro.com.br"
       },
       { "hora": "11:00h", "titulo": "Almoço & Exposição" },
       {

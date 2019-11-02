@@ -229,7 +229,7 @@ const Header = ({ siteTitle }) => (
               <StyledLink to="/">Home</StyledLink>
               <StyledLink to="/ocongresso/">O Congresso</StyledLink>
               <StyledLink to="/agenda-e-palestrantes/">Agenda &amp; Palestrantes</StyledLink>
-              <StyledLink to="/page-2/">Expositores</StyledLink>
+              <StyledLink to="/expositores/">Expositores</StyledLink>
             </LinksContainer>
             <BarraContatosDesktop />
           </LinksWrapper>

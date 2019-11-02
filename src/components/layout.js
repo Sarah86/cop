@@ -17,6 +17,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './layout.css'
 import './theme.css'
 import './typography.css'
+import Footer from './footer'
 
 const Content = styled.div`
   margin: 0 auto;
@@ -45,11 +46,7 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <Content>
         <main>{children}</main>
-        <footer style={{ minHeight: '5em' }}>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+       <Footer/>
       </Content>
     </>
   )
