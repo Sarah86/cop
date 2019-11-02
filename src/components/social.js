@@ -14,22 +14,20 @@ const SocialLink = styled.a`
   }
 `
 
-const fontSize = "1.5em"; // inline para aparecer nos primeiros segundos de carregamento de forma correta
-
-export const LinkedInstagramIcon = () => (
+export const LinkedInstagramIcon = ( props ) => (
   <SocialLink href="http://www.instagram.com">
-    <FontAwesomeIcon icon={faFacebookF} style={{fontSize:`${fontSize}`}}/>
+    <FontAwesomeIcon icon={faFacebookF} style={{fontSize:`${props.fontSize}`}}/>
   </SocialLink>
 )
 
-export const LinkedFacebookIcon = () => (
+export const LinkedFacebookIcon = (props) => (
   <SocialLink href="http://www.facebook.com">
-    <FontAwesomeIcon icon={faInstagram} style={{fontSize:`${fontSize}`}}/>
+    <FontAwesomeIcon icon={faInstagram} style={{fontSize:`${props.fontSize}`}}/>
   </SocialLink>
 )
 
-export const LinkedYoutubeIcon = () => (
+export const LinkedYoutubeIcon = (props) => (
   <SocialLink href="http://www.youtube.com">
-    <FontAwesomeIcon icon={faYoutube} style={{fontSize:`${fontSize}`}}/>
+    <FontAwesomeIcon icon={faYoutube} style={{fontSize:`${props.fontSize}`}}/>
   </SocialLink>
 )

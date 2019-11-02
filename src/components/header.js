@@ -178,8 +178,7 @@ const BarraContatosDesktop = () => (
     <BarraContato email="contato@copinternacional.com" telefone="+55 49 9932 3454" />
     <Divisor />
     <SocialLinksContainer
-      className="d-inline-block"
-      style={{ fontSize: '.5em', marginLeft: '-.5em' }}
+      style={{ display:"inline-block", marginLeft: '-.5em' }} fontSize="1.5em"
     />
   </div>
 )
