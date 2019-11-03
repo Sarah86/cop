@@ -21,12 +21,12 @@ const IconSize = styled.span`
   padding: 0.3em;
 `
 
-const Local = ({ style, fontSize, iconSize }) => (
-  <div style={style}>
-    <IconSize iconSize={iconSize}>
+const Local = (props) => (
+  <div style={props.style}>
+    <IconSize iconSize={props.iconSize}>
       <FontAwesomeIcon icon={faMapMarkerAlt} />
     </IconSize>
-    <LocalTexto fontSize={fontSize}>{Infos.dataLocal}</LocalTexto>
+    <LocalTexto fontSize={props.fontSize}>{Infos.dataLocal}</LocalTexto>
   </div>
 )
 

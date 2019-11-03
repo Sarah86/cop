@@ -3,6 +3,7 @@
     "dia": "17.mar",
     "diaLongo": "ter.17.mar",
     "diaCompleto": "Terça, 17 de Março",
+    "diaFooter": "Dia 01 - 17/03",
     "atividades": [
       { "hora": "07:30h", "titulo": "Credenciamento" },
       { "hora": "08:30h", "titulo": "Abertura dos Trabalhos" },
@@ -54,6 +55,8 @@
   {
     "dia": "18.mar",
     "diaLongo": "qua.18.mar",
+    "diaCompleto": "Quarta, 18 de Março",
+    "diaFooter": "Dia 02 - 18/03",
     "atividades": [
       { "hora": "07:30h", "titulo": "Credenciamento" },
       { "hora": "08:30h", "titulo": "Abertura dos Trabalhos" },
@@ -68,12 +71,21 @@
           "Dapibus sed aliquam sem famessse maecenas <a href=/>eleifend</a> enim etiam hac semper tellus. ",
           "Ornare vivamus cursus curabitur fur nibh. "
         ]
+      },
+      {
+        "hora": "09:00h",
+        "titulo": "Palestra Magna",
+        "palestrante": "Palestrante sem descricao",
+        "slug": "ze-da-banca",
+        "imagem": "palestrante_placeholder.jpg"
       }
     ]
   },
   {
     "dia": "19.mar",
     "diaLongo": "qui.19.mar",
+    "diaCompleto": "Quinta, 19 de Março",
+    "diaFooter": "Dia 03 - 18/03",
     "atividades": [
       { "hora": "07:30h", "titulo": "Credenciamento" },
       { "hora": "08:30h", "titulo": "Abertura dos Trabalhos" },
