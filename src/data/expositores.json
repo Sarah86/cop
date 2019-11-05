@@ -1,185 +1,178 @@
 {
-    "diamante": [
-        {
-            "nome": "Condor",
-            "ramo": "Tecnologias Não-Letais",
-            "logo": "placeholder-expositor.jpg",
-            "descricao": "Lorem ipsum dolor",
-            "local": "2° piso - Stands 03 e 04",
-            "site": "https://www.condornaoletal.com.br"
-        },
-        {
-            "nome": "5.11 Tactical",
-            "ramo": "Equipamentos táticos, vestuário especial e Acessórios",
-            "logo": "placeholder-expositor.jpg",
-            "descricao": "Lorem ipsum dolor",
-            "local": "2° piso - Stands 06 e 07",
-            "site": "https://www.5.11tactical.com"
-        },
-        {
-            "nome": "Sossul",
-            "logo": "placeholder-expositor.jpg"
-            
-        },
-        {
-            "nome": "Quartzo",
-            "logo": "placeholder-expositor.jpg"
-        }
-    ],
-    "ouro": [
-        {
-            "nome": "Coringa",
-            "logo": "placeholder-expositor.jpg",
-            "local": "2° piso - Stands 06 e 07",
-            "site": "https://www.5.11tactical.com"
-        },
-        {
-            "nome": "BadBoy",
-            "logo": "placeholder-expositor.jpg",
-            "local": "2° piso - Stands 06 e 07",
-            "site": "https://www.5.11tactical.com"
-
-        },
-        {
-            "nome": "Lock",
-            "logo": "placeholder-expositor.jpg",
-            "local": "2° piso - Stands 06 e 07",
-            "site": "https://www.5.11tactical.com"
-
-        },
-        {
-            "nome": "Maynard's",
-            "logo": "placeholder-expositor.jpg",
-            "local": "2° piso - Stands 06 e 07",
-            "site": "https://www.5.11tactical.com"
-
-        },
-        {
-            "nome": "Alfacon",
-            "logo": "placeholder-expositor.jpg",
-            "local": "2° piso - Stands 06 e 07",
-            "site": "https://www.5.11tactical.com"
-
-        },
-        {
-            "nome": "Costao do Santinho",
-            "logo": "placeholder-expositor.jpg",
-            "local": "2° piso - Stands 06 e 07",
-            "site": "https://www.5.11tactical.com"
-
-        },
-        {
-            "nome": "Quartzo",
-            "logo": "placeholder-expositor.jpg",
-            "local": "2° piso - Stands 06 e 07",
-            "site": "https://www.5.11tactical.com"
-
-        },
-        {
-            "nome": "Ditec",
-            "logo": "placeholder-expositor.jpg",
-            "local": "2° piso - Stands 06 e 07",
-            "site": "https://www.5.11tactical.com"
-        }
-    ],
-    "prata": [
-        {
-            "nome": "Vento",
-            "logo": "placeholder-expositor.jpg",
-            "local": "2° piso - Stands 06 e 07",
-            "site": "https://www.5.11tactical.com"
-        },
-        {
-            "nome": "Walfare",
-            "logo": "placeholder-expositor.jpg",
-            "local": "2° piso - Stands 06 e 07",
-            "site": "https://www.5.11tactical.com"
-        },
-        {
-            "nome": "RJC",
-            "logo": "placeholder-expositor.jpg",
-            "local": "2° piso - Stands 06 e 07",
-            "site": "https://www.5.11tactical.com"
-        },
-        {
-            "nome": "FGSeguros",
-            "logo": "placeholder-expositor.jpg",
-            "local": "2° piso - Stands 06 e 07",
-            "site": "https://www.5.11tactical.com"
-        },
-        {
-            "nome": "Glagio",
-            "logo": "placeholder-expositor.jpg",
-            "local": "2° piso - Stands 06 e 07",
-            "site": "https://www.5.11tactical.com"
-        },
-        {
-            "nome": "Protecorp",
-            "logo": "placeholder-expositor.jpg",
-            "local": "2° piso - Stands 06 e 07",
-            "site": "https://www.5.11tactical.com"
-        },
-        {
-            "nome": "Sendesp",
-            "logo": "placeholder-expositor.jpg",
-            "local": "2° piso - Stands 06 e 07",
-            "site": "https://www.5.11tactical.com"
-        },
-        {
-            "nome": "Belica",
-            "logo": "placeholder-expositor.jpg",
-            "local": "2° piso - Stands 06 e 07",
-            "site": "https://www.5.11tactical.com"
-        }
-    ],
-    "bronze": [
-        {
-            "nome": "Vento",
-            "logo": "placeholder-expositor.jpg",
-            "local": "2° piso - Stands 06 e 07",
-            "site": "https://www.5.11tactical.com"
-        },
-        {
-            "nome": "Walfare",
-            "logo": "placeholder-expositor.jpg",
-            "local": "2° piso - Stands 06 e 07",
-            "site": "https://www.5.11tactical.com"
-        },
-        {
-            "nome": "RJC",
-            "logo": "placeholder-expositor.jpg",
-            "local": "2° piso - Stands 06 e 07",
-            "site": "https://www.5.11tactical.com"
-        },
-        {
-            "nome": "FGSeguros",
-            "logo": "placeholder-expositor.jpg",
-            "local": "2° piso - Stands 06 e 07",
-            "site": "https://www.5.11tactical.com"
-        },
-        {
-            "nome": "Glagio",
-            "logo": "placeholder-expositor.jpg",
-            "local": "2° piso - Stands 06 e 07",
-            "site": "https://www.5.11tactical.com"
-        },
-        {
-            "nome": "Protecorp",
-            "logo": "placeholder-expositor.jpg",
-            "local": "2° piso - Stands 06 e 07",
-            "site": "https://www.5.11tactical.com"
-        },
-        {
-            "nome": "Sendesp",
-            "logo": "placeholder-expositor.jpg",
-            "local": "2° piso - Stands 06 e 07",
-            "site": "https://www.5.11tactical.com"
-        },
-        {
-            "nome": "Belica",
-            "logo": "placeholder-expositor.jpg",
-            "local": "2° piso - Stands 06 e 07",
-            "site": "https://www.5.11tactical.com"
-        }
-    ]
+  "diamante": [
+    {
+      "nome": "Condor",
+      "ramo": "Tecnologias Não-Letais",
+      "logo": "placeholder-expositor.jpg",
+      "descricao": "Lorem ipsum dolor",
+      "local": "2° piso - Stands 03 e 04",
+      "site": "https://www.condornaoletal.com.br"
+    },
+    {
+      "nome": "5.11 Tactical",
+      "ramo": "Equipamentos táticos, vestuário especial e Acessórios",
+      "logo": "placeholder-expositor.jpg",
+      "descricao": "Lorem ipsum dolor",
+      "local": "2° piso - Stands 06 e 07",
+      "site": "https://www.5.11tactical.com"
+    },
+    {
+      "nome": "Sossul",
+      "logo": "placeholder-expositor.jpg"
+    },
+    {
+      "nome": "Quartzo",
+      "logo": "placeholder-expositor.jpg"
+    }
+  ],
+  "ouro": [
+    {
+      "nome": "Coringa",
+      "logo": "placeholder-expositor.jpg",
+      "local": "2° piso - Stands 06 e 07",
+      "site": "https://www.5.11tactical.com"
+    },
+    {
+      "nome": "BadBoy",
+      "logo": "placeholder-expositor.jpg",
+      "local": "2° piso - Stands 06 e 07",
+      "site": "https://www.5.11tactical.com"
+    },
+    {
+      "nome": "Lock",
+      "logo": "placeholder-expositor.jpg",
+      "local": "2° piso - Stands 06 e 07",
+      "site": "https://www.5.11tactical.com"
+    },
+    {
+      "nome": "Maynard's",
+      "logo": "placeholder-expositor.jpg",
+      "local": "2° piso - Stands 06 e 07",
+      "site": "https://www.5.11tactical.com"
+    },
+    {
+      "nome": "Alfacon",
+      "logo": "placeholder-expositor.jpg",
+      "local": "2° piso - Stands 06 e 07",
+      "site": "https://www.5.11tactical.com"
+    },
+    {
+      "nome": "Costao do Santinho",
+      "logo": "placeholder-expositor.jpg",
+      "local": "2° piso - Stands 06 e 07",
+      "site": "https://www.5.11tactical.com"
+    },
+    {
+      "nome": "Quartzo",
+      "logo": "placeholder-expositor.jpg",
+      "local": "2° piso - Stands 06 e 07",
+      "site": "https://www.5.11tactical.com"
+    },
+    {
+      "nome": "Ditec",
+      "logo": "placeholder-expositor.jpg",
+      "local": "2° piso - Stands 06 e 07",
+      "site": "https://www.5.11tactical.com"
+    }
+  ],
+  "prata": [
+    {
+      "nome": "Vento",
+      "logo": "placeholder-expositor.jpg",
+      "local": "2° piso - Stands 06 e 07",
+      "site": "https://www.5.11tactical.com"
+    },
+    {
+      "nome": "Walfare",
+      "logo": "placeholder-expositor.jpg",
+      "local": "2° piso - Stands 06 e 07",
+      "site": "https://www.5.11tactical.com"
+    },
+    {
+      "nome": "RJC",
+      "logo": "placeholder-expositor.jpg",
+      "local": "2° piso - Stands 06 e 07",
+      "site": "https://www.5.11tactical.com"
+    },
+    {
+      "nome": "FGSeguros",
+      "logo": "placeholder-expositor.jpg",
+      "local": "2° piso - Stands 06 e 07",
+      "site": "https://www.5.11tactical.com"
+    },
+    {
+      "nome": "Glagio",
+      "logo": "placeholder-expositor.jpg",
+      "local": "2° piso - Stands 06 e 07",
+      "site": "https://www.5.11tactical.com"
+    },
+    {
+      "nome": "Protecorp",
+      "logo": "placeholder-expositor.jpg",
+      "local": "2° piso - Stands 06 e 07",
+      "site": "https://www.5.11tactical.com"
+    },
+    {
+      "nome": "Sendesp",
+      "logo": "placeholder-expositor.jpg",
+      "local": "2° piso - Stands 06 e 07",
+      "site": "https://www.5.11tactical.com"
+    },
+    {
+      "nome": "Belica",
+      "logo": "placeholder-expositor.jpg",
+      "local": "2° piso - Stands 06 e 07",
+      "site": "https://www.5.11tactical.com"
+    }
+  ],
+  "bronze": [
+    {
+      "nome": "Vento",
+      "logo": "placeholder-expositor.jpg",
+      "local": "2° piso - Stands 06 e 07",
+      "site": "https://www.5.11tactical.com"
+    },
+    {
+      "nome": "Walfare",
+      "logo": "placeholder-expositor.jpg",
+      "local": "2° piso - Stands 06 e 07",
+      "site": "https://www.5.11tactical.com"
+    },
+    {
+      "nome": "RJC",
+      "logo": "placeholder-expositor.jpg",
+      "local": "2° piso - Stands 06 e 07",
+      "site": "https://www.5.11tactical.com"
+    },
+    {
+      "nome": "FGSeguros",
+      "logo": "placeholder-expositor.jpg",
+      "local": "2° piso - Stands 06 e 07",
+      "site": "https://www.5.11tactical.com"
+    },
+    {
+      "nome": "Glagio",
+      "logo": "placeholder-expositor.jpg",
+      "local": "2° piso - Stands 06 e 07",
+      "site": "https://www.5.11tactical.com"
+    },
+    {
+      "nome": "Protecorp",
+      "logo": "placeholder-expositor.jpg",
+      "local": "2° piso - Stands 06 e 07",
+      "site": "https://www.5.11tactical.com"
+    },
+    {
+      "nome": "Sendesp",
+      "logo": "placeholder-expositor.jpg",
+      "local": "2° piso - Stands 06 e 07",
+      "site": "https://www.5.11tactical.com"
+    },
+    {
+      "nome": "Belica",
+      "logo": "placeholder-expositor.jpg",
+      "local": "2° piso - Stands 06 e 07",
+      "site": "https://www.5.11tactical.com"
+    }
+  ]
 }

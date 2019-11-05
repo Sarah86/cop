@@ -14,8 +14,8 @@ const SeparadorWrapper = styled.div`
 `
 
 const Separador = props => (
-  <SeparadorWrapper width={props.widthTotal} center={props.center} noMargin={props.noMargin}>
-    <MolduraBottom sm={props.sm} color={props.color} border={props.border} />
+  <SeparadorWrapper width={props.widthTotal} center={props.center} noMargin={props.noMargin} className={props.className}>
+    <MolduraBottom sm={props.sm} color={props.color} border={props.border} widthBarra={props.widthBarra} tall={props.tall} />
   </SeparadorWrapper>
 )
 

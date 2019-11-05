@@ -71,29 +71,29 @@ const DiamanteBox = styled.div`
 `
 const TitleWrapper = styled.div`
   padding: 1.5em;
-  @media ${device.desktop}{
+  @media ${device.desktop} {
     padding-left: 0;
   }
 `
 const Local = styled.p`
   font-family: TilliumWeb;
   color: var(--lemongrass);
-  font-size: .9em;
+  font-size: 0.9em;
   font-weight: bold;
   margin-bottom: 0;
 `
 
 const Site = styled.a`
- color: var(--amber);
- font-family: TilliumWeb;
- font-size: .7em;
- text-decoration: underline;
- &:hover {
-   color: var(--amber);
- }
+  color: var(--amber);
+  font-family: TilliumWeb;
+  font-size: 0.7em;
+  text-decoration: underline;
+  &:hover {
+    color: var(--amber);
+  }
 `
 
-const ExpositoresCategory = (props) => (
+const ExpositoresCategory = props => (
   <TitleWrapper>
     <StyledFadeParagraphTitle color={props.color} fontSize={props.fontSize}>
       expositores
@@ -107,7 +107,7 @@ const ExpositoresCategory = (props) => (
 const ExpositoresDiamante = () => {
   const ExpositorDiamante = Expositores.diamante.map(diamante => (
     <ColDiamante sm={12} lg={6}>
-      <Photo imgName={diamante.logo} noMargin/>
+      <Photo imgName={diamante.logo} noMargin />
       <DiamanteBox>
         <h4 style={{ fontFamily: 'TilliumWeb', fontSize: '1.2em', marginBottom: '0' }}>
           {diamante.nome}
@@ -127,12 +127,8 @@ const ExpositoresDiamante = () => {
           dangerouslySetInnerHTML={{ __html: `${diamante.descricao}` }}
         />
         <div>
-          <Local>
-            {diamante.local}
-          </Local>
-          <Site href={`${diamante.site}`}>
-            {diamante.site}
-          </Site>
+          <Local>{diamante.local}</Local>
+          <Site href={`${diamante.site}`}>{diamante.site}</Site>
         </div>
         <Separador color="var(--bunker)" sm border="1px" widthTotal="100%" noMargin />
       </DiamanteBox>
@@ -140,7 +136,7 @@ const ExpositoresDiamante = () => {
   ))
   return (
     <>
-      <div>
+      <div name="diamante">
         <ExpositoresCategory fontSizeSubtitulo="2.5em" color="var(--narvik)" category="diamante" />
         <div className="d-flex justify-content-end mt-n5">
           <MediaQuery maxWidth={991}>
@@ -161,12 +157,12 @@ const ExpositoresDiamante = () => {
 const StyledCol = styled(Col)`
   border: 0.5px solid var(--narvik);
   background-color: var(--kidnapper);
-  @media ${device.desktop}{
+  @media ${device.desktop} {
     border-color: var(--bunker);
     background-color: var(--blackpearl);
   }
 `
-const OuroBox = styled.div`
+export const OuroBox = styled.div`
   background-color: var(--feta);
   @media ${device.desktop} {
     background: none;
@@ -174,38 +170,35 @@ const OuroBox = styled.div`
 `
 const SpacerInterBlocks = styled.div`
   padding-top: 2em;
-  @media ${device.desktop}{
+  @media ${device.desktop} {
     margin-top: 5em;
-  }`
+  }
+`
 
 const OuroInfo = styled.div`
   display: none;
-@media ${device.desktop}{
-  display: block;
-  text-align: center;
-  margin:1.5em; 
+  @media ${device.desktop} {
+    display: block;
+    text-align: center;
+    margin: 1.5em;
   }
 `
 
 const ExpositoresOuro = () => {
   const ExpositorOuro = Expositores.ouro.map(ouro => (
     <StyledCol xs={6} lg={3}>
-      <Image imgName={ouro.logo} style={{margin:"1em"}}/>
+      <Image imgName={ouro.logo} style={{ margin: '1em' }} />
       <OuroInfo>
-        <Local>
-          {ouro.local}
-        </Local>
-        <Site href={`${ouro.site}`}>
-            {ouro.site}
-          </Site>
+        <Local>{ouro.local}</Local>
+        <Site href={`${ouro.site}`}>{ouro.site}</Site>
       </OuroInfo>
     </StyledCol>
   ))
 
   return (
     <>
-      <OuroBox>
-      <SpacerInterBlocks />
+      <OuroBox name="ouro">
+        <SpacerInterBlocks />
         <MediaQuery maxWidth={991}>
           <ExpositoresCategory
             fontSize="2.5em"
@@ -226,14 +219,14 @@ const ExpositoresOuro = () => {
           />
         </MediaQuery>
         <Container className="m-0 p-0">
-        <Row noGutters className="pt-2 pb-2">
+          <Row noGutters className="pt-2 pb-2">
             {ExpositorOuro}
           </Row>
         </Container>
         <MediaQuery maxWidth={991}>
-        <div className="d-flex justify-content-end mt-n5">
-          <Separador color="var(--kidnapper)" border="1px" widthTotal="50%" />
-        </div>
+          <div className="d-flex justify-content-end mt-n5">
+            <Separador color="var(--kidnapper)" border="1px" widthTotal="50%" />
+          </div>
         </MediaQuery>
       </OuroBox>
     </>
@@ -243,22 +236,18 @@ const ExpositoresOuro = () => {
 const ExpositoresPrata = () => {
   const ExpositorPrata = Expositores.prata.map(prata => (
     <StyledCol xs={4} lg={3}>
-      <Image imgName={prata.logo} style={{margin:"1em"}}/>
+      <Image imgName={prata.logo} style={{ margin: '1em' }} />
       <OuroInfo>
-        <Local>
-          {prata.local}
-        </Local>
-        <Site href={`${prata.site}`}>
-            {prata.site}
-          </Site>
+        <Local>{prata.local}</Local>
+        <Site href={`${prata.site}`}>{prata.site}</Site>
       </OuroInfo>
     </StyledCol>
   ))
 
   return (
     <>
-      <OuroBox>
-      <SpacerInterBlocks />
+      <OuroBox name="prata">
+        <SpacerInterBlocks />
         <MediaQuery maxWidth={991}>
           <ExpositoresCategory
             fontSize="2.5em"
@@ -284,35 +273,30 @@ const ExpositoresPrata = () => {
           </Row>
         </Container>
         <MediaQuery maxWidth={991}>
-        <div className="d-flex justify-content-end mt-n5">
-          <Separador color="var(--kidnapper)" border="1px" widthTotal="50%" />
-        </div>
+          <div className="d-flex justify-content-end mt-n5">
+            <Separador color="var(--kidnapper)" border="1px" widthTotal="50%" />
+          </div>
         </MediaQuery>
       </OuroBox>
     </>
   )
 }
 
-
 const ExpositoresBronze = () => {
   const ExpositorBronze = Expositores.bronze.map(bronze => (
     <StyledCol xs={3} lg={3}>
-      <Image imgName={bronze.logo} style={{margin:"1em"}}/>
+      <Image imgName={bronze.logo} style={{ margin: '1em' }} />
       <OuroInfo>
-        <Local>
-          {bronze.local}
-        </Local>
-        <Site href={`${bronze.site}`}>
-            {bronze.site}
-          </Site>
+        <Local>{bronze.local}</Local>
+        <Site href={`${bronze.site}`}>{bronze.site}</Site>
       </OuroInfo>
     </StyledCol>
   ))
 
   return (
     <>
-      <OuroBox>
-      <SpacerInterBlocks />
+      <OuroBox name="bronze">
+        <SpacerInterBlocks />
         <MediaQuery maxWidth={991}>
           <ExpositoresCategory
             fontSize="2.5em"
@@ -321,7 +305,7 @@ const ExpositoresBronze = () => {
             category="bronze"
           />
           <div className="d-flex justify-content-end mt-n5">
-            <Separador color="var(--kidnapper)" border="1px" widthTotal="50%" noMargin/>
+            <Separador color="var(--kidnapper)" border="1px" widthTotal="50%" noMargin />
           </div>
         </MediaQuery>
         <MediaQuery minWidth={992}>
@@ -333,20 +317,19 @@ const ExpositoresBronze = () => {
           />
         </MediaQuery>
         <Container className="m-0 p-0">
-        <Row noGutters className="pt-2 pb-2">
+          <Row noGutters className="pt-2 pb-2">
             {ExpositorBronze}
           </Row>
         </Container>
         <MediaQuery maxWidth={991}>
-        <div className="d-flex justify-content-end mt-n5">
-          <Separador color="var(--kidnapper)" border="1px" widthTotal="50%" />
-        </div>
+          <div className="d-flex justify-content-end mt-n5">
+            <Separador color="var(--kidnapper)" border="1px" widthTotal="50%" />
+          </div>
         </MediaQuery>
       </OuroBox>
     </>
   )
 }
-
 
 const ExpositoresPage = () => (
   <Layout>

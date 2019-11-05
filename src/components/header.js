@@ -120,7 +120,7 @@ const StyledLink = styled(Link).attrs({ activeClassName: 'active' })`
   }
 `
 
-const SocialLinksContainer = (props) => (
+const SocialLinksContainer = props => (
   <div {...props}>
     <LinkedFacebookIcon />
     <LinkedInstagramIcon />
@@ -178,7 +178,8 @@ const BarraContatosDesktop = () => (
     <BarraContato email="contato@copinternacional.com" telefone="+55 49 9932 3454" />
     <Divisor />
     <SocialLinksContainer
-      style={{ display:"inline-block", marginLeft: '-.5em' }} fontSize="1.5em"
+      style={{ display: 'inline-block', marginLeft: '-.5em' }}
+      fontSize="1.5em"
     />
   </div>
 )
@@ -249,6 +250,31 @@ const Header = ({ siteTitle }) => (
       </NavbarButtonContainer>
     </StyledNavbar>
   </header>
+)
+
+
+export const FooterMenuMobile = ({siteTitle}) => (
+  <StyledNav style={{minHeight: "500px", paddingBottom:"2em", marginTop: "-4em"}}>
+  <LogoWrapper maxWidth="170px">
+    <Link to="/" alt={siteTitle} title={siteTitle}>
+      <LogoBranca />
+    </Link>
+  </LogoWrapper>
+  <LinksWrapper>
+    <LinksContainer>
+      <StyledLink to="/">Home</StyledLink>
+      <StyledLink to="/ocongresso/">O Congresso</StyledLink>
+      <StyledLink to="/agenda-e-palestrantes/">Agenda &amp; Palestrantes</StyledLink>
+      <StyledLink to="/expositores/">Expositores</StyledLink>
+    </LinksContainer>
+    <BarraContatosDesktop />
+  </LinksWrapper>
+  <BotaoContainer>
+    <Botao texto="Inscreva-se Agora!" to="/" />
+  </BotaoContainer>
+  <BarraContatosMobile />
+  <SocialLinksContainer />
+</StyledNav>
 )
 
 Header.propTypes = {

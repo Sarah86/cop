@@ -14,20 +14,20 @@ const SocialLink = styled.a`
   }
 `
 
-export const LinkedInstagramIcon = ( props ) => (
+export const LinkedInstagramIcon = props => (
   <SocialLink href="http://www.instagram.com">
-    <FontAwesomeIcon icon={faFacebookF} style={{fontSize:`${props.fontSize}`}}/>
+    <FontAwesomeIcon icon={faFacebookF} style={{ fontSize: `${props.fontSize}` }} />
   </SocialLink>
 )
 
-export const LinkedFacebookIcon = (props) => (
+export const LinkedFacebookIcon = props => (
   <SocialLink href="http://www.facebook.com">
-    <FontAwesomeIcon icon={faInstagram} style={{fontSize:`${props.fontSize}`}}/>
+    <FontAwesomeIcon icon={faInstagram} style={{ fontSize: `${props.fontSize}` }} />
   </SocialLink>
 )
 
-export const LinkedYoutubeIcon = (props) => (
+export const LinkedYoutubeIcon = props => (
   <SocialLink href="http://www.youtube.com">
-    <FontAwesomeIcon icon={faYoutube} style={{fontSize:`${props.fontSize}`}}/>
+    <FontAwesomeIcon icon={faYoutube} style={{ fontSize: `${props.fontSize}` }} />
   </SocialLink>
 )

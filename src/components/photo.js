@@ -23,17 +23,17 @@ const Subtitle = styled.div`
 const ImageWrapper = styled.div`
   position: relative;
   margin-bottom: .5em;
-  margin: ${props  => props.noMargin ? "0" : null};
+  margin: ${props => (props.noMargin ? '0' : null)};
   }
   
 `
 
 const Container = styled.div`
   padding-bottom: 1em;
-  padding:  ${props  => props.noMargin ? "0" : null};
+  padding: ${props => (props.noMargin ? '0' : null)};
 `
 
-const Photo = (props) => (
+const Photo = props => (
   <div noMargin={props.noMargin}>
     <ImageWrapper noMargin={props.noMargin}>
       <MolduraTop />

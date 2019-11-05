@@ -1,11 +1,13 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 import { device } from './device'
 
 const BorderTop = styled.div`
   background-color: var(--firefly);
+  background-color: ${props => props.color};
   width: 100%;
-  height: 0.6%;
+  height: ${props => (props.sm ? '1px' : '.6%')};
+  height: ${props => props.border};
   position: absolute;
   top: 0;
   z-index: 2;
@@ -13,8 +15,10 @@ const BorderTop = styled.div`
 
 const BarraTop = styled.div`
   background-color: var(--firefly);
+  background-color: ${props => props.color};
   height: 4px;
   width: 30%;
+  width: ${props => props.widthBarra};
   left: -1.5px;
   position: absolute;
   transform: skewX(-50deg);
@@ -22,6 +26,7 @@ const BarraTop = styled.div`
   :before {
     content: '';
     background-color: var(--firefly);
+    background-color: ${props => props.color};
     position: absolute;
     left: -4.1%;
     top: 0;
@@ -33,13 +38,20 @@ const BarraTop = styled.div`
     height: 3%;
     left: 1.2%;
     top: 0;
+    ${props => props.sm && css `
+    height: 5px;
+    width: 30px;
+  `}
+    ${props => props.tall && css `
+    height: 8px;
+  `}
   }
 `
 
-export const MolduraTop = () => (
+export const MolduraTop = props => (
   <>
-    <BorderTop />
-    <BarraTop />
+    <BorderTop sm={props.sm} color={props.color} border={props.border}/>
+    <BarraTop sm={props.sm} color={props.color} widthBarra={props.widthBarra} tall={props.tall} />
   </>
 )
 
@@ -58,7 +70,8 @@ const BarraBottom = styled.div`
   background-color: var(--firefly);
   background-color: ${props => props.color};
   height: 4px;
-  width: ${props => (props.sm ? '30px' : '30%')};
+  width: 30%;
+  width: ${props => props.widthBarra};
   bottom: 0;
   right: 0;
   position: absolute;
@@ -76,18 +89,25 @@ const BarraBottom = styled.div`
     transform: skewX(50deg);
   }
   @media ${device.desktop} {
-    height: ${props => (props.sm ? '5px' : '3%')};
+    height: 3%;
     bottom: 0;
     right: 9px;
     :after {
       right: -9px;
     }
+    ${props => props.sm && css `
+    height: 5px;
+    width: 30px;
+  `}
+    ${props => props.tall && css `
+    height: 8px;
+  `}
   }
 `
 
-export const MolduraBottom = ({ sm, color, border }) => (
+export const MolduraBottom = (props) => (
   <>
-    <BarraBottom sm={sm} color={color} />
-    <BorderBottom sm={sm} color={color} border={border} />
+    <BarraBottom sm={props.sm} color={props.color} widthBarra={props.widthBarra} tall={props.tall}/>
+    <BorderBottom sm={props.sm} color={props.color} border={props.border} />
   </>
 )

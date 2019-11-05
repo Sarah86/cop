@@ -45,10 +45,8 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <Content>
-        <main style={{paddingBottom:"7em"}}>
-        {children}
-        </main>
-       <Footer/>
+        <main style={{ paddingBottom: '7em' }}>{children}</main>
+        <Footer />
       </Content>
     </>
   )
