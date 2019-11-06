@@ -41,12 +41,28 @@ const Layout = ({ children }) => {
     }
   `)
 
+  const pageAddress = window.location.pathname;
+
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <Content>
-        <main style={{ paddingBottom: '7em' }}>{children}</main>
-        <Footer />
+        {
+          pageAddress === "/" 
+          ? (
+          <main style={{ paddingBottom: '3em' }}>
+           {children}
+          </main>
+          ) 
+          : (
+            <>
+            <main style={{ paddingBottom: '7em' }}>
+            {children}
+           </main>
+          <Footer />
+          </>
+          )
+        }
       </Content>
     </>
   )

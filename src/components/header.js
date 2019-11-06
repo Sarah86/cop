@@ -17,6 +17,8 @@ import Shadow from './shadow'
 import IsotipoCop from './isotipo'
 import SubscribeButton from './subscribeButton'
 
+import BotaoGIf from "../images/BT-INSCREVASE-GRATUITO.gif"
+
 const StyledNavbar = styled(Navbar)`
   && {
     position: fixed;
@@ -37,7 +39,7 @@ const StyledNavbarCollapse = styled(NavbarCollapse)`
   background-color: var(--verdecop);
   position: fixed;
   top: 0;
-  bottom: 52px;
+  bottom: 48px;
   left: 0;
   right: 0;
   @media ${device.landscapeMobile} {
@@ -168,6 +170,8 @@ const NavbarButtonContainer = styled.div`
   align-items: center;
   padding-right: 1em;
   padding-left: 1em;
+  padding-top: .5em;
+  padding-bottom: .5em;
   @media ${device.desktop} {
     display: none;
   }
@@ -233,9 +237,9 @@ const Header = ({ siteTitle }) => (
             </LinksContainer>
             <BarraContatosDesktop />
           </LinksWrapper>
-          <BotaoContainer>
-            <Botao texto="Inscreva-se Agora!" to="/page-2/" />
-          </BotaoContainer>
+            <a href="/">
+              <img src={BotaoGIf} alt="Inscreva-se agora! Evento gratuito!" style={{width:"195px", padding:"0", margin:"0"}}/>
+            </a>
           <BarraContatosMobile />
           <SocialLinksContainer className="d-block d-lg-none" />
         </StyledNav>
@@ -243,7 +247,7 @@ const Header = ({ siteTitle }) => (
       </StyledNavbarCollapse>
       <NavbarButtonContainer>
         <IsotipoCop />
-        <Navbar.Toggle aria-controls="basic-navbar-nav" style={{ border: 'none' }}>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" style={{ border: 'none', position:"absolute", left:"50%", transform: "translateX(-50%)"}}>
           <Hamburger style={{ border: 'none' }} />
         </Navbar.Toggle>
         <SubscribeButton />
@@ -269,9 +273,6 @@ export const FooterMenuMobile = ({siteTitle}) => (
     </LinksContainer>
     <BarraContatosDesktop />
   </LinksWrapper>
-  <BotaoContainer>
-    <Botao texto="Inscreva-se Agora!" to="/" />
-  </BotaoContainer>
   <BarraContatosMobile />
   <SocialLinksContainer />
 </StyledNav>
