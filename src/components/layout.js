@@ -8,7 +8,7 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
 import { device } from './device'
@@ -30,46 +30,52 @@ const Content = styled.div`
   }
 `
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+class Layout extends React.Component {
 
-  const pageAddress = window.location.pathname;
+  componentDidMount(){
+    this.pageAddress = window.location.pathname;
+  }
 
-  return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+  render(){
+    return(
+      <>
+      <Header siteTitle={this.props.data.site.siteMetadata.title} />
       <Content>
         {
-          pageAddress === "/" 
-          ? (
-          <main style={{ paddingBottom: '3em' }}>
-           {children}
-          </main>
-          ) 
-          : (
-            <>
-            <main style={{ paddingBottom: '7em' }}>
-            {children}
-           </main>
-          <Footer />
-          </>
-          )
+          this.pageAddress === "/"
+            ? (
+              <main style={{ paddingBottom: '3em' }}>
+                {this.props.children}
+              </main>
+            )
+            : (
+              <>
+                <main style={{ paddingBottom: '7em' }}>
+                  {this.props.children}
+                </main>
+                <Footer />
+              </>
+            )
         }
       </Content>
     </>
-  )
+    )
+  }
 }
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default props => (
+  <StaticQuery query={graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`}
+render={data => <Layout data={data} {...props} />}
+/>)
