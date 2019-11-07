@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'gatsby'
 
 import './theme.css'
 import './typography.css'
@@ -66,7 +65,7 @@ const Botao = ({
   style,
   width,
 }) => (
-  <Link to={to}>
+  <a href={to}>
     <StyledBotao
       background={background}
       borderWidth={borderWidth}
@@ -79,7 +78,7 @@ const Botao = ({
         {texto}
       </BotaoText>
     </StyledBotao>
-  </Link>
+  </a>
 )
 
 export default Botao

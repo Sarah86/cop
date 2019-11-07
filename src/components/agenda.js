@@ -107,35 +107,56 @@ export const AgendaMobile = ({ defaultActiveKeyAccordion, defaultActiveKeyTab })
     <Tab.Pane eventKey={dia.dia}>
       {dia.atividades.map(atividade => (
         <StyledAccordion defaultActiveKey={defaultActiveKeyAccordion}>
-          {atividade.descricao == null ? (
-            <Accordion.Toggle
-              as="div"
-              eventKey={atividade.i}
-              key={atividade.i}
-              className="d-flex justify-content-between"
-            >
-              <span style={{ textAlign: 'right', flexBasis: '30%' }}>{atividade.hora}</span>
-              <span style={{ flexBasis: '65%' }}>{atividade.titulo}</span>
-            </Accordion.Toggle>
-          ) : (
-            <Accordion.Toggle as="div" eventKey={atividade.slug} key={atividade.slug}>
-              <Link
-                to={`/agenda-e-palestrantes/${atividade.slug}`}
-                activeClassName="opened-accordion"
-                className="d-flex justify-content-between has-content"
+          {atividade.palestrante
+            ? (
+              <>
+                {
+                  atividade.descricao
+                    ? (
+                      <Accordion.Toggle as="div" eventKey={atividade.slug} key={atividade.slug}>
+                        <Link
+                          to={`/agenda-e-palestrantes/${atividade.slug}`}
+                          activeClassName="opened-accordion"
+                          className="d-flex justify-content-between has-content"
+                        >
+                          <span style={{ textAlign: 'right', flexBasis: '30%' }}>{atividade.hora}</span>
+                          <div className="d-flex justify-content-between" style={{ flexBasis: '65%' }}>
+                            <span>{atividade.palestrante}</span>
+                            <FontAwesomeIcon
+                              size="xs"
+                              icon={faCaretDown}
+                              style={{ alignSelf: 'center', marginRight: '1em' }}
+                            />
+                          </div>
+                        </Link>
+                      </Accordion.Toggle>
+                    )
+                    : (
+                      <Accordion.Toggle
+                        as="div"
+                        eventKey={atividade.i}
+                        key={atividade.i}
+                        className="d-flex justify-content-between"
+                      >
+                        <span style={{ textAlign: 'right', flexBasis: '30%' }}>{atividade.hora}</span>
+                        <span style={{ flexBasis: '65%' }}>{atividade.palestrante}</span>
+                      </Accordion.Toggle>
+                    )
+                }
+              </>
+            )
+            : (
+              <Accordion.Toggle
+                as="div"
+                eventKey={atividade.i}
+                key={atividade.i}
+                className="d-flex justify-content-between"
               >
                 <span style={{ textAlign: 'right', flexBasis: '30%' }}>{atividade.hora}</span>
-                <div className="d-flex justify-content-between" style={{ flexBasis: '65%' }}>
-                  <span>{atividade.palestrante}</span>
-                  <FontAwesomeIcon
-                    size="xs"
-                    icon={faCaretDown}
-                    style={{ alignSelf: 'center', marginRight: '1em' }}
-                  />
-                </div>
-              </Link>
-            </Accordion.Toggle>
-          )}
+                <span style={{ flexBasis: '65%' }}>{atividade.titulo}</span>
+              </Accordion.Toggle>
+            )
+          }
           {atividade.descricao == null ? null : (
             <Accordion.Collapse eventKey={atividade.slug} style={{ position: 'relative' }}>
               <div>
@@ -213,25 +234,37 @@ export const AgendaTabelaDesktop = () => {
             {atividade.descricao == null ? (
               <>{atividade.hora}</>
             ) : (
-              <Link
-                to={`/agenda-e-palestrantes/${atividade.slug}`}
-                style={{ color: 'var(--narvik' }}
-              >
-                {atividade.hora}
-              </Link>
-            )}
+                <Link
+                  to={`/agenda-e-palestrantes/${atividade.slug}`}
+                  style={{ color: 'var(--narvik' }}
+                >
+                  {atividade.hora}
+                </Link>
+              )}
           </Col>
           <Col lg={8} style={{ marginLeft: '-1em' }}>
-            {atividade.descricao == null ? (
-              <>{atividade.titulo}</>
-            ) : (
-              <Link
-                to={`/agenda-e-palestrantes/${atividade.slug}`}
-                style={{ color: 'var(--narvik' }}
-              >
-                {atividade.palestrante}
-              </Link>
-            )}
+            {atividade.palestrante
+              ? (
+                <>
+                  {
+                    atividade.descricao
+                      ? (
+                        <Link
+                          to={`/agenda-e-palestrantes/${atividade.slug}`}
+                          style={{ color: 'var(--narvik' }}
+                        >
+                          {atividade.palestrante}
+                        </Link>)
+                      : (
+                        <>{atividade.palestrante}</>
+                      )
+                  }
+                </>
+              )
+              : (
+                <>{atividade.titulo}</>
+              )
+            }
           </Col>
         </StyledRow>
       ))}
@@ -333,25 +366,37 @@ export const AgendaDesktop = ({
                           {atividade.descricao == null ? (
                             <>{atividade.hora}</>
                           ) : (
-                            <StyledLink
-                              to={`/agenda-e-palestrantes/${atividade.slug}`}
-                              activeClassName="atividadeActive"
-                            >
-                              {atividade.hora}
-                            </StyledLink>
-                          )}
+                              <StyledLink
+                                to={`/agenda-e-palestrantes/${atividade.slug}`}
+                                activeClassName="atividadeActive"
+                              >
+                                {atividade.hora}
+                              </StyledLink>
+                            )}
                         </Col>
                         <Col lg={8} style={{ marginLeft: '-1em' }}>
-                          {atividade.descricao == null ? (
-                            <>{atividade.titulo}</>
-                          ) : (
-                            <StyledLink
-                              to={`/agenda-e-palestrantes/${atividade.slug}`}
-                              activeClassName="atividadeActive"
-                            >
-                              {atividade.palestrante}
-                            </StyledLink>
-                          )}
+                          {atividade.palestrante
+                            ? (
+                              <>
+                                {
+                                  atividade.descricao
+                                    ? (
+                                      <StyledLink
+                                        to={`/agenda-e-palestrantes/${atividade.slug}`}
+                                        activeClassName="atividadeActive"
+                                      >
+                                        {atividade.palestrante}
+                                      </StyledLink>)
+                                    : (
+                                      <>{atividade.palestrante}</>
+                                    )
+                                }
+                              </>
+                            )
+                            : (
+                              <>{atividade.titulo}</>
+                            )
+                          }
                         </Col>
                       </StyledRow>
                     </Nav.Link>

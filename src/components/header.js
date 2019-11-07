@@ -12,12 +12,14 @@ import { device } from './device'
 import Hamburger from './hamburger'
 import LogoAmarela from './logoamarela'
 import LogoBranca from './logobranca'
-import Botao from './botao'
 import Shadow from './shadow'
 import IsotipoCop from './isotipo'
 import SubscribeButton from './subscribeButton'
 
-import BotaoGIf from "../images/BT-INSCREVASE-GRATUITO.gif"
+import BotaoGIf from '../images/BT-INSCREVASE-GRATUITO.gif'
+
+const Dados = require('../data/dados.json')
+
 
 const StyledNavbar = styled(Navbar)`
   && {
@@ -170,8 +172,8 @@ const NavbarButtonContainer = styled.div`
   align-items: center;
   padding-right: 1em;
   padding-left: 1em;
-  padding-top: .5em;
-  padding-bottom: .5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
   @media ${device.desktop} {
     display: none;
   }
@@ -179,7 +181,7 @@ const NavbarButtonContainer = styled.div`
 
 const BarraContatosDesktop = () => (
   <div className="d-none d-lg-block" style={{ textAlign: 'right' }}>
-    <BarraContato email="contato@copinternacional.com" telefone="+55 49 9932 3454" />
+    <BarraContato email={Dados.contatoEmail} telefone={Dados.contatoTel} />
     <Divisor />
     <SocialLinksContainer
       style={{ display: 'inline-block', marginLeft: '-.5em' }}
@@ -190,8 +192,8 @@ const BarraContatosDesktop = () => (
 
 const BarraContatosMobile = () => (
   <div className="d-lg-none">
-    <BarraContato email="contato@copinternacional.com" telefone="+55 49 9932 3454" />
-    <BarraContato email="imprensa@copinternacional.com" telefone="+55 21 3434 3454" />
+    <BarraContato email={Dados.contatoEmail} telefone={Dados.contatoTel} />
+    <BarraContato email={Dados.imprensaEmail} telefone={Dados.imprensaTel} />
   </div>
 )
 
@@ -199,17 +201,6 @@ const LinksWrapper = styled.div`
   width: 100%;
   @media ${device.desktop} {
     margin-right: 1em;
-  }
-`
-
-const BotaoContainer = styled.div`
-  @media ${device.desktop} {
-    button {
-      width: 100%;
-    }
-    span {
-      font-size: 0.85em;
-    }
   }
 `
 
@@ -237,9 +228,13 @@ const Header = ({ siteTitle }) => (
             </LinksContainer>
             <BarraContatosDesktop />
           </LinksWrapper>
-            <a href="/">
-              <img src={BotaoGIf} alt="Inscreva-se agora! Evento gratuito!" style={{width:"195px", padding:"0", margin:"0"}}/>
-            </a>
+          <a href={Dados.linkInscricao}>
+            <img
+              src={BotaoGIf}
+              alt="Inscreva-se agora! Evento gratuito!"
+              style={{ width: '195px', padding: '0', margin: '0' }}
+            />
+          </a>
           <BarraContatosMobile />
           <SocialLinksContainer className="d-block d-lg-none" />
         </StyledNav>
@@ -247,7 +242,15 @@ const Header = ({ siteTitle }) => (
       </StyledNavbarCollapse>
       <NavbarButtonContainer>
         <IsotipoCop />
-        <Navbar.Toggle aria-controls="basic-navbar-nav" style={{ border: 'none', position:"absolute", left:"50%", transform: "translateX(-50%)"}}>
+        <Navbar.Toggle
+          aria-controls="basic-navbar-nav"
+          style={{
+            border: 'none',
+            position: 'absolute',
+            left: '50%',
+            transform: 'translateX(-50%)',
+          }}
+        >
           <Hamburger style={{ border: 'none' }} />
         </Navbar.Toggle>
         <SubscribeButton />
@@ -256,26 +259,25 @@ const Header = ({ siteTitle }) => (
   </header>
 )
 
-
-export const FooterMenuMobile = ({siteTitle}) => (
-  <StyledNav style={{minHeight: "500px", paddingBottom:"2em", marginTop: "-4em"}}>
-  <LogoWrapper maxWidth="170px">
-    <Link to="/" alt={siteTitle} title={siteTitle}>
-      <LogoBranca />
-    </Link>
-  </LogoWrapper>
-  <LinksWrapper>
-    <LinksContainer>
-      <StyledLink to="/">Home</StyledLink>
-      <StyledLink to="/ocongresso/">O Congresso</StyledLink>
-      <StyledLink to="/agenda-e-palestrantes/">Agenda &amp; Palestrantes</StyledLink>
-      <StyledLink to="/expositores/">Expositores</StyledLink>
-    </LinksContainer>
-    <BarraContatosDesktop />
-  </LinksWrapper>
-  <BarraContatosMobile />
-  <SocialLinksContainer />
-</StyledNav>
+export const FooterMenuMobile = ({ siteTitle }) => (
+  <StyledNav style={{ minHeight: '500px', paddingBottom: '2em', marginTop: '-4em' }}>
+    <LogoWrapper maxWidth="170px">
+      <Link to="/" alt={siteTitle} title={siteTitle}>
+        <LogoBranca />
+      </Link>
+    </LogoWrapper>
+    <LinksWrapper>
+      <LinksContainer>
+        <StyledLink to="/">Home</StyledLink>
+        <StyledLink to="/ocongresso/">O Congresso</StyledLink>
+        <StyledLink to="/agenda-e-palestrantes/">Agenda &amp; Palestrantes</StyledLink>
+        <StyledLink to="/expositores/">Expositores</StyledLink>
+      </LinksContainer>
+      <BarraContatosDesktop />
+    </LinksWrapper>
+    <BarraContatosMobile />
+    <SocialLinksContainer />
+  </StyledNav>
 )
 
 Header.propTypes = {

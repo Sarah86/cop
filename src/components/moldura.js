@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, {css} from 'styled-components'
+import styled, { css } from 'styled-components'
 import { device } from './device'
 
 const BorderTop = styled.div`
@@ -38,19 +38,23 @@ const BarraTop = styled.div`
     height: 3%;
     left: 1.2%;
     top: 0;
-    ${props => props.sm && css `
-    height: 5px;
-    width: 30px;
-  `}
-    ${props => props.tall && css `
-    height: 8px;
-  `}
+    ${props =>
+      props.sm &&
+      css`
+        height: 5px;
+        width: 30px;
+      `}
+    ${props =>
+      props.tall &&
+      css`
+        height: 8px;
+      `}
   }
 `
 
 export const MolduraTop = props => (
   <>
-    <BorderTop sm={props.sm} color={props.color} border={props.border}/>
+    <BorderTop sm={props.sm} color={props.color} border={props.border} />
     <BarraTop sm={props.sm} color={props.color} widthBarra={props.widthBarra} tall={props.tall} />
   </>
 )
@@ -95,19 +99,28 @@ const BarraBottom = styled.div`
     :after {
       right: -9px;
     }
-    ${props => props.sm && css `
-    height: 5px;
-    width: 30px;
-  `}
-    ${props => props.tall && css `
-    height: 8px;
-  `}
+    ${props =>
+      props.sm &&
+      css`
+        height: 5px;
+        width: 30px;
+      `}
+    ${props =>
+      props.tall &&
+      css`
+        height: 8px;
+      `}
   }
 `
 
-export const MolduraBottom = (props) => (
+export const MolduraBottom = props => (
   <>
-    <BarraBottom sm={props.sm} color={props.color} widthBarra={props.widthBarra} tall={props.tall}/>
+    <BarraBottom
+      sm={props.sm}
+      color={props.color}
+      widthBarra={props.widthBarra}
+      tall={props.tall}
+    />
     <BorderBottom sm={props.sm} color={props.color} border={props.border} />
   </>
 )

@@ -3,18 +3,19 @@ import MediaQuery from 'react-responsive'
 import { Row, Col, Container } from 'react-bootstrap'
 import styled, { css } from 'styled-components'
 
+
 import Local from './location'
 import FullWidth from './fullwidth'
 import Image from './image'
 import Separador from './separador'
 import { Link } from 'gatsby'
-import { Paragraph } from './typography'
 import SeparadorInverted from './separadorInverted'
-import { ExpositoresDiamante, OuroBox } from '../pages/expositores'
+import { OuroBox } from '../pages/expositores'
 import { FooterMenuMobile } from './header'
 
 const Cronograma = require('../data/cronograma.json')
 const Expositores = require('../data/expositores.json')
+const Dados = require('../data/dados.json')
 
 
 const ColunaA = styled(Col)`
@@ -42,17 +43,17 @@ const SitemapTitle = styled.p`
 `
 
 const Isotipo = () => (
-    <div style={{ width: '90px', marginLeft: '.5em', marginBottom: '1.5em' }}>
-        <Image imgName="COP-ISOTIPO-TEXTURADO.png" />
-    </div>
+  <div style={{ width: '90px', marginLeft: '.5em', marginBottom: '1.5em' }}>
+    <Image imgName="COP-ISOTIPO-TEXTURADO.png" />
+  </div>
 )
 
 const FooterTitle = () => (
-    <>
-        <TitleH1>Congresso Internacional de Operações Policiais</TitleH1>
-        <Local fontSize=".7em" iconSize="1.2em" style={{ color: 'var(--lemongrass' }} />
-        <Separador color="var(--plantation)" border="1px" widthTotal="95%" noMargin sm />
-    </>
+  <>
+    <TitleH1>Congresso Internacional de Operações Policiais</TitleH1>
+    <Local fontSize=".7em" iconSize="1.2em" style={{ color: 'var(--lemongrass' }} />
+    <Separador color="var(--plantation)" border="1px" widthTotal="95%" noMargin sm />
+  </>
 )
 
 const SitemapUl = styled.ul`
@@ -94,8 +95,8 @@ const StyledLink = styled(Link)`
     color: var(--amber);
   }
   ${props =>
-        props.page &&
-        css`
+    props.page &&
+    css`
       font-weight: 600;
     `}
 `
@@ -129,187 +130,215 @@ const FooterTitleBold = styled.h3`
   span {
     font-weight: 300;
     display: block;
-    margin-bottom: -.2em;
+    margin-bottom: -0.2em;
   }
 `
 const StyledImage = styled(Image)`
-    display: inline-block;
-    width: 70px;
-    margin: .5em;
+  display: inline-block;
+  width: 70px;
+  margin: 0.5em;
 `
 
 const StyledCol = styled(Col)`
-  border: 0.5px solid var(--narvik);
-  background-color: var(--kidnapper);
+  border: 0.5px solid var(--kidnapper);
 `
 
 const FooterMenuItem = props => (
-    <li>
-        <StyledLink to={props.link} activeClassName="active" page={props.page} section={props.section}>
-            {props.title}
-        </StyledLink>
-    </li>
+  <li>
+    <StyledLink to={props.link} activeClassName="active" page={props.page} section={props.section}>
+      {props.title}
+    </StyledLink>
+  </li>
 )
 
 const Sitemap = () => {
-    const Palestrantes = Cronograma.map(data => (
-        <SitemapUl>
-            <StyledDiaFooter>
-                <span>{data.diaFooter}</span>
-            </StyledDiaFooter>
-            <SitemapUl>
-                {data.atividades.map(atividade => (
-                    <>
-                        {atividade.descricao ? (
-                            <FooterMenuItem
-                                link={`/agenda-e-palestrantes/${atividade.slug}`}
-                                title={atividade.palestrante}
-                            />
-                        ) : atividade.palestrante ? (
-                            <li>
-                                <DisabledLink>{atividade.palestrante}</DisabledLink>
-                            </li>
-                        ) : null}
-                    </>
-                ))}
-            </SitemapUl>
-        </SitemapUl>
-    ))
+  const Palestrantes = Cronograma.map(data => (
+    <SitemapUl>
+      <StyledDiaFooter>
+        <span>{data.diaFooter}</span>
+      </StyledDiaFooter>
+      <SitemapUl>
+        {data.atividades.map(atividade => (
+          <>
+            {atividade.descricao ? (
+              <FooterMenuItem
+                link={`/agenda-e-palestrantes/${atividade.slug}`}
+                title={atividade.palestrante}
+              />
+            ) : atividade.palestrante ? (
+              <li>
+                <DisabledLink>{atividade.palestrante}</DisabledLink>
+              </li>
+            ) : null}
+          </>
+        ))}
+      </SitemapUl>
+    </SitemapUl>
+  ))
 
-    const Expositores = (
-        <SitemapUl>
-            <FooterMenuItem link="/expositores#diamante" title="Expositores Diamante" />
-            <FooterMenuItem link="/expositores#ouro" title="Expositores Ouro" />
-            <FooterMenuItem link="/expositores#prata" title="Expositores Prata" />
-            <FooterMenuItem link="/expositores#bronze" title="Expositores Bronze" />
-        </SitemapUl>
-    )
+  const Expositores = (
+    <SitemapUl>
+      <FooterMenuItem link="/expositores#diamante" title="Expositores Diamante" />
+      <FooterMenuItem link="/expositores#ouro" title="Expositores Ouro" />
+      <FooterMenuItem link="/expositores#prata" title="Expositores Prata" />
+      <FooterMenuItem link="/expositores#bronze" title="Expositores Bronze" />
+    </SitemapUl>
+  )
 
-    return (
-        <>
-            <SitemapTitle>sitemap</SitemapTitle>
-            <div>
-                <SitemapUl>
-                    <FooterMenuItem page link="/" title="Home" />
-                    <FooterMenuItem page link="/ocongresso" title="O Congresso" />
-                    <FooterMenuItem page link="/agenda-e-palestrantes" title="Agenda & Palestrantes" />
-                    {Palestrantes}
-                    <FooterMenuItem page link="/expositores" title="Expositores" />
-                    {Expositores}
-                </SitemapUl>
-            </div>
-        </>
-    )
+  return (
+    <>
+      <SitemapTitle>sitemap</SitemapTitle>
+      <div>
+        <SitemapUl>
+          <FooterMenuItem page link="/" title="Home" />
+          <FooterMenuItem page link="/ocongresso" title="O Congresso" />
+          <FooterMenuItem page link="/agenda-e-palestrantes" title="Agenda & Palestrantes" />
+          {Palestrantes}
+          <FooterMenuItem page link="/expositores" title="Expositores" />
+          {Expositores}
+        </SitemapUl>
+      </div>
+    </>
+  )
 }
 
 const Contatos = () => (
-    <>
-        <Separador color="var(--plantation)" border="1px" widthTotal="95%" sm />
-        <div className="d-flex flex-column justify-content-center">
-            <SitemapTitle>contato</SitemapTitle>
-            <LinkExterno href="mailto:contato@copinternacional.com.br">
-                contato@copinternacional.com
+  <>
+    <Separador color="var(--plantation)" border="1px" widthTotal="95%" sm />
+    <div className="d-flex flex-column justify-content-center">
+      <SitemapTitle>contato</SitemapTitle>
+      <LinkExterno href={`mailto:${Dados.contatoEmail}`}>
+        {Dados.contatoEmail}
       </LinkExterno>
-            <LinkExterno href="tel:+5521943444594">+55 21 9 4344 4594</LinkExterno>
-        </div>
-        <Separador color="var(--plantation)" border="1px" widthTotal="95%" sm />
-        <div>
-            <SitemapTitle>imprensa</SitemapTitle>
-            <LinkExterno href="mailto:imprensa@copinternacional.com.br">
-                imprensa@copinternacional.com
+      <LinkExterno href={Dados.linkContatoTel}>{Dados.contatoTel}</LinkExterno>
+    </div>
+    <Separador color="var(--plantation)" border="1px" widthTotal="95%" sm />
+    <div>
+      <SitemapTitle>imprensa</SitemapTitle>
+      <LinkExterno href={`mailto:${Dados.imprensaEmail}`}>
+        {Dados.imprensaEmail}
       </LinkExterno>
-            <LinkExterno href="tel:+5521943444594">+55 21 9 4344 4594</LinkExterno>
-        </div>
-    </>
+      <LinkExterno href={Dados.linkImprensaTel}>{Dados.imprensaTel}</LinkExterno>
+    </div>
+  </>
 )
-
 
 const FooterRealizacao = () => (
-    <>
-        <div className="w-75">
-            <div>
-                <FooterTitleBold className="d-inline-block">realização e produção</FooterTitleBold>
-                <Separador className="d-inline-block ml-2" color="var(--kidnapper)" border="1px" widthTotal="35%" widthBarra="70%" noMargin tall />
-            </div>
-            <StyledImage imgName="logo_cngc.png" />
-            <StyledImage imgName="logo_sansone.png" />
-            <div className="d-flex justify-content-center w-75">
-              <SeparadorInverted color="var(--kidnapper)" border="1px" widthTotal="90%" noMargin tall translated />
-            </div>
-        </div>
-    </>
+  <>
+    <div className="w-75">
+      <div>
+        <FooterTitleBold className="d-inline-block">realização e produção</FooterTitleBold>
+        <Separador
+          className="d-inline-block ml-2"
+          color="var(--kidnapper)"
+          border="1px"
+          widthTotal="35%"
+          widthBarra="70%"
+          noMargin
+          tall
+        />
+      </div>
+      <StyledImage imgName="logo_cngc.png" />
+      <StyledImage imgName="logo_sansone.png" />
+      <div className="d-flex justify-content-center w-75">
+        <SeparadorInverted
+          color="var(--kidnapper)"
+          border="1px"
+          widthTotal="90%"
+          noMargin
+          tall
+          translated
+        />
+      </div>
+    </div>
+  </>
 )
 
-const Patrocinadores = (props) => {
+const Patrocinadores = props => {
+  const ExpositoresCategory = `${props.category}`
+  const ExpositorLogo = Expositores[ExpositoresCategory].map(expositor => (
+    <StyledCol sm={props.sm}>
+      <a href={`${expositor.site}`} target="_blank" rel="noopener noreferrer"><Image imgName={expositor.logo}/></a>
+    </StyledCol>
+  ))
 
-    const ExpositoresCategory = `${props.category}`;
-    const ExpositorLogo = Expositores[ExpositoresCategory].map(expositor => (
-        <StyledCol sm={props.sm}>
-        <Image imgName={expositor.logo} style={{ margin: '1em' }} />
-      </StyledCol>
-    ))
-  
-    return (
-      <>
-        <OuroBox>
-          <Container className="m-0 p-0">
-            <Row noGutters className="pt-2 pb-2">
-              {ExpositorLogo}
-            </Row>
-          </Container>
-        </OuroBox>
-      </>
-    )
-  }
+  return (
+    <>
+      <OuroBox>
+        <Container className="m-0 p-0">
+          <Row noGutters className="pt-2 pb-2">
+            {ExpositorLogo}
+          </Row>
+        </Container>
+      </OuroBox>
+    </>
+  )
+}
 
 const PatrocinadoresGallery = props => (
-    <div className="mt-3">
+  <div className="mt-3">
     <FooterTitleBold>
-        <span>patrocinadores</span>
-        {props.category}
+      <span>patrocinadores</span>
+      {props.category}
     </FooterTitleBold>
     <div className="w-75">
-    <div className="d-flex justify-content-center">
-    <Separador color="var(--kidnapper)" border="1px" widthTotal="50%" widthBarra="40%" noMargin tall />
+      <div className="d-flex justify-content-center">
+        <Separador
+          color="var(--kidnapper)"
+          border="1px"
+          widthTotal="50%"
+          widthBarra="40%"
+          noMargin
+          tall
+        />
+      </div>
+      <Patrocinadores category={props.category} sm="2" />
     </div>
-    <Patrocinadores category={props.category} sm="2"/>
-    </div>
-    <SeparadorInverted className="ml-n3" color="var(--kidnapper)" border="1px" widthTotal="50%" widthBarra="40%" noMargin tall translated />
-    </div>
+    <SeparadorInverted
+      className="ml-n3"
+      color="var(--kidnapper)"
+      border="1px"
+      widthTotal="50%"
+      widthBarra="40%"
+      noMargin
+      tall
+      translated
+    />
+  </div>
 )
 
 const Footer = () => (
-    <footer style={{ minHeight: '5em' }}>
-        <MediaQuery maxWidth={991}>
-            <FooterMenuMobile/>
-        </MediaQuery>
-        <MediaQuery minWidth={992}>
-        <FullWidth>
-            <Row>
-                <ColunaA xs={5}>
-                    <div style={{ width: '50%', float: 'right' }}>
-                        <Isotipo />
-                        <FooterTitle />
-                        <Sitemap />
-                        <Contatos />
-                    </div>
-                </ColunaA>
-                <ColunaB xs={7} className="p-4">
-                    <FooterRealizacao />
-                    <div>
-                        <PatrocinadoresGallery category="diamante"/>
-                        <PatrocinadoresGallery category="ouro"/>
-                        <PatrocinadoresGallery category="prata"/>
-                        <PatrocinadoresGallery category="bronze"/>
-                    </div>
-                </ColunaB>
-            </Row>
-        </FullWidth>
-        </MediaQuery>
-        © {new Date().getFullYear()}, Built with
+  <footer style={{ minHeight: '5em' }}>
+    <MediaQuery maxWidth={991}>
+      <FooterMenuMobile />
+    </MediaQuery>
+    <MediaQuery minWidth={992}>
+      <FullWidth>
+        <Row>
+          <ColunaA xs={5}>
+            <div style={{ width: '50%', float: 'right' }}>
+              <Isotipo />
+              <FooterTitle />
+              <Sitemap />
+              <Contatos />
+            </div>
+          </ColunaA>
+          <ColunaB xs={7} className="p-4">
+            <FooterRealizacao />
+            <div>
+              <PatrocinadoresGallery category="diamante" />
+              <PatrocinadoresGallery category="ouro" />
+              <PatrocinadoresGallery category="prata" />
+              <PatrocinadoresGallery category="bronze" />
+            </div>
+          </ColunaB>
+        </Row>
+      </FullWidth>
+    </MediaQuery>
+    © {new Date().getFullYear()}, Built with
     {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-    </footer>
+    <a href="https://www.gatsbyjs.org">Gatsby</a>
+  </footer>
 )
 
 export default Footer

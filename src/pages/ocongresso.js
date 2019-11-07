@@ -26,9 +26,11 @@ import FramedVideo from '../components/framedVideo'
 import Botao from '../components/botao'
 import Background from '../components/background'
 import FullWidth from '../components/fullwidth'
-import { Palestrantes } from '../components/data/infos'
 import Separador from '../components/separador'
 import { FadeParagraphTitle } from '../components/FadeElements'
+
+const Dados = require("../data/dados.json")
+const Cronograma = require("../data/cronograma.json")
 
 const StyledCarouselCaption = styled(CarouselCaption)`
   && {
@@ -168,8 +170,8 @@ const Botoes = () => (
     className="mt-5 mb-5 d-flex flex-column justify-content-between align-items-center w-100"
     style={{ height: '9em' }}
   >
-    <Botao texto="Inscreva-se Agora!" width="12em" to="/" />
-    <Botao texto="Confira  a Programação" width="12em" to="/" />
+    <Botao texto="Inscreva-se Agora!" width="12em" to={Dados.Inscricao} />
+    <Botao texto="Confira  a Programação" width="12em" to="/agenda-e-palestrantes" />
   </div>
 )
 
@@ -225,7 +227,7 @@ const OCongressoDesktopFirstBlock = () => (
         fontSize="2em"
         borderWidth="9px"
         padding="1em"
-        to="/"
+        to={Dados.linkInscricao}
       />
     </FullWidthInscricao>
   </>
@@ -315,15 +317,28 @@ const OCongressoDesktopThirdBlock = () => (
 )
 
 const OCongressoDesktopForthBlock = () => {
-  const PalestranteContainer = Palestrantes.slice(0, 8).map(palestrante => (
-    <Col lg={3} className="p-1">
-      <LinkedPhoto
-        imgName={palestrante.foto}
-        title={palestrante.nome}
-        subtitle={palestrante.titulo}
-        to={palestrante.link}
-      />
-    </Col>
+  const PalestranteContainer = Cronograma.slice(0, 8).map(dia => (
+    <>
+    {
+      dia.atividades.map(atividade => (
+        <>
+        {
+          atividade.palestrante ?
+          ( <Col lg={3} className="p-1">
+            <LinkedPhoto
+            imgName={atividade.imagem}
+            title={atividade.palestrante}
+            subtitle={atividade.qualificacao}
+            to={atividade.slug}
+          />
+          </Col>
+          )
+          : null
+        }
+        </>
+      ))
+    }
+    </>
   ))
   return (
     <Container className="mt-5 position-relative">

@@ -10,6 +10,8 @@ import Video from './bgvideo'
 import Local from './location'
 import { navigate } from '@reach/router'
 
+const Dados = require("../data/dados.json")
+
 const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -62,7 +64,7 @@ class HomeMobile extends React.Component {
             <LogoBranca />
           </div>
           <Local fontSize="0.95em" style={{ height: 'auto', textAlign: 'center' }} />
-          <Botao texto="Inscreva-se Agora!" background="transparent" to="/" />
+          <Botao texto="Inscreva-se Agora!" background="transparent" to={Dados.linkInscricao} />
         </HomeContainer>
       </div>
     )

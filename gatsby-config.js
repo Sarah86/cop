@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Congresso Internacional de Operações Policiais`,
     description: `O Maior evento de segurança e defesa da América Latina`,
-    author: `Alvaro Marques e Sarah Gonçalves`,
+    author: `Alvaro Marques e Sarah Gonçalves`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

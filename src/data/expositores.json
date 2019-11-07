@@ -2,176 +2,146 @@
   "diamante": [
     {
       "nome": "Condor",
-      "ramo": "Tecnologias Não-Letais",
-      "logo": "placeholder-expositor.jpg",
-      "descricao": "Lorem ipsum dolor",
-      "local": "2° piso - Stands 03 e 04",
+      "ramo": "Tecnologia de Defesa Não-Letal",
+      "logo": "expositor_diamante_condor2.jpg",
+      "thumbnail": "expositor_diamante_condor.jpg",
+      "descricao": "Com foco exclusivo na produção de equipamentos, munições não letais e pirotécnicos de alta tecnologia para emprego em sinalização e salvatagem, a Condor Tecnologias Não-Letais atua há mais de vinte e cinco anos no mercado nacional e mundial de defesa e Segurança, líder no Hemisfério Sul em Tecnologias Não Letais e está entre as principais empresas exportadoras do setor de defesa do Brasil.",
+      "local": "Piso Superior - Stand 02",
       "site": "https://www.condornaoletal.com.br"
     },
     {
-      "nome": "5.11 Tactical",
-      "ramo": "Equipamentos táticos, vestuário especial e Acessórios",
-      "logo": "placeholder-expositor.jpg",
-      "descricao": "Lorem ipsum dolor",
-      "local": "2° piso - Stands 06 e 07",
-      "site": "https://www.5.11tactical.com"
+      "nome": "Dahua",
+      "ramo": "Tecnologia e Vigilância",
+      "logo": "expositor_diamante_dahua2.jpg",
+      "thumbnail": "expositor_diamante_ahua.jpg",
+      "descricao": "Zhejiang Dahua Technology Co., Ltd. (Dahua Technology) é uma provedora líder de soluções e serviços de IoT inteligente especializada em vídeo. Pautada em inovações tecnológicas, a Dahua oferece soluções, sistemas e serviços de segurança 'end-to-end' para  controle urbano, gerenciamento corporativo e consumidores.",
+      "local": "Piso Superior - Stand 01",
+      "site": "https://www.dahuasecurity.com/"
     },
     {
-      "nome": "Sossul",
-      "logo": "placeholder-expositor.jpg"
+      "nome": "DITEC Smart Solutions",
+      "ramo" : "TI e Telecomunicações",
+      "logo": "expositor_diamante_ditec2.jpg",
+      "thumbnail": "expositor_diamante_ditec.jpg",
+      "local": "Piso Superior - Stand 05",
+      "descricao": "A DITEC é uma empresa voltada ao segmento de radiocomunicação e Iinternet das Coisas do grupo SCC, que é um dos principais grupos de comunicação da região Sul do Brasil.",
+      "site": "https://ditecsc.com.br/"
     },
     {
-      "nome": "Quartzo",
-      "logo": "placeholder-expositor.jpg"
+      "nome": "Estratégia Concursos",
+      "ramo": "Preparatório para Concursos",
+      "logo": "expositor_diamante_estrategia2.jpg",
+      "thumbnail": "expositor_diamante_estrategia.jpg",
+      "local": "Piso Superior - Stand 06",
+      "descricao": "A Estratégia Concursos é o caminho mais curto entre você e a sua aprovação em um concurso público com aulas exclusivas e 100% focadas em cada edital.",
+      "site": "https://ditecsc.com.br/"
+    },
+    {
+      "nome": "Invictus",
+      "ramo" : "Acessórios Táticos e Outdoor",
+      "logo": "expositor_diamante_invictus2.jpg",
+      "thumbnail": "expositor_diamante_invictus.jpg",
+      "descricao": "Focada em produtos de alta performance e inovações para o mercado tático operacional e outdoor do Brasil, a Invictus se constrói a cada dia desenvolvendo e comercializando equipamentos, acessórios, vestimentas e calçados voltados para práticas extremas e de alto desempenho. ",
+      "local": "Piso Superior - Stand 04",
+      "site" : "https://www.invictus.com.br/"
+    },
+    {
+      "nome": "Taurus",
+      "ramo": "Armas",
+      "logo": "expositor_diamante_taurus2.jpg",
+      "thumbnail": "expositor_diamante_taurus.jpg",
+      "descricao": "A Taurus é uma Empresa Estratégica de Defesa, com 80 anos de história e reputação sólida. Sediada em São Leopoldo, no Rio Grande do Sul, emprega mais de 1.800 pessoas no país e exporta para mais de 100 países. ",
+      "local": "Piso Superior - Stand 03",
+      "site" : "https://www.taurusarmas.com.br/"
     }
   ],
   "ouro": [
     {
-      "nome": "Coringa",
-      "logo": "placeholder-expositor.jpg",
-      "local": "2° piso - Stands 06 e 07",
+      "nome": "5.11",
+      "logo": "expositor_ouro_511.jpg",
+      "local": "Piso Superior - Stands 06 e 07",
       "site": "https://www.5.11tactical.com"
     },
     {
-      "nome": "BadBoy",
-      "logo": "placeholder-expositor.jpg",
-      "local": "2° piso - Stands 06 e 07",
+      "nome": "Armalite",
+      "logo": "expositor_ouro_armalite.jpg",
+      "local": "Piso Superior - Stands 06 e 07",
       "site": "https://www.5.11tactical.com"
     },
     {
-      "nome": "Lock",
-      "logo": "placeholder-expositor.jpg",
-      "local": "2° piso - Stands 06 e 07",
-      "site": "https://www.5.11tactical.com"
-    },
-    {
-      "nome": "Maynard's",
-      "logo": "placeholder-expositor.jpg",
-      "local": "2° piso - Stands 06 e 07",
-      "site": "https://www.5.11tactical.com"
-    },
-    {
-      "nome": "Alfacon",
-      "logo": "placeholder-expositor.jpg",
-      "local": "2° piso - Stands 06 e 07",
-      "site": "https://www.5.11tactical.com"
-    },
-    {
-      "nome": "Costao do Santinho",
-      "logo": "placeholder-expositor.jpg",
-      "local": "2° piso - Stands 06 e 07",
+      "nome": "Glock",
+      "logo": "expositor_ouro_glock.jpg",
+      "local": "Piso Superior - Stands 06 e 07",
       "site": "https://www.5.11tactical.com"
     },
     {
       "nome": "Quartzo",
-      "logo": "placeholder-expositor.jpg",
-      "local": "2° piso - Stands 06 e 07",
+      "logo": "expositor_ouro_quartzo.jpg",
+      "local": "Piso Superior - Stands 06 e 07",
       "site": "https://www.5.11tactical.com"
     },
     {
-      "nome": "Ditec",
-      "logo": "placeholder-expositor.jpg",
-      "local": "2° piso - Stands 06 e 07",
+      "nome": "Sossul",
+      "logo": "expositor_ouro_sossul.jpg",
+      "local": "Piso Superior - Stands 06 e 07",
+      "site": "https://www.5.11tactical.com"
+    },
+    {
+      "nome": "Taser",
+      "logo": "expositor_ouro_teaser.jpg",
+      "local": "Piso Superior - Stands 06 e 07",
       "site": "https://www.5.11tactical.com"
     }
   ],
   "prata": [
     {
-      "nome": "Vento",
-      "logo": "placeholder-expositor.jpg",
-      "local": "2° piso - Stands 06 e 07",
+      "nome": "DAVNAR TECH",
+      "logo": "expositor_prata_davnar.jpg",
+      "local": "Piso Superior - Stands 06 e 07",
       "site": "https://www.5.11tactical.com"
     },
     {
-      "nome": "Walfare",
-      "logo": "placeholder-expositor.jpg",
-      "local": "2° piso - Stands 06 e 07",
+      "nome": "Ghost",
+      "logo": "expositor_prata_ghost.jpg",
+      "local": "Piso Superior - Stands 06 e 07",
       "site": "https://www.5.11tactical.com"
     },
     {
-      "nome": "RJC",
-      "logo": "placeholder-expositor.jpg",
-      "local": "2° piso - Stands 06 e 07",
-      "site": "https://www.5.11tactical.com"
-    },
-    {
-      "nome": "FGSeguros",
-      "logo": "placeholder-expositor.jpg",
-      "local": "2° piso - Stands 06 e 07",
-      "site": "https://www.5.11tactical.com"
-    },
-    {
-      "nome": "Glagio",
-      "logo": "placeholder-expositor.jpg",
-      "local": "2° piso - Stands 06 e 07",
-      "site": "https://www.5.11tactical.com"
-    },
-    {
-      "nome": "Protecorp",
-      "logo": "placeholder-expositor.jpg",
-      "local": "2° piso - Stands 06 e 07",
-      "site": "https://www.5.11tactical.com"
-    },
-    {
-      "nome": "Sendesp",
-      "logo": "placeholder-expositor.jpg",
-      "local": "2° piso - Stands 06 e 07",
-      "site": "https://www.5.11tactical.com"
-    },
-    {
-      "nome": "Belica",
-      "logo": "placeholder-expositor.jpg",
-      "local": "2° piso - Stands 06 e 07",
+      "nome": "Grupo Inbra",
+      "logo": "expositor_prata_grupoimbra.jpg",
+      "local": "Piso Superior - Stands 06 e 07",
       "site": "https://www.5.11tactical.com"
     }
   ],
   "bronze": [
     {
-      "nome": "Vento",
-      "logo": "placeholder-expositor.jpg",
-      "local": "2° piso - Stands 06 e 07",
+      "nome": "Algemas Brasil",
+      "logo": "expositor_bronze_algemas.jpg",
+      "local": "Piso Superior - Stands 06 e 07",
       "site": "https://www.5.11tactical.com"
     },
     {
-      "nome": "Walfare",
-      "logo": "placeholder-expositor.jpg",
-      "local": "2° piso - Stands 06 e 07",
+      "nome": "Bélica",
+      "logo": "expositor_bronze_belica.jpg",
+      "local": "Piso Superior - Stands 06 e 07",
       "site": "https://www.5.11tactical.com"
     },
     {
-      "nome": "RJC",
-      "logo": "placeholder-expositor.jpg",
-      "local": "2° piso - Stands 06 e 07",
+      "nome": "Crosster",
+      "logo": "expositor_bronze_crosster.jpg",
+      "local": "Piso Superior - Stands 06 e 07",
       "site": "https://www.5.11tactical.com"
     },
     {
-      "nome": "FGSeguros",
-      "logo": "placeholder-expositor.jpg",
-      "local": "2° piso - Stands 06 e 07",
+      "nome": "Patola",
+      "logo": "expositor_bronze_patola.jpg",
+      "local": "Piso Superior - Stands 06 e 07",
       "site": "https://www.5.11tactical.com"
     },
     {
-      "nome": "Glagio",
-      "logo": "placeholder-expositor.jpg",
-      "local": "2° piso - Stands 06 e 07",
-      "site": "https://www.5.11tactical.com"
-    },
-    {
-      "nome": "Protecorp",
-      "logo": "placeholder-expositor.jpg",
-      "local": "2° piso - Stands 06 e 07",
-      "site": "https://www.5.11tactical.com"
-    },
-    {
-      "nome": "Sendesp",
-      "logo": "placeholder-expositor.jpg",
-      "local": "2° piso - Stands 06 e 07",
-      "site": "https://www.5.11tactical.com"
-    },
-    {
-      "nome": "Belica",
-      "logo": "placeholder-expositor.jpg",
-      "local": "2° piso - Stands 06 e 07",
+      "nome": "WD-40",
+      "logo": "expositor_bronze_wd40.jpg",
+      "local": "Piso Superior - Stands 06 e 07",
       "site": "https://www.5.11tactical.com"
     }
   ]

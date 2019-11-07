@@ -5,50 +5,60 @@
     "diaCompleto": "Terça, 17 de Março",
     "diaFooter": "Dia 01 - 17/03",
     "atividades": [
-      { "hora": "07:30h", "titulo": "Credenciamento" },
-      { "hora": "08:30h", "titulo": "Abertura dos Trabalhos" },
       {
-        "hora": "09:00h",
-        "palestrante": "Sergio Moro",
-        "slug": "sergio-moro",
-        "titulo": "Lava-Jato",
-        "qualificacao": "Ministro da Justiça",
-        "imagem": "palestrante_placeholder.jpg",
+        "hora": "07:30h",
+        "titulo": "Credenciamento"
+      },
+      {
+        "hora": "08:30h",
+        "titulo": "Abertura dos Trabalhos"
+      },
+      {
         "descricao": [
-          "Sérgio Fernando Moro GCRB • GOMM • DMJM[7] (Maringá, 1 de agosto de 1972) é um jurista, ex-magistrado, professor universitário e atual ministro da Justiça e Segurança Pública do Brasil.[8] Foi juiz federal da 13ª Vara Criminal Federal de Curitiba[9][10] e professor de direito processual penal na Universidade Federal do Paraná (UFPR).[11][12]",
-          "Graduado em Direito pela Universidade Estadual de Maringá em 1995, concluiu o mestrado e o doutorado na Universidade Federal do Paraná.[6] Especializou-se em crimes financeiros e tornou-se juiz federal em 1996.[6][9] Nessa função, trabalhou em casos como o escândalo do Banestado e a Operação Farol da Colina. Também auxiliou, no Supremo Tribunal Federal, a ministra Rosa Weber durante o julgamento dos crimes relativos ao escândalo do Mensalão.[13][14][15] ",
-          "Moro ganhou enorme notoriedade nacional e internacional por comandar, entre março de 2014 e novembro de 2018, o julgamento em primeira instância dos crimes identificados na Operação Lava Jato que, segundo o Ministério Público Federal, é o maior caso de corrupção e lavagem de dinheiro já apurado no Brasil, envolvendo grande número de políticos, empreiteiros e empresas, como a Petrobras, a Odebrecht, entre outras.[6][16][17] Em 12 de julho de 2017, condenou o ex-presidente Lula a nove anos e seis meses de prisão, sendo essa a primeira vez na história do Brasil em que se condenou criminalmente um ex-presidente da República,[18] decisão esta mantida em segunda instância.[19] Sua atuação na condução da Lava-Jato rendeu-lhe prêmios e críticas. "
+          "A Palestra Magna será ministrada pelo presidente do Conselho Nacional de Comandantes Gerais, o Cel. Araújo Gomes.",
+          "Cel. Araújo é formado e pós-graduado em Controle de Emergências e Disastres e especialista em Análise de Risco, Gerenciamento de Emergência, Defesa Civil e Projetos de Segurança Pública."
         ],
-        "linkedin": "http://www.linkedin.com",
-        "instagram": "http://www.instagram.com",
-        "facebook": "http://www.facebook.com",
-        "youtube": "http://www.youtube.com",
-        "site": "https://www.sergiomoro.com.br"
+        "facebook": "https://www.facebook.com/araujo.gomes.5/",
+        "hora": "09:00h",
+        "imagem": "palestrante_araujo_gomes.jpg",
+        "linkedin": "https://www.linkedin.com/in/carlos-alberto-de-araujo-gomes-99496613/",
+        "palestrante": "Cel. PMSC Araújo Gomes",
+        "qualificacao": "Pres. CNCG e Sec. Segurança Pública  SC",
+        "slug": "palestra-magna",
+        "titulo": "Palestra Magna"
       },
-      { "hora": "11:00h", "titulo": "Almoço & Exposição" },
       {
+        "hora": "11:00h",
+        "titulo": "Almoço & Exposição"
+      },
+      {
+        "descricao": [
+          "Rogério Greco é jurista, professor e Procurador de Justiça de Minas Gerais, da safra de penalistas mais minimalista, cujas obras são referência entre concurseiros pelas citações de elevado nível jurisprudencial do STF, STJ e TJs estaduais.",
+          "Ocupações de Rogério Greco:",
+          "<ul><li>Procurador de Justiça - MG</li><li>Membro Titular da Banca Examinadora de Direito Penal do XLVIII Concurso para Ingresso no Ministério Público de Minas Gerais.</li><li>Membro fundador do Instituto de Ciências Penais (ICP) e da Associação Brasileira dos Professores de Ciências Penais.</li><li>Especialista em Direito Penal (Teoria do Crime) pela Universidade de Salamanca (Espanha).</li><li>Pós-Doutorado pela Universitá Degli Studi di Messina (Itália).</li><li>Doutor pela Universidade de Burgos (Espanha).</li><li>Mestre em Ciências Penais pela Universidade Federal de Minas Gerais - UFMG.</li><li>Palestrante em congressos e universidades em todo o País.</li><li>Membro eleito para o Conselho Superior do Ministério Público durante os anos de 2003, 2006 e 2008.</li><li>Autor de diversas obras como e livros Atividade Policial e Retomada do Complexo do Alemão.</li><li>Embaixador de Cristo.</li></ul>"
+        ],
+        "facebook": "https://www.facebook.com/paginarogeriogreco",
         "hora": "13:30h",
-        "titulo": "2a. Palestra",
-        "slug": "rei-da-persia",
-        "palestrante": "Rei da Persia",
-        "imagem": "palestrante_placeholder.jpg",
-        "descricao": [
-          "Lorem ipsum cubilia m velit pulvinar proin cras nulla.",
-          "Dapibus sed aliquam sem famessse maecenas eleifend enim etiam hac semper tellus. ",
-          "Ornare vivamus cursus curabitur fur nibh. "
-        ]
+        "imagem": "palestrante_rogerio_greco.jpg",
+        "instagram": "https://www.instagram.com/rogerio.greco",
+        "palestrante": "Rogério Greco",
+        "site": "https://www.rogeriogreco.com.br/",
+        "slug": "rogerio-greco",
+        "titulo": "Procurador de Justiça MG e Escritor"
       },
       {
-        "hora": "15:00h",
-        "titulo": "3a. Palestra",
-        "palestrante": "Papa Joao Paulo",
-        "slug": "papa-joao-paulo",
-        "imagem": "palestrante_placeholder.jpg",
         "descricao": [
-          "Lorem ipsum cubilia m velit pulvinar proin cras nulla.",
-          "Dapibus sed aliquam sem famessse maecenas eleifend enim etiam hac semper tellus. ",
-          "Ornare vivamus cursus curabitur fur nibh. "
-        ]
+          "O Cel Alessandro Visacro é graduado pela turma de 1991 da Academia Militar das Agulhas Negras, possui Curso de Infantaria da Escola de Aperfeiçoamento de Oficiais (1999); Curso de Altos Estudos Militares da Escola de Comando e Estado-Maior do Exército (2008-2009); Curso Básico Paraquedista; Curso de Mestre de Salto Paraquedista; Curso de Ações de Comandos; e Curso de Forças Especiais. Foi Comandante da 3ª Companhia de Forças Especiais (Manaus - AM); Comandante do 1º Batalhão de Forças Especiais (Goiânia - GO); e Oficial de operações do 2º Batalhão de Força de Paz do 17º contingente brasileiro no Haiti (Porto Príncipe).",
+          "Trabalhos publicados:",
+          "<ul><li>Guerra Irregular: terrorismo, guerrilha e movimentos de resistência ao longo da história</li><li>Lawrence da Arábia.</li><li>Por que forças especiais.</li><li>Jihad e Contrainsurgência: concepções distintas da guerra psicológica.</li><li>O Desafio da Transformação. Kansas: Military Review, 2011.</li></ul>"
+        ],
+        "hora": "16:00h",
+        "imagem": "palestrante_alessandro_visacro.jpg",
+        "palestrante": "Alessandro Visacro",
+        "qualificacao": "EB Coronel EB - Chefe do Estado Maior do Comando de Operações Especiais",
+        "site": "https://editoracontexto.com.br/autores/alessandro-visacro.html",
+        "slug": "alessandro-visacro",
+        "titulo": "Insurgência Criminal"
       }
     ]
   },
@@ -58,37 +68,65 @@
     "diaCompleto": "Quarta, 18 de Março",
     "diaFooter": "Dia 02 - 18/03",
     "atividades": [
-      { "hora": "07:30h", "titulo": "Credenciamento" },
-      { "hora": "08:30h", "titulo": "Abertura dos Trabalhos" },
       {
-        "hora": "09:00h",
-        "titulo": "Palestra Magna",
-        "palestrante": "Ze da banca",
-        "slug": "ze-da-banca",
-        "imagem": "palestrante_placeholder.jpg",
-        "descricao": [
-          "Lorem ipsum cubilia m velit pulvinar proin cras nulla.",
-          "Dapibus sed aliquam sem famessse maecenas <a href=/>eleifend</a> enim etiam hac semper tellus. ",
-          "Ornare vivamus cursus curabitur fur nibh. "
-        ]
+        "hora": "07:30h",
+        "titulo": "Credenciamento"
       },
       {
-        "hora": "09:00h",
-        "titulo": "Palestra Magna",
-        "palestrante": "Palestrante sem descricao",
-        "slug": "ze-da-banca",
-        "imagem": "palestrante_placeholder.jpg"
-      }
+        "descricao": [],
+        "hora": "08:30h",
+        "imagem": "palestrante_alexandre_abrahao.jpg",
+        "palestrante": "Juiz Alexandre Abrahão",
+        "qualificacao": "Presidente do Tribunal do Júri - RJ",
+        "slug": "juiz-alexandre-abrahao",
+        "titulo": "Legalidade do tiro do Sniper e possibilidades de emprego"
+      },
+      {
+        "descricao": [],
+        "hora": "10:30h",
+        "imagem": "palestrante_placeholder.jpg",
+        "linkedin": "https://www.linkedin.com/in/humberto-antunes-rocha-j%C3%BAnior-b099b27a",
+        "palestrante": "Rocha Junior",
+        "qualificacao": "Coronel EB - Assessor Militar do Gabinete de Segurança Institucional da Presidência da República.",
+        "slug": "cel-rocha-jumior",
+        "titulo": "Proteção Avançado do Dignatário"
+    },
+    {
+      "hora": "13:30h",
+      "imagem": "palestrante_placeholder.jpg",
+      "palestrante": "A Confirmar - Internacional"
+    },
+    {
+      "facebook": "https://www.facebook.com/eduardomaia.betini",
+      "instagram": "https://www.instagram.com/e._bettini/",
+      "hora": "16:00h",
+      "imagem": "palestrante_eduardo_betini.jpg",
+      "palestrante": "PF Eduardo Betin",
+      "qualificacao": "Coordenador-Geral de Fronteiras da Secretaria de Operações Integradas do Ministério da Justiça e Segurança Pública.",
+      "slug": "pf-eduardo-betini",
+      "titulo": "Importância do planejamento estratégico para atividade policial.",
+      "youtube": "https://www.youtube.com/watch?v=jqtzMcDPdyU"
+    }
     ]
   },
   {
     "dia": "19.mar",
     "diaLongo": "qui.19.mar",
     "diaCompleto": "Quinta, 19 de Março",
-    "diaFooter": "Dia 03 - 18/03",
+    "diaFooter": "Dia 03 - 19/03",
     "atividades": [
-      { "hora": "07:30h", "titulo": "Credenciamento" },
-      { "hora": "08:30h", "titulo": "Abertura dos Trabalhos" },
+      {
+        "hora": "07:30h",
+        "titulo": "Credenciamento"
+      },
+      {
+        "descricao": [],
+        "hora": "08:30h",
+        "imagem": "palestrante_placeholder.jpg",
+        "palestrante": "Souza Filho",
+        "slug": "cel-souza-filho",
+        "titulo": "Operações de Choque: Desafios e Novas Dinâmicas"
+      },
       {
         "hora": "09:00h",
         "titulo": "Palestra Magna",

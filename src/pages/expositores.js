@@ -1,21 +1,19 @@
 import React from 'react'
 import MediaQuery from 'react-responsive'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import HomeMobile from '../components/homeMobile'
-import HomeDesktop from '../components/homeDesktop'
+
 import { FadeParagraphTitle } from '../components/FadeElements'
-import { TitleH3, PaddedText, Paragraph } from '../components/typography'
+import { Paragraph } from '../components/typography'
 import Separador from '../components/separador'
 import Image from '../components/image'
-import Photo from '../components/photo'
 import { Container, Col, Row } from 'react-bootstrap'
 import Botao from '../components/botao'
 import Background from '../components/background'
 import { device } from '../components/device'
-import { Link } from 'gatsby'
+import ShadowedImage from '../components/shadowedimage'
 
 const Expositores = require('../data/expositores.json')
 
@@ -58,16 +56,17 @@ const StyledFadeParagraphTitle = styled(FadeParagraphTitle)`
 `
 const ColDiamante = styled(Col)`
   border: 0.5px solid var(--bunker);
+  display: flex;
+  flex-direction: column;
 `
 
 const DiamanteBox = styled.div`
-  display: none;
-  @media ${device.desktop} {
-    display: block;
-    margin-top: -1.5em;
-    padding: 2em;
     background-color: var(--blackpearl);
-  }
+    padding: 2em;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 `
 const TitleWrapper = styled.div`
   padding: 1.5em;
@@ -105,9 +104,9 @@ const ExpositoresCategory = props => (
 )
 
 const ExpositoresDiamante = () => {
-  const ExpositorDiamante = Expositores.diamante.map(diamante => (
+  const ExpositorDiamante = Expositores.diamante.sort((a, b) => a.local > b.local ? 1 : -1).map(diamante => (
     <ColDiamante sm={12} lg={6}>
-      <Photo imgName={diamante.logo} noMargin />
+      <ShadowedImage imgName={diamante.thumbnail} noMargin />
       <DiamanteBox>
         <h4 style={{ fontFamily: 'TilliumWeb', fontSize: '1.2em', marginBottom: '0' }}>
           {diamante.nome}
@@ -155,8 +154,7 @@ const ExpositoresDiamante = () => {
 }
 
 const StyledCol = styled(Col)`
-  border: 0.5px solid var(--narvik);
-  background-color: var(--kidnapper);
+  border: 0.5px solid var(--kidnapper);
   @media ${device.desktop} {
     border-color: var(--bunker);
     background-color: var(--blackpearl);
@@ -187,7 +185,7 @@ const OuroInfo = styled.div`
 const ExpositoresOuro = () => {
   const ExpositorOuro = Expositores.ouro.map(ouro => (
     <StyledCol xs={6} lg={3}>
-      <Image imgName={ouro.logo} style={{ margin: '1em' }} />
+      <Image imgName={ouro.logo}/>
       <OuroInfo>
         <Local>{ouro.local}</Local>
         <Site href={`${ouro.site}`}>{ouro.site}</Site>
@@ -236,7 +234,7 @@ const ExpositoresOuro = () => {
 const ExpositoresPrata = () => {
   const ExpositorPrata = Expositores.prata.map(prata => (
     <StyledCol xs={4} lg={3}>
-      <Image imgName={prata.logo} style={{ margin: '1em' }} />
+      <Image imgName={prata.logo} />
       <OuroInfo>
         <Local>{prata.local}</Local>
         <Site href={`${prata.site}`}>{prata.site}</Site>
@@ -285,7 +283,7 @@ const ExpositoresPrata = () => {
 const ExpositoresBronze = () => {
   const ExpositorBronze = Expositores.bronze.map(bronze => (
     <StyledCol xs={3} lg={3}>
-      <Image imgName={bronze.logo} style={{ margin: '1em' }} />
+      <Image imgName={bronze.logo} />
       <OuroInfo>
         <Local>{bronze.local}</Local>
         <Site href={`${bronze.site}`}>{bronze.site}</Site>

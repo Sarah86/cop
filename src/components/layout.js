@@ -31,34 +31,25 @@ const Content = styled.div`
 `
 
 class Layout extends React.Component {
-
-  componentDidMount(){
-    this.pageAddress = window.location.pathname;
+  componentDidMount() {
+    this.pageAddress = window.location.pathname
   }
 
-  render(){
-    return(
+  render() {
+    return (
       <>
-      <Header siteTitle={this.props.data.site.siteMetadata.title} />
-      <Content>
-        {
-          this.pageAddress === "/"
-            ? (
-              <main style={{ paddingBottom: '3em' }}>
-                {this.props.children}
-              </main>
-            )
-            : (
-              <>
-                <main style={{ paddingBottom: '7em' }}>
-                  {this.props.children}
-                </main>
-                <Footer />
-              </>
-            )
-        }
-      </Content>
-    </>
+        <Header siteTitle={this.props.data.site.siteMetadata.title} />
+        <Content>
+          {this.pageAddress === '/' || '' ? (
+            <main style={{ paddingBottom: '3em' }}>{this.props.children}</main>
+          ) : (
+            <>
+              <main style={{ paddingBottom: '7em' }}>{this.props.children}</main>
+              <Footer />
+            </>
+          )}
+        </Content>
+      </>
     )
   }
 }
@@ -68,14 +59,16 @@ Layout.propTypes = {
 }
 
 export default props => (
-  <StaticQuery query={graphql`
-  query {
-    site {
-      siteMetadata {
-        title
+  <StaticQuery
+    query={graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+          }
+        }
       }
-    }
-  }
-`}
-render={data => <Layout data={data} {...props} />}
-/>)
+    `}
+    render={data => <Layout data={data} {...props} />}
+  />
+)
