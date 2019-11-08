@@ -16,6 +16,8 @@ import Photo from './photo'
 import { PaddedContentBox, Paragraph, PaddedText, TitleH3 } from './typography'
 import { FadeParagraphTitle } from './FadeElements'
 import FullWidth from './fullwidth'
+import Isotipo from "../images/logo_cop_isotipo.png"
+import IsotipoCop from './isotipo'
 
 const Programacao = require('../data/cronograma.json')
 
@@ -291,7 +293,7 @@ export const AgendaTabelaDesktop = () => {
 
 const StyledPhoto = styled.div`
   .gatsby-image-wrapper {
-    max-height: 250px !important;
+    max-height: 350px !important;
   }
 `
 const StyledLink = styled(Link)`
@@ -434,11 +436,11 @@ export const AgendaDesktop = ({
               ))}
             </div>
           </Col>
-          <Col sm={8} className="p-0" style={{ marginLeft: '-4px' }}>
-            <Tab.Content>
+          <Col sm={8} className="p-0" style={{ marginLeft: '-4px', backgroundImage:`url(${Isotipo})`, backgroundSize: "80%", backgroundRepeat: "no-repeat", backgroundPosition: "center"}}>
+            <Tab.Content style={{backgroundColor: "var(--bunker)"}}>
               {dia.atividades.map(atividade => (
                 <Tab.Pane eventKey={atividade.slug}>
-                  <div>
+                  <div style={{minHeight: "650px"}}>
                     <StyledPhoto>
                       <Photo imgName={atividade.imagem} />
                     </StyledPhoto>

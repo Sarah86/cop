@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 
 import Image from './image'
 import target from '../images/target.png'
@@ -8,6 +8,14 @@ import target from '../images/target.png'
 const StyledLink = styled(Link)`
     &:hover {
         cursor: url("${target}"), cell;
+        ${props => props.noYellowLayer && css
+          ` 
+          ${StyledImage}{
+            mix-blend-mode: unset;
+            opacity: 1;
+          }
+        `
+    }
     }
     &:before {
         content: "";
@@ -24,6 +32,11 @@ const StyledLink = styled(Link)`
         opacity: 1;
         z-index: 1;
         transition: opacity 1s;
+        ${props => props.noYellowLayer && css
+          ` 
+          background-color: transparent;
+        `
+    }
     }
 `
 
@@ -31,12 +44,16 @@ const StyledImage = styled(Image)`
   &:hover {
     filter: grayscale(1);
     transition: all 0.3s;
+    ${props => props.noYellowLayer && css
+      ` 
+      filter: unset;
+    `
   }
 `
 
-const LinkedImage = ({ imgName, to }) => (
-  <StyledLink to={to}>
-    <StyledImage imgName={imgName} />
+const LinkedImage = props => (
+  <StyledLink to={props.to} noYellowLayer={props.noYellowLayer}>
+    <StyledImage imgName={props.imgName} className={props.className} noYellowLayer={props.noYellowLayer}/>
   </StyledLink>
 )
 

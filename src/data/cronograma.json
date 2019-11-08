@@ -98,6 +98,7 @@
       "palestrante": "A Confirmar - Internacional"
     },
     {
+      "descricao":[],
       "facebook": "https://www.facebook.com/eduardomaia.betini",
       "instagram": "https://www.instagram.com/e._bettini/",
       "hora": "16:00h",
@@ -129,17 +130,38 @@
         "titulo": "Operações de Choque: Desafios e Novas Dinâmicas"
       },
       {
-        "hora": "09:00h",
-        "titulo": "Palestra Magna",
-        "palestrante": "Sílvio Santos",
-        "qualificacao": "Apresentador de Televisão",
-        "slug": "silvio-santos",
+        "hora": "10:30h",
+        "imagem": "palestrante_placeholder.jpg",
+        "palestrante": "A Confirmar - Internacional"
+      },
+      {
+        "hora": "13:30h",
+        "titulo": "Gerenciamento de Crise - Case: Sequestro na ponte Rio-Niterói",
+        "palestrante": "Maurilio Nunes",
+        "qualificacao": "Ten. Cel PMERJ - Comandante BOPE/RJ",
+        "slug": "ten-cel-nunes-bope",
         "imagem": "palestrante_placeholder.jpg",
         "descricao": [
-          "Lorem ipsum cubilia m velit pulvinar proin cras nulla.",
-          "Dapibus sed aliquam sem famessse maecenas eleifend enim etiam hac semper tellus. ",
-          "Ornare vivamus cursus curabitur fur nibh. "
+          "Mestre em Gestão Empresarial e tem MBA em Gerenciamento de Projetos pela FGV e ainda com formação em Direito pela Universidade Gama Filho.",
+          "Tenente Coronel NUNES é Oficial da PMERJ há 20 anos tendo em sua carreira militar cursos como de Operações Especiais (BOPE), SNIPER, Tiro Policial, Gerenciamento de Crises em Grandes Eventos, Entradas Táticas e Estágios de Explosivista e Logística, entre outros.", 
+          "Atualmente Subcomandante do Batalhão de Operações Policiais Especiais do Rio de Janeiro e Chefe da Seção de Projetos e Tecnologia. Atua ativamente como líder das equipes especiais e estrategistas, especialmente em eventos de elevada e notória importância Nacional e impacto mundial, como os processos de Pacificação no Estado do Rio de Janeiro em 19 comunidades; Rio+20; Copa das Confederações e Olimpíadas, entre outros. Somado a isto, atua como consultor de segurança pública, Gestão de equipes de alto desempenho, liderança e motivação profissional, juntamente com suas Palestras pelo Brasil e Exterior.",
+          "Já palestrou em várias instituições como UFF (Universidade Federal Fluminense), SESI (Serviço Social da Indústria), FIRJAN (Federação das Indústrias do Estado do Rio de Janeiro), FGV (Fundação Getúlio Vargas), Coca-Cola, Banco Itaú, GOCIL, dentre outras, participando de diversos seminários como, por exemplo: 'Leadership in emergency times' em Israel e Laad Defence & Security (Feira Internacional de Segurança) Sua PALESTRA propõe explorar a relação entre a prática da vida cotidiana corporativa e/ou interpessoal e a realidade do BOPE, sendo o foco principal GESTÃO DE EQUIPE DE ALTO DESEMPENHO, buscando estimular os líderes e seus colaboradores a trabalharem seus melhores instintos no ambiente competitivo de trabalho, fortalecer a importância de uma equipe direcionada e envolvida no planejamento e execução das batalhas diárias, compartilhar métodos para se estabelecer uma liderança mútua e efetiva, focando sempre o RESULTADO, a superação dos limites, bem como a auto-realização."
         ]
+      },
+      {
+        "hora": "16:00h",
+        "titulo": "Gerenciamento de Crise - Case: Sequestro na ponte Rio-Niterói",
+        "palestrante": "General Theophilo",
+        "qualificacao": "Secretário Nacional de Segurança Pública",
+        "slug": "gen-theophilo",
+        "imagem": "palestrante_placeholder.jpg",
+        "descricao": [
+          "General 4 estrelas do Exército. Graduado em Processamento de Dados e pós-graduado em Engenharia de Sistemas.<br/>De família tradicional cearense, estudou no Colégio Militar de Fortaleza. Aos 21 anos Ingressou no Exército, onde cumpriu trajetória descrita pelos militares como invejável.",
+          "No Exército, dentre muitas funções que exerceu, foi Instrutor da Academia Militar das Agulhas Negras, Instrutor da Escola de Comando e Estado Maior do Exército, foi da Brigada Paraquedista com cerca de 300 saltos, observador Militar das Nações Unidas na América Central, oficial de Inteligência da 7ª Brigada de Infantaria Motorizada em Natal-RN, Chefe da Seção de Preparo e Emprego do Comando da 10ª Região Militar e Comandante do 10º Grupo de Artilharia de Campanha, em Fortaleza, Assistente do Ministro-Chefe do Gabinete de Segurança Institucional da Presidência da República, em Brasília, Comandante da 12ª Região Militar  e Comandante Militar da Amazônia, em Manaus, e por último, Comandante de Logística do Exército, em Brasília. Ainda no Exército, prestou serviço, também, no Haiti e na Nicarágua, trabalhando no hospital que tratava pacientes mutilados de guerra."
+        ],
+        "twitter": "https://twitter.com/galtheophilo",
+        "facebook": "https://www.facebook.com/pg/GeneralTheophilo",
+        "instagram": "https://www.instagram.com/generaltheophilo/"
       }
     ]
   }

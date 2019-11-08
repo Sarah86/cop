@@ -59,90 +59,90 @@
     {
       "nome": "5.11",
       "logo": "expositor_ouro_511.jpg",
-      "local": "Piso Superior - Stands 06 e 07",
-      "site": "https://www.5.11tactical.com"
+      "local": "Piso Superior - Stand 03",
+      "site": "https://www.511tactical.com/"
     },
     {
       "nome": "Armalite",
       "logo": "expositor_ouro_armalite.jpg",
-      "local": "Piso Superior - Stands 06 e 07",
-      "site": "https://www.5.11tactical.com"
+      "local": "Piso Superior - Stand 04",
+      "site": "https://www.armalite.com/"
     },
     {
       "nome": "Glock",
       "logo": "expositor_ouro_glock.jpg",
-      "local": "Piso Superior - Stands 06 e 07",
-      "site": "https://www.5.11tactical.com"
+      "local": "Piso Superior - Stand 02",
+      "site": "https://eu.glock.com/en"
     },
     {
       "nome": "Quartzo",
       "logo": "expositor_ouro_quartzo.jpg",
-      "local": "Piso Superior - Stands 06 e 07",
-      "site": "https://www.5.11tactical.com"
+      "local": "Piso Superior - Stand 06",
+      "site": "https://quartzoengdef.com/"
     },
     {
-      "nome": "Sossul",
+      "nome": "SOS Sul Defender",
       "logo": "expositor_ouro_sossul.jpg",
-      "local": "Piso Superior - Stands 06 e 07",
-      "site": "https://www.5.11tactical.com"
+      "local": "Piso Superior - Stand 05",
+      "site": "https://sossuldefender.com.br/"
     },
     {
       "nome": "Taser",
       "logo": "expositor_ouro_teaser.jpg",
-      "local": "Piso Superior - Stands 06 e 07",
-      "site": "https://www.5.11tactical.com"
+      "local": "Piso Superior - Stand 01",
+      "site": "https://www.taser.com/"
     }
   ],
   "prata": [
     {
       "nome": "DAVNAR TECH",
       "logo": "expositor_prata_davnar.jpg",
-      "local": "Piso Superior - Stands 06 e 07",
-      "site": "https://www.5.11tactical.com"
+      "local": "Piso Inferior - Stand 16",
+      "site": "http://www.davnar.com.ar/"
     },
     {
       "nome": "Ghost",
       "logo": "expositor_prata_ghost.jpg",
-      "local": "Piso Superior - Stands 06 e 07",
-      "site": "https://www.5.11tactical.com"
+      "local": "Piso Inferior - Stand 23",
+      "site": "http://www.estore.ghostinternational.com/en/"
     },
     {
       "nome": "Grupo Inbra",
       "logo": "expositor_prata_grupoimbra.jpg",
-      "local": "Piso Superior - Stands 06 e 07",
-      "site": "https://www.5.11tactical.com"
+      "local": "Piso Inferior - Stand 20",
+      "site": "http://grupoinbra.com.br/"
     }
   ],
   "bronze": [
     {
       "nome": "Algemas Brasil",
       "logo": "expositor_bronze_algemas.jpg",
-      "local": "Piso Superior - Stands 06 e 07",
-      "site": "https://www.5.11tactical.com"
+      "local": "Piso Inferior - Stand 08",
+      "site": "https://www.algemasbrasil.com.br/"
     },
     {
       "nome": "Bélica",
       "logo": "expositor_bronze_belica.jpg",
-      "local": "Piso Superior - Stands 06 e 07",
-      "site": "https://www.5.11tactical.com"
+      "local": "Piso Inferior - Stand 19",
+      "site": "http://www.lojabelica.com.br/"
     },
     {
       "nome": "Crosster",
       "logo": "expositor_bronze_crosster.jpg",
-      "local": "Piso Superior - Stands 06 e 07",
-      "site": "https://www.5.11tactical.com"
+      "local": "Piso Inferior - Stand 05",
+      "site": "https://www.crosster.com.br/"
     },
     {
       "nome": "Patola",
       "logo": "expositor_bronze_patola.jpg",
-      "local": "Piso Superior - Stands 06 e 07",
-      "site": "https://www.5.11tactical.com"
+      "local": "Piso Inferior - Stand 13",
+      "site": "http://www.patola.com.br/"
     },
     {
       "nome": "WD-40",
       "logo": "expositor_bronze_wd40.jpg",
-      "local": "Piso Superior - Stands 06 e 07",
-      "site": "https://www.5.11tactical.com"
+      "local": "Piso Inferior - Stand 06",
+      "site": "http://wd40.com.br/"
     }
   ]
 }

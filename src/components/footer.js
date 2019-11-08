@@ -7,6 +7,7 @@ import styled, { css } from 'styled-components'
 import Local from './location'
 import FullWidth from './fullwidth'
 import Image from './image'
+import LinkedImage from "./LinkedImage"
 import Separador from './separador'
 import { Link } from 'gatsby'
 import SeparadorInverted from './separadorInverted'
@@ -23,7 +24,7 @@ const ColunaA = styled(Col)`
   padding: 1.5em;
 `
 const ColunaB = styled(Col)`
-  background-color: var(--narvik);
+  background-color: var(--feta);
   padding: 1.5em;
 `
 
@@ -137,6 +138,13 @@ const StyledImage = styled(Image)`
   display: inline-block;
   width: 70px;
   margin: 0.5em;
+  mix-blend-mode: luminosity;
+  opacity: 0.7;
+`
+const PatrocinadoresImage = styled(LinkedImage)`
+  mix-blend-mode: luminosity;
+  opacity: 0.7;
+  transition: all .3s;
 `
 
 const StyledCol = styled(Col)`
@@ -258,7 +266,7 @@ const Patrocinadores = props => {
   const ExpositoresCategory = `${props.category}`
   const ExpositorLogo = Expositores[ExpositoresCategory].map(expositor => (
     <StyledCol sm={props.sm}>
-      <a href={`${expositor.site}`} target="_blank" rel="noopener noreferrer"><Image imgName={expositor.logo}/></a>
+      <PatrocinadoresImage noYellowLayer imgName={expositor.logo} to={`${expositor.site}`} target="_blank" rel="noopener noreferrer"/>
     </StyledCol>
   ))
 

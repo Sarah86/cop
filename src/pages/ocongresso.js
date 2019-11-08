@@ -121,15 +121,15 @@ const CongressoCarousel = () => {
 const Assista = () => {
   const Videos = [
     {
-      url: 'https://youtu.be/qpF-_5foMyc',
-      title: 'Cobertura da Edição Anterior',
+      url: 'https://www.youtube.com/watch?v=uYrPl1fKaK0',
+      title: 'Edição anterior',
     },
     {
-      url: 'https://youtu.be/qpF-_5foMyc',
-      title: 'Institucional CIOC',
+      url: 'https://www.youtube.com/watch?v=SZPvvIRiSrQ&t=133s',
+      title: 'Institucional COP 2018',
     },
     {
-      url: 'https://youtu.be/qpF-_5foMyc',
+      url: 'https://www.youtube.com/watch?v=deh2PEW_MTE',
       title: 'Cobertura Completa Ao Vivo',
     },
   ]
@@ -170,24 +170,30 @@ const Botoes = () => (
     className="mt-5 mb-5 d-flex flex-column justify-content-between align-items-center w-100"
     style={{ height: '9em' }}
   >
-    <Botao texto="Inscreva-se Agora!" width="12em" to={Dados.Inscricao} />
+    <Botao texto="Inscreva-se Agora!" width="12em" to={Dados.linkInscricao} />
     <Botao texto="Confira  a Programação" width="12em" to="/agenda-e-palestrantes" />
   </div>
+)
+
+const Video = () => (
+  //Aguardando video. Substituir pelo banner
+  <>
+  <PaddedContentBox>
+  <h1>o congresso</h1>
+</PaddedContentBox>
+  <FramedVideo
+  url="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+  controls
+  width="100%"
+  height="100%"
+/>
+</>
 )
 
 const OCongressoMobile = () => (
   <MediaQuery maxWidth={991}>
     <SEO title="O Congresso" />
-    <PaddedContentBox>
-      <h1>o congresso</h1>
-    </PaddedContentBox>
-    <FramedVideo
-      url="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
-      controls
-      width="100%"
-      height="100%"
-    />
-    <Image imgName="ocongresso-capa.png" />
+    <Image imgName="ocongresso_composite.png" />
     <CongressoFirstBlock />
     <Photo imgName="floripa.png" />
     <CongressoSecondBlock />
@@ -215,7 +221,7 @@ const OCongressoDesktopFirstBlock = () => (
           <CongressoFirstBlock />
         </Col>
         <Col>
-          <Image imgName="ocongresso-capa.png" />
+          <Image imgName="ocongresso_composite.png" />
         </Col>
       </Row>
     </Container>
@@ -253,7 +259,7 @@ const TemasInteresse = () => (
 
 const OCongressoDesktopSecondBlock = () => (
   <div className="mt-5">
-    <Photo imgName="teatro.jpg" />
+    <Photo imgName="ocongresso_auditorio.jpg" />
     <Container style={{ position: 'relative' }}>
       <Background position="left top" left="-40%" />
       <Row>
@@ -272,8 +278,9 @@ const OCongressoDesktopThirdBlock = () => (
   <Container className="mt-5">
     <Row>
       <Col className="text-justify d-flex flex-column">
-        <Photo imgName="ocongresso_espaco-abopesp.jpg" />
+        <Photo imgName="ocongresso_foto_abopesp.jpg" />
         <FadeParagraphTitle sm>espaço ABOpEsp</FadeParagraphTitle>
+        <div className="d-flex flex-column justify-content-between flex-grow-1">
         <PaddedText>
           <Paragraph>
             As unidades de operações especiais terão{' '}
@@ -285,13 +292,16 @@ const OCongressoDesktopThirdBlock = () => (
             no anfiteatro do Centro de Eventos Luiz Henrique da Silveira, com uma programação de
             clínicas e workshops para quem leva a atividade policial como um ofício de excelência.
           </Paragraph>
-          <Image imgName="logo-aboe.jpg" style={{ width: '150px' }} />
-          <Separador sm widthTotal="100px" />
+          <Image imgName="ocongresso_logos_sociais_abopesp.png" style={{ width: '150px' }} />
         </PaddedText>
+        <Separador sm widthTotal="100px"/>
+        </div>
+        
       </Col>
-      <Col className="text-justify">
-        <Photo imgName="ocongresso_acoes-sociais.jpg" />
+      <Col className="text-justify d-flex flex-column">
+        <Photo imgName="ocongresso_foto_social.jpg" />
         <FadeParagraphTitle sm>ações sociais</FadeParagraphTitle>
+        <div className="d-flex flex-column justify-content-between flex-grow-1">
         <PaddedText>
           <Paragraph>
             O COP Internacional fará a coleta de alimentos não-perecíveis durante os 3 dias de
@@ -305,12 +315,14 @@ const OCongressoDesktopThirdBlock = () => (
             <strong>A meta de arrecadação é de 4 toneladas de alimentos.</strong> Faça parte deste
             movimento!
           </Paragraph>
-          <div className="d-flex justify-content-between" style={{ width: '30%' }}>
-            <Image imgName="logo-seove.jpg" style={{ width: '50px' }} />
-            <Image imgName="logo-boladeneve.jpg" style={{ width: '50px' }} />
+          <div className="d-flex justify-content-between" style={{width: "30%"}}>
+            <Image imgName="ocongresso_logos_sociais_seove.png" style={{width:"50px"}}/>
+            <Image imgName="ocongresso_logos_sociais_boladeneve.png" style={{width:"50px"}}/>
           </div>
-          <Separador sm widthTotal="100px" />
         </PaddedText>
+        <Separador sm widthTotal="100px"/>
+        </div>
+        
       </Col>
     </Row>
   </Container>

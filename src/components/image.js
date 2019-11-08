@@ -22,7 +22,7 @@ const Image = ({ className, imgName, style }) => (
         allImageSharp {
           edges {
             node {
-              fluid(maxWidth: 700, quality: 100) {
+              fluid(maxWidth: 1500, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
                 originalName
               }

@@ -13,6 +13,7 @@ import Image from './image'
 import LinkedPhoto from './LinkedPhoto'
 import LinkedShadowedImage from './LinkedShadowedImage'
 import Background from './background'
+import FullWidth from './fullwidth'
 
 const BemVindo = styled.h2`
   font-size: 3em;
@@ -87,6 +88,12 @@ const Video = () => (
       <Shadow />
     </div>
   </VideoContainer>
+)
+
+export const BannerTemporario = () => (
+  <FullWidth>
+    <Image imgName="home_temp_banner.jpg"/>
+  </FullWidth>
 )
 
 const CongressoPalestrantes = () => (
@@ -236,7 +243,7 @@ const Espaco = () => (
 const HomeDesktop = () => (
   <>
     <BoasVindas />
-    <Video />
+    <BannerTemporario />
     <CongressoPalestrantes />
     <Expositores />
     <Espaco />

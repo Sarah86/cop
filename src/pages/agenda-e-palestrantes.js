@@ -31,7 +31,7 @@ const Palestrantes = () => (
     </StyledPaddedText>
     <FullWidth>
       <PhotoWrapper>
-        <Photo imgName="programacao_capa.jpg" />
+        <Photo imgName="palestrantes_topbanner.jpg" />
       </PhotoWrapper>
     </FullWidth>
     <MediaQuery maxWidth={991}>

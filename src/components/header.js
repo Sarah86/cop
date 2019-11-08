@@ -128,7 +128,6 @@ const SocialLinksContainer = props => (
   <div {...props}>
     <LinkedFacebookIcon />
     <LinkedInstagramIcon />
-    <LinkedYoutubeIcon />
   </div>
 )
 

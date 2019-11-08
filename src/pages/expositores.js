@@ -22,10 +22,19 @@ const ExpositoresIntroduction = () => (
     <FadeParagraphTitle>expositores</FadeParagraphTitle>
     <Row>
       <Col>
-        <Paragraph>Durante os 3 dias do evento...</Paragraph>
+        <Paragraph>Durante os 3 dias de evento, a maiores marcas do Brasil e do mundo em segurança e defesa exporão seus produtos e soluções.</Paragraph>
+
+<Paragraph>
+  Será uma oportunidade única de se atualizar e se conectar com o que há de melhor e mais moderno no seguimento.
+</Paragraph>
+
+<Paragraph>
+Downloads:<br/>
+<br/>Manual de Uso da Marca COP  ·  Manual do Expositor  · 
+</Paragraph>
       </Col>
       <Col className="d-flex justify-content-center">
-        <Botao texto="QUER EXPOR SUA MARCA?" />
+        <Botao texto="QUER EXPOR SUA MARCA?" to="mailto:marketing@copinternacional.com" />
       </Col>
     </Row>
   </Container>

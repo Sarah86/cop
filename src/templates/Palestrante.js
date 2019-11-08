@@ -31,7 +31,7 @@ const Body = ({ children }) => (
     </StyledPaddedText>
     <FullWidth>
       <PhotoWrapper>
-        <Photo imgName="programacao_capa.jpg" />
+        <Photo imgName="palestrantes_topbanner.jpg" />
       </PhotoWrapper>
     </FullWidth>
     {children}

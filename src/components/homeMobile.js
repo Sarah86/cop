@@ -57,7 +57,7 @@ class HomeMobile extends React.Component {
   render() {
     return (
       <div style={{ height: '100vh' }} onScroll={this.handleScroll}>
-        <Video url="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" />
+        <Video url="https://youtu.be/7XnCwfvA_SY?t=48" />
         <HomeContainer>
           <ConselhoNacional />
           <div style={{ width: '65vw' }}>
