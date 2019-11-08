@@ -18,6 +18,7 @@
           "A Palestra Magna será ministrada pelo presidente do Conselho Nacional de Comandantes Gerais, o Cel. Araújo Gomes.",
           "Cel. Araújo é formado e pós-graduado em Controle de Emergências e Disastres e especialista em Análise de Risco, Gerenciamento de Emergência, Defesa Civil e Projetos de Segurança Pública."
         ],
+        "destaque": true,
         "facebook": "https://www.facebook.com/araujo.gomes.5/",
         "hora": "09:00h",
         "imagem": "palestrante_araujo_gomes.jpg",
@@ -37,6 +38,7 @@
           "Ocupações de Rogério Greco:",
           "<ul><li>Procurador de Justiça - MG</li><li>Membro Titular da Banca Examinadora de Direito Penal do XLVIII Concurso para Ingresso no Ministério Público de Minas Gerais.</li><li>Membro fundador do Instituto de Ciências Penais (ICP) e da Associação Brasileira dos Professores de Ciências Penais.</li><li>Especialista em Direito Penal (Teoria do Crime) pela Universidade de Salamanca (Espanha).</li><li>Pós-Doutorado pela Universitá Degli Studi di Messina (Itália).</li><li>Doutor pela Universidade de Burgos (Espanha).</li><li>Mestre em Ciências Penais pela Universidade Federal de Minas Gerais - UFMG.</li><li>Palestrante em congressos e universidades em todo o País.</li><li>Membro eleito para o Conselho Superior do Ministério Público durante os anos de 2003, 2006 e 2008.</li><li>Autor de diversas obras como e livros Atividade Policial e Retomada do Complexo do Alemão.</li><li>Embaixador de Cristo.</li></ul>"
         ],
+        "destaque": true,
         "facebook": "https://www.facebook.com/paginarogeriogreco",
         "hora": "13:30h",
         "imagem": "palestrante_rogerio_greco.jpg",
@@ -53,6 +55,7 @@
           "Trabalhos publicados:",
           "<ul><li>Guerra Irregular: terrorismo, guerrilha e movimentos de resistência ao longo da história</li><li>Lawrence da Arábia.</li><li>Por que forças especiais.</li><li>Jihad e Contrainsurgência: concepções distintas da guerra psicológica.</li><li>O Desafio da Transformação. Kansas: Military Review, 2011.</li></ul>"
         ],
+        "destaque": true,
         "hora": "16:00h",
         "imagem": "palestrante_alessandro_visacro.jpg",
         "palestrante": "Alessandro Visacro",
@@ -75,6 +78,7 @@
       },
       {
         "descricao": [],
+        "destaque": true,
         "hora": "08:30h",
         "imagem": "palestrante_alexandre_abrahao.jpg",
         "palestrante": "Juiz Alexandre Abrahão",

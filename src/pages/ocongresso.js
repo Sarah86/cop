@@ -28,6 +28,7 @@ import Background from '../components/background'
 import FullWidth from '../components/fullwidth'
 import Separador from '../components/separador'
 import { FadeParagraphTitle } from '../components/FadeElements'
+import LinkedImage from '../components/LinkedImage'
 
 const Dados = require("../data/dados.json")
 const Cronograma = require("../data/cronograma.json")
@@ -292,7 +293,7 @@ const OCongressoDesktopThirdBlock = () => (
             no anfiteatro do Centro de Eventos Luiz Henrique da Silveira, com uma programação de
             clínicas e workshops para quem leva a atividade policial como um ofício de excelência.
           </Paragraph>
-          <Image imgName="ocongresso_logos_sociais_abopesp.png" style={{ width: '150px' }} />
+          <LinkedImage imgName="ocongresso_logos_sociais_abopesp.png" to="https://abopesp.com.br/" className="w-50" noyellowlayer/>
         </PaddedText>
         <Separador sm widthTotal="100px"/>
         </div>
@@ -315,9 +316,9 @@ const OCongressoDesktopThirdBlock = () => (
             <strong>A meta de arrecadação é de 4 toneladas de alimentos.</strong> Faça parte deste
             movimento!
           </Paragraph>
-          <div className="d-flex justify-content-between" style={{width: "30%"}}>
-            <Image imgName="ocongresso_logos_sociais_seove.png" style={{width:"50px"}}/>
-            <Image imgName="ocongresso_logos_sociais_boladeneve.png" style={{width:"50px"}}/>
+          <div className="d-flex justify-content-between" style={{width: "35%"}}>
+            <LinkedImage imgName="ocongresso_logos_sociais_seove.png" to="http://seove.org.br/" className="mx-1" noyellowlayer />
+            <LinkedImage imgName="ocongresso_logos_sociais_boladeneve.png" to="http://www.boladeneve.com/" className="mx-1" noyellowlayer/>
           </div>
         </PaddedText>
         <Separador sm widthTotal="100px"/>
@@ -338,10 +339,11 @@ const OCongressoDesktopForthBlock = () => {
           atividade.palestrante ?
           ( <Col lg={3} className="p-1">
             <LinkedPhoto
+            key={atividade.slug}
             imgName={atividade.imagem}
             title={atividade.palestrante}
             subtitle={atividade.qualificacao}
-            to={atividade.slug}
+            to={`/agenda-e-palestrantes/${atividade.slug}`}
           />
           </Col>
           )
@@ -357,7 +359,7 @@ const OCongressoDesktopForthBlock = () => {
       <Background />
       <FadeParagraphTitle>palestrantes</FadeParagraphTitle>
       <Row noGutters>{PalestranteContainer}</Row>
-      <ReadMore className="align-self-end">leia mais</ReadMore>
+      <ReadMore className="align-self-end" to="/agenda-e-palestrantes">leia mais</ReadMore>
     </Container>
   )
 }

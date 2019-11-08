@@ -6,7 +6,7 @@ import { MolduraTop } from './moldura'
 const SeparadorWrapper = styled.div`
   margin-top: 2em;
   margin-bottom: 2em;
-  margin: ${props => (props.noMargin ? '0' : null)};
+  margin: ${props => (props.nomargin ? '0' : null)};
   height: 1em;
   position: relative;
   width: ${props => props.width};
@@ -23,7 +23,7 @@ const SeparadorInverted = props => (
   <SeparadorWrapper
     width={props.widthTotal}
     center={props.center}
-    noMargin={props.noMargin}
+    nomargin={props.nomargin}
     translated={props.translated}
     className={props.className}
     style={props.style}

@@ -114,8 +114,8 @@ const ExpositoresCategory = props => (
 
 const ExpositoresDiamante = () => {
   const ExpositorDiamante = Expositores.diamante.sort((a, b) => a.local > b.local ? 1 : -1).map(diamante => (
-    <ColDiamante sm={12} lg={6}>
-      <ShadowedImage imgName={diamante.thumbnail} noMargin />
+    <ColDiamante sm={12} lg={6} key={diamante.nome}>
+      <ShadowedImage imgName={diamante.thumbnail} nomargin />
       <DiamanteBox>
         <h4 style={{ fontFamily: 'TilliumWeb', fontSize: '1.2em', marginBottom: '0' }}>
           {diamante.nome}
@@ -138,7 +138,7 @@ const ExpositoresDiamante = () => {
           <Local>{diamante.local}</Local>
           <Site href={`${diamante.site}`}>{diamante.site}</Site>
         </div>
-        <Separador color="var(--bunker)" sm border="1px" widthTotal="100%" noMargin />
+        <Separador color="var(--bunker)" sm border="1px" widthTotal="100%" nomargin />
       </DiamanteBox>
     </ColDiamante>
   ))
@@ -192,8 +192,8 @@ const OuroInfo = styled.div`
 `
 
 const ExpositoresOuro = () => {
-  const ExpositorOuro = Expositores.ouro.map(ouro => (
-    <StyledCol xs={6} lg={3}>
+  const ExpositorOuro = Expositores.ouro.sort((a, b) => a.local > b.local ? 1 : -1).map(ouro => (
+    <StyledCol xs={6} lg={3} key={ouro.nome}>
       <Image imgName={ouro.logo}/>
       <OuroInfo>
         <Local>{ouro.local}</Local>
@@ -214,7 +214,7 @@ const ExpositoresOuro = () => {
             category="ouro"
           />
           <div className="d-flex justify-content-end mt-n5">
-            <Separador color="var(--kidnapper)" border="1px" widthTotal="50%" noMargin />
+            <Separador color="var(--kidnapper)" border="1px" widthTotal="50%" nomargin />
           </div>
         </MediaQuery>
         <MediaQuery minWidth={992}>
@@ -241,8 +241,8 @@ const ExpositoresOuro = () => {
 }
 
 const ExpositoresPrata = () => {
-  const ExpositorPrata = Expositores.prata.map(prata => (
-    <StyledCol xs={4} lg={3}>
+  const ExpositorPrata = Expositores.prata.sort((a, b) => a.local > b.local ? 1 : -1).map(prata => (
+    <StyledCol xs={4} lg={3} key={prata.nome}>
       <Image imgName={prata.logo} />
       <OuroInfo>
         <Local>{prata.local}</Local>
@@ -263,7 +263,7 @@ const ExpositoresPrata = () => {
             category="prata"
           />
           <div className="d-flex justify-content-end mt-n5">
-            <Separador color="var(--kidnapper)" border="1px" widthTotal="50%" noMargin />
+            <Separador color="var(--kidnapper)" border="1px" widthTotal="50%" nomargin />
           </div>
         </MediaQuery>
         <MediaQuery minWidth={992}>
@@ -290,8 +290,8 @@ const ExpositoresPrata = () => {
 }
 
 const ExpositoresBronze = () => {
-  const ExpositorBronze = Expositores.bronze.map(bronze => (
-    <StyledCol xs={3} lg={3}>
+  const ExpositorBronze = Expositores.bronze.sort((a, b) => a.local > b.local ? 1 : -1).map(bronze => (
+    <StyledCol xs={3} lg={3} key={bronze.nome}>
       <Image imgName={bronze.logo} />
       <OuroInfo>
         <Local>{bronze.local}</Local>
@@ -312,7 +312,7 @@ const ExpositoresBronze = () => {
             category="bronze"
           />
           <div className="d-flex justify-content-end mt-n5">
-            <Separador color="var(--kidnapper)" border="1px" widthTotal="50%" noMargin />
+            <Separador color="var(--kidnapper)" border="1px" widthTotal="50%" nomargin />
           </div>
         </MediaQuery>
         <MediaQuery minWidth={992}>

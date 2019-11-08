@@ -46,7 +46,7 @@ class HomeMobile extends React.Component {
   }
 
   handleScroll() {
-    if (window.location.pathname === '/' || '') {
+    if (window.location.pathname === '/' || null) {
       setTimeout(function() {
         console.log('redirection to ocongresso')
         navigate(`/ocongresso/`)

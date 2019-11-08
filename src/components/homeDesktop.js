@@ -15,6 +15,8 @@ import LinkedShadowedImage from './LinkedShadowedImage'
 import Background from './background'
 import FullWidth from './fullwidth'
 
+const Cronograma = require("../data/cronograma.json")
+
 const BemVindo = styled.h2`
   font-size: 3em;
   font-family: var(--font2);
@@ -96,8 +98,32 @@ export const BannerTemporario = () => (
   </FullWidth>
 )
 
-const CongressoPalestrantes = () => (
-  <Container className="mt-5">
+const CongressoPalestrantes = () => {
+  
+  const PalestranteDestaque = Cronograma.map(dia => (
+    <>{
+      dia.atividades.map(atividade => (
+        <>
+          {
+            atividade.destaque === true ? (
+              <Col xs={6} className="pl-1 pr-1">
+              <LinkedPhoto
+              imgName={atividade.imagem}
+              title={atividade.palestrante}
+              subtitle={atividade.qualificacao}
+              to={`/agenda-e-palestrantes/${atividade.slug}`}
+            />
+            </Col>
+            ) : null
+          }
+        </>
+      ))
+    }
+    </>
+  ))
+
+  return(
+    <Container className="mt-5">
     <Row>
       <Col className="text-justify pr-5 d-flex flex-column justify-content-between">
         <FadeParagraphTitle>o congresso</FadeParagraphTitle>
@@ -118,47 +144,19 @@ const CongressoPalestrantes = () => (
           <ParagraphLink>Florianópolis</ParagraphLink>, que por sua vez abriga o moderno{' '}
           <ParagraphLink>Centro de Eventos Governador Luiz Henrique da Silveira</ParagraphLink>.
         </Paragraph>
-        <ReadMore className="align-self-end">leia mais</ReadMore>
+        <ReadMore className="align-self-end" to="/ocongresso">leia mais</ReadMore>
       </Col>
       <Col className="pl-5 d-flex flex-column justify-content-between">
         <FadeParagraphTitle>palestrantes</FadeParagraphTitle>
         <Row noGutters>
-          <Col className="pl-1 pr-1">
-            <LinkedPhoto
-              imgName="palestrante_p.jpg"
-              title="Jair Messias Bolsonaro"
-              subtitle="Presidente da República"
-            />
-          </Col>
-          <Col className="pl-1 pr-1">
-            <LinkedPhoto
-              imgName="palestrante_p.jpg"
-              title="Hamilton Mourão"
-              subtitle="Vice-Presidente e General do EB"
-            />
-          </Col>
+          {PalestranteDestaque}
         </Row>
-        <Row noGutters>
-          <Col className="pl-1 pr-1">
-            <LinkedPhoto
-              imgName="palestrante_p.jpg"
-              title="Sérgio Moro"
-              subtitle="Ministro da Justiça"
-            />
-          </Col>
-          <Col className="pl-1 pr-1">
-            <LinkedPhoto
-              imgName="palestrante_p.jpg"
-              title="Maurício Silveira"
-              subtitle="Cmdte. Grupamento de Choque PMSC"
-            />
-          </Col>
-        </Row>
-        <ReadMore className="align-self-end">leia mais</ReadMore>
+        <ReadMore className="align-self-end" to="/agenda-e-palestrantes">leia mais</ReadMore>
       </Col>
     </Row>
   </Container>
-)
+  )
+}
 
 const Expositores = () => (
   <Container className="mt-5 d-flex flex-column justify-content-between position-relative">

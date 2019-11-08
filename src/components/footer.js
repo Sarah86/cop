@@ -53,7 +53,7 @@ const FooterTitle = () => (
   <>
     <TitleH1>Congresso Internacional de Operações Policiais</TitleH1>
     <Local fontSize=".7em" iconSize="1.2em" style={{ color: 'var(--lemongrass' }} />
-    <Separador color="var(--plantation)" border="1px" widthTotal="95%" noMargin sm />
+    <Separador color="var(--plantation)" border="1px" widthTotal="95%" nomargin sm />
   </>
 )
 
@@ -161,7 +161,7 @@ const FooterMenuItem = props => (
 
 const Sitemap = () => {
   const Palestrantes = Cronograma.map(data => (
-    <SitemapUl>
+    <SitemapUl key={data.dia}>
       <StyledDiaFooter>
         <span>{data.diaFooter}</span>
       </StyledDiaFooter>
@@ -172,10 +172,11 @@ const Sitemap = () => {
               <FooterMenuItem
                 link={`/agenda-e-palestrantes/${atividade.slug}`}
                 title={atividade.palestrante}
+                key={atividade.slug}
               />
             ) : atividade.palestrante ? (
               <li>
-                <DisabledLink>{atividade.palestrante}</DisabledLink>
+                <DisabledLink key={atividade.slug}>{atividade.palestrante}</DisabledLink>
               </li>
             ) : null}
           </>
@@ -242,7 +243,7 @@ const FooterRealizacao = () => (
           border="1px"
           widthTotal="35%"
           widthBarra="70%"
-          noMargin
+          nomargin
           tall
         />
       </div>
@@ -253,7 +254,7 @@ const FooterRealizacao = () => (
           color="var(--kidnapper)"
           border="1px"
           widthTotal="90%"
-          noMargin
+          nomargin
           tall
           translated
         />
@@ -265,8 +266,8 @@ const FooterRealizacao = () => (
 const Patrocinadores = props => {
   const ExpositoresCategory = `${props.category}`
   const ExpositorLogo = Expositores[ExpositoresCategory].map(expositor => (
-    <StyledCol sm={props.sm}>
-      <PatrocinadoresImage noYellowLayer imgName={expositor.logo} to={`${expositor.site}`} target="_blank" rel="noopener noreferrer"/>
+    <StyledCol sm={props.sm} key={expositor.nome}>
+      <PatrocinadoresImage noyellowlayer imgName={expositor.logo} to={`${expositor.site}`} target="_blank" rel="noopener noreferrer"/>
     </StyledCol>
   ))
 
@@ -296,7 +297,7 @@ const PatrocinadoresGallery = props => (
           border="1px"
           widthTotal="50%"
           widthBarra="40%"
-          noMargin
+          nomargin
           tall
         />
       </div>
@@ -308,7 +309,7 @@ const PatrocinadoresGallery = props => (
       border="1px"
       widthTotal="50%"
       widthBarra="40%"
-      noMargin
+      nomargin
       tall
       translated
     />
