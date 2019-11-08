@@ -43,7 +43,7 @@
         "hora": "13:30h",
         "imagem": "palestrante_rogerio_greco.jpg",
         "instagram": "https://www.instagram.com/rogerio.greco",
-        "palestrante": "Rogério Greco",
+        "palestrante": "Proc. Juz. Rogério Greco",
         "qualificacao": "Procurador de Justiça MG e Escritor",
         "site": "https://www.rogeriogreco.com.br/",
         "slug": "rogerio-greco",
@@ -58,7 +58,7 @@
         "destaque": true,
         "hora": "16:00h",
         "imagem": "palestrante_alessandro_visacro.jpg",
-        "palestrante": "Alessandro Visacro",
+        "palestrante": "Cel. EB Alessandro Visacro",
         "qualificacao": "EB Coronel EB - Chefe do Estado Maior do Comando de Operações Especiais",
         "site": "https://editoracontexto.com.br/autores/alessandro-visacro.html",
         "slug": "alessandro-visacro",
@@ -84,14 +84,15 @@
         "palestrante": "Juiz Alexandre Abrahão",
         "qualificacao": "Presidente do Tribunal do Júri - RJ",
         "slug": "juiz-alexandre-abrahao",
-        "titulo": "Legalidade do tiro do Sniper e possibilidades de emprego"
+        "titulo": "Legalidade do tiro do Sniper e possibilidades de emprego",
+        "youtube": "https://www.youtube.com/watch?v=q_QPiaBAYpo"
       },
       {
         "descricao": [],
         "hora": "10:30h",
         "imagem": "palestrante_placeholder.jpg",
         "linkedin": "https://www.linkedin.com/in/humberto-antunes-rocha-j%C3%BAnior-b099b27a",
-        "palestrante": "Rocha Junior",
+        "palestrante": "Cel. EB Rocha Junior",
         "qualificacao": "Coronel EB - Assessor Militar do Gabinete de Segurança Institucional da Presidência da República.",
         "slug": "cel-rocha-jumior",
         "titulo": "Proteção Avançado do Dignatário"
@@ -107,7 +108,7 @@
       "instagram": "https://www.instagram.com/e._bettini/",
       "hora": "16:00h",
       "imagem": "palestrante_eduardo_betini.jpg",
-      "palestrante": "PF Eduardo Betin",
+      "palestrante": "PF Eduardo Betini",
       "qualificacao": "Coordenador-Geral de Fronteiras da Secretaria de Operações Integradas do Ministério da Justiça e Segurança Pública.",
       "slug": "pf-eduardo-betini",
       "titulo": "Importância do planejamento estratégico para atividade policial.",
@@ -128,8 +129,8 @@
       {
         "descricao": [],
         "hora": "08:30h",
-        "imagem": "palestrante_placeholder.jpg",
-        "palestrante": "Souza Filho",
+        "imagem": "palestrante_souza_filho.jpg",
+        "palestrante": "Cel. PMPI Souza Filho",
         "slug": "cel-souza-filho",
         "titulo": "Operações de Choque: Desafios e Novas Dinâmicas"
       },
@@ -141,10 +142,10 @@
       {
         "hora": "13:30h",
         "titulo": "Gerenciamento de Crise - Case: Sequestro na ponte Rio-Niterói",
-        "palestrante": "Maurilio Nunes",
+        "palestrante": "Ten. Cel. Maurilio Nunes",
         "qualificacao": "Ten. Cel PMERJ - Comandante BOPE/RJ",
         "slug": "ten-cel-nunes-bope",
-        "imagem": "palestrante_placeholder.jpg",
+        "imagem": "palestrante_coronel_nunes.jpg",
         "descricao": [
           "Mestre em Gestão Empresarial e tem MBA em Gerenciamento de Projetos pela FGV e ainda com formação em Direito pela Universidade Gama Filho.",
           "Tenente Coronel NUNES é Oficial da PMERJ há 20 anos tendo em sua carreira militar cursos como de Operações Especiais (BOPE), SNIPER, Tiro Policial, Gerenciamento de Crises em Grandes Eventos, Entradas Táticas e Estágios de Explosivista e Logística, entre outros.", 

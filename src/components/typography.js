@@ -111,12 +111,24 @@ export const ParagraphLink = styled.a`
   }
 `
 
+export const InternalParagraphLink = styled(Link)`
+  &&& {
+    color: var(--amber);
+    font-weight: 600;
+    text-decoration: underline;
+    :hover {
+      color: var(--amber);
+      cursor: pointer;
+    }
+  }
+`
+
 export const ParagraphTitle = styled.h2`
   font-family: var(--font2);
   font-size: ${props => (props.sm ? '2.5em' : '3em')};
-  font-weight: 300;
+  font-weight: 200;
   color: ${props => (props.color ? `${props.color}` : 'var(--amber)')};
-  letter-spacing: var(--lp1);
+  letter-spacing: var(--lp0);
   line-height: 0.95em;
   width: ${props => props.width};
   transform: ${props => (props.reversedSkew ? 'skewX(7deg)' : '')};

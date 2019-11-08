@@ -13,6 +13,8 @@ import { Link } from 'gatsby'
 import SeparadorInverted from './separadorInverted'
 import { OuroBox } from '../pages/expositores'
 import { FooterMenuMobile } from './header'
+import { Paragraph, ParagraphLink } from './typography'
+import { device } from './device'
 
 const Cronograma = require('../data/cronograma.json')
 const Expositores = require('../data/expositores.json')
@@ -41,6 +43,15 @@ const SitemapTitle = styled.p`
   line-height: 1em;
   margin: 0.5em 0;
   letter-spacing: var(--lp1);
+`
+const Creditos = styled.div`
+  padding-bottom: 2em;
+ ${Paragraph}{
+   margin-bottom: .5em; 
+ }
+ @media ${device.desktop}{
+    padding-bottom: 0;
+}
 `
 
 const Isotipo = () => (
@@ -267,7 +278,7 @@ const Patrocinadores = props => {
   const ExpositoresCategory = `${props.category}`
   const ExpositorLogo = Expositores[ExpositoresCategory].map(expositor => (
     <StyledCol sm={props.sm} key={expositor.nome}>
-      <PatrocinadoresImage noyellowlayer imgName={expositor.logo} to={`${expositor.site}`} target="_blank" rel="noopener noreferrer"/>
+      <PatrocinadoresImage noyellowlayer imgName={expositor.logo} to={`${expositor.site}`} target="_blank" rel="noopener noreferrer" />
     </StyledCol>
   ))
 
@@ -344,9 +355,14 @@ const Footer = () => (
         </Row>
       </FullWidth>
     </MediaQuery>
-    © {new Date().getFullYear()}, Built with
-    {` `}
-    <a href="https://www.gatsbyjs.org">Gatsby</a>
+    <Creditos className="m-5 text-center">
+      <Paragraph style={{color: "var(--narvik)", fontWeight: "600"}}>COP Internacional - Todos os Direitos Reservados © {new Date().getFullYear()}</Paragraph>
+      <Paragraph style={{fontSize: ".7em"}}>Design: <ParagraphLink href="http://www.gara.dj">Alvaro Marques</ParagraphLink> - Desenvolvimento: <ParagraphLink href="http://sarahgoncalves.netlify.com">Sarah Gonçalves</ParagraphLink></Paragraph>
+      <Paragraph><span style={{ fontSize: ".6em" }}>
+        Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
+      </span></Paragraph>
+    </Creditos>
+
   </footer>
 )
 

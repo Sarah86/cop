@@ -18,6 +18,7 @@ import {
   ListOl,
   PaddedText,
   ReadMore,
+  InternalParagraphLink,
 } from '../components/typography'
 import Photo from '../components/photo'
 import LinkedPhoto from '../components/LinkedPhoto'
@@ -58,8 +59,8 @@ const CongressoFirstBlock = () => (
     </Paragraph>
     <Paragraph lastLineRightDesktop reversedSkew>
       A cidade-sede escolhida é pelo segundo ano consecutivo a belíssima{' '}
-      <ParagraphLink>Florianópolis</ParagraphLink>, que por sua vez abriga o moderno{' '}
-      <ParagraphLink>Centro de Eventos Governador Luiz Henrique da Silveira</ParagraphLink>.
+      <ParagraphLink href="http://www.pmf.sc.gov.br" target="_blank">Florianópolis</ParagraphLink>, que por sua vez abriga o moderno{' '}
+      <ParagraphLink href="https://www.facebook.com/CentrodeEventosGovernadorLuizHenriquedaSilveira" target="_blank">Centro de Eventos Governador Luiz Henrique da Silveira</ParagraphLink>.
     </Paragraph>
   </PaddedContentBox>
 )
@@ -76,8 +77,8 @@ const CongressoSecondBlock = () => (
         <li>E a sociedade civil.</li>
       </List>
       <Paragraph>
-        A intensa programação de <ParagraphLink>Palestras</ParagraphLink> e{' '}
-        <ParagraphLink>Exposições</ParagraphLink> será uma oportunidade única adquirir conhecimento,
+        A intensa programação de <InternalParagraphLink to="/agenda-e-palestrantes">Palestras</InternalParagraphLink> e{' '}
+        <InternalParagraphLink to="/agenda-e-palestrantes">Exposições</InternalParagraphLink> será uma oportunidade única adquirir conhecimento,
         ter contato com o que existe de mais moderno em táticas e equipamentos de defesa e debater
         pontos críticos da segurança pública; sempre na direção de uma sociedade mais segura.
       </Paragraph>

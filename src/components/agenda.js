@@ -13,11 +13,10 @@ import {
 
 import { device } from '../components/device'
 import Photo from './photo'
-import { PaddedContentBox, Paragraph, PaddedText, TitleH3 } from './typography'
+import { PaddedContentBox, Paragraph, PaddedText, TitleH3, ParagraphTitle } from './typography'
 import { FadeParagraphTitle } from './FadeElements'
 import FullWidth from './fullwidth'
 import Isotipo from "../images/logo_cop_isotipo.png"
-import IsotipoCop from './isotipo'
 
 const Programacao = require('../data/cronograma.json')
 
@@ -88,14 +87,13 @@ const Hora = styled.h3`
   color: var(--amber);
   font-family: 'TTSupermolotNeue';
   font-weight: 400;
-  margin-top: -1em;
 `
 
 const GreyDivisor = styled.hr`
   background-color: var(--tapa);
-  width: 2em;
+  width: 3em;
   height: 2px;
-  margin: 0;
+  margin-top: 1em;
 `
 
 export const AgendaMobile = ({ defaultActiveKeyAccordion, defaultActiveKeyTab }) => {
@@ -164,14 +162,70 @@ export const AgendaMobile = ({ defaultActiveKeyAccordion, defaultActiveKeyTab })
               <div>
                 <Photo imgName={atividade.imagem} />
                 <PaddedContentBox className="pt-0">
-                  <FadeParagraphTitle sm>{atividade.titulo}</FadeParagraphTitle>
-                  <Hora>{atividade.hora}</Hora>
-                  <PaddedText>
-                    {atividade.descricao.map(paragrafo => (
-                      <Paragraph dangerouslySetInnerHTML={{ __html: `${paragrafo}` }} />
-                    ))}
-                    <GreyDivisor />
-                  </PaddedText>
+                <ParagraphTitle sm style={{ marginBottom: '.2em' }}>
+                        {atividade.palestrante}
+                      </ParagraphTitle>
+                      <div
+                        style={{
+                          fontFamily: 'TTSupermolotNeue',
+                          color: 'var(--lemongrass)',
+                          fontSize: '.9em',
+                          lineHeight: '1.2em'
+                        }}
+                      >
+                        {atividade.qualificacao}
+                      </div>
+                      <div
+                        style={{
+                          fontFamily: 'TilliumWeb',
+                          fontSize: '.9em',
+                          margin: '1em 0 2em 0',
+                          color: "var(--amber)",
+                          lineHeight: "1.2em"
+                        }}
+                      >
+                        Palestra: <strong>{atividade.titulo}</strong> <span className="mt-3 d-block">{dia.diaCompleto} -{' '}{atividade.hora}{' '}</span>
+                      </div>
+                      <PaddedText style={{ padding: '0', textAlign: 'justify' }}>
+                        {atividade.descricao == null ? null : (
+                          <>
+                            {atividade.descricao.map(paragrafo => (
+                              <Paragraph dangerouslySetInnerHTML={{ __html: `${paragrafo}` }} />
+                            ))}
+                          </>
+                        )}
+                      </PaddedText>
+                      <SocialPalestrante>
+                        Siga o palestrante:
+                        <SocialIcons>
+                          {atividade.facebook == null ? null : (
+                            <a href={atividade.facebook} target="_blank">
+                              <FontAwesomeIcon icon={faFacebookF} />
+                            </a>
+                          )}
+                          {atividade.instagram == null ? null : (
+                            <a href={atividade.instagram} target="_blank">
+                              <FontAwesomeIcon icon={faInstagram} />
+                            </a>
+                          )}
+                          {atividade.linkedin == null ? null : (
+                            <a href={atividade.linkedin} target="_blank">
+                              <FontAwesomeIcon icon={faLinkedinIn} />
+                            </a>
+                          )}
+                          {atividade.youtube == null ? null : (
+                            <a href={atividade.youtube} target="_blank">
+                              <FontAwesomeIcon icon={faYoutube} />
+                            </a>
+                          )}
+                        </SocialIcons>
+                        {atividade.site == null ? null : (
+                          <div style={{ display: 'block' }}>
+                            Site: <a href={atividade.site}>{atividade.site}</a>
+                          </div>
+                        )}
+                      </SocialPalestrante>
+                  <GreyDivisor />
                 </PaddedContentBox>
               </div>
             </Accordion.Collapse>
@@ -206,7 +260,7 @@ const DataHeader = styled.h2`
 const StyledRow = styled(Row)`
   color: var(--tapa);
   font-family: 'TTSupermolotNeue';
-  font-size: 1.1em;
+  font-size: 1em;
   background-color: var(--bunker);
   border: none !important;
   line-height: 1.5em;
@@ -406,35 +460,6 @@ export const AgendaDesktop = ({
                 </Nav>
               ))}
             </div>
-            <div>
-              <TitleH3 style={{ marginBottom: '1em' }}>palestrantes</TitleH3>
-              {dia.atividades.map(atividade => (
-                <>
-                  {atividade.palestrante == null ? null : (
-                    <StyledRow className="m-0">
-                      <Col className="p-0">
-                        <Nav className="flex-column">
-                          <Nav.Item>
-                            <Nav.Link
-                              eventKey={atividade.slug}
-                              style={{ paddingTop: '.5em', paddingBottom: '.5em' }}
-                            >
-                              <StyledLink
-                                to={`/agenda-e-palestrantes/${atividade.slug}`}
-                                activeClassName="palestranteActive"
-                              >
-                                {atividade.palestrante}
-                                <Qualificacao>{atividade.qualificacao}</Qualificacao>
-                              </StyledLink>
-                            </Nav.Link>
-                          </Nav.Item>
-                        </Nav>
-                      </Col>
-                    </StyledRow>
-                  )}
-                </>
-              ))}
-            </div>
           </Col>
           <Col sm={8} className="p-0" style={{ marginLeft: '-4px', backgroundImage:`url(${Isotipo})`, backgroundSize: "80%", backgroundRepeat: "no-repeat", backgroundPosition: "center"}}>
             <Tab.Content style={{backgroundColor: "var(--bunker)"}}>
@@ -464,8 +489,8 @@ export const AgendaDesktop = ({
                           margin: '1em 0 2em 0',
                         }}
                       >
-                        Palestra: <strong>{atividade.titulo}</strong> | {dia.diaCompleto} -{' '}
-                        {atividade.hora}{' '}
+                        Palestra: <strong>{atividade.titulo}</strong> <span className="mt-3 d-block">{dia.diaCompleto} -{' '}{atividade.hora}{' '}</span>
+
                       </div>
                       <PaddedText style={{ padding: '0', textAlign: 'justify' }}>
                         {atividade.descricao == null ? null : (
@@ -480,22 +505,22 @@ export const AgendaDesktop = ({
                         Siga o palestrante:
                         <SocialIcons>
                           {atividade.facebook == null ? null : (
-                            <a href={atividade.facebook}>
+                            <a href={atividade.facebook} target="_blank">
                               <FontAwesomeIcon icon={faFacebookF} />
                             </a>
                           )}
                           {atividade.instagram == null ? null : (
-                            <a href={atividade.instagram}>
+                            <a href={atividade.instagram} target="_blank">
                               <FontAwesomeIcon icon={faInstagram} />
                             </a>
                           )}
                           {atividade.linkedin == null ? null : (
-                            <a href={atividade.linkedin}>
+                            <a href={atividade.linkedin} target="_blank">
                               <FontAwesomeIcon icon={faLinkedinIn} />
                             </a>
                           )}
                           {atividade.youtube == null ? null : (
-                            <a href={atividade.youtube}>
+                            <a href={atividade.youtube} target="_blank">
                               <FontAwesomeIcon icon={faYoutube} />
                             </a>
                           )}
