@@ -211,7 +211,7 @@ const Espaco = () => (
     <Background left="-45%" position="left top" />
     <Row className="pt-5">
       <Col>
-        <FadeParagraphTitle size="2.5em" width="3.16em">
+        <FadeParagraphTitle size="2.5em" width="2.88em">
           espaço abopesp
         </FadeParagraphTitle>
         <LinkedPhoto imgName="destaque_triplo_home_1.jpg" to="/ocongresso/" />

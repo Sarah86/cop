@@ -391,12 +391,11 @@ const Footer = () => (
     </MediaQuery>
     <Creditos className="m-5 text-center">
       <Paragraph style={{ color: 'var(--narvik)', fontWeight: '600' }}>
-        COP Internacional - Todos os Direitos Reservados © {new Date().getFullYear()}
+        COP Internacional - Todos os Direitos Reservados © 2019
       </Paragraph>
       <Paragraph style={{ fontSize: '.7em' }}>
         Design: <ParagraphLink href="http://www.gara.dj">Alvaro Marques</ParagraphLink> -
-        Desenvolvimento:{' '}
-        <ParagraphLink href="http://sarahgoncalves.netlify.com">Sarah Gonçalves</ParagraphLink>
+        Desenvolvimento: <ParagraphLink href="http://sarahgoncalves.netlify.com">Sarah Gonçalves</ParagraphLink>
       </Paragraph>
       <Paragraph>
         <span style={{ fontSize: '.6em' }}>
