@@ -65,7 +65,7 @@ const Botao = ({
   style,
   width,
 }) => (
-  <a href={to}>
+  <a href={to} target="_blank">
     <StyledBotao
       background={background}
       borderWidth={borderWidth}

@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 
 import { FadeParagraphTitle } from '../components/FadeElements'
-import { Paragraph } from '../components/typography'
+import { Paragraph, ParagraphLink } from '../components/typography'
 import Separador from '../components/separador'
 import Image from '../components/image'
 import { Container, Col, Row } from 'react-bootstrap'
@@ -17,6 +17,8 @@ import ShadowedImage from '../components/shadowedimage'
 import LinkedImage from '../components/LinkedImage'
 
 const Expositores = require('../data/expositores.json')
+const Dados = require('../data/dados.json')
+
 
 const ExpositoresIntroduction = () => (
   <Container>
@@ -37,7 +39,9 @@ const ExpositoresIntroduction = () => (
           Downloads:
           <br />
           <br />
-          Manual de Uso da Marca COP · Manual do Expositor ·
+          <ParagraphLink href={Dados.manualmarca}>
+            Manual de Uso da Marca COP
+          </ParagraphLink> ·  <ParagraphLink href={Dados.manualexpositor}>Manual do Expositor</ParagraphLink> ·
         </Paragraph>
       </Col>
       <Col className="d-flex justify-content-center">

@@ -1,11 +1,11 @@
 import React from 'react'
 
 import { Container, Col, Row } from 'react-bootstrap'
-import { PaddedContentBox, Paragraph } from '../components/typography'
+import { PaddedContentBox, Paragraph } from './typography'
 
-import FramedVideo from '../components/framedVideo'
+import FramedVideo from './framedVideo'
 
-import { FadeParagraphTitle } from '../components/FadeElements'
+import { FadeParagraphTitle } from './FadeElements'
 
 const Assista = () => {
   const Videos = [
@@ -53,3 +53,5 @@ const Assista = () => {
     </>
   )
 }
+
+export default Assista

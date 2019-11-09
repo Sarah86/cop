@@ -200,6 +200,19 @@ const Sitemap = () => {
       <FooterMenuItem link="/expositores#ouro" title="Expositores Ouro" />
       <FooterMenuItem link="/expositores#prata" title="Expositores Prata" />
       <FooterMenuItem link="/expositores#bronze" title="Expositores Bronze" />
+      <StyledDiaFooter>
+        <span>Downloads Restritos</span>
+      </StyledDiaFooter>
+      <SitemapUl>
+        <FooterMenuItem
+          link={Dados.manualmarca}
+          title="Manual de Uso da Marca COP"
+        />
+        <FooterMenuItem
+          link={Dados.manualmarca}
+          title="Manual do Expositor"
+        />
+      </SitemapUl>
     </SitemapUl>
   )
 

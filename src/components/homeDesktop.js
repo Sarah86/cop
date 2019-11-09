@@ -195,7 +195,7 @@ const Expositores = () => {
           </Paragraph>
         </Col>
         <Col className="d-flex flex-column justify-content-center align-items-center">
-          <Botao texto="QUER EXPOR A SUA MARCA?" borderWidth="8px" width="12em"></Botao>
+          <Botao texto="QUER EXPOR A SUA MARCA?" borderWidth="8px" width="12em" to="mailto:marketing@copinternacional.com"></Botao>
         </Col>
       </Row>
       <Row noGutters className="mb-4">
