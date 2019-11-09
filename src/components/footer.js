@@ -382,12 +382,12 @@ const CreditosSection = () => (
 )
 
 const Footer = () => (
-  <FullWidth>
   <footer style={{ minHeight: '5em' }}>
     <MediaQuery maxWidth={991}>
       <FooterMenuMobile />
     </MediaQuery>
     <MediaQuery minWidth={992}>
+      <FullWidth>
         <Row>
           <ColunaA xs={5}>
             <div style={{ width: '50%', float: 'right' }}>
@@ -406,11 +406,11 @@ const Footer = () => (
               <PatrocinadoresGallery category="bronze" />
             </div>
           </ColunaB>
+          </FullWidth>
         </Row>
     </MediaQuery>
     <CreditosSection/>
   </footer>
-  </FullWidth>
 )
 
 export default Footer
