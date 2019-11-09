@@ -28,7 +28,6 @@ const ImageWrapper = styled.div`
   
 `
 
-
 const Photo = props => (
   <div nomargin={props.nomargin}>
     <ImageWrapper nomargin={props.nomargin}>

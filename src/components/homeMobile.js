@@ -10,7 +10,7 @@ import Video from './bgvideo'
 import Local from './location'
 import { navigate } from '@reach/router'
 
-const Dados = require("../data/dados.json")
+const Dados = require('../data/dados.json')
 
 const HomeContainer = styled.div`
   display: flex;

@@ -7,7 +7,6 @@ import './theme.css'
 
 const Dados = require('../data/dados.json')
 
-
 const SocialLink = styled.a`
   color: var(--tapa);
   padding: 0.4em;

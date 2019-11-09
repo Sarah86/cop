@@ -16,7 +16,7 @@ import Photo from './photo'
 import { PaddedContentBox, Paragraph, PaddedText, TitleH3, ParagraphTitle } from './typography'
 import { FadeParagraphTitle } from './FadeElements'
 import FullWidth from './fullwidth'
-import Isotipo from "../images/logo_cop_isotipo.png"
+import Isotipo from '../images/logo_cop_isotipo.png'
 
 const Programacao = require('../data/cronograma.json')
 
@@ -107,124 +107,120 @@ export const AgendaMobile = ({ defaultActiveKeyAccordion, defaultActiveKeyTab })
     <Tab.Pane eventKey={dia.dia}>
       {dia.atividades.map(atividade => (
         <StyledAccordion defaultActiveKey={defaultActiveKeyAccordion}>
-          {atividade.palestrante
-            ? (
-              <>
-                {
-                  atividade.descricao
-                    ? (
-                      <Accordion.Toggle as="div" eventKey={atividade.slug} key={atividade.slug}>
-                        <Link
-                          to={`/agenda-e-palestrantes/${atividade.slug}`}
-                          activeClassName="opened-accordion"
-                          className="d-flex justify-content-between has-content"
-                        >
-                          <span style={{ textAlign: 'right', flexBasis: '30%' }}>{atividade.hora}</span>
-                          <div className="d-flex justify-content-between" style={{ flexBasis: '65%' }}>
-                            <span>{atividade.palestrante}</span>
-                            <FontAwesomeIcon
-                              size="xs"
-                              icon={faCaretDown}
-                              style={{ alignSelf: 'center', marginRight: '1em' }}
-                            />
-                          </div>
-                        </Link>
-                      </Accordion.Toggle>
-                    )
-                    : (
-                      <Accordion.Toggle
-                        as="div"
-                        eventKey={atividade.i}
-                        key={atividade.i}
-                        className="d-flex justify-content-between"
-                      >
-                        <span style={{ textAlign: 'right', flexBasis: '30%' }}>{atividade.hora}</span>
-                        <span style={{ flexBasis: '65%' }}>{atividade.palestrante}</span>
-                      </Accordion.Toggle>
-                    )
-                }
-              </>
-            )
-            : (
-              <Accordion.Toggle
-                as="div"
-                eventKey={atividade.i}
-                key={atividade.i}
-                className="d-flex justify-content-between"
-              >
-                <span style={{ textAlign: 'right', flexBasis: '30%' }}>{atividade.hora}</span>
-                <span style={{ flexBasis: '65%' }}>{atividade.titulo}</span>
-              </Accordion.Toggle>
-            )
-          }
+          {atividade.palestrante ? (
+            <>
+              {atividade.descricao ? (
+                <Accordion.Toggle as="div" eventKey={atividade.slug} key={atividade.slug}>
+                  <Link
+                    to={`/agenda-e-palestrantes/${atividade.slug}`}
+                    activeClassName="opened-accordion"
+                    className="d-flex justify-content-between has-content"
+                  >
+                    <span style={{ textAlign: 'right', flexBasis: '30%' }}>{atividade.hora}</span>
+                    <div className="d-flex justify-content-between" style={{ flexBasis: '65%' }}>
+                      <span>{atividade.palestrante}</span>
+                      <FontAwesomeIcon
+                        size="xs"
+                        icon={faCaretDown}
+                        style={{ alignSelf: 'center', marginRight: '1em' }}
+                      />
+                    </div>
+                  </Link>
+                </Accordion.Toggle>
+              ) : (
+                <Accordion.Toggle
+                  as="div"
+                  eventKey={atividade.i}
+                  key={atividade.i}
+                  className="d-flex justify-content-between"
+                >
+                  <span style={{ textAlign: 'right', flexBasis: '30%' }}>{atividade.hora}</span>
+                  <span style={{ flexBasis: '65%' }}>{atividade.palestrante}</span>
+                </Accordion.Toggle>
+              )}
+            </>
+          ) : (
+            <Accordion.Toggle
+              as="div"
+              eventKey={atividade.i}
+              key={atividade.i}
+              className="d-flex justify-content-between"
+            >
+              <span style={{ textAlign: 'right', flexBasis: '30%' }}>{atividade.hora}</span>
+              <span style={{ flexBasis: '65%' }}>{atividade.titulo}</span>
+            </Accordion.Toggle>
+          )}
           {atividade.descricao == null ? null : (
             <Accordion.Collapse eventKey={atividade.slug} style={{ position: 'relative' }}>
               <div>
                 <Photo imgName={atividade.imagem} />
                 <PaddedContentBox className="pt-0">
-                <ParagraphTitle sm style={{ marginBottom: '.2em' }}>
-                        {atividade.palestrante}
-                      </ParagraphTitle>
-                      <div
-                        style={{
-                          fontFamily: 'TTSupermolotNeue',
-                          color: 'var(--lemongrass)',
-                          fontSize: '.9em',
-                          lineHeight: '1.2em'
-                        }}
-                      >
-                        {atividade.qualificacao}
+                  <ParagraphTitle sm style={{ marginBottom: '.2em' }}>
+                    {atividade.palestrante}
+                  </ParagraphTitle>
+                  <div
+                    style={{
+                      fontFamily: 'TTSupermolotNeue',
+                      color: 'var(--lemongrass)',
+                      fontSize: '.9em',
+                      lineHeight: '1.2em',
+                    }}
+                  >
+                    {atividade.qualificacao}
+                  </div>
+                  <div
+                    style={{
+                      fontFamily: 'TilliumWeb',
+                      fontSize: '.9em',
+                      margin: '1em 0 2em 0',
+                      color: 'var(--amber)',
+                      lineHeight: '1.2em',
+                    }}
+                  >
+                    Palestra: <strong>{atividade.titulo}</strong>{' '}
+                    <span className="mt-3 d-block">
+                      {dia.diaCompleto} - {atividade.hora}{' '}
+                    </span>
+                  </div>
+                  <PaddedText style={{ padding: '0', textAlign: 'justify' }}>
+                    {atividade.descricao == null ? null : (
+                      <>
+                        {atividade.descricao.map(paragrafo => (
+                          <Paragraph dangerouslySetInnerHTML={{ __html: `${paragrafo}` }} />
+                        ))}
+                      </>
+                    )}
+                  </PaddedText>
+                  <SocialPalestrante>
+                    Siga o palestrante:
+                    <SocialIcons>
+                      {atividade.facebook == null ? null : (
+                        <a href={atividade.facebook} target="_blank">
+                          <FontAwesomeIcon icon={faFacebookF} />
+                        </a>
+                      )}
+                      {atividade.instagram == null ? null : (
+                        <a href={atividade.instagram} target="_blank">
+                          <FontAwesomeIcon icon={faInstagram} />
+                        </a>
+                      )}
+                      {atividade.linkedin == null ? null : (
+                        <a href={atividade.linkedin} target="_blank">
+                          <FontAwesomeIcon icon={faLinkedinIn} />
+                        </a>
+                      )}
+                      {atividade.youtube == null ? null : (
+                        <a href={atividade.youtube} target="_blank">
+                          <FontAwesomeIcon icon={faYoutube} />
+                        </a>
+                      )}
+                    </SocialIcons>
+                    {atividade.site == null ? null : (
+                      <div style={{ display: 'block' }}>
+                        Site: <a href={atividade.site}>{atividade.site}</a>
                       </div>
-                      <div
-                        style={{
-                          fontFamily: 'TilliumWeb',
-                          fontSize: '.9em',
-                          margin: '1em 0 2em 0',
-                          color: "var(--amber)",
-                          lineHeight: "1.2em"
-                        }}
-                      >
-                        Palestra: <strong>{atividade.titulo}</strong> <span className="mt-3 d-block">{dia.diaCompleto} -{' '}{atividade.hora}{' '}</span>
-                      </div>
-                      <PaddedText style={{ padding: '0', textAlign: 'justify' }}>
-                        {atividade.descricao == null ? null : (
-                          <>
-                            {atividade.descricao.map(paragrafo => (
-                              <Paragraph dangerouslySetInnerHTML={{ __html: `${paragrafo}` }} />
-                            ))}
-                          </>
-                        )}
-                      </PaddedText>
-                      <SocialPalestrante>
-                        Siga o palestrante:
-                        <SocialIcons>
-                          {atividade.facebook == null ? null : (
-                            <a href={atividade.facebook} target="_blank">
-                              <FontAwesomeIcon icon={faFacebookF} />
-                            </a>
-                          )}
-                          {atividade.instagram == null ? null : (
-                            <a href={atividade.instagram} target="_blank">
-                              <FontAwesomeIcon icon={faInstagram} />
-                            </a>
-                          )}
-                          {atividade.linkedin == null ? null : (
-                            <a href={atividade.linkedin} target="_blank">
-                              <FontAwesomeIcon icon={faLinkedinIn} />
-                            </a>
-                          )}
-                          {atividade.youtube == null ? null : (
-                            <a href={atividade.youtube} target="_blank">
-                              <FontAwesomeIcon icon={faYoutube} />
-                            </a>
-                          )}
-                        </SocialIcons>
-                        {atividade.site == null ? null : (
-                          <div style={{ display: 'block' }}>
-                            Site: <a href={atividade.site}>{atividade.site}</a>
-                          </div>
-                        )}
-                      </SocialPalestrante>
+                    )}
+                  </SocialPalestrante>
                   <GreyDivisor />
                 </PaddedContentBox>
               </div>
@@ -290,37 +286,31 @@ export const AgendaTabelaDesktop = () => {
             {atividade.descricao == null ? (
               <>{atividade.hora}</>
             ) : (
-                <Link
-                  to={`/agenda-e-palestrantes/${atividade.slug}`}
-                  style={{ color: 'var(--narvik' }}
-                >
-                  {atividade.hora}
-                </Link>
-              )}
+              <Link
+                to={`/agenda-e-palestrantes/${atividade.slug}`}
+                style={{ color: 'var(--narvik' }}
+              >
+                {atividade.hora}
+              </Link>
+            )}
           </Col>
           <Col lg={8} style={{ marginLeft: '-1em' }}>
-            {atividade.palestrante
-              ? (
-                <>
-                  {
-                    atividade.descricao
-                      ? (
-                        <Link
-                          to={`/agenda-e-palestrantes/${atividade.slug}`}
-                          style={{ color: 'var(--narvik' }}
-                        >
-                          {atividade.palestrante}
-                        </Link>)
-                      : (
-                        <>{atividade.palestrante}</>
-                      )
-                  }
-                </>
-              )
-              : (
-                <>{atividade.titulo}</>
-              )
-            }
+            {atividade.palestrante ? (
+              <>
+                {atividade.descricao ? (
+                  <Link
+                    to={`/agenda-e-palestrantes/${atividade.slug}`}
+                    style={{ color: 'var(--narvik' }}
+                  >
+                    {atividade.palestrante}
+                  </Link>
+                ) : (
+                  <>{atividade.palestrante}</>
+                )}
+              </>
+            ) : (
+              <>{atividade.titulo}</>
+            )}
           </Col>
         </StyledRow>
       ))}
@@ -422,37 +412,31 @@ export const AgendaDesktop = ({
                           {atividade.descricao == null ? (
                             <>{atividade.hora}</>
                           ) : (
-                              <StyledLink
-                                to={`/agenda-e-palestrantes/${atividade.slug}`}
-                                activeClassName="atividadeActive"
-                              >
-                                {atividade.hora}
-                              </StyledLink>
-                            )}
+                            <StyledLink
+                              to={`/agenda-e-palestrantes/${atividade.slug}`}
+                              activeClassName="atividadeActive"
+                            >
+                              {atividade.hora}
+                            </StyledLink>
+                          )}
                         </Col>
                         <Col lg={8} style={{ marginLeft: '-1em' }}>
-                          {atividade.palestrante
-                            ? (
-                              <>
-                                {
-                                  atividade.descricao
-                                    ? (
-                                      <StyledLink
-                                        to={`/agenda-e-palestrantes/${atividade.slug}`}
-                                        activeClassName="atividadeActive"
-                                      >
-                                        {atividade.palestrante}
-                                      </StyledLink>)
-                                    : (
-                                      <>{atividade.palestrante}</>
-                                    )
-                                }
-                              </>
-                            )
-                            : (
-                              <>{atividade.titulo}</>
-                            )
-                          }
+                          {atividade.palestrante ? (
+                            <>
+                              {atividade.descricao ? (
+                                <StyledLink
+                                  to={`/agenda-e-palestrantes/${atividade.slug}`}
+                                  activeClassName="atividadeActive"
+                                >
+                                  {atividade.palestrante}
+                                </StyledLink>
+                              ) : (
+                                <>{atividade.palestrante}</>
+                              )}
+                            </>
+                          ) : (
+                            <>{atividade.titulo}</>
+                          )}
                         </Col>
                       </StyledRow>
                     </Nav.Link>
@@ -461,11 +445,21 @@ export const AgendaDesktop = ({
               ))}
             </div>
           </Col>
-          <Col sm={8} className="p-0" style={{ marginLeft: '-4px', backgroundImage:`url(${Isotipo})`, backgroundSize: "80%", backgroundRepeat: "no-repeat", backgroundPosition: "center"}}>
-            <Tab.Content style={{backgroundColor: "var(--bunker)"}}>
+          <Col
+            sm={8}
+            className="p-0"
+            style={{
+              marginLeft: '-4px',
+              backgroundImage: `url(${Isotipo})`,
+              backgroundSize: '80%',
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center',
+            }}
+          >
+            <Tab.Content style={{ backgroundColor: 'var(--bunker)' }}>
               {dia.atividades.map(atividade => (
                 <Tab.Pane eventKey={atividade.slug}>
-                  <div style={{minHeight: "650px"}}>
+                  <div style={{ minHeight: '650px' }}>
                     <StyledPhoto>
                       <Photo imgName={atividade.imagem} />
                     </StyledPhoto>
@@ -489,8 +483,10 @@ export const AgendaDesktop = ({
                           margin: '1em 0 2em 0',
                         }}
                       >
-                        Palestra: <strong>{atividade.titulo}</strong> <span className="mt-3 d-block">{dia.diaCompleto} -{' '}{atividade.hora}{' '}</span>
-
+                        Palestra: <strong>{atividade.titulo}</strong>{' '}
+                        <span className="mt-3 d-block">
+                          {dia.diaCompleto} - {atividade.hora}{' '}
+                        </span>
                       </div>
                       <PaddedText style={{ padding: '0', textAlign: 'justify' }}>
                         {atividade.descricao == null ? null : (

@@ -20,7 +20,7 @@
     },
     {
       "nome": "DITEC Smart Solutions",
-      "ramo" : "TI e Telecomunicações",
+      "ramo": "TI e Telecomunicações",
       "logo": "expositor_diamante_ditec2.jpg",
       "thumbnail": "expositor_diamante_ditec.jpg",
       "local": "Piso Superior - Stand 05",
@@ -38,12 +38,12 @@
     },
     {
       "nome": "Invictus",
-      "ramo" : "Acessórios Táticos e Outdoor",
+      "ramo": "Acessórios Táticos e Outdoor",
       "logo": "expositor_diamante_invictus2.jpg",
       "thumbnail": "expositor_diamante_invictus.jpg",
       "descricao": "Focada em produtos de alta performance e inovações para o mercado tático operacional e outdoor do Brasil, a Invictus se constrói a cada dia desenvolvendo e comercializando equipamentos, acessórios, vestimentas e calçados voltados para práticas extremas e de alto desempenho. ",
       "local": "Piso Superior - Stand 04",
-      "site" : "https://www.invictus.com.br/"
+      "site": "https://www.invictus.com.br/"
     },
     {
       "nome": "Taurus",
@@ -52,7 +52,7 @@
       "thumbnail": "expositor_diamante_taurus.jpg",
       "descricao": "A Taurus é uma Empresa Estratégica de Defesa, com 80 anos de história e reputação sólida. Sediada em São Leopoldo, no Rio Grande do Sul, emprega mais de 1.800 pessoas no país e exporta para mais de 100 países. ",
       "local": "Piso Superior - Stand 03",
-      "site" : "https://www.taurusarmas.com.br/"
+      "site": "https://www.taurusarmas.com.br/"
     }
   ],
   "ouro": [

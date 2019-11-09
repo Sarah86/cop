@@ -35,12 +35,16 @@ class Layout extends React.Component {
     this.pageAddress = window.location.pathname
   }
 
+  componentDidUpdate() {
+    this.pageAddress = window.location.pathname
+  }
+
   render() {
     return (
       <>
         <Header siteTitle={this.props.data.site.siteMetadata.title} />
         <Content>
-          {this.pageAddress === '/' || '' ? (
+          {this.pageAddress === '/' || null ? (
             <main style={{ paddingBottom: '3em' }}>{this.props.children}</main>
           ) : (
             <>

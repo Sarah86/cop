@@ -8,14 +8,14 @@ import target from '../images/target.png'
 const StyledLink = styled(Link)`
     &:hover {
         cursor: url("${target}"), cell;
-        ${props => props.noyellowlayer && css
-    ` 
-          ${StyledImage}{
-            mix-blend-mode: unset;
-            opacity: 1;
-          }
-        `
-  }
+        ${props =>
+          props.noyellowlayer &&
+          css`
+            ${StyledImage} {
+              mix-blend-mode: unset;
+              opacity: 1;
+            }
+          `}
     }
     &:before {
         content: "";
@@ -32,27 +32,28 @@ const StyledLink = styled(Link)`
         opacity: 1;
         z-index: 1;
         transition: opacity 1s;
-        ${props => props.noyellowlayer && css
-    ` 
-          background-color: transparent;
-        `
-  }
+        ${props =>
+          props.noyellowlayer &&
+          css`
+            background-color: transparent;
+          `}
     }
 `
 
 const ExternalStyledLink = styled.a`
 position: relative;
+display: block;
 width: 100%;
     &:hover {
         cursor: url("${target}"), cell;
-        ${props => props.noyellowlayer && css
-    ` 
-          ${StyledImage}{
-            mix-blend-mode: unset;
-            opacity: 1;
-          }
-        `
-  }
+        ${props =>
+          props.noyellowlayer &&
+          css`
+            ${StyledImage} {
+              mix-blend-mode: unset;
+              opacity: 1;
+            }
+          `}
     }
     &:before {
         content: "";
@@ -69,11 +70,11 @@ width: 100%;
         opacity: 1;
         z-index: 1;
         transition: opacity 1s;
-        ${props => props.noyellowlayer && css
-    ` 
-          background-color: transparent;
-        `
-  }
+        ${props =>
+          props.noyellowlayer &&
+          css`
+            background-color: transparent;
+          `}
     }
 `
 
@@ -81,27 +82,32 @@ const StyledImage = styled(Image)`
   &:hover {
     filter: grayscale(1);
     transition: all 0.3s;
-    ${props => props.noyellowlayer && css
-    ` 
-      filter: unset;
-    `
-  }
+    ${props =>
+      props.noyellowlayer &&
+      css`
+        filter: unset;
+      `}
 `
 
-const InternaURL = /^https?:\/\//;
+const InternaURL = /^https?:\/\//
 
-const LinkedImage = props => (
-    InternaURL.test(props.to) ? (
+const LinkedImage = props =>
+  InternaURL.test(props.to) ? (
     <ExternalStyledLink href={props.to} target="_blank" noyellowlayer={props.noyellowlayer}>
-      <StyledImage imgName={props.imgName} className={props.className} noyellowlayer={props.noyellowlayer}/>
-      </ExternalStyledLink>
+      <StyledImage
+        imgName={props.imgName}
+        className={props.className}
+        noyellowlayer={props.noyellowlayer}
+      />
+    </ExternalStyledLink>
   ) : (
     <StyledLink to={props.to} noyellowlayer={props.noyellowlayer}>
-       <StyledImage imgName={props.imgName} className={props.className} noyellowlayer={props.noyellowlayer}/>
-     </StyledLink>
-    )
-)
-
-
+      <StyledImage
+        imgName={props.imgName}
+        className={props.className}
+        noyellowlayer={props.noyellowlayer}
+      />
+    </StyledLink>
+  )
 
 export default LinkedImage

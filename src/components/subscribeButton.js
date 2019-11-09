@@ -2,7 +2,7 @@ import React from 'react'
 
 import BotaoGifMobile from '../images/bt_inscrevase_mob.gif'
 
-const Dados = require("../data/dados.json")
+const Dados = require('../data/dados.json')
 
 const SubscribeButton = () => (
   <a href={Dados.linkInscricao}>

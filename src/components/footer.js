@@ -3,11 +3,10 @@ import MediaQuery from 'react-responsive'
 import { Row, Col, Container } from 'react-bootstrap'
 import styled, { css } from 'styled-components'
 
-
 import Local from './location'
 import FullWidth from './fullwidth'
 import Image from './image'
-import LinkedImage from "./LinkedImage"
+import LinkedImage from './LinkedImage'
 import Separador from './separador'
 import { Link } from 'gatsby'
 import SeparadorInverted from './separadorInverted'
@@ -19,7 +18,6 @@ import { device } from './device'
 const Cronograma = require('../data/cronograma.json')
 const Expositores = require('../data/expositores.json')
 const Dados = require('../data/dados.json')
-
 
 const ColunaA = styled(Col)`
   background-color: var(--firefly);
@@ -46,12 +44,12 @@ const SitemapTitle = styled.p`
 `
 const Creditos = styled.div`
   padding-bottom: 2em;
- ${Paragraph}{
-   margin-bottom: .5em; 
- }
- @media ${device.desktop}{
+  ${Paragraph} {
+    margin-bottom: 0.5em;
+  }
+  @media ${device.desktop} {
     padding-bottom: 0;
-}
+  }
 `
 
 const Isotipo = () => (
@@ -155,7 +153,7 @@ const StyledImage = styled(Image)`
 const PatrocinadoresImage = styled(LinkedImage)`
   mix-blend-mode: luminosity;
   opacity: 0.7;
-  transition: all .3s;
+  transition: all 0.3s;
 `
 
 const StyledCol = styled(Col)`
@@ -227,17 +225,13 @@ const Contatos = () => (
     <Separador color="var(--plantation)" border="1px" widthTotal="95%" sm />
     <div className="d-flex flex-column justify-content-center">
       <SitemapTitle>contato</SitemapTitle>
-      <LinkExterno href={`mailto:${Dados.contatoEmail}`}>
-        {Dados.contatoEmail}
-      </LinkExterno>
+      <LinkExterno href={`mailto:${Dados.contatoEmail}`}>{Dados.contatoEmail}</LinkExterno>
       <LinkExterno href={Dados.linkContatoTel}>{Dados.contatoTel}</LinkExterno>
     </div>
     <Separador color="var(--plantation)" border="1px" widthTotal="95%" sm />
     <div>
       <SitemapTitle>imprensa</SitemapTitle>
-      <LinkExterno href={`mailto:${Dados.imprensaEmail}`}>
-        {Dados.imprensaEmail}
-      </LinkExterno>
+      <LinkExterno href={`mailto:${Dados.imprensaEmail}`}>{Dados.imprensaEmail}</LinkExterno>
       <LinkExterno href={Dados.linkImprensaTel}>{Dados.imprensaTel}</LinkExterno>
     </div>
   </>
@@ -278,7 +272,13 @@ const Patrocinadores = props => {
   const ExpositoresCategory = `${props.category}`
   const ExpositorLogo = Expositores[ExpositoresCategory].map(expositor => (
     <StyledCol sm={props.sm} key={expositor.nome}>
-      <PatrocinadoresImage noyellowlayer imgName={expositor.logo} to={`${expositor.site}`} target="_blank" rel="noopener noreferrer" />
+      <PatrocinadoresImage
+        noyellowlayer
+        imgName={expositor.logo}
+        to={`${expositor.site}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      />
     </StyledCol>
   ))
 
@@ -356,13 +356,20 @@ const Footer = () => (
       </FullWidth>
     </MediaQuery>
     <Creditos className="m-5 text-center">
-      <Paragraph style={{color: "var(--narvik)", fontWeight: "600"}}>COP Internacional - Todos os Direitos Reservados © {new Date().getFullYear()}</Paragraph>
-      <Paragraph style={{fontSize: ".7em"}}>Design: <ParagraphLink href="http://www.gara.dj">Alvaro Marques</ParagraphLink> - Desenvolvimento: <ParagraphLink href="http://sarahgoncalves.netlify.com">Sarah Gonçalves</ParagraphLink></Paragraph>
-      <Paragraph><span style={{ fontSize: ".6em" }}>
-        Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </span></Paragraph>
+      <Paragraph style={{ color: 'var(--narvik)', fontWeight: '600' }}>
+        COP Internacional - Todos os Direitos Reservados © {new Date().getFullYear()}
+      </Paragraph>
+      <Paragraph style={{ fontSize: '.7em' }}>
+        Design: <ParagraphLink href="http://www.gara.dj">Alvaro Marques</ParagraphLink> -
+        Desenvolvimento:{' '}
+        <ParagraphLink href="http://sarahgoncalves.netlify.com">Sarah Gonçalves</ParagraphLink>
+      </Paragraph>
+      <Paragraph>
+        <span style={{ fontSize: '.6em' }}>
+          Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
+        </span>
+      </Paragraph>
     </Creditos>
-
   </footer>
 )
 

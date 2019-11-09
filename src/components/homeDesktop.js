@@ -15,7 +15,8 @@ import LinkedShadowedImage from './LinkedShadowedImage'
 import Background from './background'
 import FullWidth from './fullwidth'
 
-const Cronograma = require("../data/cronograma.json")
+const Cronograma = require('../data/cronograma.json')
+const dadosExpositores = require('../data/expositores.json')
 
 const BemVindo = styled.h2`
   font-size: 3em;
@@ -94,106 +95,116 @@ const Video = () => (
 
 export const BannerTemporario = () => (
   <FullWidth>
-    <Image imgName="home_temp_banner.jpg"/>
+    <Image imgName="home_temp_banner.jpg" />
   </FullWidth>
 )
 
 const CongressoPalestrantes = () => {
-  
   const PalestranteDestaque = Cronograma.map(dia => (
-    <>{
-      dia.atividades.map(atividade => (
+    <>
+      {dia.atividades.map(atividade => (
         <>
-          {
-            atividade.destaque === true ? (
-              <Col xs={6} className="pl-1 pr-1">
+          {atividade.destaque === true ? (
+            <Col xs={6} className="pl-1 pr-1">
               <LinkedPhoto
-              imgName={atividade.imagem}
-              title={atividade.palestrante}
-              subtitle={atividade.qualificacao}
-              to={`/agenda-e-palestrantes/${atividade.slug}`}
-            />
+                imgName={atividade.imagem}
+                title={atividade.palestrante}
+                subtitle={atividade.qualificacao}
+                to={`/agenda-e-palestrantes/${atividade.slug}`}
+              />
             </Col>
-            ) : null
-          }
+          ) : null}
         </>
-      ))
-    }
+      ))}
     </>
   ))
 
-  return(
+  return (
     <Container className="mt-5">
-    <Row>
-      <Col className="text-justify pr-5 d-flex flex-column justify-content-between">
-        <FadeParagraphTitle>o congresso</FadeParagraphTitle>
-        <Quote>
-          Autoridades nacionais e internacionais, agentes de segurança pública, as principais marcas
-          do setor, e a sociedade civil. Em contato direto por 3 dias.
-        </Quote>
-        <Paragraph>
-          Depois do sucesso absoluto da estreia em 2018 o Congresso de Operações Policiais retorna
-          mais abrangente, inclusivo, dinâmico, informativo e tecnológico.
-        </Paragraph>
-        <Paragraph>
-          Congresso se realizará de forma gratuita nos dias 17, 18 e 19 de Março de 2019 para um
-          público diário de aproximadamente 2000 pessoas..
-        </Paragraph>
-        <Paragraph>
-          A cidade-sede escolhida é pelo segundo ano consecutivo a belíssima{' '}
-          <ParagraphLink>Florianópolis</ParagraphLink>, que por sua vez abriga o moderno{' '}
-          <ParagraphLink>Centro de Eventos Governador Luiz Henrique da Silveira</ParagraphLink>.
-        </Paragraph>
-        <ReadMore className="align-self-end" to="/ocongresso">leia mais</ReadMore>
-      </Col>
-      <Col className="pl-5 d-flex flex-column justify-content-between">
-        <FadeParagraphTitle>palestrantes</FadeParagraphTitle>
-        <Row noGutters>
-          {PalestranteDestaque}
-        </Row>
-        <ReadMore className="align-self-end" to="/agenda-e-palestrantes">leia mais</ReadMore>
-      </Col>
-    </Row>
-  </Container>
+      <Row>
+        <Col className="text-justify pr-5 d-flex flex-column justify-content-between">
+          <FadeParagraphTitle>o congresso</FadeParagraphTitle>
+          <Quote>
+            Autoridades nacionais e internacionais, agentes de segurança pública, as principais
+            marcas do setor, e a sociedade civil. Em contato direto por 3 dias.
+          </Quote>
+          <Paragraph>
+            Depois do sucesso absoluto da estreia em 2018 o Congresso de Operações Policiais retorna
+            mais abrangente, inclusivo, dinâmico, informativo e tecnológico.
+          </Paragraph>
+          <Paragraph>
+            Congresso se realizará de forma gratuita nos dias 17, 18 e 19 de Março de 2019 para um
+            público diário de aproximadamente 2000 pessoas..
+          </Paragraph>
+          <Paragraph>
+            A cidade-sede escolhida é pelo segundo ano consecutivo a belíssima{' '}
+            <ParagraphLink>Florianópolis</ParagraphLink>, que por sua vez abriga o moderno{' '}
+            <ParagraphLink>Centro de Eventos Governador Luiz Henrique da Silveira</ParagraphLink>.
+          </Paragraph>
+          <ReadMore className="align-self-end" to="/ocongresso">
+            leia mais
+          </ReadMore>
+        </Col>
+        <Col className="pl-5 d-flex flex-column justify-content-between">
+          <FadeParagraphTitle>palestrantes</FadeParagraphTitle>
+          <Row noGutters>{PalestranteDestaque}</Row>
+          <ReadMore className="align-self-end" to="/agenda-e-palestrantes">
+            leia mais
+          </ReadMore>
+        </Col>
+      </Row>
+    </Container>
   )
 }
 
-const Expositores = () => (
-  <Container className="mt-5 d-flex flex-column justify-content-between position-relative">
-    <Background />
-    <Row>
-      <Col className="mt-5 pt-5">
-        <FadeParagraphTitle>expositores</FadeParagraphTitle>
-        <Paragraph>
-          Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em segurança e defesa
-          exporão seus produtos e soluções.
-        </Paragraph>
-        <Paragraph>
-          Será uma oportunidade única de se atualizar e se conectar con o que há de melhor e mais
-          moderno no segmento.
-        </Paragraph>
-      </Col>
-      <Col className="d-flex flex-column justify-content-center align-items-center">
-        <Botao texto="QUER EXPOR A SUA MARCA?" borderWidth="8px" width="12em"></Botao>
-      </Col>
-    </Row>
-    <Row noGutters className="mb-4">
-      <Col lg={6}>
-        <LinkedShadowedImage imgName="expositor_diamante.jpg" />
-      </Col>
-      <Col lg={6}>
-        <LinkedShadowedImage imgName="expositor_diamante.jpg" />
-      </Col>
-      <Col lg={6}>
-        <LinkedShadowedImage imgName="expositor_diamante.jpg" />
-      </Col>
-      <Col lg={6}>
-        <LinkedShadowedImage imgName="expositor_diamante.jpg" />
-      </Col>
-    </Row>
-    <ReadMore className="align-self-end">leia mais</ReadMore>
-  </Container>
-)
+function getRandom(arr, n) {
+  var result = new Array(n),
+    len = arr.length,
+    taken = new Array(len)
+  if (n > len) throw new RangeError('getRandom: more elements taken than available')
+  while (n--) {
+    var x = Math.floor(Math.random() * len)
+    result[n] = arr[x in taken ? taken[x] : x]
+    taken[x] = --len in taken ? taken[len] : len
+  }
+  return result
+}
+
+const Expositores = () => {
+  const Expositor = getRandom(dadosExpositores.diamante, 4)
+
+  const ThumbnailsExpositores = Expositor.map(diamante => (
+    <Col lg={6}>
+      <LinkedShadowedImage imgName={diamante.thumbnail} to="/expositores" />
+    </Col>
+  ))
+
+  return (
+    <Container className="mt-5 d-flex flex-column justify-content-between position-relative">
+      <Background />
+      <Row>
+        <Col className="mt-5 pt-5">
+          <FadeParagraphTitle>expositores</FadeParagraphTitle>
+          <Paragraph>
+            Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em segurança e
+            defesa exporão seus produtos e soluções.
+          </Paragraph>
+          <Paragraph>
+            Será uma oportunidade única de se atualizar e se conectar con o que há de melhor e mais
+            moderno no segmento.
+          </Paragraph>
+        </Col>
+        <Col className="d-flex flex-column justify-content-center align-items-center">
+          <Botao texto="QUER EXPOR A SUA MARCA?" borderWidth="8px" width="12em"></Botao>
+        </Col>
+      </Row>
+      <Row noGutters className="mb-4">
+        {ThumbnailsExpositores}
+      </Row>
+      <ReadMore className="align-self-end">leia mais</ReadMore>
+    </Container>
+  )
+}
 
 const Espaco = () => (
   <Container className="mt-5 d-flex flex-column justify-content-between position-relative">
@@ -213,7 +224,7 @@ const Espaco = () => (
         </ReadMore>
       </Col>
       <Col>
-        <FadeParagraphTitle size="2.5em" width="3.6em">
+        <FadeParagraphTitle size="2.5em" width="3.3em">
           confira o programa
         </FadeParagraphTitle>
         <LinkedPhoto imgName="destaque_triplo_home_2.jpg" />
@@ -221,10 +232,12 @@ const Espaco = () => (
           Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em segurança e defesa
           exporão seus produtos e soluções.
         </Paragraph>
-        <ReadMore className="align-self-end">leia mais</ReadMore>
+        <ReadMore className="align-self-end" to="/agenda-e-palestrantes">
+          leia mais
+        </ReadMore>
       </Col>
       <Col>
-        <FadeParagraphTitle size="2.5em" width="2.1em">
+        <FadeParagraphTitle size="2.5em" width="2em">
           ação social
         </FadeParagraphTitle>
         <LinkedPhoto imgName="destaque_triplo_home_3.jpg" />
@@ -232,7 +245,9 @@ const Espaco = () => (
           Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em segurança e defesa
           exporão seus produtos e soluções.
         </Paragraph>
-        <ReadMore className="align-self-end">leia mais</ReadMore>
+        <ReadMore className="align-self-end" to="/ocongresso">
+          leia mais
+        </ReadMore>
       </Col>
     </Row>
   </Container>

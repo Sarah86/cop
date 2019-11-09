@@ -20,7 +20,6 @@ import BotaoGIf from '../images/BT-INSCREVASE-GRATUITO.gif'
 
 const Dados = require('../data/dados.json')
 
-
 const StyledNavbar = styled(Navbar)`
   && {
     position: fixed;
@@ -222,7 +221,9 @@ const Header = ({ siteTitle }) => (
             <LinksContainer>
               <StyledLink to="/">Home</StyledLink>
               <StyledLink to="/ocongresso/">O Congresso</StyledLink>
-              <StyledLink to="/agenda-e-palestrantes/">Agenda &amp; Palestrantes</StyledLink>
+              <StyledLink to="/agenda-e-palestrantes/" partiallyActive={true}>
+                Agenda &amp; Palestrantes
+              </StyledLink>
               <StyledLink to="/expositores/">Expositores</StyledLink>
             </LinksContainer>
             <BarraContatosDesktop />
@@ -269,7 +270,9 @@ export const FooterMenuMobile = ({ siteTitle }) => (
       <LinksContainer>
         <StyledLink to="/">Home</StyledLink>
         <StyledLink to="/ocongresso/">O Congresso</StyledLink>
-        <StyledLink to="/agenda-e-palestrantes/">Agenda &amp; Palestrantes</StyledLink>
+        <StyledLink to="/agenda-e-palestrantes/" partiallyActive={true}>
+          Agenda &amp; Palestrantes
+        </StyledLink>
         <StyledLink to="/expositores/">Expositores</StyledLink>
       </LinksContainer>
       <BarraContatosDesktop />

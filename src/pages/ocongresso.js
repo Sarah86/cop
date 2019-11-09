@@ -31,8 +31,8 @@ import Separador from '../components/separador'
 import { FadeParagraphTitle } from '../components/FadeElements'
 import LinkedImage from '../components/LinkedImage'
 
-const Dados = require("../data/dados.json")
-const Cronograma = require("../data/cronograma.json")
+const Dados = require('../data/dados.json')
+const Cronograma = require('../data/cronograma.json')
 
 const StyledCarouselCaption = styled(CarouselCaption)`
   && {
@@ -59,8 +59,17 @@ const CongressoFirstBlock = () => (
     </Paragraph>
     <Paragraph lastLineRightDesktop reversedSkew>
       A cidade-sede escolhida é pelo segundo ano consecutivo a belíssima{' '}
-      <ParagraphLink href="http://www.pmf.sc.gov.br" target="_blank">Florianópolis</ParagraphLink>, que por sua vez abriga o moderno{' '}
-      <ParagraphLink href="https://www.facebook.com/CentrodeEventosGovernadorLuizHenriquedaSilveira" target="_blank">Centro de Eventos Governador Luiz Henrique da Silveira</ParagraphLink>.
+      <ParagraphLink href="http://www.pmf.sc.gov.br" target="_blank">
+        Florianópolis
+      </ParagraphLink>
+      , que por sua vez abriga o moderno{' '}
+      <ParagraphLink
+        href="https://www.facebook.com/CentrodeEventosGovernadorLuizHenriquedaSilveira"
+        target="_blank"
+      >
+        Centro de Eventos Governador Luiz Henrique da Silveira
+      </ParagraphLink>
+      .
     </Paragraph>
   </PaddedContentBox>
 )
@@ -77,28 +86,66 @@ const CongressoSecondBlock = () => (
         <li>E a sociedade civil.</li>
       </List>
       <Paragraph>
-        A intensa programação de <InternalParagraphLink to="/agenda-e-palestrantes">Palestras</InternalParagraphLink> e{' '}
-        <InternalParagraphLink to="/agenda-e-palestrantes">Exposições</InternalParagraphLink> será uma oportunidade única adquirir conhecimento,
-        ter contato com o que existe de mais moderno em táticas e equipamentos de defesa e debater
-        pontos críticos da segurança pública; sempre na direção de uma sociedade mais segura.
+        A intensa programação de{' '}
+        <InternalParagraphLink to="/agenda-e-palestrantes">Palestras</InternalParagraphLink> e{' '}
+        <InternalParagraphLink to="/agenda-e-palestrantes">Exposições</InternalParagraphLink> será
+        uma oportunidade única adquirir conhecimento, ter contato com o que existe de mais moderno
+        em táticas e equipamentos de defesa e debater pontos críticos da segurança pública; sempre
+        na direção de uma sociedade mais segura.
       </Paragraph>
     </PaddedText>
   </PaddedContentBox>
 )
 
-const CongressoCarousel = () => {
+const CongressoFirstCarousel = () => {
   const Slides = [
     {
-      imagem: 'destaque_triplo_home_1.jpg',
-      caption: 'Cobertura Televisiva do Stand Taurus',
+      imagem: 'ocongresso_slider01-01.jpg',
+      caption: 'Ct. Eventos. Gov. Luiz H. Silveira',
     },
     {
-      imagem: 'destaque_triplo_home_2.jpg',
-      caption: 'destaque_triplo_home_2.jpg',
+      imagem: 'ocongresso_slider01-02.jpg',
+      caption: 'Auditório',
     },
     {
-      imagem: 'destaque_triplo_home_3.jpg',
-      caption: 'destaque_triplo_home_3.jpg',
+      imagem: 'ocongresso_slider01-03.jpg',
+      caption: 'Chegando em Florianópolis',
+    },
+    {
+      imagem: 'ocongresso_slider01-04.jpg',
+      caption: 'Ponte Hercílio Luz',
+    },
+    {
+      imagem: 'ocongresso_slider01-05.jpg',
+      caption: 'Credenciamento',
+    },
+    {
+      imagem: 'ocongresso_slider01-06.jpg',
+      caption: 'Hall',
+    },
+    {
+      imagem: 'ocongresso_slider01-07.jpg',
+      caption: 'Tradução simultânea',
+    },
+    {
+      imagem: 'ocongresso_slider01-08.jpg',
+      caption: 'Controle auditório',
+    },
+    {
+      imagem: 'ocongresso_slider01-09.jpg',
+      caption: 'Público',
+    },
+    {
+      imagem: 'ocongresso_slider01-10.jpg',
+      caption: 'Instalação no hall',
+    },
+    {
+      imagem: 'ocongresso_slider01-11.jpg',
+      caption: 'Autoridades',
+    },
+    {
+      imagem: 'ocongresso_slider01-02.jpg',
+      caption: 'Sinalização',
     },
   ]
 
@@ -120,50 +167,73 @@ const CongressoCarousel = () => {
   )
 }
 
-const Assista = () => {
-  const Videos = [
+const CongressoSecondCarousel = () => {
+  const Slides = [
     {
-      url: 'https://www.youtube.com/watch?v=uYrPl1fKaK0',
-      title: 'Edição anterior',
+      imagem: 'ocongresso_slider02-01.jpg',
+      caption: 'Autoridades',
     },
     {
-      url: 'https://www.youtube.com/watch?v=SZPvvIRiSrQ&t=133s',
-      title: 'Institucional COP 2018',
+      imagem: 'ocongresso_slider02-02.jpg',
+      caption: 'Palestrante internacional',
     },
     {
-      url: 'https://www.youtube.com/watch?v=deh2PEW_MTE',
-      title: 'Cobertura Completa Ao Vivo',
+      imagem: 'ocongresso_slider02-03.jpg',
+      caption: 'Cobertura midiática',
+    },
+    {
+      imagem: 'ocongresso_slider02-04.jpg',
+      caption: 'Entrevista',
+    },
+    {
+      imagem: 'ocongresso_slider02-05.jpg',
+      caption: 'Cobertura midiática',
+    },
+    {
+      imagem: 'ocongresso_slider02-06.jpg',
+      caption: 'Entrevista',
+    },
+    {
+      imagem: 'ocongresso_slider02-07.jpg',
+      caption: 'Stand 5.11 Tactical',
+    },
+    {
+      imagem: 'ocongresso_slider02-08.jpg',
+      caption: 'Workshop',
+    },
+    {
+      imagem: 'ocongresso_slider02-09.jpg',
+      caption: 'Workshop',
+    },
+    {
+      imagem: 'ocongresso_slider02-10.jpg',
+      caption: 'Vigilância e tecnologia',
+    },
+    {
+      imagem: 'ocongresso_slider02-11.jpg',
+      caption: 'Stand Condor Não Letal',
+    },
+    {
+      imagem: 'ocongresso_slider02-12.jpg',
+      caption: 'Stand Taurus',
     },
   ]
-  const VideoContainer = Videos.map(video => (
-    <Col xs={6}>
-      <FramedVideo
-        url={video.url}
-        light
-        width="100%"
-        height="100%"
-        style={{ marginBottom: '1em' }}
-      />
-      <Paragraph
-        style={{
-          textAlign: 'center',
-          paddingLeft: '.5em',
-          paddingRight: '.5em',
-        }}
-      >
-        {video.title}
-      </Paragraph>
-    </Col>
+
+  const CarouselItem = Slides.map(slide => (
+    <Carousel.Item key={slide.i}>
+      <Image imgName={slide.imagem} />
+      <StyledCarouselCaption>
+        <CarouselCaptionTitle>{slide.caption}</CarouselCaptionTitle>
+      </StyledCarouselCaption>
+    </Carousel.Item>
   ))
   return (
-    <>
-      <PaddedContentBox>
-        <FadeParagraphTitle>assista</FadeParagraphTitle>
-      </PaddedContentBox>
-      <Container className="p-0">
-        <Row noGutters>{VideoContainer}</Row>
-      </Container>
-    </>
+    <div style={{ position: 'relative' }}>
+      <MolduraTop />
+      <Carousel indicators={false}>{CarouselItem}</Carousel>
+      <MolduraBottom />
+      <Shadow />
+    </div>
   )
 }
 
@@ -180,16 +250,16 @@ const Botoes = () => (
 const Video = () => (
   //Aguardando video. Substituir pelo banner
   <>
-  <PaddedContentBox>
-  <h1>o congresso</h1>
-</PaddedContentBox>
-  <FramedVideo
-  url="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
-  controls
-  width="100%"
-  height="100%"
-/>
-</>
+    <PaddedContentBox>
+      <h1>o congresso</h1>
+    </PaddedContentBox>
+    <FramedVideo
+      url="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+      controls
+      width="100%"
+      height="100%"
+    />
+  </>
 )
 
 const OCongressoMobile = () => (
@@ -197,10 +267,9 @@ const OCongressoMobile = () => (
     <SEO title="O Congresso" />
     <Image imgName="ocongresso_composite.png" />
     <CongressoFirstBlock />
-    <Photo imgName="floripa.png" />
+    <CongressoFirstCarousel />
     <CongressoSecondBlock />
-    <CongressoCarousel />
-    <Assista />
+    <CongressoSecondCarousel />
     <Botoes />
   </MediaQuery>
 )
@@ -283,48 +352,61 @@ const OCongressoDesktopThirdBlock = () => (
         <Photo imgName="ocongresso_foto_abopesp.jpg" />
         <FadeParagraphTitle sm>espaço ABOpEsp</FadeParagraphTitle>
         <div className="d-flex flex-column justify-content-between flex-grow-1">
-        <PaddedText>
-          <Paragraph>
-            As unidades de operações especiais terão{' '}
-            <strong>um espaço exclusivo para proporcionar trocas e aproximar doutrinas</strong>{' '}
-            entre agentes das diferentes esferas e membros da segurança pública.
-          </Paragraph>
-          <Paragraph>
-            A Associação Brasileira de Operações Especiais (ABOPESP) vai disponibilizar um estande
-            no anfiteatro do Centro de Eventos Luiz Henrique da Silveira, com uma programação de
-            clínicas e workshops para quem leva a atividade policial como um ofício de excelência.
-          </Paragraph>
-          <LinkedImage imgName="ocongresso_logos_sociais_abopesp.png" to="https://abopesp.com.br/" className="w-50" noyellowlayer/>
-        </PaddedText>
-        <Separador sm widthTotal="100px"/>
+          <PaddedText>
+            <Paragraph>
+              As unidades de operações especiais terão{' '}
+              <strong>um espaço exclusivo para proporcionar trocas e aproximar doutrinas</strong>{' '}
+              entre agentes das diferentes esferas e membros da segurança pública.
+            </Paragraph>
+            <Paragraph>
+              A Associação Brasileira de Operações Especiais (ABOPESP) vai disponibilizar um estande
+              no anfiteatro do Centro de Eventos Luiz Henrique da Silveira, com uma programação de
+              clínicas e workshops para quem leva a atividade policial como um ofício de excelência.
+            </Paragraph>
+            <LinkedImage
+              imgName="ocongresso_logos_sociais_abopesp.png"
+              to="https://abopesp.com.br/"
+              className="w-50"
+              noyellowlayer
+            />
+          </PaddedText>
+          <Separador sm widthTotal="100px" />
         </div>
-        
       </Col>
       <Col className="text-justify d-flex flex-column">
         <Photo imgName="ocongresso_foto_social.jpg" />
         <FadeParagraphTitle sm>ações sociais</FadeParagraphTitle>
         <div className="d-flex flex-column justify-content-between flex-grow-1">
-        <PaddedText>
-          <Paragraph>
-            O COP Internacional fará a coleta de alimentos não-perecíveis durante os 3 dias de
-            evento.
-          </Paragraph>
-          <Paragraph>
-            Então ao participr do congresso você estará automaticamente ajudando duas instituições
-            filantrópicas da cidade-sede do evento: A Igreja Bola de Neve e o SEOVE Caridade.
-          </Paragraph>
-          <Paragraph>
-            <strong>A meta de arrecadação é de 4 toneladas de alimentos.</strong> Faça parte deste
-            movimento!
-          </Paragraph>
-          <div className="d-flex justify-content-between" style={{width: "35%"}}>
-            <LinkedImage imgName="ocongresso_logos_sociais_seove.png" to="http://seove.org.br/" className="mx-1" noyellowlayer />
-            <LinkedImage imgName="ocongresso_logos_sociais_boladeneve.png" to="http://www.boladeneve.com/" className="mx-1" noyellowlayer/>
-          </div>
-        </PaddedText>
-        <Separador sm widthTotal="100px"/>
+          <PaddedText>
+            <Paragraph>
+              O COP Internacional fará a coleta de alimentos não-perecíveis durante os 3 dias de
+              evento.
+            </Paragraph>
+            <Paragraph>
+              Então ao participr do congresso você estará automaticamente ajudando duas instituições
+              filantrópicas da cidade-sede do evento: A Igreja Bola de Neve e o SEOVE Caridade.
+            </Paragraph>
+            <Paragraph>
+              <strong>A meta de arrecadação é de 4 toneladas de alimentos.</strong> Faça parte deste
+              movimento!
+            </Paragraph>
+            <div className="d-flex justify-content-between" style={{ width: '35%' }}>
+              <LinkedImage
+                imgName="ocongresso_logos_sociais_seove.png"
+                to="http://seove.org.br/"
+                className="mx-1"
+                noyellowlayer
+              />
+              <LinkedImage
+                imgName="ocongresso_logos_sociais_boladeneve.png"
+                to="http://www.boladeneve.com/"
+                className="mx-1"
+                noyellowlayer
+              />
+            </div>
+          </PaddedText>
+          <Separador sm widthTotal="100px" />
         </div>
-        
       </Col>
     </Row>
   </Container>
@@ -333,26 +415,21 @@ const OCongressoDesktopThirdBlock = () => (
 const OCongressoDesktopForthBlock = () => {
   const PalestranteContainer = Cronograma.slice(0, 8).map(dia => (
     <>
-    {
-      dia.atividades.map(atividade => (
+      {dia.atividades.map(atividade => (
         <>
-        {
-          atividade.palestrante ?
-          ( <Col lg={3} className="p-1">
-            <LinkedPhoto
-            key={atividade.slug}
-            imgName={atividade.imagem}
-            title={atividade.palestrante}
-            subtitle={atividade.qualificacao}
-            to={`/agenda-e-palestrantes/${atividade.slug}`}
-          />
-          </Col>
-          )
-          : null
-        }
+          {atividade.palestrante ? (
+            <Col lg={3} className="p-1">
+              <LinkedPhoto
+                key={atividade.slug}
+                imgName={atividade.imagem}
+                title={atividade.palestrante}
+                subtitle={atividade.qualificacao}
+                to={`/agenda-e-palestrantes/${atividade.slug}`}
+              />
+            </Col>
+          ) : null}
         </>
-      ))
-    }
+      ))}
     </>
   ))
   return (
@@ -360,7 +437,9 @@ const OCongressoDesktopForthBlock = () => {
       <Background />
       <FadeParagraphTitle>palestrantes</FadeParagraphTitle>
       <Row noGutters>{PalestranteContainer}</Row>
-      <ReadMore className="align-self-end" to="/agenda-e-palestrantes">leia mais</ReadMore>
+      <ReadMore className="align-self-end" to="/agenda-e-palestrantes">
+        leia mais
+      </ReadMore>
     </Container>
   )
 }
