@@ -366,50 +366,53 @@ const PatrocinadoresGallery = props => (
 
 const CreditosSection = () => (
   <Creditos className="text-center">
-      <Paragraph style={{ color: 'var(--narvik)', fontWeight: '600' }}>
-        COP Internacional - Todos os Direitos Reservados © 2019
+    <Paragraph style={{ color: 'var(--narvik)', fontWeight: '600' }}>
+      COP Internacional - Todos os Direitos Reservados © 2019
       </Paragraph>
-      <Paragraph style={{ fontSize: '.7em' }}>
-        Design: <ParagraphLink href="http://www.gara.dj">Alvaro Marques</ParagraphLink> -
+    <Paragraph style={{ fontSize: '.7em' }}>
+      Design: <ParagraphLink href="http://www.gara.dj">Alvaro Marques</ParagraphLink> -
         Desenvolvimento: <ParagraphLink href="http://sarahgoncalves.netlify.com">Sarah Gonçalves</ParagraphLink>
-      </Paragraph>
-      <Paragraph>
-        <span style={{ fontSize: '.6em' }}>
-          Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </span>
-      </Paragraph>
-    </Creditos>
+    </Paragraph>
+    <Paragraph>
+      <span style={{ fontSize: '.6em' }}>
+        Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
+      </span>
+    </Paragraph>
+  </Creditos>
 )
 
 const Footer = () => (
   <footer style={{ minHeight: '5em' }}>
     <MediaQuery maxWidth={991}>
       <FooterMenuMobile />
+      <CreditosSection />
     </MediaQuery>
     <MediaQuery minWidth={992}>
       <FullWidth>
-        <Row>
-          <ColunaA xs={5}>
-            <div style={{ width: '50%', float: 'right' }}>
-              <Isotipo />
-              <FooterTitle />
-              <Sitemap />
-              <Contatos />
-            </div>
-          </ColunaA>
-          <ColunaB xs={7} className="p-4">
-            <FooterRealizacao />
-            <div>
-              <PatrocinadoresGallery category="diamante" />
-              <PatrocinadoresGallery category="ouro" />
-              <PatrocinadoresGallery category="prata" />
-              <PatrocinadoresGallery category="bronze" />
-            </div>
-          </ColunaB>
-          </FullWidth>
-        </Row>
+        <div>
+          <Row>
+            <ColunaA xs={5}>
+              <div style={{ width: '50%', float: 'right' }}>
+                <Isotipo />
+                <FooterTitle />
+                <Sitemap />
+                <Contatos />
+              </div>
+            </ColunaA>
+            <ColunaB xs={7} className="p-4">
+              <FooterRealizacao />
+              <div>
+                <PatrocinadoresGallery category="diamante" />
+                <PatrocinadoresGallery category="ouro" />
+                <PatrocinadoresGallery category="prata" />
+                <PatrocinadoresGallery category="bronze" />
+              </div>
+            </ColunaB>
+          </Row>
+          <CreditosSection />
+        </div>
+      </FullWidth>
     </MediaQuery>
-    <CreditosSection/>
   </footer>
 )
 
