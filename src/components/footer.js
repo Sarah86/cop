@@ -42,29 +42,7 @@ const SitemapTitle = styled.p`
   margin: 0.5em 0;
   letter-spacing: var(--lp1);
 `
-const Creditos = styled.div`
-  padding-bottom: 2em;
-  ${Paragraph} {
-    margin-bottom: 0.5em;
-  }
-  @media ${device.desktop} {
-    padding-bottom: 0;
-  }
-`
 
-const Isotipo = () => (
-  <div style={{ width: '90px', marginLeft: '.5em', marginBottom: '1.5em' }}>
-    <Image imgName="COP-ISOTIPO-TEXTURADO.png" />
-  </div>
-)
-
-const FooterTitle = () => (
-  <>
-    <TitleH1>Congresso Internacional de Operações Policiais</TitleH1>
-    <Local fontSize=".7em" iconSize="1.2em" style={{ color: 'var(--lemongrass' }} />
-    <Separador color="var(--plantation)" border="1px" widthTotal="95%" nomargin sm />
-  </>
-)
 
 const SitemapUl = styled.ul`
   font-family: 'TilliumWeb';
@@ -172,6 +150,30 @@ const PatrocinadoresImage = styled(LinkedImage)`
 const StyledCol = styled(Col)`
   border: 0.5px solid var(--kidnapper);
 `
+
+const Creditos = styled.div`
+  padding: 2em;
+  ${Paragraph} {
+    margin-bottom: 0.5em;
+  }
+  @media ${device.desktop} {
+    padding-bottom: 0;
+  }
+`
+
+const Isotipo = () => (
+  <div style={{ width: '90px', marginLeft: '.5em', marginBottom: '1.5em' }}>
+    <Image imgName="COP-ISOTIPO-TEXTURADO.png" />
+  </div>
+)
+
+const FooterTitle = () => (
+  <>
+    <TitleH1>Congresso Internacional de Operações Policiais</TitleH1>
+    <Local fontSize=".7em" iconSize="1.2em" style={{ color: 'var(--lemongrass' }} />
+    <Separador color="var(--plantation)" border="1px" widthTotal="95%" nomargin sm />
+  </>
+)
 
 const FooterMenuItem = props => (
   <li>
@@ -361,6 +363,23 @@ const PatrocinadoresGallery = props => (
   </div>
 )
 
+const CreditosSection = () => (
+  <Creditos className="text-center">
+      <Paragraph style={{ color: 'var(--narvik)', fontWeight: '600' }}>
+        COP Internacional - Todos os Direitos Reservados © 2019
+      </Paragraph>
+      <Paragraph style={{ fontSize: '.7em' }}>
+        Design: <ParagraphLink href="http://www.gara.dj">Alvaro Marques</ParagraphLink> -
+        Desenvolvimento: <ParagraphLink href="http://sarahgoncalves.netlify.com">Sarah Gonçalves</ParagraphLink>
+      </Paragraph>
+      <Paragraph>
+        <span style={{ fontSize: '.6em' }}>
+          Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
+        </span>
+      </Paragraph>
+    </Creditos>
+)
+
 const Footer = () => (
   <footer style={{ minHeight: '5em' }}>
     <MediaQuery maxWidth={991}>
@@ -389,20 +408,7 @@ const Footer = () => (
         </Row>
       </FullWidth>
     </MediaQuery>
-    <Creditos className="m-5 text-center">
-      <Paragraph style={{ color: 'var(--narvik)', fontWeight: '600' }}>
-        COP Internacional - Todos os Direitos Reservados © 2019
-      </Paragraph>
-      <Paragraph style={{ fontSize: '.7em' }}>
-        Design: <ParagraphLink href="http://www.gara.dj">Alvaro Marques</ParagraphLink> -
-        Desenvolvimento: <ParagraphLink href="http://sarahgoncalves.netlify.com">Sarah Gonçalves</ParagraphLink>
-      </Paragraph>
-      <Paragraph>
-        <span style={{ fontSize: '.6em' }}>
-          Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </span>
-      </Paragraph>
-    </Creditos>
+    <CreditosSection/>
   </footer>
 )
 
