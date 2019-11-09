@@ -153,6 +153,7 @@ const StyledCol = styled(Col)`
 
 const Creditos = styled.div`
   padding: 2em;
+  padding-bottom: 4em;
   ${Paragraph} {
     margin-bottom: 0.5em;
   }

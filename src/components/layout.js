@@ -25,18 +25,28 @@ const Content = styled.div`
   //padding: 0px 1.0875rem 1.45rem;
   padding-top: 1em;
   color: var(--narvik);
+  ${Footer}{
+    &.no-footer-mobile {
+      display: none
+    }
+  }
   @media ${device.desktop} {
     padding-top: 5em;
+    ${Footer}{
+      &.no-footer-mobile {
+        display: block
+      }
+    }
   }
 `
 
 class Layout extends React.Component {
   componentDidMount() {
-    this.pageAddress = window.location.pathname
+    this.pageAddress = location.pathname
   }
 
   componentDidUpdate() {
-    this.pageAddress = window.location.pathname
+    this.pageAddress = location.pathname
   }
 
   render() {
@@ -44,8 +54,11 @@ class Layout extends React.Component {
       <>
         <Header siteTitle={this.props.data.site.siteMetadata.title} />
         <Content>
-          {this.pageAddress === '/' || null ? (
+          {this.pageAddress === "/" || "" ? (
+            <>
             <main style={{ paddingBottom: '3em' }}>{this.props.children}</main>
+            <Footer className="no-footer-mobile"/>
+            </>
           ) : (
             <>
               <main style={{ paddingBottom: '7em' }}>{this.props.children}</main>
