@@ -111,6 +111,19 @@ const StyledLink = styled(Link)`
     `}
 `
 
+const ExternalStyledLink = styled.a`
+  color: var(--lemongrass);
+  padding-left: 10px;
+  &:hover {
+    color: var(--amber);
+  }
+  ${props =>
+    props.page &&
+    css`
+      font-weight: 600;
+    `}
+`
+
 const LinkExterno = styled.a`
   display: block;
   color: var(--tapa);
@@ -168,6 +181,14 @@ const FooterMenuItem = props => (
   </li>
 )
 
+const FooterMenuItemExternal = props => (
+  <li>
+    <ExternalStyledLink href={props.link} page={props.page} section={props.section}>
+      {props.title}
+    </ExternalStyledLink>
+  </li>
+)
+
 const Sitemap = () => {
   const Palestrantes = Cronograma.map(data => (
     <SitemapUl key={data.dia}>
@@ -204,11 +225,11 @@ const Sitemap = () => {
         <span>Downloads Restritos</span>
       </StyledDiaFooter>
       <SitemapUl>
-        <FooterMenuItem
+        <FooterMenuItemExternal
           link={Dados.manualmarca}
           title="Manual de Uso da Marca COP"
         />
-        <FooterMenuItem
+        <FooterMenuItemExternal
           link={Dados.manualmarca}
           title="Manual do Expositor"
         />
