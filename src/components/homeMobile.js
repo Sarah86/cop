@@ -10,6 +10,8 @@ import Video from './bgvideo'
 import Local from './location'
 import { navigate } from '@reach/router'
 
+import BackgroundVideo from "../videos/video-home-mobile.mp4"
+
 const Dados = require('../data/dados.json')
 
 const HomeContainer = styled.div`
@@ -57,7 +59,7 @@ class HomeMobile extends React.Component {
   render() {
     return (
       <div style={{ height: '100vh' }} onScroll={this.handleScroll}>
-        <Video url="https://youtu.be/7XnCwfvA_SY?t=48" />
+        <Video url={BackgroundVideo} />
         <HomeContainer>
           <ConselhoNacional />
           <div style={{ width: '65vw' }}>
