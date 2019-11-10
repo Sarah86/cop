@@ -190,7 +190,7 @@ const BarraContatosDesktop = () => (
 )
 
 const BarraContatosMobile = () => (
-  <div className="d-lg-none p-2">
+  <div className="d-lg-none p-2 w-100">
     <BarraContato email={Dados.contatoEmail} telefone={Dados.contatoTel} />
     <BarraContato email={Dados.imprensaEmail} telefone={Dados.imprensaTel} />
   </div>
@@ -261,13 +261,13 @@ const Header = ({ siteTitle }) => (
 )
 
 export const FooterMenuMobile = ({ siteTitle }) => (
-  <StyledNav style={{ minHeight: '600px', paddingBottom: '2em', marginTop: '-4em' }}>
+  <StyledNav style={{ minHeight: '700px', paddingBottom: '2em', marginTop: '-4em' }}>
     <LogoWrapper maxWidth="170px">
       <Link to="/" alt={siteTitle} title={siteTitle}>
         <LogoBranca />
       </Link>
     </LogoWrapper>
-    <Local fontSize=".8em"/>
+    <Local fontSize=".8em" className="w-100"/>
     <LinksWrapper>
       <LinksContainer>
         <StyledLink to="/">Home</StyledLink>
@@ -278,7 +278,7 @@ export const FooterMenuMobile = ({ siteTitle }) => (
         <StyledLink to="/expositores/">Expositores</StyledLink>
       </LinksContainer>
     </LinksWrapper>
-     <a href={Dados.linkInscricao} target="_blank"  rel="noopener noreferrer">
+    <a href={Dados.linkInscricao} target="_blank" rel="noopener noreferrer" className="w-100 text-center">
             <img
               src={BotaoGIf}
               alt="Inscreva-se agora! Evento gratuito!"
