@@ -17,6 +17,7 @@ import IsotipoCop from './isotipo'
 import SubscribeButton from './subscribeButton'
 
 import BotaoGIf from '../images/BT-INSCREVASE-GRATUITO.gif'
+import Local from './location'
 
 const Dados = require('../data/dados.json')
 
@@ -189,7 +190,7 @@ const BarraContatosDesktop = () => (
 )
 
 const BarraContatosMobile = () => (
-  <div className="d-lg-none">
+  <div className="d-lg-none p-2">
     <BarraContato email={Dados.contatoEmail} telefone={Dados.contatoTel} />
     <BarraContato email={Dados.imprensaEmail} telefone={Dados.imprensaTel} />
   </div>
@@ -260,12 +261,13 @@ const Header = ({ siteTitle }) => (
 )
 
 export const FooterMenuMobile = ({ siteTitle }) => (
-  <StyledNav style={{ minHeight: '500px', paddingBottom: '2em', marginTop: '-4em' }}>
+  <StyledNav style={{ minHeight: '600px', paddingBottom: '2em', marginTop: '-4em' }}>
     <LogoWrapper maxWidth="170px">
       <Link to="/" alt={siteTitle} title={siteTitle}>
         <LogoBranca />
       </Link>
     </LogoWrapper>
+    <Local fontSize=".8em"/>
     <LinksWrapper>
       <LinksContainer>
         <StyledLink to="/">Home</StyledLink>
@@ -275,8 +277,14 @@ export const FooterMenuMobile = ({ siteTitle }) => (
         </StyledLink>
         <StyledLink to="/expositores/">Expositores</StyledLink>
       </LinksContainer>
-      <BarraContatosDesktop />
     </LinksWrapper>
+     <a href={Dados.linkInscricao} target="_blank"  rel="noopener noreferrer">
+            <img
+              src={BotaoGIf}
+              alt="Inscreva-se agora! Evento gratuito!"
+              style={{ width: '195px', padding: '0', margin: '0' }}
+            />
+          </a>
     <BarraContatosMobile />
     <SocialLinksContainer />
   </StyledNav>

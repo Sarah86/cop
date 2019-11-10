@@ -381,8 +381,8 @@ const CreditosSection = () => (
   </Creditos>
 )
 
-const Footer = (props) => (
-  <footer style={{ minHeight: '5em' }} className={props.className}>
+const Footer = () => (
+  <footer style={{ minHeight: '5em', marginTop:"3em" }}>
     <MediaQuery maxWidth={991}>
       <FooterMenuMobile />
       <CreditosSection />

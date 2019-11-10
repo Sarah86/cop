@@ -24,12 +24,13 @@ const Content = styled.div`
   margin: 0 auto;
   max-width: 960px;
   //padding: 0px 1.0875rem 1.45rem;
+  padding-bottom: 3em;
   padding-top: 1em;
   color: var(--narvik);
   
   @media ${device.desktop} {
     padding-top: 5em;
-   
+    padding-bottom: 7em;
   }
 `
 
@@ -40,7 +41,7 @@ class Layout extends React.Component {
       <>
         <Header siteTitle={this.props.data.site.siteMetadata.title} />
         <Content>
-             <main style={{ paddingBottom: '3em' }}>{this.props.children}</main>
+             <main>{this.props.children}</main>
         </Content>
         <Footer/>
       </>

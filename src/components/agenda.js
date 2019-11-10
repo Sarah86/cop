@@ -96,6 +96,13 @@ const GreyDivisor = styled.hr`
   margin-top: 1em;
 `
 
+const TabelaLink = styled(Link)`
+  color: var(--narvik);
+  &:hover {
+    color: var(--amber)
+  }
+`
+
 export const AgendaMobile = ({ defaultActiveKeyAccordion, defaultActiveKeyTab }) => {
   const NavItem = Programacao.map(dia => (
     <Nav.Item>
@@ -286,24 +293,22 @@ export const AgendaTabelaDesktop = () => {
             {atividade.descricao == null ? (
               <>{atividade.hora}</>
             ) : (
-              <Link
+              <TabelaLink
                 to={`/agenda-e-palestrantes/${atividade.slug}`}
-                style={{ color: 'var(--narvik' }}
               >
                 {atividade.hora}
-              </Link>
+              </TabelaLink>
             )}
           </Col>
           <Col lg={8} style={{ marginLeft: '-1em' }}>
             {atividade.palestrante ? (
               <>
                 {atividade.descricao ? (
-                  <Link
+                  <TabelaLink
                     to={`/agenda-e-palestrantes/${atividade.slug}`}
-                    style={{ color: 'var(--narvik' }}
                   >
                     {atividade.palestrante}
-                  </Link>
+                  </TabelaLink>
                 ) : (
                   <>{atividade.palestrante}</>
                 )}
