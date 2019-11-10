@@ -93,7 +93,7 @@ const InternaURL = /^https?:\/\//
 
 const LinkedImage = props =>
   InternaURL.test(props.to) ? (
-    <ExternalStyledLink href={props.to} target="_blank" noyellowlayer={props.noyellowlayer}>
+    <ExternalStyledLink href={props.to} target="_blank"  rel="noopener noreferrer" noyellowlayer={props.noyellowlayer}>
       <StyledImage
         imgName={props.imgName}
         className={props.className}

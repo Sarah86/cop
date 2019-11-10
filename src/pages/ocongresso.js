@@ -59,13 +59,13 @@ const CongressoFirstBlock = () => (
     </Paragraph>
     <Paragraph lastLineRightDesktop reversedSkew>
       A cidade-sede escolhida é pelo segundo ano consecutivo a belíssima{' '}
-      <ParagraphLink href="http://www.pmf.sc.gov.br" target="_blank">
+      <ParagraphLink href="http://www.pmf.sc.gov.br" target="_blank"  rel="noopener noreferrer">
         Florianópolis
       </ParagraphLink>
       , que por sua vez abriga o moderno{' '}
       <ParagraphLink
         href="https://www.facebook.com/CentrodeEventosGovernadorLuizHenriquedaSilveira"
-        target="_blank"
+        target="_blank"  rel="noopener noreferrer"
       >
         Centro de Eventos Governador Luiz Henrique da Silveira
       </ParagraphLink>

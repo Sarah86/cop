@@ -39,8 +39,10 @@ const ConselhoNacional = () => (
 )
 
 class HomeMobile extends React.Component {
+
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll, true)
+    window.addEventListener('scroll', this.handleScroll, true);
+    this.handleFooterLoad();
   }
 
   componentWillUnmount() {
@@ -53,6 +55,13 @@ class HomeMobile extends React.Component {
         console.log('redirection to ocongresso')
         navigate(`/ocongresso/`)
       }, 1000)
+    }
+  }
+
+  handleFooterLoad() {
+    if ((window.location.pathname === '/' || null) && (window.matchMedia("(max-width: 991px)").matches)) {
+        document.querySelector("footer").classList.add("d-none");
+        console.log("ocultando footer");
     }
   }
 

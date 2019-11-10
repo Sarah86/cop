@@ -10,6 +10,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, StaticQuery, graphql } from 'gatsby'
 
+
 import Header from './header'
 import { device } from './device'
 import styled from 'styled-components'
@@ -25,47 +26,23 @@ const Content = styled.div`
   //padding: 0px 1.0875rem 1.45rem;
   padding-top: 1em;
   color: var(--narvik);
-  ${Footer}{
-    &.no-footer-mobile {
-      display: none
-    }
-  }
+  
   @media ${device.desktop} {
     padding-top: 5em;
-    ${Footer}{
-      &.no-footer-mobile {
-        display: block
-      }
-    }
+   
   }
 `
 
 class Layout extends React.Component {
-  componentDidMount() {
-    this.pageAddress = location.pathname
-  }
-
-  componentDidUpdate() {
-    this.pageAddress = location.pathname
-  }
 
   render() {
     return (
       <>
         <Header siteTitle={this.props.data.site.siteMetadata.title} />
         <Content>
-          {this.pageAddress === "/" || "" ? (
-            <>
-            <main style={{ paddingBottom: '3em' }}>{this.props.children}</main>
-            <Footer className="no-footer-mobile"/>
-            </>
-          ) : (
-            <>
-              <main style={{ paddingBottom: '7em' }}>{this.props.children}</main>
-              <Footer />
-            </>
-          )}
+             <main style={{ paddingBottom: '3em' }}>{this.props.children}</main>
         </Content>
+        <Footer/>
       </>
     )
   }

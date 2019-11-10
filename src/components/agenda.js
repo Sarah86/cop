@@ -195,22 +195,22 @@ export const AgendaMobile = ({ defaultActiveKeyAccordion, defaultActiveKeyTab })
                     Siga o palestrante:
                     <SocialIcons>
                       {atividade.facebook == null ? null : (
-                        <a href={atividade.facebook} target="_blank">
+                        <a href={atividade.facebook} target="_blank"  rel="noopener">
                           <FontAwesomeIcon icon={faFacebookF} />
                         </a>
                       )}
                       {atividade.instagram == null ? null : (
-                        <a href={atividade.instagram} target="_blank">
+                        <a href={atividade.instagram} target="_blank"  rel="noopener">
                           <FontAwesomeIcon icon={faInstagram} />
                         </a>
                       )}
                       {atividade.linkedin == null ? null : (
-                        <a href={atividade.linkedin} target="_blank">
+                        <a href={atividade.linkedin} target="_blank"  rel="noopener">
                           <FontAwesomeIcon icon={faLinkedinIn} />
                         </a>
                       )}
                       {atividade.youtube == null ? null : (
-                        <a href={atividade.youtube} target="_blank">
+                        <a href={atividade.youtube} target="_blank"  rel="noopener">
                           <FontAwesomeIcon icon={faYoutube} />
                         </a>
                       )}
@@ -501,29 +501,29 @@ export const AgendaDesktop = ({
                         Siga o palestrante:
                         <SocialIcons>
                           {atividade.facebook == null ? null : (
-                            <a href={atividade.facebook} target="_blank">
+                            <a href={atividade.facebook} target="_blank"  rel="noopener">
                               <FontAwesomeIcon icon={faFacebookF} />
                             </a>
                           )}
                           {atividade.instagram == null ? null : (
-                            <a href={atividade.instagram} target="_blank">
+                            <a href={atividade.instagram} target="_blank"  rel="noopener">
                               <FontAwesomeIcon icon={faInstagram} />
                             </a>
                           )}
                           {atividade.linkedin == null ? null : (
-                            <a href={atividade.linkedin} target="_blank">
+                            <a href={atividade.linkedin} target="_blank"  rel="noopener">
                               <FontAwesomeIcon icon={faLinkedinIn} />
                             </a>
                           )}
                           {atividade.youtube == null ? null : (
-                            <a href={atividade.youtube} target="_blank">
+                            <a href={atividade.youtube} target="_blank"  rel="noopener">
                               <FontAwesomeIcon icon={faYoutube} />
                             </a>
                           )}
                         </SocialIcons>
                         {atividade.site == null ? null : (
                           <div style={{ display: 'block' }}>
-                            Site: <a href={atividade.site}>{atividade.site}</a>
+                            Site: <a href={atividade.site} target="_blank"  rel="noopener">{atividade.site}</a>
                           </div>
                         )}
                       </SocialPalestrante>

@@ -313,7 +313,7 @@ const Patrocinadores = props => {
         noyellowlayer
         imgName={expositor.logo}
         to={`${expositor.site}`}
-        target="_blank"
+        target="_blank"  rel="noopener noreferrer"
         rel="noopener noreferrer"
       />
     </StyledCol>
@@ -381,8 +381,8 @@ const CreditosSection = () => (
   </Creditos>
 )
 
-const Footer = () => (
-  <footer style={{ minHeight: '5em' }}>
+const Footer = (props) => (
+  <footer style={{ minHeight: '5em' }} className={props.className}>
     <MediaQuery maxWidth={991}>
       <FooterMenuMobile />
       <CreditosSection />

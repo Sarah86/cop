@@ -65,7 +65,7 @@ const Botao = ({
   style,
   width,
 }) => (
-  <a href={to} target="_blank">
+  <a href={to} target="_blank"  rel="noopener noreferrer">
     <StyledBotao
       background={background}
       borderWidth={borderWidth}

@@ -228,7 +228,7 @@ const Header = ({ siteTitle }) => (
             </LinksContainer>
             <BarraContatosDesktop />
           </LinksWrapper>
-          <a href={Dados.linkInscricao}>
+          <a href={Dados.linkInscricao} target="_blank"  rel="noopener noreferrer">
             <img
               src={BotaoGIf}
               alt="Inscreva-se agora! Evento gratuito!"
