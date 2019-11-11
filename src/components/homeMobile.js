@@ -17,7 +17,7 @@ const Dados = require('../data/dados.json')
 const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 85px);
+  height: calc(100vh - 115px);
   justify-content: space-evenly;
   align-items: center;
 `
