@@ -3,7 +3,7 @@ import { Container, Col, Row } from 'react-bootstrap'
 import styled from 'styled-components'
 import MediaQuery from 'react-responsive'
 
-import Layout from '../layouts/index'
+import Layout from '../components/layout'
 import Image from '../components/image'
 import { PaddedContentBox, Paragraph, ListOl, PaddedText, ReadMore } from '../components/typography'
 import Photo from '../components/photo'

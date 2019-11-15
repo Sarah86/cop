@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import './theme.css'
 import './typography.css'
+import { Link } from 'gatsby'
 
 const StyledBotao = styled.button`
   background-color: transparent;
@@ -79,6 +80,33 @@ const Botao = ({
       </BotaoText>
     </StyledBotao>
   </a>
+)
+
+export const InternalBotao = ({
+  background,
+  borderWidth,
+  fontSize,
+  inverted,
+  padding,
+  texto,
+  to,
+  style,
+  width,
+}) => (
+  <Link to={to}>
+    <StyledBotao
+      background={background}
+      borderWidth={borderWidth}
+      inverted={inverted}
+      padding={padding}
+      style={style}
+      width={width}
+    >
+      <BotaoText inverted={inverted} fontSize={fontSize}>
+        {texto}
+      </BotaoText>
+    </StyledBotao>
+  </Link>
 )
 
 export default Botao

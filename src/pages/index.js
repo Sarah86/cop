@@ -1,7 +1,7 @@
 import React from 'react'
 import MediaQuery from 'react-responsive'
 
-import Layout from '../layouts/index'
+import Layout from '../components/layout'
 import SEO from '../components/seo'
 import HomeMobile from '../components/homeMobile'
 import HomeDesktop from '../components/homeDesktop'
@@ -16,7 +16,7 @@ class IndexPage extends React.Component {
      <Layout>
       <SEO title="COP 2019 - Congresso de Operações Policiais" />
       <MediaQuery maxWidth={991}>
-        <HomeMobile />
+        <HomeMobile id="home"/>
         <OCongressoMobile id="ocongresso" />
       </MediaQuery>
       <MediaQuery minWidth={992}>

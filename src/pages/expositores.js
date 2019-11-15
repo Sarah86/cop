@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import PageTransition from 'gatsby-plugin-page-transitions';
 
 
-import Layout from '../layouts/index'
+import Layout from '../components/layout'
 import SEO from '../components/seo'
 
 import { FadeParagraphTitle } from '../components/FadeElements'

@@ -209,7 +209,7 @@ const BarraContatosMobile = () => (
 
 const MobilePages = [
   {
-    link: '/',
+    link: '/#home',
     nome: 'Home',
   },
   {
@@ -301,7 +301,7 @@ class Header extends React.Component {
 
     const MenuMobile = props => (
       <MediaQuery maxWidth={991}>
-        <Scrollspy items={['/','ocongresso', 'hshs', 'hshs']} currentClassName="active">
+        <Scrollspy items={['home','ocongresso', 'hshs', 'hshs']} currentClassName="active">
           {MobilePages.map(mobile => (
             <StyledLink
               onClick={this.closeNav}

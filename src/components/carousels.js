@@ -154,3 +154,37 @@ export const CongressoSecondCarousel = () => {
     </div>
   )
 }
+
+export const AgendaEPalestrantesCarousel = () => {
+  const Slides = [
+    {
+      imagem: 'palestrantes_topbanner_01.jpg',
+    },
+    {
+      imagem: 'palestrantes_topbanner_02.jpg',
+    },
+    {
+      imagem: 'palestrantes_topbanner_03.jpg',
+    },
+    {
+      imagem: 'palestrantes_topbanner_04.jpg',
+    },
+    {
+      imagem: 'palestrantes_topbanner_05.jpg',
+    }
+  ]
+
+  const CarouselItem = Slides.map(slide => (
+    <Carousel.Item key={slide.i}>
+      <Image imgName={slide.imagem} />
+    </Carousel.Item>
+  ))
+  return (
+    <div style={{ position: 'relative' }}>
+      <MolduraTop />
+      <Carousel indicators={false}>{CarouselItem}</Carousel>
+      <MolduraBottom />
+      <Shadow />
+    </div>
+  )
+}

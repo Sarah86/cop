@@ -239,7 +239,7 @@ export const AgendaMobile = ({ defaultActiveKeyAccordion, defaultActiveKeyTab })
   ))
   return (
     <Tab.Container defaultActiveKey={defaultActiveKeyTab} id="cronograma">
-      <div style={{ marginTop: '-1.5em' }}>
+      <div>
         <div>
           <StyledNav>{NavItem}</StyledNav>
         </div>
@@ -318,7 +318,7 @@ export const AgendaTabelaDesktop = () => {
     </StyledCol>
   ))
   return (
-    <Container>
+    <Container style={{marginTop: "1em"}}>
       <TitleH3>datas</TitleH3>
       <div style={{ position: 'relative' }}>
         <FullWidth

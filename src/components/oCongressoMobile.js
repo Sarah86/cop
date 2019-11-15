@@ -4,7 +4,7 @@ import MediaQuery from 'react-responsive'
 import Image from '../components/image'
 import SEO from '../components/seo'
 
-import Botao from '../components/botao'
+import Botao, { InternalBotao } from '../components/botao'
 import { CongressoFirstBlock, CongressoSecondBlock } from '../components/textBlocks'
 import { CongressoFirstCarousel, CongressoSecondCarousel } from './carousels'
 
@@ -16,7 +16,7 @@ const Botoes = () => (
     style={{ height: '9em' }}
   >
     <Botao texto="Inscreva-se Agora!" width="12em" to={Dados.linkInscricao} />
-    <Botao texto="Confira  a Programação" width="12em" to="/agenda-e-palestrantes" />
+    <InternalBotao texto="Confira  a Programação" width="12em" to="/agenda-e-palestrantes" />
   </div>
 )
 

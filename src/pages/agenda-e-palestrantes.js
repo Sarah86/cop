@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import MediaQuery from 'react-responsive'
 
-import Layout from '../layouts/index'
+import Layout from '../components/layout'
 import { device } from '../components/device'
 import SEO from '../components/seo'
 import { ParagraphTitle, PaddedText } from '../components/typography'
@@ -10,15 +10,10 @@ import Photo from '../components/photo'
 import { AgendaMobile, AgendaTabelaDesktop } from '../components/agenda'
 import FullWidth from '../components/fullwidth'
 import PageTransition from 'gatsby-plugin-page-transitions';
+import { AgendaEPalestrantesCarousel } from '../components/carousels'
 
 
-const StyledPaddedText = styled(PaddedText)`
-  @media ${device.desktop} {
-    top: 8em;
-    position: absolute;
-    z-index: 3;
-  }
-`
+
 const PhotoWrapper = styled.div`
   .gatsby-image-wrapper {
     max-height: 300px;
@@ -28,14 +23,10 @@ const PhotoWrapper = styled.div`
 const Palestrantes = () => (
   <Layout>
       <SEO title="Agenda e Palestrantes" />
-        <StyledPaddedText>
+        <PaddedText>
         <ParagraphTitle>agenda & palestrantes</ParagraphTitle>
-      </StyledPaddedText>
-      <FullWidth>
-        <PhotoWrapper>
-          <Photo imgName="palestrantes_topbanner.jpg" />
-        </PhotoWrapper>
-      </FullWidth>
+      </PaddedText>
+      <AgendaEPalestrantesCarousel/>
       <MediaQuery maxWidth={991}>
         <AgendaMobile defaultActiveKeyAccordion="0" defaultActiveKeyTab="17.mar" />
       </MediaQuery>

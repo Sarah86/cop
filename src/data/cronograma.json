@@ -157,7 +157,8 @@
         "qualificacao": "Ten. Cel PMERJ - Comandante BOPE/RJ",
         "slug": "ten-cel-nunes-bope",
         "imagem": "palestrante_coronel_nunes.jpg",
-        "descricao": []
+        "descricao": [],
+        "youtube": "http://g1.globo.com/globo-news/jornal-globo-news/videos/v/comandante-do-bope-fala-sobre-operacao-na-ponte-rio-niteroi/7856723/"
       },
       {
         "destaque": true,
@@ -167,7 +168,7 @@
         "palestrante": "General Theophilo",
         "qualificacao": "Secretário Nacional de Segurança Pública",
         "slug": "gen-theophilo",
-        "imagem": "palestrante_placeholder.jpg",
+        "imagem": "palestrante_general_theophilo.jpg",
         "descricao": [],
         "twitter": "https://twitter.com/galtheophilo",
         "facebook": "https://www.facebook.com/pg/GeneralTheophilo",

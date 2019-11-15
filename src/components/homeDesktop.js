@@ -111,7 +111,6 @@ const CongressoPalestrantes = () => {
                 <LinkedPhoto
                   imgName={atividade.imagem}
                   title={atividade.palestrante}
-                  subtitle={atividade.qualificacao}
                   to={`/agenda-e-palestrantes/${atividade.slug}`}
                 />
               </Col>
@@ -124,8 +123,9 @@ const CongressoPalestrantes = () => {
   return (
     <Container className="mt-5">
       <Row>
-        <Col className="text-justify pr-5 d-flex flex-column justify-content-between">
+        <Col className="text-justify pr-5">
           <FadeParagraphTitle>o congresso</FadeParagraphTitle>
+          <div>
           <Paragraph>
             Autoridades nacionais e internacionais, agentes de segurança pública, as principais
             marcas do setor, e a sociedade civil. Em contato direto por 3 dias.
@@ -143,7 +143,8 @@ const CongressoPalestrantes = () => {
             <ParagraphLink>Florianópolis</ParagraphLink>, que por sua vez abriga o moderno{' '}
             <ParagraphLink>Centro de Eventos Governador Luiz Henrique da Silveira</ParagraphLink>.
           </Paragraph>
-          <ReadMore className="align-self-end" to="/ocongresso">
+          </div>
+          <ReadMore to="/ocongresso">
             leia mais
           </ReadMore>
         </Col>
@@ -173,7 +174,7 @@ function getRandom(arr, n) {
 }
 
 const Expositores = () => {
-  const Expositor = getRandom(dadosExpositores.diamante, 4)
+  const Expositor = getRandom(dadosExpositores.diamante, 6)
 
   const ThumbnailsExpositores = Expositor.map(diamante => (
     <Col lg={6}>
@@ -220,8 +221,8 @@ const Espaco = () => (
     <Background left="-45%" position="left top" />
     <Row className="pt-5">
       <Col>
-        <FadeParagraphTitle size="2.5em" width="3.88em">
-          4º ENPOE 2020
+        <FadeParagraphTitle size="2.5em" width="3.5em">
+          4º enpoe 2020
         </FadeParagraphTitle>
         <LinkedPhoto imgName="destaque_triplo_home_1.jpg" to="/ocongresso/" />
         <Paragraph>

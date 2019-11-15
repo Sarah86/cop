@@ -41,7 +41,7 @@ const ConselhoNacional = () => (
 class HomeMobile extends React.Component {
   render() {
     return (
-      <div style={{ height: '100vh' }} onScroll={this.handleScroll}>
+      <div style={{ height: '100vh' }} id={this.props.id}>
         <Video url={BackgroundVideo} />
         <HomeContainer>
           <ConselhoNacional />

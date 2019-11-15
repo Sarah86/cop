@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import MediaQuery from 'react-responsive'
 
-import Layout from '../layouts/index'
+import Layout from '../components/layout'
 import { device } from '../components/device'
 import SEO from '../components/seo'
 import Photo from '../components/photo'

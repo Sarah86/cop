@@ -27,8 +27,7 @@ const StyledLink = styled(Link)`
         opacity: 0;
     }
     &:hover:before{
-      ${'/*background-color: rgba(254,191,1,0.8);*/'}
-        background-color: rgba(41, 38, 29, .9);
+        background-color: rgba(185, 167, 112, .8);
         mix-blend-mode: color;
         opacity: 1;
         z-index: 1;
