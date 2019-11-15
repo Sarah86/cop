@@ -67,7 +67,7 @@ const BoasVindas = () => (
       Congresso Internacional de Operações Policiais
     </BemVindo>
     <Sublegenda>O maior evento de segurança e defesa da América Latina</Sublegenda>
-    <Local fontSize="1em" iconSize="1.2em" />
+    <Local fontSize="1em" iconSize="1.2em" className="text-left" />
     <ApresentadoPor>
       Orgulhosamente apresentado pelo CNGC - Conselho Nacional de Comandantes Gerais
     </ApresentadoPor>
@@ -102,20 +102,22 @@ export const BannerTemporario = () => (
 const CongressoPalestrantes = () => {
   const PalestranteDestaque = Cronograma.map(dia => (
     <>
-      {dia.atividades.map(atividade => (
-        <>
-          {atividade.destaque === true ? (
-            <Col xs={6} className="pl-1 pr-1">
-              <LinkedPhoto
-                imgName={atividade.imagem}
-                title={atividade.palestrante}
-                subtitle={atividade.qualificacao}
-                to={`/agenda-e-palestrantes/${atividade.slug}`}
-              />
-            </Col>
-          ) : null}
-        </>
-      ))}
+      {dia.atividades
+        .sort((a, b) => a.destaqueOrdem - b.destaqueOrdem) //nao esta funcionando. precisa rever a funcao
+        .map(atividade => (
+          <>
+            {atividade.destaque === true ? (
+              <Col xs={6} className="pl-1 pr-1" key={atividade.destaqueOrdem}>
+                <LinkedPhoto
+                  imgName={atividade.imagem}
+                  title={atividade.palestrante}
+                  subtitle={atividade.qualificacao}
+                  to={`/agenda-e-palestrantes/${atividade.slug}`}
+                />
+              </Col>
+            ) : null}
+          </>
+        ))}
     </>
   ))
 
@@ -124,10 +126,10 @@ const CongressoPalestrantes = () => {
       <Row>
         <Col className="text-justify pr-5 d-flex flex-column justify-content-between">
           <FadeParagraphTitle>o congresso</FadeParagraphTitle>
-          <Quote>
+          <Paragraph>
             Autoridades nacionais e internacionais, agentes de segurança pública, as principais
             marcas do setor, e a sociedade civil. Em contato direto por 3 dias.
-          </Quote>
+          </Paragraph>
           <Paragraph>
             Depois do sucesso absoluto da estreia em 2018 o Congresso de Operações Policiais retorna
             mais abrangente, inclusivo, dinâmico, informativo e tecnológico.
@@ -149,7 +151,7 @@ const CongressoPalestrantes = () => {
           <FadeParagraphTitle>palestrantes</FadeParagraphTitle>
           <Row noGutters>{PalestranteDestaque}</Row>
           <ReadMore className="align-self-end" to="/agenda-e-palestrantes">
-            leia mais
+            conheça todos os palestrantes
           </ReadMore>
         </Col>
       </Row>
@@ -195,13 +197,20 @@ const Expositores = () => {
           </Paragraph>
         </Col>
         <Col className="d-flex flex-column justify-content-center align-items-center">
-          <Botao texto="QUER EXPOR A SUA MARCA?" borderWidth="8px" width="12em" to="mailto:marketing@copinternacional.com"></Botao>
+          <Botao
+            texto="QUER EXPOR A SUA MARCA?"
+            borderWidth="8px"
+            width="12em"
+            to="mailto:marketing@copinternacional.com"
+          ></Botao>
         </Col>
       </Row>
       <Row noGutters className="mb-4">
         {ThumbnailsExpositores}
       </Row>
-      <ReadMore className="align-self-end">leia mais</ReadMore>
+      <ReadMore className="align-self-end" to="/expositores">
+        veja todos
+      </ReadMore>
     </Container>
   )
 }
@@ -211,39 +220,40 @@ const Espaco = () => (
     <Background left="-45%" position="left top" />
     <Row className="pt-5">
       <Col>
-        <FadeParagraphTitle size="2.5em" width="2.88em">
-          espaço abopesp
+        <FadeParagraphTitle size="2.5em" width="3.88em">
+          4º ENPOE 2020
         </FadeParagraphTitle>
         <LinkedPhoto imgName="destaque_triplo_home_1.jpg" to="/ocongresso/" />
         <Paragraph>
-          Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em segurança e defesa
-          exporão seus produtos e soluções.
+          O 4º Encontro Nacional de Profissionais de Operações especiais (4º ENPOE - 2020)
+          acontecerá no COP Internacional nos dias 17, 18 e 19 de março de 2020, em
+          Florianópolis-SC.
         </Paragraph>
         <ReadMore className="align-self-end" to="/ocongresso/">
           leia mais
         </ReadMore>
       </Col>
       <Col>
-        <FadeParagraphTitle size="2.5em" width="3.3em">
-          confira o programa
+        <FadeParagraphTitle size="2.5em" width="5em">
+          reunião técnica de fronteiras
         </FadeParagraphTitle>
         <LinkedPhoto imgName="destaque_triplo_home_2.jpg" />
         <Paragraph>
-          Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em segurança e defesa
-          exporão seus produtos e soluções.
+        Reunião Técnica da Coordenadoria Geral de fronteiras da Secretaria de Op. Integradas do Ministério da Justiça e Segurança Pública.
+Prioridade de combate ao crime de fronteiras, o encontro do Ministério da Justiça e Segurança Pública tem entre seus projetos estratégicos a integração entre as principais lideranças que atuam em área de fronteiras, O objetivo é blindar o país da entrada de armas, drogas e produtos contrabandeados pelos cerca de 16 mil quilômetros de fronteira.  Entre as linhas de atuação estão as operações integradas, aquisição de equipamentos, capacitações e bases operacionais com integração de sistemas.
+
         </Paragraph>
         <ReadMore className="align-self-end" to="/agenda-e-palestrantes">
           leia mais
         </ReadMore>
       </Col>
       <Col>
-        <FadeParagraphTitle size="2.5em" width="2em">
-          ação social
+        <FadeParagraphTitle size="2.5em" width="3.65em">
+          clínicas &  workshops
         </FadeParagraphTitle>
         <LinkedPhoto imgName="destaque_triplo_home_3.jpg" />
         <Paragraph>
-          Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em segurança e defesa
-          exporão seus produtos e soluções.
+        Durante os dias de COP serão oferecidas  clínicas e workshops que abordarão assuntos de grande relevância tanto para o agente de segurança pública quanto para o cidadão civil.
         </Paragraph>
         <ReadMore className="align-self-end" to="/ocongresso">
           leia mais

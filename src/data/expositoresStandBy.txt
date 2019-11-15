@@ -1,0 +1,16 @@
+   {
+      "nome": "Estratégia Concursos",
+      "ramo": "Preparatório para Concursos",
+      "logo": "expositor_diamante_estrategia2.jpg",
+      "thumbnail": "expositor_diamante_estrategia.jpg",
+      "local": "Piso Superior - Stand 06",
+      "descricao": "A Estratégia Concursos é o caminho mais curto entre você e a sua aprovação em um concurso público com aulas exclusivas e 100% focadas em cada edital.",
+      "site": "https://ditecsc.com.br/"
+    },
+  
+  {
+      "nome": "Armalite",
+      "logo": "expositor_ouro_armalite.jpg",
+      "local": "Piso Superior - Stand 04",
+      "site": "https://www.armalite.com/"
+    },

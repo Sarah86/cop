@@ -11,7 +11,6 @@ import Separador from './separador'
 import { Link } from 'gatsby'
 import SeparadorInverted from './separadorInverted'
 import { OuroBox } from '../pages/expositores'
-import { FooterMenuMobile } from './header'
 import { Paragraph, ParagraphLink } from './typography'
 import { device } from './device'
 
@@ -42,7 +41,6 @@ const SitemapTitle = styled.p`
   margin: 0.5em 0;
   letter-spacing: var(--lp1);
 `
-
 
 const SitemapUl = styled.ul`
   font-family: 'TilliumWeb';
@@ -171,7 +169,13 @@ const Isotipo = () => (
 const FooterTitle = () => (
   <>
     <TitleH1>Congresso Internacional de Operações Policiais</TitleH1>
-    <Local fontSize=".7em" iconSize="1.2em" style={{ color: 'var(--lemongrass' }} />
+    <Local
+      fontSize=".7em"
+      iconSize="1.2em"
+      style={{ color: 'var(--lemongrass' }}
+      centeredIcon
+      className="text-center"
+    />
     <Separador color="var(--plantation)" border="1px" widthTotal="95%" nomargin sm />
   </>
 )
@@ -228,14 +232,8 @@ const Sitemap = () => {
         <span>Downloads Restritos</span>
       </StyledDiaFooter>
       <SitemapUl>
-        <FooterMenuItemExternal
-          link={Dados.manualmarca}
-          title="Manual de Uso da Marca COP"
-        />
-        <FooterMenuItemExternal
-          link={Dados.manualmarca}
-          title="Manual do Expositor"
-        />
+        <FooterMenuItemExternal link={Dados.manualmarca} title="Manual de Uso da Marca COP" />
+        <FooterMenuItemExternal link={Dados.manualmarca} title="Manual do Expositor" />
       </SitemapUl>
     </SitemapUl>
   )
@@ -313,7 +311,8 @@ const Patrocinadores = props => {
         noyellowlayer
         imgName={expositor.logo}
         to={`${expositor.site}`}
-        target="_blank"  rel="noopener noreferrer"
+        target="_blank"
+        rel="noopener noreferrer"
         rel="noopener noreferrer"
       />
     </StyledCol>
@@ -368,10 +367,10 @@ const CreditosSection = () => (
   <Creditos className="text-center">
     <Paragraph style={{ color: 'var(--narvik)', fontWeight: '600' }}>
       COP Internacional - Todos os Direitos Reservados © 2019
-      </Paragraph>
+    </Paragraph>
     <Paragraph style={{ fontSize: '.7em' }}>
       Design: <ParagraphLink href="http://www.gara.dj">Alvaro Marques</ParagraphLink> -
-        Desenvolvimento: <ParagraphLink href="http://sarahgoncalves.netlify.com">Sarah Gonçalves</ParagraphLink>
+      Desenvolvimento: <ParagraphLink href="http://sarahgoncalves.netlify.com">Sarah Gonçalves</ParagraphLink>
     </Paragraph>
     <Paragraph>
       <span style={{ fontSize: '.6em' }}>
@@ -382,9 +381,8 @@ const CreditosSection = () => (
 )
 
 const Footer = () => (
-  <footer style={{ minHeight: '5em', marginTop:"3em" }}>
+  <footer style={{ minHeight: '5em', marginTop: '3em' }}>
     <MediaQuery maxWidth={991}>
-      <FooterMenuMobile />
       <CreditosSection />
     </MediaQuery>
     <MediaQuery minWidth={992}>

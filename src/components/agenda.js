@@ -99,7 +99,7 @@ const GreyDivisor = styled.hr`
 const TabelaLink = styled(Link)`
   color: var(--narvik);
   &:hover {
-    color: var(--amber)
+    color: var(--amber);
   }
 `
 
@@ -202,22 +202,22 @@ export const AgendaMobile = ({ defaultActiveKeyAccordion, defaultActiveKeyTab })
                     Siga o palestrante:
                     <SocialIcons>
                       {atividade.facebook == null ? null : (
-                        <a href={atividade.facebook} target="_blank"  rel="noopener">
+                        <a href={atividade.facebook} target="_blank" rel="noopener">
                           <FontAwesomeIcon icon={faFacebookF} />
                         </a>
                       )}
                       {atividade.instagram == null ? null : (
-                        <a href={atividade.instagram} target="_blank"  rel="noopener">
+                        <a href={atividade.instagram} target="_blank" rel="noopener">
                           <FontAwesomeIcon icon={faInstagram} />
                         </a>
                       )}
                       {atividade.linkedin == null ? null : (
-                        <a href={atividade.linkedin} target="_blank"  rel="noopener">
+                        <a href={atividade.linkedin} target="_blank" rel="noopener">
                           <FontAwesomeIcon icon={faLinkedinIn} />
                         </a>
                       )}
                       {atividade.youtube == null ? null : (
-                        <a href={atividade.youtube} target="_blank"  rel="noopener">
+                        <a href={atividade.youtube} target="_blank" rel="noopener">
                           <FontAwesomeIcon icon={faYoutube} />
                         </a>
                       )}
@@ -293,9 +293,7 @@ export const AgendaTabelaDesktop = () => {
             {atividade.descricao == null ? (
               <>{atividade.hora}</>
             ) : (
-              <TabelaLink
-                to={`/agenda-e-palestrantes/${atividade.slug}`}
-              >
+              <TabelaLink to={`/agenda-e-palestrantes/${atividade.slug}`}>
                 {atividade.hora}
               </TabelaLink>
             )}
@@ -304,9 +302,7 @@ export const AgendaTabelaDesktop = () => {
             {atividade.palestrante ? (
               <>
                 {atividade.descricao ? (
-                  <TabelaLink
-                    to={`/agenda-e-palestrantes/${atividade.slug}`}
-                  >
+                  <TabelaLink to={`/agenda-e-palestrantes/${atividade.slug}`}>
                     {atividade.palestrante}
                   </TabelaLink>
                 ) : (
@@ -506,29 +502,32 @@ export const AgendaDesktop = ({
                         Siga o palestrante:
                         <SocialIcons>
                           {atividade.facebook == null ? null : (
-                            <a href={atividade.facebook} target="_blank"  rel="noopener">
+                            <a href={atividade.facebook} target="_blank" rel="noopener">
                               <FontAwesomeIcon icon={faFacebookF} />
                             </a>
                           )}
                           {atividade.instagram == null ? null : (
-                            <a href={atividade.instagram} target="_blank"  rel="noopener">
+                            <a href={atividade.instagram} target="_blank" rel="noopener">
                               <FontAwesomeIcon icon={faInstagram} />
                             </a>
                           )}
                           {atividade.linkedin == null ? null : (
-                            <a href={atividade.linkedin} target="_blank"  rel="noopener">
+                            <a href={atividade.linkedin} target="_blank" rel="noopener">
                               <FontAwesomeIcon icon={faLinkedinIn} />
                             </a>
                           )}
                           {atividade.youtube == null ? null : (
-                            <a href={atividade.youtube} target="_blank"  rel="noopener">
+                            <a href={atividade.youtube} target="_blank" rel="noopener">
                               <FontAwesomeIcon icon={faYoutube} />
                             </a>
                           )}
                         </SocialIcons>
                         {atividade.site == null ? null : (
                           <div style={{ display: 'block' }}>
-                            Site: <a href={atividade.site} target="_blank"  rel="noopener">{atividade.site}</a>
+                            Site:{' '}
+                            <a href={atividade.site} target="_blank" rel="noopener">
+                              {atividade.site}
+                            </a>
                           </div>
                         )}
                       </SocialPalestrante>

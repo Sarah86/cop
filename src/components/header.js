@@ -1,5 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import Scrollspy from 'react-scrollspy'
+
+import MediaQuery from 'react-responsive'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Nav from 'react-bootstrap/Nav'
@@ -84,6 +87,9 @@ const LinksContainer = styled.div`
   a:nth-child(odd) {
     background-color: var(--blackpearl);
   }
+  ul{
+    margin: 0;
+  }
   @media ${device.desktop} {
     display: block;
     text-align: right;
@@ -123,23 +129,25 @@ const StyledLink = styled(Link).attrs({ activeClassName: 'active' })`
     }
   }
 `
-
-const SocialLinksContainer = props => (
-  <div {...props}>
-    <LinkedFacebookIcon />
-    <LinkedInstagramIcon />
-  </div>
-)
-
-const StyledDivisor = styled.span`
-  color: var(--tapa);
-  padding: 0em 0.3em;
+const LinksWrapper = styled.div`
+  width: 100%;
   @media ${device.desktop} {
-    padding: 0em 0.5em;
+    margin-right: 1em;
   }
 `
-
-const Divisor = () => <StyledDivisor>·</StyledDivisor>
+const NavbarButtonContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1em;
+  padding-left: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  @media ${device.desktop} {
+    display: none;
+  }
+`
 
 const StyledBarraContato = styled.div`
   font-size: 0.9em;
@@ -158,25 +166,28 @@ const StyledBarraContato = styled.div`
   }
 `
 
-const BarraContato = ({ email, telefone }) => (
-  <StyledBarraContato>
-    <a href={'mailto:' + email}>{email}</a> <Divisor /> <a href={'tel:' + telefone}>{telefone}</a>
-  </StyledBarraContato>
-)
-
-const NavbarButtonContainer = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-right: 1em;
-  padding-left: 1em;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+const StyledDivisor = styled.span`
+  color: var(--tapa);
+  padding: 0em 0.3em;
   @media ${device.desktop} {
-    display: none;
+    padding: 0em 0.5em;
   }
 `
+
+const SocialLinksContainer = props => (
+  <div {...props}>
+    <LinkedFacebookIcon />
+    <LinkedInstagramIcon />
+  </div>
+)
+
+const Divisor = () => <StyledDivisor>·</StyledDivisor>
+
+const BarraContato = ({ email, telefone }) => (
+  <StyledBarraContato>
+    <a href={'mailto:' + email}>{email}</a> <a href={'tel:' + telefone}>{telefone}</a>
+  </StyledBarraContato>
+)
 
 const BarraContatosDesktop = () => (
   <div className="d-none d-lg-block" style={{ textAlign: 'right' }}>
@@ -196,99 +207,168 @@ const BarraContatosMobile = () => (
   </div>
 )
 
-const LinksWrapper = styled.div`
-  width: 100%;
-  @media ${device.desktop} {
-    margin-right: 1em;
+const MobilePages = [
+  {
+    link: '/',
+    nome: 'Home',
+  },
+  {
+    link: '/#ocongresso',
+    nome: 'O Congresso',
+  },
+  {
+    link: '/agenda-e-palestrantes',
+    nome: 'Agenda e Palestrantes',
+  },
+  {
+    link: '/expositores',
+    nome: 'Expositores',
+  },
+]
+
+const DesktopPages = [
+  {
+    link: '/',
+    nome: 'Home',
+  },
+  {
+    link: '/ocongresso',
+    nome: 'O Congresso',
+  },
+  {
+    link: '/agenda-e-palestrantes',
+    nome: 'Agenda e Palestrantes',
+  },
+  {
+    link: '/expositores',
+    nome: 'Expositores',
+  },
+]
+
+const BotaoInscrevase = () => (
+  <a href={Dados.linkInscricao} target="_blank" rel="noopener noreferrer">
+    <img
+      src={BotaoGIf}
+      alt="Inscreva-se agora! Evento gratuito!"
+      style={{ width: '195px', padding: '0', margin: '0' }}
+    />
+  </a>
+)
+
+const MenuDesktop = () => (
+  <MediaQuery minWidth={992}>
+    {DesktopPages.map(desktop => (
+      <StyledLink
+        to={desktop.link}
+        partiallyActive={desktop.link === '/' || '' ? false : true}
+        key={desktop.link}
+      >
+        {desktop.nome}
+      </StyledLink>
+    ))}
+    <BarraContatosDesktop />
+  </MediaQuery>
+)
+
+//Atencao: alteracores feitas de ultima hora para atender requisicoes fora do previsto, como links diferentes para a pagina congresso Mobile e Desktop. Sendo O Congresso Mobile constando na home.
+
+class Header extends React.Component {
+  state = {
+    navExpanded: false,
   }
-`
 
-const Header = ({ siteTitle }) => (
-  <header>
-    <StyledNavbar bg="verdecop" variant="dark" expand="lg">
-      <StyledNavbarCollapse id="basic-navbar-nav">
-        <StyledNav>
-          <LogoWrapper maxWidth="170px" className="d-lg-none">
-            <Link to="/" alt={siteTitle} title={siteTitle}>
-              <LogoBranca />
-            </Link>
-          </LogoWrapper>
-          <LogoWrapper maxWidth="100px " className="d-none d-lg-block">
-            <Link to="/" alt={siteTitle} title={siteTitle}>
-              <LogoAmarela />
-            </Link>
-          </LogoWrapper>
-          <LinksWrapper>
-            <LinksContainer>
-              <StyledLink to="/">Home</StyledLink>
-              <StyledLink to="/ocongresso/">O Congresso</StyledLink>
-              <StyledLink to="/agenda-e-palestrantes/" partiallyActive={true}>
-                Agenda &amp; Palestrantes
-              </StyledLink>
-              <StyledLink to="/expositores/">Expositores</StyledLink>
-            </LinksContainer>
-            <BarraContatosDesktop />
-          </LinksWrapper>
-          <a href={Dados.linkInscricao} target="_blank"  rel="noopener noreferrer">
-            <img
-              src={BotaoGIf}
-              alt="Inscreva-se agora! Evento gratuito!"
-              style={{ width: '195px', padding: '0', margin: '0' }}
-            />
-          </a>
-          <BarraContatosMobile />
-          <SocialLinksContainer className="d-block d-lg-none" />
-        </StyledNav>
-        <Shadow />
-      </StyledNavbarCollapse>
-      <NavbarButtonContainer>
-        <IsotipoCop />
-        <Navbar.Toggle
-          aria-controls="basic-navbar-nav"
-          style={{
-            border: 'none',
-            position: 'absolute',
-            left: '50%',
-            transform: 'translateX(-50%)',
-          }}
+  constructor(props) {
+    super(props)
+    this.HamburgerButton = React.createRef()
+    this.MenuMobileRef = React.createRef()
+  }
+
+  setNavExpanded = expanded => {
+    this.setState({
+      navExpanded: expanded,
+    })
+  }
+
+  closeNav = () => {
+    //console.log("close nav");
+    this.setState({
+      navExpanded: !this.state,
+    })
+    this.HamburgerButton.current.toggleButton()
+  }
+
+  render() {
+
+    const MenuMobile = props => (
+      <MediaQuery maxWidth={991}>
+        <Scrollspy items={['/','ocongresso', 'hshs', 'hshs']} currentClassName="active">
+          {MobilePages.map(mobile => (
+            <StyledLink
+              onClick={this.closeNav}
+              ref={this.MenuMobileRef}
+              to={mobile.link}
+              key={mobile.link}
+              partiallyActive={mobile.link === '/' ? false : true}
+            >
+              {mobile.nome}
+            </StyledLink>
+          ))}
+          </Scrollspy>
+      </MediaQuery>
+    )
+    return (
+      <header>
+        <StyledNavbar
+          bg="verdecop"
+          variant="dark"
+          expand="lg"
+          onToggle={this.setNavExpanded}
+          expanded={this.state.navExpanded}
         >
-          <Hamburger style={{ border: 'none' }} />
-        </Navbar.Toggle>
-        <SubscribeButton />
-      </NavbarButtonContainer>
-    </StyledNavbar>
-  </header>
-)
-
-export const FooterMenuMobile = ({ siteTitle }) => (
-  <StyledNav style={{ minHeight: '700px', paddingBottom: '2em', marginTop: '-4em' }}>
-    <LogoWrapper maxWidth="170px">
-      <Link to="/" alt={siteTitle} title={siteTitle}>
-        <LogoBranca />
-      </Link>
-    </LogoWrapper>
-    <Local fontSize=".8em" className="w-100"/>
-    <LinksWrapper>
-      <LinksContainer>
-        <StyledLink to="/">Home</StyledLink>
-        <StyledLink to="/ocongresso/">O Congresso</StyledLink>
-        <StyledLink to="/agenda-e-palestrantes/" partiallyActive={true}>
-          Agenda &amp; Palestrantes
-        </StyledLink>
-        <StyledLink to="/expositores/">Expositores</StyledLink>
-      </LinksContainer>
-    </LinksWrapper>
-    <a href={Dados.linkInscricao} target="_blank" rel="noopener noreferrer" className="w-100 text-center">
-            <img
-              src={BotaoGIf}
-              alt="Inscreva-se agora! Evento gratuito!"
-              style={{ width: '195px', padding: '0', margin: '0' }}
-            />
-          </a>
-    <BarraContatosMobile />
-    <SocialLinksContainer />
-  </StyledNav>
-)
+          <StyledNavbarCollapse id="basic-navbar-nav">
+            <StyledNav>
+              <LogoWrapper maxWidth="170px" className="d-lg-none">
+                <Link to="/" alt={this.props.siteTitle} title={this.props.siteTitle}>
+                  <LogoBranca />
+                </Link>
+              </LogoWrapper>
+              <LogoWrapper maxWidth="100px " className="d-none d-lg-block">
+                <Link to="/" alt={this.props.siteTitle} title={this.props.siteTitle}>
+                  <LogoAmarela />
+                </Link>
+              </LogoWrapper>
+              <LinksWrapper>
+                <LinksContainer>
+                  <MenuDesktop />
+                  <MenuMobile />
+                </LinksContainer>
+              </LinksWrapper>
+              <BotaoInscrevase />
+              <BarraContatosMobile />
+              <SocialLinksContainer className="d-block d-lg-none" />
+            </StyledNav>
+            <Shadow />
+          </StyledNavbarCollapse>
+          <NavbarButtonContainer>
+            <IsotipoCop />
+            <Navbar.Toggle
+              aria-controls="basic-navbar-nav"
+              style={{
+                border: 'none',
+                position: 'absolute',
+                left: '50%',
+                transform: 'translateX(-50%)',
+              }}
+            >
+              <Hamburger style={{ border: 'none' }} ref={this.HamburgerButton} />
+            </Navbar.Toggle>
+            <SubscribeButton />
+          </NavbarButtonContainer>
+        </StyledNavbar>
+      </header>
+    )
+  }
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,

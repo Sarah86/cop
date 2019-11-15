@@ -28,15 +28,6 @@
       "site": "https://ditecsc.com.br/"
     },
     {
-      "nome": "Estratégia Concursos",
-      "ramo": "Preparatório para Concursos",
-      "logo": "expositor_diamante_estrategia2.jpg",
-      "thumbnail": "expositor_diamante_estrategia.jpg",
-      "local": "Piso Superior - Stand 06",
-      "descricao": "A Estratégia Concursos é o caminho mais curto entre você e a sua aprovação em um concurso público com aulas exclusivas e 100% focadas em cada edital.",
-      "site": "https://ditecsc.com.br/"
-    },
-    {
       "nome": "Invictus",
       "ramo": "Acessórios Táticos e Outdoor",
       "logo": "expositor_diamante_invictus2.jpg",
@@ -53,6 +44,15 @@
       "descricao": "A Taurus é uma Empresa Estratégica de Defesa, com 80 anos de história e reputação sólida. Sediada em São Leopoldo, no Rio Grande do Sul, emprega mais de 1.800 pessoas no país e exporta para mais de 100 países. ",
       "local": "Piso Superior - Stand 03",
       "site": "https://www.taurusarmas.com.br/"
+    },
+    {
+      "nome": "Armalite",
+      "ramo": "Armas",
+      "thumbnail": "expositor_diamante_armalite.jpg",
+      "logo": "expositor_ouro_armalite.jpg",
+      "local": "Piso Superior - Stand 06",
+      "descricao": "Fundada em 1954 pela Fairchild Engine e Airplane Corporation, a Armalite é mais conhecida como a criadora das armas de fogo das plataformas AR-10 ™ e AR-15. Hoje, a Armalite é de propriedade do Strategic Armory Corps e segue  exibindo o mais alto nível de compromisso com a inovação, o desenvolvimento de produtos e o atendimento ao cliente para o setor de armas de fogo.",
+      "site": "https://www.armalite.com/"
     }
   ],
   "ouro": [
@@ -61,12 +61,6 @@
       "logo": "expositor_ouro_511.jpg",
       "local": "Piso Superior - Stand 03",
       "site": "https://www.511tactical.com/"
-    },
-    {
-      "nome": "Armalite",
-      "logo": "expositor_ouro_armalite.jpg",
-      "local": "Piso Superior - Stand 04",
-      "site": "https://www.armalite.com/"
     },
     {
       "nome": "Glock",

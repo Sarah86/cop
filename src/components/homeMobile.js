@@ -10,7 +10,7 @@ import Video from './bgvideo'
 import Local from './location'
 import { navigate } from '@reach/router'
 
-import BackgroundVideo from "../videos/video-home-mobile.mp4"
+import BackgroundVideo from '../videos/video-home-mobile.mp4'
 
 const Dados = require('../data/dados.json')
 
@@ -39,32 +39,6 @@ const ConselhoNacional = () => (
 )
 
 class HomeMobile extends React.Component {
-
-  componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll, true);
-    this.handleFooterLoad();
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll)
-  }
-
-  handleScroll() {
-    if (window.location.pathname === '/' || null) {
-      setTimeout(function() {
-        console.log('redirection to ocongresso')
-        navigate(`/ocongresso/`)
-      }, 1000)
-    }
-  }
-
-  handleFooterLoad() {
-    if ((window.location.pathname === '/' || null) && (window.matchMedia("(max-width: 991px)").matches)) {
-        document.querySelector("footer").classList.add("d-none");
-        console.log("ocultando footer");
-    }
-  }
-
   render() {
     return (
       <div style={{ height: '100vh' }} onScroll={this.handleScroll}>

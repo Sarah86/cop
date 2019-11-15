@@ -27,7 +27,8 @@ const StyledLink = styled(Link)`
         opacity: 0;
     }
     &:hover:before{
-        background-color: rgba(254,191,1,0.8);
+      ${'/*background-color: rgba(254,191,1,0.8);*/'}
+        background-color: rgba(41, 38, 29, .9);
         mix-blend-mode: color;
         opacity: 1;
         z-index: 1;
@@ -93,7 +94,12 @@ const InternaURL = /^https?:\/\//
 
 const LinkedImage = props =>
   InternaURL.test(props.to) ? (
-    <ExternalStyledLink href={props.to} target="_blank"  rel="noopener noreferrer" noyellowlayer={props.noyellowlayer}>
+    <ExternalStyledLink
+      href={props.to}
+      target="_blank"
+      rel="noopener noreferrer"
+      noyellowlayer={props.noyellowlayer}
+    >
       <StyledImage
         imgName={props.imgName}
         className={props.className}

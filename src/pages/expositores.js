@@ -1,8 +1,10 @@
 import React from 'react'
 import MediaQuery from 'react-responsive'
 import styled from 'styled-components'
+import PageTransition from 'gatsby-plugin-page-transitions';
 
-import Layout from '../components/layout'
+
+import Layout from '../layouts/index'
 import SEO from '../components/seo'
 
 import { FadeParagraphTitle } from '../components/FadeElements'
@@ -16,9 +18,9 @@ import { device } from '../components/device'
 import ShadowedImage from '../components/shadowedimage'
 import LinkedImage from '../components/LinkedImage'
 
+
 const Expositores = require('../data/expositores.json')
 const Dados = require('../data/dados.json')
-
 
 const ExpositoresIntroduction = () => (
   <Container>
@@ -39,9 +41,8 @@ const ExpositoresIntroduction = () => (
           Downloads:
           <br />
           <br />
-          <ParagraphLink href={Dados.manualmarca}>
-            Manual de Uso da Marca COP
-          </ParagraphLink> ·  <ParagraphLink href={Dados.manualexpositor}>Manual do Expositor</ParagraphLink> ·
+          <ParagraphLink href={Dados.manualmarca}>Manual de Uso da Marca COP</ParagraphLink> ·{' '}
+          <ParagraphLink href={Dados.manualexpositor}>Manual do Expositor</ParagraphLink> ·
         </Paragraph>
       </Col>
       <Col className="d-flex justify-content-center">
@@ -157,7 +158,7 @@ const ExpositoresDiamante = () => {
     ))
   return (
     <>
-      <div name="diamante">
+      <div id="diamante">
         <ExpositoresCategory fontSizeSubtitulo="2.5em" color="var(--narvik)" category="diamante" />
         <div className="d-flex justify-content-end mt-n5">
           <MediaQuery maxWidth={991}>
@@ -183,6 +184,8 @@ const StyledCol = styled(Col)`
   }
 `
 export const OuroBox = styled.div`
+  padding-top: 1em;
+  margin-top: -1em;
   background-color: var(--feta);
   @media ${device.desktop} {
     background: none;
@@ -204,6 +207,57 @@ const OuroInfo = styled.div`
   }
 `
 
+const ExpositoresDiamanteLogos = () => {
+  const ExpositorDiamante = Expositores.diamante
+    .sort((a, b) => (a.local > b.local ? 1 : -1))
+    .map(diamante => (
+      <StyledCol xs={6} sm={4} lg={3} key={diamante.nome}>
+        <LinkedImage imgName={diamante.logo} to={diamante.site} />
+        <OuroInfo>
+          <Local>{diamante.local}</Local>
+          <Site href={`${diamante.site}`}>{diamante.site}</Site>
+        </OuroInfo>
+      </StyledCol>
+    ))
+
+  return (
+    <>
+      <OuroBox id="diamante-logos">
+        <SpacerInterBlocks />
+        <MediaQuery maxWidth={991}>
+          <ExpositoresCategory
+            fontSize="2.5em"
+            fontSizeSubtitulo="2.5em"
+            color="var(--firefly)"
+            category="diamante"
+          />
+          <div className="d-flex justify-content-end mt-n5">
+            <Separador color="var(--kidnapper)" border="1px" widthTotal="50%" nomargin />
+          </div>
+        </MediaQuery>
+        <MediaQuery minWidth={992}>
+          <ExpositoresCategory
+            fontSize="2.5em"
+            fontSizeSubtitulo="2.5em"
+            color="var(--narvik)"
+            category="diamante"
+          />
+        </MediaQuery>
+        <Container className="m-auto p-0">
+          <Row noGutters className="pt-2 pb-2">
+            {ExpositorDiamante}
+          </Row>
+        </Container>
+        <MediaQuery maxWidth={991}>
+          <div className="d-flex justify-content-end mt-n5">
+            <Separador color="var(--kidnapper)" border="1px" widthTotal="50%" />
+          </div>
+        </MediaQuery>
+      </OuroBox>
+    </>
+  )
+}
+
 const ExpositoresOuro = () => {
   const ExpositorOuro = Expositores.ouro
     .sort((a, b) => (a.local > b.local ? 1 : -1))
@@ -212,14 +266,14 @@ const ExpositoresOuro = () => {
         <LinkedImage imgName={ouro.logo} to={ouro.site} />
         <OuroInfo>
           <Local>{ouro.local}</Local>
-          <Site href={`${ouro.site}`}>{ouro.site}</Site>
+          {/* <Site href={`${ouro.site}`}>{ouro.site}</Site> */}
         </OuroInfo>
       </StyledCol>
     ))
 
   return (
     <>
-      <OuroBox name="ouro">
+      <OuroBox id="ouro">
         <SpacerInterBlocks />
         <MediaQuery maxWidth={991}>
           <ExpositoresCategory
@@ -263,14 +317,14 @@ const ExpositoresPrata = () => {
         <LinkedImage imgName={prata.logo} to={prata.site} />
         <OuroInfo>
           <Local>{prata.local}</Local>
-          <Site href={`${prata.site}`}>{prata.site}</Site>
+          {/* <Site href={`${prata.site}`}>{prata.site}</Site> */}
         </OuroInfo>
       </StyledCol>
     ))
 
   return (
     <>
-      <OuroBox name="prata">
+      <OuroBox id="prata">
         <SpacerInterBlocks />
         <MediaQuery maxWidth={991}>
           <ExpositoresCategory
@@ -314,14 +368,14 @@ const ExpositoresBronze = () => {
         <LinkedImage imgName={bronze.logo} to={bronze.site} />
         <OuroInfo>
           <Local>{bronze.local}</Local>
-          <Site href={`${bronze.site}`}>{bronze.site}</Site>
+          {/* <Site href={`${bronze.site}`}>{bronze.site}</Site> */}
         </OuroInfo>
       </StyledCol>
     ))
 
   return (
     <>
-      <OuroBox name="bronze">
+      <OuroBox id="bronze">
         <SpacerInterBlocks />
         <MediaQuery maxWidth={991}>
           <ExpositoresCategory
@@ -365,6 +419,7 @@ const ExpositoresPage = () => (
       <ExpositoresIntroduction />
     </MediaQuery>
     <ExpositoresDiamante />
+    <ExpositoresDiamanteLogos />
     <ExpositoresOuro />
     <ExpositoresPrata />
     <ExpositoresBronze />

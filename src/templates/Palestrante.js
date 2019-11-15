@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import MediaQuery from 'react-responsive'
 
-import Layout from '../components/layout'
+import Layout from '../layouts/index'
 import { device } from '../components/device'
 import SEO from '../components/seo'
 import Photo from '../components/photo'
@@ -14,7 +14,7 @@ const StyledPaddedText = styled(PaddedText)`
   @media ${device.desktop} {
     top: 8em;
     position: absolute;
-    z-index: 2;
+    z-index: 3;
   }
 `
 const PhotoWrapper = styled.div`

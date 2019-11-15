@@ -1,28 +1,13 @@
 import React from 'react'
-import { Carousel, Container, Col, Row } from 'react-bootstrap'
-import CarouselCaption from 'react-bootstrap/CarouselCaption'
+import { Container, Col, Row } from 'react-bootstrap'
 import styled from 'styled-components'
 import MediaQuery from 'react-responsive'
 
-import Layout from '../components/layout'
+import Layout from '../layouts/index'
 import Image from '../components/image'
-import SEO from '../components/seo'
-import { MolduraTop, MolduraBottom } from '../components/moldura'
-import {
-  CarouselCaptionTitle,
-  PaddedContentBox,
-  ParagraphLink,
-  ParagraphTitle,
-  Paragraph,
-  List,
-  ListOl,
-  PaddedText,
-  ReadMore,
-  InternalParagraphLink,
-} from '../components/typography'
+import { PaddedContentBox, Paragraph, ListOl, PaddedText, ReadMore } from '../components/typography'
 import Photo from '../components/photo'
 import LinkedPhoto from '../components/LinkedPhoto'
-import Shadow from '../components/shadow'
 import FramedVideo from '../components/framedVideo'
 import Botao from '../components/botao'
 import Background from '../components/background'
@@ -30,222 +15,20 @@ import FullWidth from '../components/fullwidth'
 import Separador from '../components/separador'
 import { FadeParagraphTitle } from '../components/FadeElements'
 import LinkedImage from '../components/LinkedImage'
+import { CongressoFirstBlock, CongressoSecondBlock } from '../components/textBlocks'
+import OCongressoMobile from '../components/oCongressoMobile'
+import PageTransition from 'gatsby-plugin-page-transitions';
+
 
 const Dados = require('../data/dados.json')
 const Cronograma = require('../data/cronograma.json')
 
-const StyledCarouselCaption = styled(CarouselCaption)`
-  && {
-    bottom: 0;
-    padding: 0;
-    text-align: left;
-    left: 7%;
-    right: 7%;
-  }
+const FullWidthInscricao = styled(FullWidth)`
+  background-color: var(--amber);
+  text-align: center;
+  padding: 1.5em;
+  margin-top: 1.5em;
 `
-
-const CongressoFirstBlock = () => (
-  <PaddedContentBox skewedOnDesktop className="text-justify">
-    <ParagraphTitle reversedSkew className="text-lg-right">
-      o congresso
-    </ParagraphTitle>
-    <Paragraph lastLineRightDesktop reversedSkew>
-      Depois do sucesso absoluto da estreia em 2018 o Congresso de Operações Policiais retorna mais
-      abrangente, inclusivo, dinâmico, informativo e tecnológico.
-    </Paragraph>
-    <Paragraph lastLineRightDesktop reversedSkew>
-      Congresso se realizará de forma gratuita nos dias 17, 18 e 19 de Março de 2019 para um público
-      diário de aproximadamente 2000 pessoas.
-    </Paragraph>
-    <Paragraph lastLineRightDesktop reversedSkew>
-      A cidade-sede escolhida é pelo segundo ano consecutivo a belíssima{' '}
-      <ParagraphLink href="http://www.pmf.sc.gov.br" target="_blank"  rel="noopener noreferrer">
-        Florianópolis
-      </ParagraphLink>
-      , que por sua vez abriga o moderno{' '}
-      <ParagraphLink
-        href="https://www.facebook.com/CentrodeEventosGovernadorLuizHenriquedaSilveira"
-        target="_blank"  rel="noopener noreferrer"
-      >
-        Centro de Eventos Governador Luiz Henrique da Silveira
-      </ParagraphLink>
-      .
-    </Paragraph>
-  </PaddedContentBox>
-)
-
-const CongressoSecondBlock = () => (
-  <PaddedContentBox className="text-justify">
-    <FadeParagraphTitle sm>o congresso</FadeParagraphTitle>
-    <PaddedText>
-      <Paragraph>Durante os três dias de evento, o COP colocará em contato direto:</Paragraph>
-      <List>
-        <li>Autoridades nacionais e internacionais;</li>
-        <li>Agentes de segurança pública;</li>
-        <li>As principais marcas do setor;</li>
-        <li>E a sociedade civil.</li>
-      </List>
-      <Paragraph>
-        A intensa programação de{' '}
-        <InternalParagraphLink to="/agenda-e-palestrantes">Palestras</InternalParagraphLink> e{' '}
-        <InternalParagraphLink to="/agenda-e-palestrantes">Exposições</InternalParagraphLink> será
-        uma oportunidade única adquirir conhecimento, ter contato com o que existe de mais moderno
-        em táticas e equipamentos de defesa e debater pontos críticos da segurança pública; sempre
-        na direção de uma sociedade mais segura.
-      </Paragraph>
-    </PaddedText>
-  </PaddedContentBox>
-)
-
-const CongressoFirstCarousel = () => {
-  const Slides = [
-    {
-      imagem: 'ocongresso_slider01-01.jpg',
-      caption: 'Ct. Eventos. Gov. Luiz H. Silveira',
-    },
-    {
-      imagem: 'ocongresso_slider01-02.jpg',
-      caption: 'Auditório',
-    },
-    {
-      imagem: 'ocongresso_slider01-03.jpg',
-      caption: 'Chegando em Florianópolis',
-    },
-    {
-      imagem: 'ocongresso_slider01-04.jpg',
-      caption: 'Ponte Hercílio Luz',
-    },
-    {
-      imagem: 'ocongresso_slider01-05.jpg',
-      caption: 'Credenciamento',
-    },
-    {
-      imagem: 'ocongresso_slider01-06.jpg',
-      caption: 'Hall',
-    },
-    {
-      imagem: 'ocongresso_slider01-07.jpg',
-      caption: 'Tradução simultânea',
-    },
-    {
-      imagem: 'ocongresso_slider01-08.jpg',
-      caption: 'Controle auditório',
-    },
-    {
-      imagem: 'ocongresso_slider01-09.jpg',
-      caption: 'Público',
-    },
-    {
-      imagem: 'ocongresso_slider01-10.jpg',
-      caption: 'Instalação no hall',
-    },
-    {
-      imagem: 'ocongresso_slider01-11.jpg',
-      caption: 'Autoridades',
-    },
-    {
-      imagem: 'ocongresso_slider01-02.jpg',
-      caption: 'Sinalização',
-    },
-  ]
-
-  const CarouselItem = Slides.map(slide => (
-    <Carousel.Item key={slide.i}>
-      <Image imgName={slide.imagem} />
-      <StyledCarouselCaption>
-        <CarouselCaptionTitle>{slide.caption}</CarouselCaptionTitle>
-      </StyledCarouselCaption>
-    </Carousel.Item>
-  ))
-  return (
-    <div style={{ position: 'relative' }}>
-      <MolduraTop />
-      <Carousel indicators={false}>{CarouselItem}</Carousel>
-      <MolduraBottom />
-      <Shadow />
-    </div>
-  )
-}
-
-const CongressoSecondCarousel = () => {
-  const Slides = [
-    {
-      imagem: 'ocongresso_slider02-01.jpg',
-      caption: 'Autoridades',
-    },
-    {
-      imagem: 'ocongresso_slider02-02.jpg',
-      caption: 'Palestrante internacional',
-    },
-    {
-      imagem: 'ocongresso_slider02-03.jpg',
-      caption: 'Cobertura midiática',
-    },
-    {
-      imagem: 'ocongresso_slider02-04.jpg',
-      caption: 'Entrevista',
-    },
-    {
-      imagem: 'ocongresso_slider02-05.jpg',
-      caption: 'Cobertura midiática',
-    },
-    {
-      imagem: 'ocongresso_slider02-06.jpg',
-      caption: 'Entrevista',
-    },
-    {
-      imagem: 'ocongresso_slider02-07.jpg',
-      caption: 'Stand 5.11 Tactical',
-    },
-    {
-      imagem: 'ocongresso_slider02-08.jpg',
-      caption: 'Workshop',
-    },
-    {
-      imagem: 'ocongresso_slider02-09.jpg',
-      caption: 'Workshop',
-    },
-    {
-      imagem: 'ocongresso_slider02-10.jpg',
-      caption: 'Vigilância e tecnologia',
-    },
-    {
-      imagem: 'ocongresso_slider02-11.jpg',
-      caption: 'Stand Condor Não Letal',
-    },
-    {
-      imagem: 'ocongresso_slider02-12.jpg',
-      caption: 'Stand Taurus',
-    },
-  ]
-
-  const CarouselItem = Slides.map(slide => (
-    <Carousel.Item key={slide.i}>
-      <Image imgName={slide.imagem} />
-      <StyledCarouselCaption>
-        <CarouselCaptionTitle>{slide.caption}</CarouselCaptionTitle>
-      </StyledCarouselCaption>
-    </Carousel.Item>
-  ))
-  return (
-    <div style={{ position: 'relative' }}>
-      <MolduraTop />
-      <Carousel indicators={false}>{CarouselItem}</Carousel>
-      <MolduraBottom />
-      <Shadow />
-    </div>
-  )
-}
-
-const Botoes = () => (
-  <div
-    className="mt-5 mb-5 d-flex flex-column justify-content-between align-items-center w-100"
-    style={{ height: '9em' }}
-  >
-    <Botao texto="Inscreva-se Agora!" width="12em" to={Dados.linkInscricao} />
-    <Botao texto="Confira  a Programação" width="12em" to="/agenda-e-palestrantes" />
-  </div>
-)
 
 const Video = () => (
   //Aguardando video. Substituir pelo banner
@@ -262,26 +45,7 @@ const Video = () => (
   </>
 )
 
-const OCongressoMobile = () => (
-  <MediaQuery maxWidth={991}>
-    <SEO title="O Congresso" />
-    <Image imgName="ocongresso_composite.png" />
-    <CongressoFirstBlock />
-    <CongressoFirstCarousel />
-    <CongressoSecondBlock />
-    <CongressoSecondCarousel />
-    <Botoes />
-  </MediaQuery>
-)
-
 // Desktop
-
-const FullWidthInscricao = styled(FullWidth)`
-  background-color: var(--amber);
-  text-align: center;
-  padding: 1.5em;
-  margin-top: 1.5em;
-`
 
 const OCongressoDesktopFirstBlock = () => (
   <>
@@ -316,11 +80,12 @@ const TemasInteresse = () => (
     <ListOl>
       <li>Operações de Choque;</li>
       <li>Operações Especiais;</li>
-      <li>Operações Aéreas;</li>
-      <li>Operações com emprego de animais;</li>
-      <li>Patrulhamento Tático Motorizado (2 e 4 Rodas);</li>
+      <li>Operações de Fronteiras;</li>
+      <li>Tiro Policiais - Sniper;</li>
+      <li>Proteção Dignatário;</li>
+      <li>Sistema Prisional;</li>
       <li>Operações de Inteligência;</li>
-      <li>Operações Integradas (GAECO;)</li>
+      <li>Operações Integradas Promotoria e Judiciário;</li>
       <li>Tecnologia aplicada a operações policiais;</li>
       <li>Licitações Internacionais;</li>
       <li>Operações Policiais em outros países.</li>
@@ -383,8 +148,9 @@ const OCongressoDesktopThirdBlock = () => (
               evento.
             </Paragraph>
             <Paragraph>
-              Então ao participr do congresso você estará automaticamente ajudando duas instituições
-              filantrópicas da cidade-sede do evento: A Igreja Bola de Neve e o SEOVE Caridade.
+              Então ao participar do congresso você estará automaticamente ajudando duas
+              instituições filantrópicas da cidade-sede do evento: A Igreja Bola de Neve e o SEOVE
+              Caridade.
             </Paragraph>
             <Paragraph>
               <strong>A meta de arrecadação é de 4 toneladas de alimentos.</strong> Faça parte deste
@@ -438,7 +204,7 @@ const OCongressoDesktopForthBlock = () => {
       <FadeParagraphTitle>palestrantes</FadeParagraphTitle>
       <Row noGutters>{PalestranteContainer}</Row>
       <ReadMore className="align-self-end" to="/agenda-e-palestrantes">
-        leia mais
+        veja a programação
       </ReadMore>
     </Container>
   )
@@ -454,11 +220,15 @@ const OCongressoDesktop = () => (
   </MediaQuery>
 )
 
+
 const OCongresso = () => (
-  <Layout>
-    <OCongressoMobile />
-    <OCongressoDesktop />
-  </Layout>
+    <Layout>
+        <OCongressoMobile />
+        <OCongressoDesktop />
+    </Layout>
 )
 
+
 export default OCongresso
+
+//Por pedido do cliente, foi removido o conteudo do Congresso Mobile e alocado na home, index.js
