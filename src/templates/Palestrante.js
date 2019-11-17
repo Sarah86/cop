@@ -50,7 +50,7 @@ const Palestrante = (props) => {
       .querySelector('.opened-accordion')
       .scrollIntoView({ block: 'start', behavior:'auto'});
     //alert("should scroll")
-    }, 0);
+    }, 100);
   })
 
     const { dataContext, atividadeContext } = props.pageContext
