@@ -1,5 +1,4 @@
 import React from 'react'
-import '@babel/polyfill'
 import styled from 'styled-components'
 
 import LogoBranca from './logobranca'
@@ -8,7 +7,6 @@ import { Paragraph } from './typography'
 import CNCGLogo from '../images/CNCG.png'
 import Video from './bgvideo'
 import Local from './location'
-import { navigate } from '@reach/router'
 
 import BackgroundVideo from '../videos/video-home-mobile.mp4'
 
@@ -37,11 +35,10 @@ const ConselhoNacional = () => (
     </Paragraph>
   </>
 )
-
-class HomeMobile extends React.Component {
-  render() {
+const HomeMobile= props => {
+ 
     return (
-      <div style={{ height: '100vh' }} id={this.props.id}>
+      <div style={{ height: '100vh' }} id={props.id}>
         <Video url={BackgroundVideo} />
         <HomeContainer>
           <ConselhoNacional />
@@ -53,7 +50,7 @@ class HomeMobile extends React.Component {
         </HomeContainer>
       </div>
     )
-  }
+
 }
 
 export default HomeMobile

@@ -7,6 +7,7 @@ import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 
 const LocalTexto = styled.h2`
   color: var(--narvik);
+  color: ${props => props.Color};
   font-family: var(--font3);
   font-weight: 500;
   font-size: ${props => props.fontSize};
@@ -23,6 +24,7 @@ const IconSize = styled.span`
   display: block;
   text-align: center;
   color: var(--narvik);
+  color: ${props => props.Color};
   font-size: ${props => props.iconSize};
   padding: 0.3em;
 
@@ -33,11 +35,11 @@ const IconSize = styled.span`
 
 const Local = props => (
   <div style={props.style} className={props.className}>
-    <IconSize iconSize={props.iconSize} centeredIcon={props.centeredIcon}>
+    <IconSize iconSize={props.iconSize} centeredIcon={props.centeredIcon} Color={props.Color}>
       <FontAwesomeIcon icon={faMapMarkerAlt} />
     </IconSize>
-    <LocalTexto fontSize={props.fontSize}>{Infos.dataLocal}</LocalTexto>
-    <LocalTexto className="mt-1 d-block" fontSize={props.fontSize} as="h3">
+    <LocalTexto fontSize={props.fontSize} Color={props.Color}>{Infos.dataLocal}</LocalTexto>
+    <LocalTexto className="mt-1 d-block" Color={props.Color} fontSize={props.fontSize} as="h3">
       {Infos.location}
     </LocalTexto>
   </div>

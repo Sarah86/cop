@@ -9,7 +9,7 @@ import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import NavbarCollapse from 'react-bootstrap/NavbarCollapse'
 
-import { LinkedInstagramIcon, LinkedFacebookIcon, LinkedYoutubeIcon } from './social'
+import { LinkedInstagramIcon, LinkedFacebookIcon } from './social'
 import './theme.css'
 import { device } from './device'
 import Hamburger from './hamburger'
@@ -20,7 +20,6 @@ import IsotipoCop from './isotipo'
 import SubscribeButton from './subscribeButton'
 
 import BotaoGIf from '../images/BT-INSCREVASE-GRATUITO.gif'
-import Local from './location'
 
 const Dados = require('../data/dados.json')
 
@@ -51,6 +50,7 @@ const StyledNavbarCollapse = styled(NavbarCollapse)`
     overflow-y: scroll;
   }
   @media ${device.desktop} {
+    position: relative;
     height: auto;
     padding: 0.5em;
     bottom: auto;
@@ -93,6 +93,8 @@ const LinksContainer = styled.div`
   @media ${device.desktop} {
     display: block;
     text-align: right;
+    a:nth-child(odd) {
+      background-color: initial;
   }
 `
 
@@ -347,11 +349,11 @@ class Header extends React.Component {
               <BarraContatosMobile />
               <SocialLinksContainer className="d-block d-lg-none" />
             </StyledNav>
-            <Shadow />
           </StyledNavbarCollapse>
+          <Shadow />
           <NavbarButtonContainer>
             <IsotipoCop />
-            <Navbar.Toggle
+            <Navbar.Toggle as="div"
               aria-controls="basic-navbar-nav"
               style={{
                 border: 'none',

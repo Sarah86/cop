@@ -1,24 +1,12 @@
 import React from 'react'
-import styled from 'styled-components'
 import MediaQuery from 'react-responsive'
 
 import Layout from '../components/layout'
-import { device } from '../components/device'
 import SEO from '../components/seo'
 import { ParagraphTitle, PaddedText } from '../components/typography'
-import Photo from '../components/photo'
 import { AgendaMobile, AgendaTabelaDesktop } from '../components/agenda'
-import FullWidth from '../components/fullwidth'
-import PageTransition from 'gatsby-plugin-page-transitions';
 import { AgendaEPalestrantesCarousel } from '../components/carousels'
 
-
-
-const PhotoWrapper = styled.div`
-  .gatsby-image-wrapper {
-    max-height: 300px;
-  }
-`
 
 const Palestrantes = () => (
   <Layout>

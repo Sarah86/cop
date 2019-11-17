@@ -34,19 +34,17 @@ const Content = styled.div`
   }
 `
 
-class Layout extends React.Component {
+const Layout = (props) => {
 
-  render() {
     return (
       <>
-        <Header siteTitle={this.props.data.site.siteMetadata.title} />
+        <Header siteTitle={props.data.site.siteMetadata.title} />
         <Content>
-             <main>{this.props.children}</main>
+             <main>{props.children}</main>
         </Content>
         <Footer/>
       </>
     )
-  }
 }
 
 Layout.propTypes = {

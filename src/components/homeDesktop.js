@@ -7,13 +7,15 @@ import Botao from './botao'
 import Local from './location'
 import { MolduraTop, MolduraBottom } from './moldura'
 import Shadow from './shadow'
-import { Paragraph, ParagraphLink, Quote, ReadMore } from './typography'
+import { Paragraph, ParagraphLink, ReadMore } from './typography'
 import { FadeParagraphTitle } from './FadeElements'
 import Image from './image'
 import LinkedPhoto from './LinkedPhoto'
 import LinkedShadowedImage from './LinkedShadowedImage'
 import Background from './background'
 import FullWidth from './fullwidth'
+import Photo from './photo'
+import { isNullOrUndefined } from 'util'
 
 const Cronograma = require('../data/cronograma.json')
 const dadosExpositores = require('../data/expositores.json')
@@ -100,25 +102,22 @@ export const BannerTemporario = () => (
 )
 
 const CongressoPalestrantes = () => {
-  const PalestranteDestaque = Cronograma.map(dia => (
+  const PalestranteDestaque = Cronograma.map((dia,i) => (
     <>
-      {dia.atividades
-        .sort((a, b) => a.destaqueOrdem - b.destaqueOrdem) //nao esta funcionando. precisa rever a funcao
-        .map(atividade => (
-          <>
-            {atividade.destaque === true ? (
-              <Col xs={6} className="pl-1 pr-1" key={atividade.destaqueOrdem}>
-                <LinkedPhoto
-                  imgName={atividade.imagem}
-                  title={atividade.palestrante}
-                  to={`/agenda-e-palestrantes/${atividade.slug}`}
-                />
-              </Col>
-            ) : null}
-          </>
-        ))}
-    </>
-  ))
+    {dia.atividades
+      .filter(atividade => atividade.destaque === true)
+      .map((atividade,i) => (
+            <Col xs={6} className="pl-1 pr-1" key={atividade.destaqueOrdem} style={{order:`${atividade.destaqueOrdem}`}}>
+              <LinkedPhoto
+                imgName={atividade.imagem}
+                title={atividade.palestrante}
+                to={`/agenda-e-palestrantes/${atividade.slug}`}
+              />
+            </Col>
+          )
+      )}
+  </>
+));
 
   return (
     <Container className="mt-5">
@@ -176,8 +175,8 @@ function getRandom(arr, n) {
 const Expositores = () => {
   const Expositor = getRandom(dadosExpositores.diamante, 6)
 
-  const ThumbnailsExpositores = Expositor.map(diamante => (
-    <Col lg={6}>
+  const ThumbnailsExpositores = Expositor.map((diamante,i) => (
+    <Col lg={6} key={i}>
       <LinkedShadowedImage imgName={diamante.thumbnail} to="/expositores" />
     </Col>
   ))
@@ -238,27 +237,19 @@ const Espaco = () => (
         <FadeParagraphTitle size="2.5em" width="5em">
           reunião técnica de fronteiras
         </FadeParagraphTitle>
-        <LinkedPhoto imgName="destaque_triplo_home_2.jpg" />
+        <Photo imgName="destaque_triplo_home_2.jpg" />
         <Paragraph>
-        Reunião Técnica da Coordenadoria Geral de fronteiras da Secretaria de Op. Integradas do Ministério da Justiça e Segurança Pública.
-Prioridade de combate ao crime de fronteiras, o encontro do Ministério da Justiça e Segurança Pública tem entre seus projetos estratégicos a integração entre as principais lideranças que atuam em área de fronteiras, O objetivo é blindar o país da entrada de armas, drogas e produtos contrabandeados pelos cerca de 16 mil quilômetros de fronteira.  Entre as linhas de atuação estão as operações integradas, aquisição de equipamentos, capacitações e bases operacionais com integração de sistemas.
-
+        O COP 2020 receberá também a Reunião Técnica da Coordenadoria Geral de fronteiras da Secretaria de Op. Integradas do Ministério da Justiça e Segurança Pública.
         </Paragraph>
-        <ReadMore className="align-self-end" to="/agenda-e-palestrantes">
-          leia mais
-        </ReadMore>
       </Col>
       <Col>
         <FadeParagraphTitle size="2.5em" width="3.65em">
           clínicas &  workshops
         </FadeParagraphTitle>
-        <LinkedPhoto imgName="destaque_triplo_home_3.jpg" />
+        <Photo imgName="destaque_triplo_home_3.jpg" />
         <Paragraph>
         Durante os dias de COP serão oferecidas  clínicas e workshops que abordarão assuntos de grande relevância tanto para o agente de segurança pública quanto para o cidadão civil.
         </Paragraph>
-        <ReadMore className="align-self-end" to="/ocongresso">
-          leia mais
-        </ReadMore>
       </Col>
     </Row>
   </Container>

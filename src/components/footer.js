@@ -172,9 +172,7 @@ const FooterTitle = () => (
     <Local
       fontSize=".7em"
       iconSize="1.2em"
-      style={{ color: 'var(--lemongrass' }}
-      centeredIcon
-      className="text-center"
+      Color="var(--lemongrass)"
     />
     <Separador color="var(--plantation)" border="1px" widthTotal="95%" nomargin sm />
   </>
@@ -203,7 +201,7 @@ const Sitemap = () => {
         <span>{data.diaFooter}</span>
       </StyledDiaFooter>
       <SitemapUl>
-        {data.atividades.map(atividade => (
+        {data.atividades.map((atividade,i) => (
           <>
             {atividade.descricao ? (
               <FooterMenuItem
@@ -212,7 +210,7 @@ const Sitemap = () => {
                 key={atividade.slug}
               />
             ) : atividade.palestrante ? (
-              <li>
+              <li key={i}>
                 <DisabledLink key={atividade.slug}>{atividade.palestrante}</DisabledLink>
               </li>
             ) : null}
@@ -312,7 +310,6 @@ const Patrocinadores = props => {
         imgName={expositor.logo}
         to={`${expositor.site}`}
         target="_blank"
-        rel="noopener noreferrer"
         rel="noopener noreferrer"
       />
     </StyledCol>

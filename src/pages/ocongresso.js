@@ -17,7 +17,6 @@ import { FadeParagraphTitle } from '../components/FadeElements'
 import LinkedImage from '../components/LinkedImage'
 import { CongressoFirstBlock, CongressoSecondBlock } from '../components/textBlocks'
 import OCongressoMobile from '../components/oCongressoMobile'
-import PageTransition from 'gatsby-plugin-page-transitions';
 
 
 const Dados = require('../data/dados.json')
@@ -115,18 +114,15 @@ const OCongressoDesktopThirdBlock = () => (
     <Row>
       <Col className="text-justify d-flex flex-column">
         <Photo imgName="ocongresso_foto_abopesp.jpg" />
-        <FadeParagraphTitle sm>espaço ABOpEsp</FadeParagraphTitle>
+        <FadeParagraphTitle sm>4º enpoe - 2020</FadeParagraphTitle>
         <div className="d-flex flex-column justify-content-between flex-grow-1">
           <PaddedText>
             <Paragraph>
-              As unidades de operações especiais terão{' '}
-              <strong>um espaço exclusivo para proporcionar trocas e aproximar doutrinas</strong>{' '}
-              entre agentes das diferentes esferas e membros da segurança pública.
+            O <strong>Encontro Nacional de Profissionais de Operações especiais (4º ENPOE - 2020)</strong> já tem data e local marcado, será dentro do COP Internacional nos dias 17, 18 e 19 de março de 2020, em Florianópolis-SC.  
+            A direção da <strong>ABOPESP (Associação Brasileira de Operações Especiais)</strong>, realizadora do encontro, fez o anúncio durante o último evento que ocorreu  em Fortaleza-CE. 
             </Paragraph>
             <Paragraph>
-              A Associação Brasileira de Operações Especiais (ABOPESP) vai disponibilizar um estande
-              no anfiteatro do Centro de Eventos Luiz Henrique da Silveira, com uma programação de
-              clínicas e workshops para quem leva a atividade policial como um ofício de excelência.
+            O Encontro visa deliberar <strong>temas importantes</strong> relacionados às atividades de Operações Especiais, como doutrina mundial e emprego de novas tecnologias, além do Feedback para empresas fornecedoras de equipamentos e material bélico. Poderão participar Militares e Policiais possuidores do curso de Operações Especiais ou que operem em Unidades de OE de suas Instituições e convidados.
             </Paragraph>
             <LinkedImage
               imgName="ocongresso_logos_sociais_abopesp.png"
@@ -153,8 +149,7 @@ const OCongressoDesktopThirdBlock = () => (
               Caridade.
             </Paragraph>
             <Paragraph>
-              <strong>A meta de arrecadação é de 4 toneladas de alimentos.</strong> Faça parte deste
-              movimento!
+              <strong>É obrigatória a doação de 1kg de alimento não-perecível.</strong>
             </Paragraph>
             <div className="d-flex justify-content-between" style={{ width: '35%' }}>
               <LinkedImage
@@ -179,12 +174,12 @@ const OCongressoDesktopThirdBlock = () => (
 )
 
 const OCongressoDesktopForthBlock = () => {
-  const PalestranteContainer = Cronograma.slice(0, 8).map(dia => (
+  const PalestranteContainer = Cronograma.slice(0, 8).map((dia,i) => (
     <>
-      {dia.atividades.map(atividade => (
+      {dia.atividades.map((atividade,i) => (
         <>
           {atividade.palestrante ? (
-            <Col lg={3} className="p-1">
+            <Col lg={3} className="p-1" key={i}>
               <LinkedPhoto
                 key={atividade.slug}
                 imgName={atividade.imagem}

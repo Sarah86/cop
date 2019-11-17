@@ -25,6 +25,9 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
     {
+      resolve: `gatsby-plugin-analytics`,
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Congresso Internacional de Operações Policiais`,

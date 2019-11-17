@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import styled from 'styled-components'
 import MediaQuery from 'react-responsive'
 
@@ -38,26 +38,23 @@ const Body = ({ children }) => (
   </Layout>
 )
 
-export default class Palestrante extends React.Component {
-  componentDidMount() {
-    this.handleAutoScroll()
-  }
-
-  componentDidUpdate() {
-    this.handleAutoScroll()
-  }
-
-  handleAutoScroll = () => {
+const Palestrante = (props) => {
+  
+  useEffect(() => {
     setTimeout(() => {
+      // window.scrollTo({
+      //   top: 320,
+      //   behavior: 'smooth',
+      // });
       document
-        .querySelector('.opened-accordion')
-        .scrollIntoView({ block: 'start', behavior: 'smooth' })
-      //console.log("Scrolled to opened accordion")
-    }, 50)
-  }
+      .querySelector('.opened-accordion')
+      .scrollIntoView({ block: 'start', behavior:'auto'});
+    //alert("should scroll")
+    }, 0);
+  })
 
-  render() {
-    const { dataContext, atividadeContext } = this.props.pageContext
+    const { dataContext, atividadeContext } = props.pageContext
+
     return (
       <Body>
         <MediaQuery maxWidth={991}>
@@ -75,4 +72,5 @@ export default class Palestrante extends React.Component {
       </Body>
     )
   }
-}
+
+  export default Palestrante

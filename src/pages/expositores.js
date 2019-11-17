@@ -1,7 +1,6 @@
 import React from 'react'
 import MediaQuery from 'react-responsive'
 import styled from 'styled-components'
-import PageTransition from 'gatsby-plugin-page-transitions';
 
 
 import Layout from '../components/layout'
@@ -10,7 +9,6 @@ import SEO from '../components/seo'
 import { FadeParagraphTitle } from '../components/FadeElements'
 import { Paragraph, ParagraphLink } from '../components/typography'
 import Separador from '../components/separador'
-import Image from '../components/image'
 import { Container, Col, Row } from 'react-bootstrap'
 import Botao from '../components/botao'
 import Background from '../components/background'

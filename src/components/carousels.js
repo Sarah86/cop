@@ -71,8 +71,8 @@ export const CongressoFirstCarousel = () => {
     },
   ]
 
-  const CarouselItem = Slides.map(slide => (
-    <Carousel.Item key={slide.i}>
+  const CarouselItem = Slides.map((slide,i) => (
+    <Carousel.Item key={i}>
       <Image imgName={slide.imagem} />
       <StyledCarouselCaption>
         <CarouselCaptionTitle>{slide.caption}</CarouselCaptionTitle>
@@ -137,8 +137,8 @@ export const CongressoSecondCarousel = () => {
     },
   ]
 
-  const CarouselItem = Slides.map(slide => (
-    <Carousel.Item key={slide.i}>
+  const CarouselItem = Slides.map((slide,i) => (
+    <Carousel.Item key={i}>
       <Image imgName={slide.imagem} />
       <StyledCarouselCaption>
         <CarouselCaptionTitle>{slide.caption}</CarouselCaptionTitle>
@@ -174,8 +174,8 @@ export const AgendaEPalestrantesCarousel = () => {
     }
   ]
 
-  const CarouselItem = Slides.map(slide => (
-    <Carousel.Item key={slide.i}>
+  const CarouselItem = Slides.map((slide,i) => (
+    <Carousel.Item key={i}>
       <Image imgName={slide.imagem} />
     </Carousel.Item>
   ))
