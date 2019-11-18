@@ -127,12 +127,27 @@ const OCongressoDesktopThirdBlock = () => (
             <LinkedImage
               imgName="ocongresso_logos_sociais_abopesp.png"
               to="https://abopesp.com.br/"
-              className="w-50"
+              className="w-75"
               noyellowlayer
             />
           </PaddedText>
           <Separador sm widthTotal="100px" />
         </div>
+      </Col>
+       <Col>
+       <Photo imgName="destaque_triplo_home_3.jpg" />
+        <FadeParagraphTitle size="2.5em" width="3.65em">
+          clínicas &  workshops
+        </FadeParagraphTitle>
+        <Paragraph>
+        <strong>Reunião Técnica da Coordenadoria Geral de fronteiras da Secretaria de Op. Integradas do Ministério da Justiça e Segurança Pública.</strong>
+        </Paragraph>
+        <Paragraph>
+        Prioridade de <strong>combate ao crime de fronteiras</strong>, o encontro do Ministério da Justiça e Segurança Pública tem entre seus projetos estratégicos a integração entre as principais lideranças que atuam em área de fronteiras.
+        </Paragraph>
+        <Paragraph>
+        O objetivo é blindar o país da entrada de armas, drogas e produtos contrabandeados pelos cerca de 16 mil quilômetros de fronteira.  Entre as linhas de atuação estão as <strong>operações integradas, aquisição de equipamentos, capacitações e bases operacionais com integração de sistemas</strong>.
+        </Paragraph>
       </Col>
       <Col className="text-justify d-flex flex-column">
         <Photo imgName="ocongresso_foto_social.jpg" />
@@ -151,7 +166,7 @@ const OCongressoDesktopThirdBlock = () => (
             <Paragraph>
               <strong>É obrigatória a doação de 1kg de alimento não-perecível.</strong>
             </Paragraph>
-            <div className="d-flex justify-content-between" style={{ width: '35%' }}>
+            <div className="d-flex justify-content-between" style={{ width: '50%' }}>
               <LinkedImage
                 imgName="ocongresso_logos_sociais_seove.png"
                 to="http://seove.org.br/"
@@ -179,7 +194,7 @@ const OCongressoDesktopForthBlock = () => {
       {dia.atividades.map((atividade,i) => (
         <>
           {atividade.palestrante ? (
-            <Col lg={3} className="p-1" key={i}>
+            <Col lg={3} className="p-1" key={i} style={{order: `${atividade.ordemGaleriaOCongresso}`}}>
               <LinkedPhoto
                 key={atividade.slug}
                 imgName={atividade.imagem}

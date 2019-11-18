@@ -15,7 +15,8 @@ import LinkedShadowedImage from './LinkedShadowedImage'
 import Background from './background'
 import FullWidth from './fullwidth'
 import Photo from './photo'
-import { isNullOrUndefined } from 'util'
+import VideoDesktop from "../videos/VIDEO-PROM_2.mp4"
+
 
 const Cronograma = require('../data/cronograma.json')
 const dadosExpositores = require('../data/expositores.json')
@@ -84,7 +85,7 @@ const Video = () => (
     <div style={{ position: 'relative' }}>
       <MolduraTop />
       <ReactPlayer
-        url="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+        url={VideoDesktop}
         controls
         width="910px"
         height="100%"
@@ -122,7 +123,7 @@ const CongressoPalestrantes = () => {
   return (
     <Container className="mt-5">
       <Row>
-        <Col className="text-justify pr-5">
+      <Col className="text-justify">
           <FadeParagraphTitle>o congresso</FadeParagraphTitle>
           <div>
           <Paragraph>
@@ -147,7 +148,9 @@ const CongressoPalestrantes = () => {
             leia mais
           </ReadMore>
         </Col>
-        <Col className="pl-5 d-flex flex-column justify-content-between">
+      </Row>
+      <Row>
+        <Col className="d-flex flex-column justify-content-between">
           <FadeParagraphTitle>palestrantes</FadeParagraphTitle>
           <Row noGutters>{PalestranteDestaque}</Row>
           <ReadMore className="align-self-end" to="/agenda-e-palestrantes">
@@ -159,24 +162,23 @@ const CongressoPalestrantes = () => {
   )
 }
 
-function getRandom(arr, n) {
-  var result = new Array(n),
-    len = arr.length,
-    taken = new Array(len)
-  if (n > len) throw new RangeError('getRandom: more elements taken than available')
-  while (n--) {
-    var x = Math.floor(Math.random() * len)
-    result[n] = arr[x in taken ? taken[x] : x]
-    taken[x] = --len in taken ? taken[len] : len
-  }
-  return result
-}
+//Funcao para gerar randomicamente os thumbnails. Substituido por ordem especifica
+// function getRandom(arr, n) {
+//   var result = new Array(n),
+//     len = arr.length,
+//     taken = new Array(len)
+//   if (n > len) throw new RangeError('getRandom: more elements taken than available')
+//   while (n--) {
+//     var x = Math.floor(Math.random() * len)
+//     result[n] = arr[x in taken ? taken[x] : x]
+//     taken[x] = --len in taken ? taken[len] : len
+//   }
+//   return result
+// }
 
 const Expositores = () => {
-  const Expositor = getRandom(dadosExpositores.diamante, 6)
-
-  const ThumbnailsExpositores = Expositor.map((diamante,i) => (
-    <Col lg={6} key={i}>
+  const ThumbnailsExpositores = dadosExpositores.diamante.map((diamante,i) => (
+    <Col lg={6} key={i} style={{order: `${diamante.ordem}`}}>
       <LinkedShadowedImage imgName={diamante.thumbnail} to="/expositores" />
     </Col>
   ))
@@ -233,7 +235,7 @@ const Espaco = () => (
           leia mais
         </ReadMore>
       </Col>
-      <Col>
+      {/* <Col>
         <FadeParagraphTitle size="2.5em" width="5em">
           reunião técnica de fronteiras
         </FadeParagraphTitle>
@@ -241,7 +243,7 @@ const Espaco = () => (
         <Paragraph>
         O COP 2020 receberá também a Reunião Técnica da Coordenadoria Geral de fronteiras da Secretaria de Op. Integradas do Ministério da Justiça e Segurança Pública.
         </Paragraph>
-      </Col>
+      </Col> */}
       <Col>
         <FadeParagraphTitle size="2.5em" width="3.65em">
           clínicas &  workshops
@@ -258,7 +260,7 @@ const Espaco = () => (
 const HomeDesktop = () => (
   <>
     <BoasVindas />
-    <BannerTemporario />
+    <Video />
     <CongressoPalestrantes />
     <Expositores />
     <Espaco />

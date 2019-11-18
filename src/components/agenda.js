@@ -556,7 +556,7 @@ export const AgendaDesktop = ({
           <StyledNav>{NavItem}</StyledNav>
         </div>
         <Tab.Content style={{ paddingTop: '0', paddingBottom: '2em', marginTop: '-1.5em' }}>
-          <div className="opened-accordion" style={{ marginTop: '-5em', paddingTop: '4em' }}></div>
+          <div className="opened-accordion" style={{ marginTop: '-5.5em', paddingTop: '4em' }}></div>
           {TabPane}
         </Tab.Content>
       </Tab.Container>

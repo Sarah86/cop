@@ -201,7 +201,7 @@ const Sitemap = () => {
         <span>{data.diaFooter}</span>
       </StyledDiaFooter>
       <SitemapUl>
-        {data.atividades.map((atividade,i) => (
+        {data.atividades.map((atividade, i) => (
           <>
             {atividade.descricao ? (
               <FooterMenuItem
@@ -301,41 +301,90 @@ const FooterRealizacao = () => (
   </>
 )
 
-const Patrocinadores = props => {
-  const ExpositoresCategory = `${props.category}`
-  const ExpositorLogo = Expositores[ExpositoresCategory].map(expositor => (
-    <StyledCol sm={props.sm} key={expositor.nome}>
-      <PatrocinadoresImage
-        noyellowlayer
-        imgName={expositor.logo}
-        to={`${expositor.site}`}
-        target="_blank"
-        rel="noopener noreferrer"
-      />
-    </StyledCol>
+// const Patrocinadores = props => {
+//   const ExpositoresCategory = `${props.category}`
+//   const ExpositorLogo = Expositores[ExpositoresCategory].map(expositor => (
+//     <StyledCol sm={props.sm} key={expositor.nome}>
+//       <PatrocinadoresImage
+//         noyellowlayer
+//         imgName={expositor.logo}
+//         to={`${expositor.site}`}
+//         target="_blank"
+//         rel="noopener noreferrer"
+//       />
+//     </StyledCol>
+//   ))
+
+//   return (
+//     <>
+//       <OuroBox>
+//         <Container className="m-0 p-0">
+//           <Row noGutters className="pt-2 pb-2">
+//             {ExpositorLogo}
+//           </Row>
+//         </Container>
+//       </OuroBox>
+//     </>
+//   )
+// }
+
+// const PatrocinadoresGallery = props => (
+//   <div className="mt-3">
+//     <FooterTitleBold>
+//       <span>patrocinadores</span>
+//       {props.category}
+//     </FooterTitleBold>
+//     <div className="w-75">
+//       <div className="d-flex justify-content-center">
+//         <Separador
+//           color="var(--kidnapper)"
+//           border="1px"
+//           widthTotal="50%"
+//           widthBarra="40%"
+//           nomargin
+//           tall
+//         />
+//       </div>
+//       <Patrocinadores category={props.category} sm="2" />
+//     </div>
+//     <SeparadorInverted
+//       className="ml-n3"
+//       color="var(--kidnapper)"
+//       border="1px"
+//       widthTotal="50%"
+//       widthBarra="40%"
+//       nomargin
+//       tall
+//       translated
+//     />
+//   </div>
+// )
+
+const PatrocinadoresUnificado = props => {
+
+  const ExpositorCategory = Expositores.diamante.concat(Expositores.ouro, Expositores.prata, Expositores.bronze)
+
+  // .sort((a, b) => a.nome > b.nome ? 1 : -1)
+
+  const Expositor = ExpositorCategory.map(expositor => (
+    <StyledCol sm="2" key={expositor.id}>
+    <PatrocinadoresImage
+      noyellowlayer
+      imgName={expositor.logo}
+      to={`${expositor.site}`}
+      target="_blank"
+      rel="noopener noreferrer"
+    />
+  </StyledCol>
   ))
 
   return (
     <>
       <OuroBox>
+     <FooterTitleBold>
+       <span>patrocinadores</span>
+     </FooterTitleBold>
         <Container className="m-0 p-0">
-          <Row noGutters className="pt-2 pb-2">
-            {ExpositorLogo}
-          </Row>
-        </Container>
-      </OuroBox>
-    </>
-  )
-}
-
-const PatrocinadoresGallery = props => (
-  <div className="mt-3">
-    <FooterTitleBold>
-      <span>patrocinadores</span>
-      {props.category}
-    </FooterTitleBold>
-    <div className="w-75">
-      <div className="d-flex justify-content-center">
         <Separador
           color="var(--kidnapper)"
           border="1px"
@@ -344,10 +393,12 @@ const PatrocinadoresGallery = props => (
           nomargin
           tall
         />
-      </div>
-      <Patrocinadores category={props.category} sm="2" />
-    </div>
-    <SeparadorInverted
+          <Row noGutters className="pt-2 pb-2">
+        
+            {Expositor}
+            
+          </Row>
+          <SeparadorInverted
       className="ml-n3"
       color="var(--kidnapper)"
       border="1px"
@@ -357,8 +408,11 @@ const PatrocinadoresGallery = props => (
       tall
       translated
     />
-  </div>
-)
+        </Container>
+      </OuroBox>
+    </>
+  )
+}
 
 const CreditosSection = () => (
   <Creditos className="text-center">
@@ -396,11 +450,8 @@ const Footer = () => (
             </ColunaA>
             <ColunaB xs={7} className="p-4">
               <FooterRealizacao />
-              <div>
-                <PatrocinadoresGallery category="diamante" />
-                <PatrocinadoresGallery category="ouro" />
-                <PatrocinadoresGallery category="prata" />
-                <PatrocinadoresGallery category="bronze" />
+              <div className="mt-3">
+                <PatrocinadoresUnificado />
               </div>
             </ColunaB>
           </Row>
