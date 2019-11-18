@@ -384,7 +384,7 @@ const PatrocinadoresUnificado = props => {
      <FooterTitleBold>
        <span>patrocinadores</span>
      </FooterTitleBold>
-        <Container className="m-0 p-0">
+        <Container className="m-0 p-0 w-75">
         <Separador
           color="var(--kidnapper)"
           border="1px"

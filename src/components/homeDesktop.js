@@ -148,9 +148,14 @@ const CongressoPalestrantes = () => {
             leia mais
           </ReadMore>
         </Col>
+        <Col>
+        <div>
+         <Image imgName="logo_cop_isotipo.png"/>
+        </div>
+        </Col>
       </Row>
       <Row>
-        <Col className="d-flex flex-column justify-content-between">
+        <Col className="d-flex flex-column justify-content-between mt-5">
           <FadeParagraphTitle>palestrantes</FadeParagraphTitle>
           <Row noGutters>{PalestranteDestaque}</Row>
           <ReadMore className="align-self-end" to="/agenda-e-palestrantes">

@@ -9,8 +9,7 @@ import HomeDesktop from '../components/homeDesktop'
 import OCongressoMobile from '../components/oCongressoMobile'
 
 const HomeMobileWrapper = styled.div`
-  scroll-snap-type: y mandatory;
-  overflow-Y: scroll;
+
 `
 
 const IndexPage = () => {

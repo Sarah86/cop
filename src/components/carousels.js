@@ -82,7 +82,7 @@ export const CongressoFirstCarousel = () => {
   return (
     <div style={{ position: 'relative' }}>
       <MolduraTop />
-      <Carousel indicators={false}>{CarouselItem}</Carousel>
+      <Carousel indicators={false} interval={3000} fade={true}>{CarouselItem}</Carousel>
       <MolduraBottom />
       <Shadow />
     </div>
@@ -148,7 +148,7 @@ export const CongressoSecondCarousel = () => {
   return (
     <div style={{ position: 'relative' }}>
       <MolduraTop />
-      <Carousel indicators={false}>{CarouselItem}</Carousel>
+      <Carousel indicators={false} interval={3000} fade={true}>{CarouselItem}</Carousel>
       <MolduraBottom />
       <Shadow />
     </div>
@@ -182,7 +182,7 @@ export const AgendaEPalestrantesCarousel = () => {
   return (
     <div style={{ position: 'relative' }}>
       <MolduraTop />
-      <Carousel indicators={false}>{CarouselItem}</Carousel>
+      <Carousel indicators={false} interval={2000} fade={true}>{CarouselItem}</Carousel>
       <MolduraBottom />
       <Shadow />
     </div>
