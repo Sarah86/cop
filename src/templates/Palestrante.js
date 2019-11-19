@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import MediaQuery from 'react-responsive'
 
@@ -38,8 +38,7 @@ const Body = ({ children }) => (
   </Layout>
 )
 
-const Palestrante = (props) => {
-  
+const Palestrante = props => {
   useEffect(() => {
     setTimeout(() => {
       // window.scrollTo({
@@ -47,30 +46,30 @@ const Palestrante = (props) => {
       //   behavior: 'smooth',
       // });
       document
-      .querySelector('.opened-accordion')
-      .scrollIntoView({ block: 'start', behavior:'auto'});
-    //alert("should scroll")
-    }, 100);
+        .querySelector('.opened-accordion')
+        .scrollIntoView({ block: 'start', behavior: 'auto' })
+      //alert("should scroll")
+    }, 100)
   })
 
-    const { dataContext, atividadeContext } = props.pageContext
+  const { dataContext, atividadeContext } = props.pageContext
 
-    return (
-      <Body>
-        <MediaQuery maxWidth={991}>
-          <AgendaMobile
-            defaultActiveKeyAccordion={atividadeContext.slug}
-            defaultActiveKeyTab={dataContext.dia}
-          />
-        </MediaQuery>
-        <MediaQuery minWidth={992}>
-          <AgendaDesktop
-            defaultActiveKeyTabContainer={dataContext.dia}
-            defaultActiveKeyTabContainerPalestrante={atividadeContext.slug}
-          />
-        </MediaQuery>
-      </Body>
-    )
-  }
+  return (
+    <Body>
+      <MediaQuery maxWidth={991}>
+        <AgendaMobile
+          defaultActiveKeyAccordion={atividadeContext.slug}
+          defaultActiveKeyTab={dataContext.dia}
+        />
+      </MediaQuery>
+      <MediaQuery minWidth={992}>
+        <AgendaDesktop
+          defaultActiveKeyTabContainer={dataContext.dia}
+          defaultActiveKeyTabContainerPalestrante={atividadeContext.slug}
+        />
+      </MediaQuery>
+    </Body>
+  )
+}
 
-  export default Palestrante
+export default Palestrante

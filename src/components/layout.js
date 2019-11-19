@@ -10,7 +10,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, StaticQuery, graphql } from 'gatsby'
 
-
 import Header from './header'
 import { device } from './device'
 import styled from 'styled-components'
@@ -27,24 +26,23 @@ const Content = styled.div`
   padding-bottom: 3em;
   padding-top: 1em;
   color: var(--narvik);
-  
+
   @media ${device.desktop} {
     padding-top: 5em;
     padding-bottom: 7em;
   }
 `
 
-const Layout = (props) => {
-
-    return (
-      <>
-        <Header siteTitle={props.data.site.siteMetadata.title} />
-        <Content>
-             <main>{props.children}</main>
-        </Content>
-        <Footer/>
-      </>
-    )
+const Layout = props => {
+  return (
+    <>
+      <Header siteTitle={props.data.site.siteMetadata.title} />
+      <Content>
+        <main>{props.children}</main>
+      </Content>
+      <Footer />
+    </>
+  )
 }
 
 Layout.propTypes = {

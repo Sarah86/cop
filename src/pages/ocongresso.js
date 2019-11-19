@@ -18,7 +18,6 @@ import LinkedImage from '../components/LinkedImage'
 import { CongressoFirstBlock, CongressoSecondBlock } from '../components/textBlocks'
 import OCongressoMobile from '../components/oCongressoMobile'
 
-
 const Dados = require('../data/dados.json')
 const Cronograma = require('../data/cronograma.json')
 
@@ -28,22 +27,6 @@ const FullWidthInscricao = styled(FullWidth)`
   padding: 1.5em;
   margin-top: 1.5em;
 `
-
-const Video = () => (
-  //Aguardando video. Substituir pelo banner
-  <>
-    <PaddedContentBox>
-      <h1>o congresso</h1>
-    </PaddedContentBox>
-    <FramedVideo
-      url="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
-      controls
-      width="100%"
-      height="100%"
-    />
-  </>
-)
-
 // Desktop
 
 const OCongressoDesktopFirstBlock = () => (
@@ -118,11 +101,21 @@ const OCongressoDesktopThirdBlock = () => (
         <div className="d-flex flex-column justify-content-between flex-grow-1">
           <PaddedText>
             <Paragraph>
-            O <strong>Encontro Nacional de Profissionais de Operações especiais (4º ENPOE - 2020)</strong> já tem data e local marcado, será dentro do COP Internacional nos dias 17, 18 e 19 de março de 2020, em Florianópolis-SC.  
-            A direção da <strong>ABOPESP (Associação Brasileira de Operações Especiais)</strong>, realizadora do encontro, fez o anúncio durante o último evento que ocorreu  em Fortaleza-CE. 
+              O{' '}
+              <strong>
+                Encontro Nacional de Profissionais de Operações especiais (4º ENPOE - 2020)
+              </strong>{' '}
+              já tem data e local marcado, será dentro do COP Internacional nos dias 17, 18 e 19 de
+              março de 2020, em Florianópolis-SC. A direção da{' '}
+              <strong>ABOPESP (Associação Brasileira de Operações Especiais)</strong>, realizadora
+              do encontro, fez o anúncio durante o último evento que ocorreu em Fortaleza-CE.
             </Paragraph>
             <Paragraph>
-            O Encontro visa deliberar <strong>temas importantes</strong> relacionados às atividades de Operações Especiais, como doutrina mundial e emprego de novas tecnologias, além do Feedback para empresas fornecedoras de equipamentos e material bélico. Poderão participar Militares e Policiais possuidores do curso de Operações Especiais ou que operem em Unidades de OE de suas Instituições e convidados.
+              O Encontro visa deliberar <strong>temas importantes</strong> relacionados às
+              atividades de Operações Especiais, como doutrina mundial e emprego de novas
+              tecnologias, além do Feedback para empresas fornecedoras de equipamentos e material
+              bélico. Poderão participar Militares e Policiais possuidores do curso de Operações
+              Especiais ou que operem em Unidades de OE de suas Instituições e convidados.
             </Paragraph>
             <LinkedImage
               imgName="ocongresso_logos_sociais_abopesp.png"
@@ -134,19 +127,30 @@ const OCongressoDesktopThirdBlock = () => (
           <Separador sm widthTotal="100px" />
         </div>
       </Col>
-       <Col>
-       <Photo imgName="destaque_triplo_home_3.jpg" />
+      <Col>
+        <Photo imgName="destaque_triplo_home_3.jpg" />
         <FadeParagraphTitle size="2.5em" width="3.65em">
-          clínicas &  workshops
+          clínicas & workshops
         </FadeParagraphTitle>
         <Paragraph>
-        <strong>Reunião Técnica da Coordenadoria Geral de fronteiras da Secretaria de Op. Integradas do Ministério da Justiça e Segurança Pública.</strong>
+          <strong>
+            Reunião Técnica da Coordenadoria Geral de fronteiras da Secretaria de Op. Integradas do
+            Ministério da Justiça e Segurança Pública.
+          </strong>
         </Paragraph>
         <Paragraph>
-        Prioridade de <strong>combate ao crime de fronteiras</strong>, o encontro do Ministério da Justiça e Segurança Pública tem entre seus projetos estratégicos a integração entre as principais lideranças que atuam em área de fronteiras.
+          Prioridade de <strong>combate ao crime de fronteiras</strong>, o encontro do Ministério da
+          Justiça e Segurança Pública tem entre seus projetos estratégicos a integração entre as
+          principais lideranças que atuam em área de fronteiras.
         </Paragraph>
         <Paragraph>
-        O objetivo é blindar o país da entrada de armas, drogas e produtos contrabandeados pelos cerca de 16 mil quilômetros de fronteira.  Entre as linhas de atuação estão as <strong>operações integradas, aquisição de equipamentos, capacitações e bases operacionais com integração de sistemas</strong>.
+          O objetivo é blindar o país da entrada de armas, drogas e produtos contrabandeados pelos
+          cerca de 16 mil quilômetros de fronteira. Entre as linhas de atuação estão as{' '}
+          <strong>
+            operações integradas, aquisição de equipamentos, capacitações e bases operacionais com
+            integração de sistemas
+          </strong>
+          .
         </Paragraph>
       </Col>
       <Col className="text-justify d-flex flex-column">
@@ -189,12 +193,17 @@ const OCongressoDesktopThirdBlock = () => (
 )
 
 const OCongressoDesktopForthBlock = () => {
-  const PalestranteContainer = Cronograma.slice(0, 8).map((dia,i) => (
+  const PalestranteContainer = Cronograma.slice(0, 8).map((dia, i) => (
     <>
-      {dia.atividades.map((atividade,i) => (
+      {dia.atividades.map((atividade, i) => (
         <>
           {atividade.palestrante ? (
-            <Col lg={3} className="p-1" key={i} style={{order: `${atividade.ordemGaleriaOCongresso}`}}>
+            <Col
+              lg={3}
+              className="p-1"
+              key={i}
+              style={{ order: `${atividade.ordemGaleriaOCongresso}` }}
+            >
               <LinkedPhoto
                 key={atividade.slug}
                 imgName={atividade.imagem}
@@ -230,14 +239,12 @@ const OCongressoDesktop = () => (
   </MediaQuery>
 )
 
-
 const OCongresso = () => (
-    <Layout>
-        <OCongressoMobile />
-        <OCongressoDesktop />
-    </Layout>
+  <Layout>
+    <OCongressoMobile />
+    <OCongressoDesktop />
+  </Layout>
 )
-
 
 export default OCongresso
 

@@ -15,11 +15,11 @@ import LinkedShadowedImage from './LinkedShadowedImage'
 import Background from './background'
 import FullWidth from './fullwidth'
 import Photo from './photo'
-import VideoDesktop from "../videos/VIDEO-PROM_2.mp4"
-
+import VideoDesktop from '../videos/COP-VIDEO-PROMO-FULL-HD-1920x1080-60s.mp4'
 
 const Cronograma = require('../data/cronograma.json')
 const dadosExpositores = require('../data/expositores.json')
+const Dados = require('../data/dados.json')
 
 const BemVindo = styled.h2`
   font-size: 3em;
@@ -84,12 +84,7 @@ const Video = () => (
   <VideoContainer>
     <div style={{ position: 'relative' }}>
       <MolduraTop />
-      <ReactPlayer
-        url={VideoDesktop}
-        controls
-        width="910px"
-        height="100%"
-      />
+      <ReactPlayer url={VideoDesktop} controls width="910px" height="100%" />
       <MolduraBottom />
       <Shadow />
     </div>
@@ -103,55 +98,71 @@ export const BannerTemporario = () => (
 )
 
 const CongressoPalestrantes = () => {
-  const PalestranteDestaque = Cronograma.map((dia,i) => (
+  const PalestranteDestaque = Cronograma.map((dia, i) => (
     <>
-    {dia.atividades
-      .filter(atividade => atividade.destaque === true)
-      .map((atividade,i) => (
-            <Col xs={6} className="pl-1 pr-1" key={atividade.destaqueOrdem} style={{order:`${atividade.destaqueOrdem}`}}>
-              <LinkedPhoto
-                imgName={atividade.imagem}
-                title={atividade.palestrante}
-                to={`/agenda-e-palestrantes/${atividade.slug}`}
-              />
-            </Col>
-          )
-      )}
-  </>
-));
+      {dia.atividades
+        .filter(atividade => atividade.destaque === true)
+        .map((atividade, i) => (
+          <Col
+            xs={6}
+            className="pl-1 pr-1"
+            key={atividade.destaqueOrdem}
+            style={{ order: `${atividade.destaqueOrdem}` }}
+          >
+            <LinkedPhoto
+              imgName={atividade.imagem}
+              title={atividade.palestrante}
+              to={`/agenda-e-palestrantes/${atividade.slug}`}
+            />
+          </Col>
+        ))}
+    </>
+  ))
 
   return (
     <Container className="mt-5">
       <Row>
-      <Col className="text-justify">
+        <Col className="text-justify">
           <FadeParagraphTitle>o congresso</FadeParagraphTitle>
           <div>
-          <Paragraph>
-            Autoridades nacionais e internacionais, agentes de segurança pública, as principais
-            marcas do setor, e a sociedade civil. Em contato direto por 3 dias.
-          </Paragraph>
-          <Paragraph>
-            Depois do sucesso absoluto da estreia em 2018 o Congresso de Operações Policiais retorna
-            mais abrangente, inclusivo, dinâmico, informativo e tecnológico.
-          </Paragraph>
-          <Paragraph>
-            Congresso se realizará de forma gratuita nos dias 17, 18 e 19 de Março de 2019 para um
-            público diário de aproximadamente 2000 pessoas..
-          </Paragraph>
-          <Paragraph>
-            A cidade-sede escolhida é pelo segundo ano consecutivo a belíssima{' '}
-            <ParagraphLink>Florianópolis</ParagraphLink>, que por sua vez abriga o moderno{' '}
-            <ParagraphLink>Centro de Eventos Governador Luiz Henrique da Silveira</ParagraphLink>.
-          </Paragraph>
+            <Paragraph>
+              Autoridades nacionais e internacionais, agentes de segurança pública, as principais
+              marcas do setor, e a sociedade civil. Em contato direto por 3 dias.
+            </Paragraph>
+            <Paragraph>
+              Depois do sucesso absoluto da estreia em 2018 o Congresso de Operações Policiais
+              retorna mais abrangente, inclusivo, dinâmico, informativo e tecnológico.
+            </Paragraph>
+            <Paragraph>
+              Congresso se realizará de forma gratuita nos dias 17, 18 e 19 de Março de 2019 para um
+              público diário de aproximadamente 2000 pessoas..
+            </Paragraph>
+            <Paragraph>
+              A cidade-sede escolhida é pelo segundo ano consecutivo a belíssima{' '}
+              <ParagraphLink
+                href="http://www.pmf.sc.gov.br"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Florianópolis
+              </ParagraphLink>
+              , que por sua vez abriga o moderno{' '}
+              <ParagraphLink
+                href="https://www.facebook.com/CentrodeEventosGovernadorLuizHenriquedaSilveira"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Centro de Eventos Governador Luiz Henrique da Silveira
+              </ParagraphLink>
+              .
+            </Paragraph>
           </div>
-          <ReadMore to="/ocongresso">
-            leia mais
-          </ReadMore>
+          <ReadMore to="/ocongresso">leia mais</ReadMore>
         </Col>
         <Col>
-        <div>
-         <Image imgName="logo_cop_isotipo.png"/>
-        </div>
+          <div>
+            <Image imgName="logo_cop_isotipo.png" />
+          </div>
         </Col>
       </Row>
       <Row>
@@ -182,8 +193,8 @@ const CongressoPalestrantes = () => {
 // }
 
 const Expositores = () => {
-  const ThumbnailsExpositores = dadosExpositores.diamante.map((diamante,i) => (
-    <Col lg={6} key={i} style={{order: `${diamante.ordem}`}}>
+  const ThumbnailsExpositores = dadosExpositores.diamante.map((diamante, i) => (
+    <Col lg={6} key={i} style={{ order: `${diamante.ordem}` }}>
       <LinkedShadowedImage imgName={diamante.thumbnail} to="/expositores" />
     </Col>
   ))
@@ -208,7 +219,7 @@ const Expositores = () => {
             texto="QUER EXPOR A SUA MARCA?"
             borderWidth="8px"
             width="12em"
-            to="mailto:marketing@copinternacional.com"
+            to={`mailto:${Dados.marketingEmail}`}
           ></Botao>
         </Col>
       </Row>
@@ -251,11 +262,12 @@ const Espaco = () => (
       </Col> */}
       <Col>
         <FadeParagraphTitle size="2.5em" width="3.65em">
-          clínicas &  workshops
+          clínicas & workshops
         </FadeParagraphTitle>
         <Photo imgName="destaque_triplo_home_3.jpg" />
         <Paragraph>
-        Durante os dias de COP serão oferecidas  clínicas e workshops que abordarão assuntos de grande relevância tanto para o agente de segurança pública quanto para o cidadão civil.
+          Durante os dias de COP serão oferecidas clínicas e workshops que abordarão assuntos de
+          grande relevância tanto para o agente de segurança pública quanto para o cidadão civil.
         </Paragraph>
       </Col>
     </Row>

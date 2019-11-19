@@ -35,22 +35,20 @@ const ConselhoNacional = () => (
     </Paragraph>
   </>
 )
-const HomeMobile= props => {
- 
-    return (
-      <div style={{ height: '100vh' }} id={props.id}>
-        <Video url={BackgroundVideo} />
-        <HomeContainer>
-          <ConselhoNacional />
-          <div style={{ width: '65vw' }}>
-            <LogoBranca />
-          </div>
-          <Local fontSize="0.95em" style={{ height: 'auto', textAlign: 'center' }} />
-          <Botao texto="Inscreva-se Agora!" background="transparent" to={Dados.linkInscricao} />
-        </HomeContainer>
-      </div>
-    )
-
+const HomeMobile = props => {
+  return (
+    <div style={{ height: '100vh' }} id={props.id}>
+      <Video url={BackgroundVideo} />
+      <HomeContainer>
+        <ConselhoNacional />
+        <div style={{ width: '65vw' }}>
+          <LogoBranca />
+        </div>
+        <Local fontSize="0.95em" style={{ height: 'auto', textAlign: 'center' }} />
+        <Botao texto="Inscreva-se Agora!" background="transparent" to={Dados.linkInscricao} />
+      </HomeContainer>
+    </div>
+  )
 }
 
 export default HomeMobile

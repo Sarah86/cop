@@ -2,7 +2,6 @@ import React from 'react'
 import MediaQuery from 'react-responsive'
 import styled from 'styled-components'
 
-
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
@@ -15,7 +14,6 @@ import Background from '../components/background'
 import { device } from '../components/device'
 import ShadowedImage from '../components/shadowedimage'
 import LinkedImage from '../components/LinkedImage'
-
 
 const Expositores = require('../data/expositores.json')
 const Dados = require('../data/dados.json')
@@ -40,11 +38,11 @@ const ExpositoresIntroduction = () => (
           <br />
           <br />
           <ParagraphLink href={Dados.manualmarca}>Manual de Uso da Marca COP</ParagraphLink> ·{' '}
-          <ParagraphLink href={Dados.manualexpositor}>Manual do Expositor</ParagraphLink> ·
+          <ParagraphLink href={Dados.manualexpositor}>Manual do Expositor</ParagraphLink>
         </Paragraph>
       </Col>
       <Col className="d-flex justify-content-center">
-        <Botao texto="QUER EXPOR SUA MARCA?" to="mailto:marketing@copinternacional.com" />
+        <Botao texto="QUER EXPOR SUA MARCA?" to={`mailto:${Dados.marketingEmail}`} />
       </Col>
     </Row>
   </Container>
@@ -148,7 +146,9 @@ const ExpositoresDiamante = () => {
           />
           <div>
             <Local>{diamante.local}</Local>
-            <Site href={`${diamante.site}`}>{diamante.site}</Site>
+            <Site href={`${diamante.site}`} target="_blank" rel="noopener noreferrer">
+              {diamante.site}
+            </Site>
           </div>
           <Separador color="var(--bunker)" sm border="1px" widthTotal="100%" nomargin />
         </DiamanteBox>
@@ -166,9 +166,9 @@ const ExpositoresDiamante = () => {
         <MediaQuery minWidth={992}>
           <Separador color="var(--blackpearl)" sm border="1px" widthTotal="35%" />
         </MediaQuery>
-      <Container className="p-0">
-        <Row noGutters>{ExpositorDiamante}</Row>
-      </Container>
+        <Container className="p-0">
+          <Row noGutters>{ExpositorDiamante}</Row>
+        </Container>
       </div>
     </>
   )
@@ -412,7 +412,7 @@ const ExpositoresBronze = () => {
 const ExpositoresPage = () => (
   <Layout>
     <SEO title="Expositores" />
-    <Background left="-20%" top="0" size="50%" style={{ width: '100%' }} />
+    <Background left="-20%" top="0" size="50%" />
     <MediaQuery minWidth={992}>
       <ExpositoresIntroduction />
     </MediaQuery>

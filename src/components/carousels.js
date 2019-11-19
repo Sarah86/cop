@@ -71,7 +71,7 @@ export const CongressoFirstCarousel = () => {
     },
   ]
 
-  const CarouselItem = Slides.map((slide,i) => (
+  const CarouselItem = Slides.map((slide, i) => (
     <Carousel.Item key={i}>
       <Image imgName={slide.imagem} />
       <StyledCarouselCaption>
@@ -82,7 +82,9 @@ export const CongressoFirstCarousel = () => {
   return (
     <div style={{ position: 'relative' }}>
       <MolduraTop />
-      <Carousel indicators={false} interval={3000} fade={true}>{CarouselItem}</Carousel>
+      <Carousel indicators={false} interval={3000} fade={true}>
+        {CarouselItem}
+      </Carousel>
       <MolduraBottom />
       <Shadow />
     </div>
@@ -137,7 +139,7 @@ export const CongressoSecondCarousel = () => {
     },
   ]
 
-  const CarouselItem = Slides.map((slide,i) => (
+  const CarouselItem = Slides.map((slide, i) => (
     <Carousel.Item key={i}>
       <Image imgName={slide.imagem} />
       <StyledCarouselCaption>
@@ -148,7 +150,9 @@ export const CongressoSecondCarousel = () => {
   return (
     <div style={{ position: 'relative' }}>
       <MolduraTop />
-      <Carousel indicators={false} interval={3000} fade={true}>{CarouselItem}</Carousel>
+      <Carousel indicators={false} interval={3000} fade={true}>
+        {CarouselItem}
+      </Carousel>
       <MolduraBottom />
       <Shadow />
     </div>
@@ -171,10 +175,10 @@ export const AgendaEPalestrantesCarousel = () => {
     },
     {
       imagem: 'palestrantes_topbanner_05.jpg',
-    }
+    },
   ]
 
-  const CarouselItem = Slides.map((slide,i) => (
+  const CarouselItem = Slides.map((slide, i) => (
     <Carousel.Item key={i}>
       <Image imgName={slide.imagem} />
     </Carousel.Item>
@@ -182,7 +186,9 @@ export const AgendaEPalestrantesCarousel = () => {
   return (
     <div style={{ position: 'relative' }}>
       <MolduraTop />
-      <Carousel indicators={false} interval={2000} fade={true}>{CarouselItem}</Carousel>
+      <Carousel indicators={false} interval={2000} fade={true}>
+        {CarouselItem}
+      </Carousel>
       <MolduraBottom />
       <Shadow />
     </div>

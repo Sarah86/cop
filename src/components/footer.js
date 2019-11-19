@@ -162,18 +162,14 @@ const Creditos = styled.div`
 
 const Isotipo = () => (
   <div style={{ width: '90px', marginLeft: '.5em', marginBottom: '1.5em' }}>
-    <Image imgName="COP-ISOTIPO-TEXTURADO.png" />
+    <Image imgName="logo_cop_isotipo.png" style={{ filter: 'contrast(0.1)' }} />
   </div>
 )
 
 const FooterTitle = () => (
   <>
     <TitleH1>Congresso Internacional de Operações Policiais</TitleH1>
-    <Local
-      fontSize=".7em"
-      iconSize="1.2em"
-      Color="var(--lemongrass)"
-    />
+    <Local fontSize=".7em" iconSize="1.2em" Color="var(--lemongrass)" />
     <Separador color="var(--plantation)" border="1px" widthTotal="95%" nomargin sm />
   </>
 )
@@ -361,53 +357,54 @@ const FooterRealizacao = () => (
 // )
 
 const PatrocinadoresUnificado = props => {
-
-  const ExpositorCategory = Expositores.diamante.concat(Expositores.ouro, Expositores.prata, Expositores.bronze)
+  const ExpositorCategory = Expositores.diamante.concat(
+    Expositores.ouro,
+    Expositores.prata,
+    Expositores.bronze
+  )
 
   // .sort((a, b) => a.nome > b.nome ? 1 : -1)
 
   const Expositor = ExpositorCategory.map(expositor => (
     <StyledCol sm="2" key={expositor.id}>
-    <PatrocinadoresImage
-      noyellowlayer
-      imgName={expositor.logo}
-      to={`${expositor.site}`}
-      target="_blank"
-      rel="noopener noreferrer"
-    />
-  </StyledCol>
+      <PatrocinadoresImage
+        noyellowlayer
+        imgName={expositor.logo}
+        to={`${expositor.site}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      />
+    </StyledCol>
   ))
 
   return (
     <>
       <OuroBox>
-     <FooterTitleBold>
-       <span>patrocinadores</span>
-     </FooterTitleBold>
+        <FooterTitleBold>
+          <span>patrocinadores</span>
+        </FooterTitleBold>
         <Container className="m-0 p-0 w-75">
-        <Separador
-          color="var(--kidnapper)"
-          border="1px"
-          widthTotal="50%"
-          widthBarra="40%"
-          nomargin
-          tall
-        />
+          <Separador
+            color="var(--kidnapper)"
+            border="1px"
+            widthTotal="50%"
+            widthBarra="40%"
+            nomargin
+            tall
+          />
           <Row noGutters className="pt-2 pb-2">
-        
             {Expositor}
-            
           </Row>
           <SeparadorInverted
-      className="ml-n3"
-      color="var(--kidnapper)"
-      border="1px"
-      widthTotal="50%"
-      widthBarra="40%"
-      nomargin
-      tall
-      translated
-    />
+            className="ml-n3"
+            color="var(--kidnapper)"
+            border="1px"
+            widthTotal="50%"
+            widthBarra="40%"
+            nomargin
+            tall
+            translated
+          />
         </Container>
       </OuroBox>
     </>
@@ -421,7 +418,8 @@ const CreditosSection = () => (
     </Paragraph>
     <Paragraph style={{ fontSize: '.7em' }}>
       Design: <ParagraphLink href="http://www.gara.dj">Alvaro Marques</ParagraphLink> -
-      Desenvolvimento: <ParagraphLink href="http://sarahgoncalves.netlify.com">Sarah Gonçalves</ParagraphLink>
+      Desenvolvimento:{' '}
+      <ParagraphLink href="http://sarahgoncalves.netlify.com">Sarah Gonçalves</ParagraphLink>
     </Paragraph>
     <Paragraph>
       <span style={{ fontSize: '.6em' }}>

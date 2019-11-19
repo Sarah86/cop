@@ -300,10 +300,9 @@ class Header extends React.Component {
   }
 
   render() {
-
     const MenuMobile = props => (
       <MediaQuery maxWidth={991}>
-        <Scrollspy items={['home','ocongresso', 'hshs', 'hshs']} currentClassName="active">
+        <Scrollspy items={['home', 'ocongresso', 'hshs', 'hshs']} currentClassName="active">
           {MobilePages.map(mobile => (
             <StyledLink
               onClick={this.closeNav}
@@ -315,7 +314,7 @@ class Header extends React.Component {
               {mobile.nome}
             </StyledLink>
           ))}
-          </Scrollspy>
+        </Scrollspy>
       </MediaQuery>
     )
     return (
@@ -353,7 +352,8 @@ class Header extends React.Component {
           <Shadow />
           <NavbarButtonContainer>
             <IsotipoCop />
-            <Navbar.Toggle as="div"
+            <Navbar.Toggle
+              as="div"
               aria-controls="basic-navbar-nav"
               style={{
                 border: 'none',

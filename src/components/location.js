@@ -38,7 +38,9 @@ const Local = props => (
     <IconSize iconSize={props.iconSize} centeredIcon={props.centeredIcon} Color={props.Color}>
       <FontAwesomeIcon icon={faMapMarkerAlt} />
     </IconSize>
-    <LocalTexto fontSize={props.fontSize} Color={props.Color}>{Infos.dataLocal}</LocalTexto>
+    <LocalTexto fontSize={props.fontSize} Color={props.Color}>
+      {Infos.dataLocal}
+    </LocalTexto>
     <LocalTexto className="mt-1 d-block" Color={props.Color} fontSize={props.fontSize} as="h3">
       {Infos.location}
     </LocalTexto>

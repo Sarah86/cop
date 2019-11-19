@@ -110,9 +110,9 @@ export const AgendaMobile = ({ defaultActiveKeyAccordion, defaultActiveKeyTab })
     </Nav.Item>
   ))
 
-  const TabPane = Programacao.map((dia,i) => (
+  const TabPane = Programacao.map((dia, i) => (
     <Tab.Pane eventKey={dia.dia} key={i}>
-      {dia.atividades.map((atividade,i) => (
+      {dia.atividades.map((atividade, i) => (
         <StyledAccordion defaultActiveKey={defaultActiveKeyAccordion} key={i}>
           {atividade.palestrante ? (
             <>
@@ -224,7 +224,10 @@ export const AgendaMobile = ({ defaultActiveKeyAccordion, defaultActiveKeyTab })
                     </SocialIcons>
                     {atividade.site == null ? null : (
                       <div style={{ display: 'block' }}>
-                        Site: <a href={atividade.site}>{atividade.site}</a>
+                        Site:{' '}
+                        <a href={atividade.site} target="_blank" rel="noopener noreferrer">
+                          {atividade.site}
+                        </a>
                       </div>
                     )}
                   </SocialPalestrante>
@@ -280,18 +283,16 @@ const StyledCol = styled(Col)`
 `
 
 export const AgendaTabelaDesktop = () => {
-  const DataMap = Programacao.map((dia,i) => (
+  const DataMap = Programacao.map((dia, i) => (
     <StyledCol key={i}>
       <DataHeader>{dia.diaLongo}</DataHeader>
-      {dia.atividades.map((atividade,i) => (
+      {dia.atividades.map((atividade, i) => (
         <StyledRow key={i}>
           <Col lg={4}>
             {atividade.descricao == null ? (
               <>{atividade.hora}</>
             ) : (
-              <TabelaLink 
-              to={`/agenda-e-palestrantes/${atividade.slug}`}
-              >
+              <TabelaLink to={`/agenda-e-palestrantes/${atividade.slug}`}>
                 {atividade.hora}
               </TabelaLink>
             )}
@@ -300,9 +301,7 @@ export const AgendaTabelaDesktop = () => {
             {atividade.palestrante ? (
               <>
                 {atividade.descricao ? (
-                  <TabelaLink 
-                  to={`/agenda-e-palestrantes/${atividade.slug}`}
-                  >
+                  <TabelaLink to={`/agenda-e-palestrantes/${atividade.slug}`}>
                     {atividade.palestrante}
                   </TabelaLink>
                 ) : (
@@ -318,7 +317,7 @@ export const AgendaTabelaDesktop = () => {
     </StyledCol>
   ))
   return (
-    <Container style={{marginTop: "1em"}}>
+    <Container style={{ marginTop: '1em' }}>
       <TitleH3>datas</TitleH3>
       <div style={{ position: 'relative' }}>
         <FullWidth
@@ -383,9 +382,9 @@ const SocialIcons = styled.div`
 `
 
 const StyledNavTabela = styled(Nav)`
-&:nth-of-type(odd) {
-  background: linear-gradient(90deg, rgba(8, 20, 31, 0) 0%, rgba(8, 20, 31, 1) 100%);
-}
+  &:nth-of-type(odd) {
+    background: linear-gradient(90deg, rgba(8, 20, 31, 0) 0%, rgba(8, 20, 31, 1) 100%);
+  }
 `
 
 export const AgendaDesktop = ({
@@ -407,7 +406,7 @@ export const AgendaDesktop = ({
         <Row>
           <Col sm={4} style={{ paddingTop: '9em', paddingRight: '0' }}>
             <div style={{ marginBottom: '2em' }}>
-              {dia.atividades.map((atividade,i) => (
+              {dia.atividades.map((atividade, i) => (
                 <StyledNavTabela className="flex-column" style={{ flexWrap: 'nowrap' }} key={i}>
                   <Nav.Item>
                     <Nav.Link
@@ -465,7 +464,7 @@ export const AgendaDesktop = ({
             }}
           >
             <Tab.Content style={{ backgroundColor: 'var(--bunker)' }}>
-              {dia.atividades.map((atividade,i) => (
+              {dia.atividades.map((atividade, i) => (
                 <Tab.Pane eventKey={atividade.slug} key={i}>
                   <div style={{ minHeight: '650px' }}>
                     <StyledPhoto>
@@ -499,8 +498,11 @@ export const AgendaDesktop = ({
                       <PaddedText style={{ padding: '0', textAlign: 'justify' }}>
                         {atividade.descricao == null ? null : (
                           <>
-                            {atividade.descricao.map((paragrafo,i) => (
-                              <Paragraph dangerouslySetInnerHTML={{ __html: `${paragrafo}` }} key={i}/>
+                            {atividade.descricao.map((paragrafo, i) => (
+                              <Paragraph
+                                dangerouslySetInnerHTML={{ __html: `${paragrafo}` }}
+                                key={i}
+                              />
                             ))}
                           </>
                         )}
@@ -556,7 +558,10 @@ export const AgendaDesktop = ({
           <StyledNav>{NavItem}</StyledNav>
         </div>
         <Tab.Content style={{ paddingTop: '0', paddingBottom: '2em', marginTop: '-1.5em' }}>
-          <div className="opened-accordion" style={{ marginTop: '-5.5em', paddingTop: '4em' }}></div>
+          <div
+            className="opened-accordion"
+            style={{ marginTop: '-5.5em', paddingTop: '4em' }}
+          ></div>
           {TabPane}
         </Tab.Content>
       </Tab.Container>
