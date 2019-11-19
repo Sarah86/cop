@@ -9,8 +9,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  scroll-snap-type: y mandatory;
-  overflow-Y: scroll;
 }
 article,
 aside,
