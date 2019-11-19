@@ -39,7 +39,7 @@ const ExpositoresIntroduction = () => (
           Downloads:
           <br />
           <br />
-          <ParagraphLink href={Dados.manualmarca}>Manual de Uso da Marca COP</ParagraphLink> ·{' '}
+          <ParagraphLink href={Dados.manualmarca}>Manual de Uso da Marca COP</ParagraphLink> ·
           <ParagraphLink href={Dados.manualexpositor}>Manual do Expositor</ParagraphLink> ·
         </Paragraph>
       </Col>
@@ -166,10 +166,10 @@ const ExpositoresDiamante = () => {
         <MediaQuery minWidth={992}>
           <Separador color="var(--blackpearl)" sm border="1px" widthTotal="35%" />
         </MediaQuery>
-      </div>
       <Container className="p-0">
         <Row noGutters>{ExpositorDiamante}</Row>
       </Container>
+      </div>
     </>
   )
 }
