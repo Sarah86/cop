@@ -54,6 +54,18 @@ export const ListOl = styled.ol`
   }
 `
 
+export const ListUl = styled.ul`
+  color: var(--lemongrass);
+  font-family: 'TilliumWeb';
+  font-size: 1.1em;
+  letter-spacing: var(--lp3);
+  text-align: left;
+  @media ${device.desktop} {
+    font-size: 0.9em;
+    letter-spacing: initial;
+  }
+`
+
 export const PaddedContentBox = styled.div`
   padding-bottom: 1.5em;
   padding-top: 1.5em;

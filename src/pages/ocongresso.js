@@ -5,7 +5,7 @@ import MediaQuery from 'react-responsive'
 
 import Layout from '../components/layout'
 import Image from '../components/image'
-import { PaddedContentBox, Paragraph, ListOl, PaddedText, ReadMore } from '../components/typography'
+import { PaddedContentBox, Paragraph, ListOl, PaddedText, ReadMore, ListUl } from '../components/typography'
 import Photo from '../components/photo'
 import LinkedPhoto from '../components/LinkedPhoto'
 import FramedVideo from '../components/framedVideo'
@@ -130,28 +130,34 @@ const OCongressoDesktopThirdBlock = () => (
       <Col>
         <Photo imgName="destaque_triplo_home_3.jpg" />
         <FadeParagraphTitle size="2.5em" width="3.8em">
-        clínicas & {''} workshops
+          clínicas & {''} workshops
         </FadeParagraphTitle>
         <Paragraph>
-          <strong>
-            Reunião Técnica da Coordenadoria Geral de fronteiras da Secretaria de Op. Integradas do
-            Ministério da Justiça e Segurança Pública.
-          </strong>
+          Durante os dias de COP serão oferecidas  clínicas e workshops que abordarão assuntos de grande relevância tanto para o agente de segurança pública quanto para o cidadão civil.
         </Paragraph>
-        <Paragraph>
-          Prioridade de <strong>combate ao crime de fronteiras</strong>, o encontro do Ministério da
-          Justiça e Segurança Pública tem entre seus projetos estratégicos a integração entre as
-          principais lideranças que atuam em área de fronteiras.
-        </Paragraph>
-        <Paragraph>
-          O objetivo é blindar o país da entrada de armas, drogas e produtos contrabandeados pelos
-          cerca de 16 mil quilômetros de fronteira. Entre as linhas de atuação estão as{' '}
-          <strong>
-            operações integradas, aquisição de equipamentos, capacitações e bases operacionais com
-            integração de sistemas
-          </strong>
-          .
-        </Paragraph>
+        <ListUl>
+          <li>
+            Sobrevivência Policial (TESP Treinamento)
+          </li>
+          <li>
+            Retenção e Contra Retenção de Arma de Fogo (Luiz Charneski)
+</li>
+          <li>
+            Extorsão Mediante Sequestro (CORE MG)
+</li>
+          <li>
+            Técnicas de Algemamento (Tarcísio Jardim)
+</li>
+          <li>
+            Combate com Faca (Waldevir Junior)
+</li>
+          <li>
+            Entradas Táticas (Rodrigo Lopes)
+</li>
+          <li>
+            APH de Combate (Felipe Lessa)
+</li>
+        </ListUl>
       </Col>
       <Col className="text-justify d-flex flex-column">
         <Photo imgName="ocongresso_foto_social.jpg" />
