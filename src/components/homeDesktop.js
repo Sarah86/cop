@@ -261,7 +261,7 @@ const Espaco = () => (
         </Paragraph>
       </Col> */}
       <Col>
-        <FadeParagraphTitle size="2.5em" width="3.8em">
+        <FadeParagraphTitle size="2.5em" width="3.77em">
           clínicas & {''} workshops
         </FadeParagraphTitle>
         <Photo imgName="destaque_triplo_home_3.jpg" />
