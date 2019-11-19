@@ -129,8 +129,8 @@ const OCongressoDesktopThirdBlock = () => (
       </Col>
       <Col>
         <Photo imgName="destaque_triplo_home_3.jpg" />
-        <FadeParagraphTitle size="2.5em" width="3.65em">
-          clínicas &  workshops
+        <FadeParagraphTitle size="2.5em" width="3.8em">
+        clínicas & {''} workshops
         </FadeParagraphTitle>
         <Paragraph>
           <strong>
