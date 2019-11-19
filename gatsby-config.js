@@ -7,6 +7,12 @@ module.exports = {
     author: `Alvaro Marques e Sarah Gonçalves`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-analytics`,
+      trackingId: "UA-152803216-1",
+      head: true,
+      anonymize: true,
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -26,9 +32,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
-    {
-      resolve: `gatsby-plugin-analytics`,
-    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
