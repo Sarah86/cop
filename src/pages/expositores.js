@@ -39,7 +39,7 @@ const ExpositoresIntroduction = () => (
           Downloads:
           <br />
           <br />
-          <ParagraphLink href={Dados.manualmarca}>Manual de Uso da Marca COP</ParagraphLink> ·
+          <ParagraphLink href={Dados.manualmarca}>Manual de Uso da Marca COP</ParagraphLink> ·{' '}
           <ParagraphLink href={Dados.manualexpositor}>Manual do Expositor</ParagraphLink> ·
         </Paragraph>
       </Col>
