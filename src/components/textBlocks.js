@@ -18,12 +18,10 @@ export const CongressoFirstBlock = () => (
       o congresso
     </ParagraphTitle>
     <Paragraph lastLineRightDesktop reversedSkew>
-      Depois do sucesso absoluto da estreia em 2018 o Congresso de Operações Policiais retorna mais
-      abrangente, inclusivo, dinâmico, informativo e tecnológico.
+    Agentes de todos os estados da federação e de outros países, poderão trocar conhecimento e ter contato com o que de mais novo e eficiente está disponível no mercado.
     </Paragraph>
     <Paragraph lastLineRightDesktop reversedSkew>
-      Congresso se realizará de forma gratuita nos dias 17, 18 e 19 de Março de 2019 para um público
-      diário de aproximadamente 2000 pessoas.
+    O público civil, praticantes de esportes outdoor, atiradores e colecionadores de armas também terão atividades e programação própria, pela primeira vez em nosso país, a integração da sociedade e segurança pública, juntos numa única missão, valorizar nossos nobres heróis e buscar uma sociedade mais justa e segura.
     </Paragraph>
     <Paragraph lastLineRightDesktop reversedSkew>
       A cidade-sede escolhida é pelo segundo ano consecutivo a belíssima{' '}

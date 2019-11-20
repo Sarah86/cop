@@ -101,21 +101,7 @@ const OCongressoDesktopThirdBlock = () => (
         <div className="d-flex flex-column justify-content-between flex-grow-1">
           <PaddedText>
             <Paragraph>
-              O{' '}
-              <strong>
-                Encontro Nacional de Profissionais de Operações especiais (4º ENPOE - 2020)
-              </strong>{' '}
-              já tem data e local marcado, será dentro do COP Internacional nos dias 17, 18 e 19 de
-              março de 2020, em Florianópolis-SC. A direção da{' '}
-              <strong>ABOPESP (Associação Brasileira de Operações Especiais)</strong>, realizadora
-              do encontro, fez o anúncio durante o último evento que ocorreu em Fortaleza-CE.
-            </Paragraph>
-            <Paragraph>
-              O Encontro visa deliberar <strong>temas importantes</strong> relacionados às
-              atividades de Operações Especiais, como doutrina mundial e emprego de novas
-              tecnologias, além do Feedback para empresas fornecedoras de equipamentos e material
-              bélico. Poderão participar Militares e Policiais possuidores do curso de Operações
-              Especiais ou que operem em Unidades de OE de suas Instituições e convidados.
+            O <strong>4° Encontro Nacional de Profissionais de Operações Especiais (ENPOE)</strong> acontecerá dentro do COP 2020, com diversas atividades paralelas e auditório exclusivo para deliberar assuntos do tema.
             </Paragraph>
             <LinkedImage
               imgName="ocongresso_logos_sociais_abopesp.png"
@@ -133,7 +119,7 @@ const OCongressoDesktopThirdBlock = () => (
           clínicas & {''} workshops
         </FadeParagraphTitle>
         <Paragraph>
-          Durante os dias de COP serão oferecidas  clínicas e workshops que abordarão assuntos de grande relevância tanto para o agente de segurança pública quanto para o cidadão civil.
+          Durante os três dias de evento serão oferecidas clínicas e workshops com grandes nomes e instrutores do cenário policial nacional.
         </Paragraph>
         <ListUl>
           <li>

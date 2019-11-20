@@ -3,6 +3,7 @@
     {
       "nome": "Condor",
       "ordem": 1,
+      "ordemThumbnailExpositores": 1,
       "ramo": "Tecnologia de Defesa Não-Letal",
       "logo": "expositor_diamante_condor2.jpg",
       "thumbnail": "expositor_diamante_condor.jpg",
@@ -13,6 +14,7 @@
     {
       "nome": "Dahua",
       "ordem": 5,
+      "ordemThumbnailExpositores": 3,
       "ramo": "Tecnologia e Vigilância",
       "logo": "expositor_diamante_dahua2.jpg",
       "thumbnail": "expositor_diamante_ahua.jpg",
@@ -23,6 +25,7 @@
     {
       "nome": "DITEC Smart Solutions",
       "ordem": 4,
+      "ordemThumbnailExpositores": 4,
       "ramo": "TI e Telecomunicações",
       "logo": "expositor_diamante_ditec2.jpg",
       "thumbnail": "expositor_diamante_ditec.jpg",
@@ -33,6 +36,7 @@
     {
       "nome": "Invictus",
       "ordem": 2,
+      "ordemThumbnailExpositores": 2,
       "ramo": "Acessórios Táticos e Outdoor",
       "logo": "expositor_diamante_invictus2.jpg",
       "thumbnail": "expositor_diamante_invictus.jpg",
@@ -43,6 +47,7 @@
     {
       "nome": "Taurus",
       "ordem": 3,
+      "ordemThumbnailExpositores": 5,
       "ramo": "Armas",
       "logo": "expositor_diamante_taurus2.jpg",
       "thumbnail": "expositor_diamante_taurus.jpg",
@@ -53,6 +58,7 @@
     {
       "nome": "Armalite",
       "ordem": 6,
+      "ordemThumbnailExpositores": 6,
       "ramo": "Armas",
       "thumbnail": "expositor_diamante_armalite.jpg",
       "logo": "expositor_ouro_armalite.jpg",

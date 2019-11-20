@@ -16,6 +16,7 @@ import Background from './background'
 import FullWidth from './fullwidth'
 import Photo from './photo'
 import VideoDesktop from '../videos/COP-VIDEO-PROMO-FULL-HD-1920x1080-60s.mp4'
+import { HomeImagesOCongresso } from './carousels'
 
 const Cronograma = require('../data/cronograma.json')
 const dadosExpositores = require('../data/expositores.json')
@@ -130,10 +131,6 @@ const CongressoPalestrantes = () => {
               marcas do setor, e a sociedade civil. Em contato direto por 3 dias.
             </Paragraph>
             <Paragraph>
-              Depois do sucesso absoluto da estreia em 2018 o Congresso de Operações Policiais
-              retorna mais abrangente, inclusivo, dinâmico, informativo e tecnológico.
-            </Paragraph>
-            <Paragraph>
               Congresso se realizará de forma gratuita nos dias 17, 18 e 19 de Março de 2019 para um
               público diário de aproximadamente 2000 pessoas..
             </Paragraph>
@@ -159,10 +156,8 @@ const CongressoPalestrantes = () => {
           </div>
           <ReadMore to="/ocongresso">leia mais</ReadMore>
         </Col>
-        <Col>
-          <div>
-            <Image imgName="logo_cop_isotipo.png" />
-          </div>
+        <Col className="d-flex flex-column justify-content-center">
+            <HomeImagesOCongresso/>
         </Col>
       </Row>
       <Row>
@@ -206,8 +201,7 @@ const Expositores = () => {
         <Col className="mt-5 pt-5">
           <FadeParagraphTitle>expositores</FadeParagraphTitle>
           <Paragraph>
-            Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em segurança e
-            defesa exporão seus produtos e soluções.
+           Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em segurança e defesa estarão expondo seus produtos e soluções.
           </Paragraph>
           <Paragraph>
             Será uma oportunidade única de se atualizar e se conectar con o que há de melhor e mais
@@ -243,13 +237,8 @@ const Espaco = () => (
         </FadeParagraphTitle>
         <LinkedPhoto imgName="destaque_triplo_home_1.jpg" to="/ocongresso/" />
         <Paragraph>
-          O 4º Encontro Nacional de Profissionais de Operações especiais (4º ENPOE - 2020)
-          acontecerá no COP Internacional nos dias 17, 18 e 19 de março de 2020, em
-          Florianópolis-SC.
+        O <strong>4° Encontro Nacional de Profissionais de Operações Especiais (ENPOE)</strong> acontecerá dentro do COP 2020, com diversas atividades paralelas e auditório exclusivo para deliberar assuntos do tema.
         </Paragraph>
-        <ReadMore className="align-self-end" to="/ocongresso/">
-          leia mais
-        </ReadMore>
       </Col>
       {/* <Col>
         <FadeParagraphTitle size="2.5em" width="5em">
@@ -266,8 +255,7 @@ const Espaco = () => (
         </FadeParagraphTitle>
         <Photo imgName="destaque_triplo_home_3.jpg" />
         <Paragraph>
-          Durante os dias de COP serão oferecidas clínicas e workshops que abordarão assuntos de
-          grande relevância tanto para o agente de segurança pública quanto para o cidadão civil.
+        Durante os três dias de evento serão oferecidas clínicas e workshops com grandes nomes e instrutores do cenário policial nacional.
         </Paragraph>
       </Col>
     </Row>

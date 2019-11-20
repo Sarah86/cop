@@ -125,7 +125,7 @@ export const AgendaMobile = ({ defaultActiveKeyAccordion, defaultActiveKeyTab })
                   >
                     <span style={{ textAlign: 'right', flexBasis: '30%' }}>{atividade.hora}</span>
                     <div className="d-flex justify-content-between" style={{ flexBasis: '65%' }}>
-                      <span>{atividade.palestrante}</span>
+                      <span>{atividade.palestranteAbreviado ? atividade.palestranteAbreviado : atividade.palestrante}</span>
                       <FontAwesomeIcon
                         size="xs"
                         icon={faCaretDown}
@@ -435,10 +435,10 @@ export const AgendaDesktop = ({
                                   to={`/agenda-e-palestrantes/${atividade.slug}`}
                                   activeClassName="atividadeActive"
                                 >
-                                  {atividade.palestrante}
+                                  {atividade.palestranteAbreviado ? atividade.palestranteAbreviado : atividade.palestrante}
                                 </StyledLink>
                               ) : (
-                                <>{atividade.palestrante}</>
+                                <>{atividade.palestranteAbreviado ? atividade.palestranteAbreviado : atividade.palestrante}</>
                               )}
                             </>
                           ) : (

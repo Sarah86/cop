@@ -218,10 +218,6 @@ const Sitemap = () => {
 
   const Expositores = (
     <SitemapUl>
-      <FooterMenuItem link="/expositores#diamante" title="Expositores Diamante" />
-      <FooterMenuItem link="/expositores#ouro" title="Expositores Ouro" />
-      <FooterMenuItem link="/expositores#prata" title="Expositores Prata" />
-      <FooterMenuItem link="/expositores#bronze" title="Expositores Bronze" />
       <StyledDiaFooter>
         <span>Downloads Restritos</span>
       </StyledDiaFooter>

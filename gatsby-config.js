@@ -14,6 +14,7 @@ module.exports = {
         head: true,
       },
     },
+    `gatsby-plugin-preload-fonts`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

@@ -194,3 +194,39 @@ export const AgendaEPalestrantesCarousel = () => {
     </div>
   )
 }
+
+export const HomeImagesOCongresso = () => {
+  const Slides = [
+    {
+      imagem: 'home_foto_ocongresso_01.jpg',
+    },
+    {
+      imagem: 'home_foto_ocongresso_02.jpg',
+    },
+    {
+      imagem: 'home_foto_ocongresso_03.jpg',
+    },
+    {
+      imagem: 'home_foto_ocongresso_04.jpg',
+    },
+    {
+      imagem: 'home_foto_ocongresso_05.jpg',
+    },
+  ]
+
+  const CarouselItem = Slides.map((slide, i) => (
+    <Carousel.Item key={i}>
+      <Image imgName={slide.imagem} />
+    </Carousel.Item>
+  ))
+  return (
+    <div style={{ position: 'relative' }}>
+      <MolduraTop />
+      <Carousel indicators={false} interval={2000} fade={true}>
+        {CarouselItem}
+      </Carousel>
+      <MolduraBottom />
+      <Shadow />
+    </div>
+  )
+}
