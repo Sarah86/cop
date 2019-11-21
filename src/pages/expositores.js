@@ -231,7 +231,7 @@ const ExpositoresLogos = props => {
               fontSizeSubtitulo="2.5em"
               color="var(--firefly)"
             />
-            <div className="d-flex justify-content-end mt-n5">
+            <div className="d-flex justify-content-end">
               <Separador color="var(--kidnapper)" border="1px" widthTotal="50%" nomargin />
             </div>
           </MediaQuery>

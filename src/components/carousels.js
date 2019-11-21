@@ -199,24 +199,36 @@ export const HomeImagesOCongresso = () => {
   const Slides = [
     {
       imagem: 'home_foto_ocongresso_01.jpg',
+      caption: 'Ponte Hercílio Luz',
     },
     {
       imagem: 'home_foto_ocongresso_02.jpg',
+      caption: 'Florianópolis de cima',
     },
     {
       imagem: 'home_foto_ocongresso_03.jpg',
+      caption: 'Anoitecer na Ponte Hercílio Luz',
     },
     {
       imagem: 'home_foto_ocongresso_04.jpg',
+      caption: 'CE Gov. Henrique da Silveira'
     },
     {
       imagem: 'home_foto_ocongresso_05.jpg',
+      caption: 'Plenária',
+    },
+    {
+      imagem: 'home_foto_ocongresso_06.jpg',
+      caption: 'CE Gov. Henrique da Silveira',
     },
   ]
 
   const CarouselItem = Slides.map((slide, i) => (
     <Carousel.Item key={i}>
       <Image imgName={slide.imagem} />
+      <StyledCarouselCaption>
+        <CarouselCaptionTitle>{slide.caption}</CarouselCaptionTitle>
+      </StyledCarouselCaption>
     </Carousel.Item>
   ))
   return (
