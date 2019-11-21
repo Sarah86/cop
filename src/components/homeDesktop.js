@@ -114,6 +114,7 @@ const CongressoPalestrantes = () => {
               imgName={atividade.imagem}
               title={atividade.palestrante}
               to={`/agenda-e-palestrantes/${atividade.slug}`}
+              subtitle={atividade.qualificacao}
             />
           </Col>
         ))}
