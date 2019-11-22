@@ -70,7 +70,7 @@ const BoasVindas = () => (
       Bem vindo ao <br />
       Congresso Internacional de Operações Policiais
     </BemVindo>
-    <Sublegenda>O maior evento de segurança e defesa da América Latina</Sublegenda>
+    <Sublegenda>O maior evento para atividade policial da América Latina</Sublegenda>
     <Local fontSize="1em" iconSize="1.2em" className="text-left" />
     <ApresentadoPor>
       Orgulhosamente apresentado pelo CNGC - Conselho Nacional de Comandantes Gerais

@@ -3,7 +3,7 @@ require('dotenv').config()
 module.exports = {
   siteMetadata: {
     title: `Congresso Internacional de Operações Policiais`,
-    description: `O Maior evento de segurança e defesa da América Latina`,
+    description: `O maior evento para atividade policial da América Latina`,
     author: `Alvaro Marques e Sarah Gonçalves`,
   },
   plugins: [
