@@ -113,14 +113,14 @@ export const CongressoSecondCarousel = () => {
       imagem: 'ocongresso_slider02-05.jpg',
       caption: 'Cobertura midiática',
     },
-    {
-      imagem: 'ocongresso_slider02-06.jpg',
-      caption: 'Entrevista',
-    },
-    {
-      imagem: 'ocongresso_slider02-07.jpg',
-      caption: 'Stand 5.11 Tactical',
-    },
+    // {
+    //   imagem: 'ocongresso_slider02-06.jpg',
+    //   caption: 'Entrevista',
+    // },
+    // {
+    //   imagem: 'ocongresso_slider02-07.jpg',
+    //   caption: 'Stand 5.11 Tactical',
+    // },
     {
       imagem: 'ocongresso_slider02-08.jpg',
       caption: 'Workshop',
