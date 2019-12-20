@@ -17,6 +17,14 @@ import { device } from './device'
 const Cronograma = require('../data/cronograma.json')
 const Expositores = require('../data/expositores.json')
 const Dados = require('../data/dados.json')
+const Apoio = require('../data/apoio.json')
+const ApoioInstitucional = require('../data/apoio-institucional.json')
+const ParceirosDeMidiaFile = require('../data/parceiros-midia.json')
+
+
+
+
+
 
 const ColunaA = styled(Col)`
   background-color: var(--firefly);
@@ -407,6 +415,154 @@ const PatrocinadoresUnificado = props => {
   )
 }
 
+const Apoiadores = props => {
+  // .sort((a, b) => a.nome > b.nome ? 1 : -1)
+
+  const Apoiador = Apoio.map(apoiador => (
+    <StyledCol sm="2" key={apoiador.id}>
+      <PatrocinadoresImage
+        noyellowlayer
+        imgName={apoiador.logo}
+        to={`${apoiador.site}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      />
+    </StyledCol>
+  ))
+
+  return (
+    <>
+      <OuroBox>
+        <FooterTitleBold>
+          <span>apoiadores</span>
+        </FooterTitleBold>
+        <Container className="m-0 p-0 w-75">
+          <Separador
+            color="var(--kidnapper)"
+            border="1px"
+            widthTotal="50%"
+            widthBarra="40%"
+            nomargin
+            tall
+          />
+          <Row noGutters className="pt-2 pb-2">
+            {Apoiador}
+          </Row>
+          <SeparadorInverted
+            className="ml-n3"
+            color="var(--kidnapper)"
+            border="1px"
+            widthTotal="50%"
+            widthBarra="40%"
+            nomargin
+            tall
+            translated
+          />
+        </Container>
+      </OuroBox>
+    </>
+  )
+}
+
+const ApoiadoresInstitucionais = props => {
+  // .sort((a, b) => a.nome > b.nome ? 1 : -1)
+
+  const ApoiadorInstitucionalItem = ApoioInstitucional.map(apoiadorinstitucional => (
+    <StyledCol sm="2" key={apoiadorinstitucional.id}>
+      <PatrocinadoresImage
+        noyellowlayer
+        imgName={apoiadorinstitucional.logo}
+        to={`${apoiadorinstitucional.site}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      />
+    </StyledCol>
+  ))
+
+  return (
+    <>
+      <OuroBox>
+        <FooterTitleBold>
+          <span>apoio institucional</span>
+        </FooterTitleBold>
+        <Container className="m-0 p-0 w-75">
+          <Separador
+            color="var(--kidnapper)"
+            border="1px"
+            widthTotal="50%"
+            widthBarra="40%"
+            nomargin
+            tall
+          />
+          <Row noGutters className="pt-2 pb-2">
+            {ApoiadorInstitucionalItem}
+          </Row>
+          <SeparadorInverted
+            className="ml-n3"
+            color="var(--kidnapper)"
+            border="1px"
+            widthTotal="50%"
+            widthBarra="40%"
+            nomargin
+            tall
+            translated
+          />
+        </Container>
+      </OuroBox>
+    </>
+  )
+}
+
+const ParceirosDeMidia = props => {
+  // .sort((a, b) => a.nome > b.nome ? 1 : -1)
+
+  const ParceiroDeMidia = ParceirosDeMidiaFile.map(parceirodemidia => (
+    <StyledCol sm="2" key={parceirodemidia.id}>
+      <PatrocinadoresImage
+        noyellowlayer
+        imgName={parceirodemidia.logo}
+        to={`${parceirodemidia.site}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      />
+    </StyledCol>
+  ))
+
+  return (
+    <>
+      <OuroBox>
+        <FooterTitleBold>
+          <span>parceiros de mídia</span>
+        </FooterTitleBold>
+        <Container className="m-0 p-0 w-75">
+          <Separador
+            color="var(--kidnapper)"
+            border="1px"
+            widthTotal="50%"
+            widthBarra="40%"
+            nomargin
+            tall
+          />
+          <Row noGutters className="pt-2 pb-2">
+            {ParceiroDeMidia}
+          </Row>
+          <SeparadorInverted
+            className="ml-n3"
+            color="var(--kidnapper)"
+            border="1px"
+            widthTotal="50%"
+            widthBarra="40%"
+            nomargin
+            tall
+            translated
+          />
+        </Container>
+      </OuroBox>
+    </>
+  )
+}
+
+
 const CreditosSection = () => (
   <Creditos className="text-center">
     <Paragraph style={{ color: 'var(--narvik)', fontWeight: '600' }}>
@@ -446,6 +602,9 @@ const Footer = () => (
               <FooterRealizacao />
               <div className="mt-3">
                 <PatrocinadoresUnificado />
+                <Apoiadores />
+                <ApoiadoresInstitucionais />
+                <ParceirosDeMidia />
               </div>
             </ColunaB>
           </Row>

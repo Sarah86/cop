@@ -97,6 +97,24 @@
       "logo": "expositor_ouro_teaser.jpg",
       "local": "Piso Superior - Stand 01",
       "site": "https://www.taser.com/"
+    },
+    {
+      "nome": "Iwi",
+      "logo": "expositor_ouro_iwi.jpg",
+      "local": "Piso Inferior",
+      "site": "https://www.facebook.com/events/338914773660128/"
+    },
+    {
+      "nome": "",
+      "logo": "expositor_ouro_sig_sauer.jpg",
+      "local": "Piso Inferior",
+      "site": "https://www.facebook.com/events/338914773660128/"
+    },
+    {
+      "nome": "",
+      "logo": "expositor_ouro_maynards.jpg",
+      "local": "Piso Inferior",
+      "site": "https://www.facebook.com/events/338914773660128/"
     }
   ],
   "prata": [
@@ -117,6 +135,42 @@
       "logo": "expositor_prata_grupoimbra.jpg",
       "local": "Piso Inferior - Stand 20",
       "site": "http://grupoinbra.com.br/"
+    },
+    {
+      "nome": "",
+      "logo": "expositor_prata_fabdefense.jpg",
+      "local": "Piso Inferior",
+      "site": "https://www.facebook.com/events/338914773660128/"
+    },
+    {
+      "nome": "",
+      "logo": "expositor_prata_benelli.jpg",
+      "local": "Piso Inferior",
+      "site": "https://www.facebook.com/events/338914773660128/"
+    },
+    {
+      "nome": "",
+      "logo": "expositor_prata_springfield.jpg",
+      "local": "Piso Inferior",
+      "site": "https://www.facebook.com/events/338914773660128/"
+    },
+    {
+      "nome": "",
+      "logo": "expositor_prata_honeywell.jpg",
+      "local": "Piso Inferior",
+      "site": "https://www.facebook.com/events/338914773660128/"
+    },
+    {
+      "nome": "",
+      "logo": "expositor_prata_cobra.jpg",
+      "local": "Piso Inferior",
+      "site": "https://www.facebook.com/events/338914773660128/"
+    },
+    {
+      "nome": "",
+      "logo": "expositor_prata_brasimplex.jpg",
+      "local": "Piso Inferior",
+      "site": "https://www.facebook.com/events/338914773660128/"
     }
   ],
   "bronze": [
@@ -149,6 +203,24 @@
       "logo": "expositor_bronze_wd40.jpg",
       "local": "Piso Inferior - Stand 06",
       "site": "http://wd40.com.br/"
+    },
+    {
+      "nome": "",
+      "logo": "expositor_bronze_sindesp.jpg",
+      "local": "Piso Inferior",
+      "site": "https://www.facebook.com/events/338914773660128/"
+    },
+    {
+      "nome": "",
+      "logo": "expositor_bronze_mag44.jpg",
+      "local": "Piso Inferior",
+      "site": "https://www.facebook.com/events/338914773660128/"
+    },
+    {
+      "nome": "",
+      "logo": "expositor_bronze_shopping.jpg",
+      "local": "Piso Inferior",
+      "site": "https://www.facebook.com/events/338914773660128/"
     }
   ]
 }
