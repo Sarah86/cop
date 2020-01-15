@@ -48,20 +48,6 @@
         "titulo": "A crise dos poderes e a sua repercussão na segurança pública"
       },
       {
-        "descricao": [],
-        "destaque": true,
-        "destaqueOrdem": 6,
-        "ordemGaleriaOCongresso": 6,
-        "hora": "16:00h",
-        "imagem": "palestrante_alessandro_visacro.jpg",
-        "palestrante": "Coronel EB Alessandro Visacro",
-        "palestranteAbreviado": "Cel. EB Alessandro Visacro",
-        "qualificacao": "Chefe do Estado Maior do Comando de Operações Especiais",
-        "site": "https://editoracontexto.com.br/autores/alessandro-visacro.html",
-        "slug": "alessandro-visacro",
-        "titulo": "Insurgência Criminal"
-      },
-      {
         "hora": "18:00h",
         "titulo": "Encerramento"
       }
@@ -142,18 +128,6 @@
       {
         "hora": "07:30h",
         "titulo": "Credenciamento"
-      },
-      {
-        "descricao": [],
-        "hora": "08:30h",
-        "destaqueOrdem": 9,
-        "ordemGaleriaOCongresso": 9,
-        "imagem": "palestrante_souza_filho.jpg",
-        "palestrante": "Coronel PM Souza Filho",
-        "palestranteAbreviado": "Cel. PM Souza Filho",
-        "qualificacao": "Subcomandante Geral da Polícia Militar do Piauí",
-        "slug": "cel-souza-filho",
-        "titulo": "Operações de Choque: Desafios e Novas Dinâmicas"
       },
       {
         "hora": "10:30h",

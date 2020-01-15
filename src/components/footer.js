@@ -259,13 +259,11 @@ const Contatos = () => (
     <div className="d-flex flex-column justify-content-center">
       <SitemapTitle>contato</SitemapTitle>
       <LinkExterno href={`mailto:${Dados.contatoEmail}`}>{Dados.contatoEmail}</LinkExterno>
-      <LinkExterno href={Dados.linkContatoTel}>{Dados.contatoTel}</LinkExterno>
     </div>
     <Separador color="var(--plantation)" border="1px" widthTotal="95%" sm />
     <div>
       <SitemapTitle>imprensa</SitemapTitle>
       <LinkExterno href={`mailto:${Dados.imprensaEmail}`}>{Dados.imprensaEmail}</LinkExterno>
-      <LinkExterno href={Dados.linkImprensaTel}>{Dados.imprensaTel}</LinkExterno>
     </div>
   </>
 )

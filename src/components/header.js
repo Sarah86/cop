@@ -187,7 +187,7 @@ const Divisor = () => <StyledDivisor>·</StyledDivisor>
 
 const BarraContato = ({ email, telefone }) => (
   <StyledBarraContato>
-    <a href={'mailto:' + email}>{email}</a> <a href={'tel:' + telefone}>{telefone}</a>
+    <a href={`mailto:` + email}>{email}</a> <a href={'tel:' + telefone}>{telefone}</a>
   </StyledBarraContato>
 )
 

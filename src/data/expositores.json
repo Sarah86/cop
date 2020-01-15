@@ -99,22 +99,28 @@
       "site": "https://www.taser.com/"
     },
     {
-      "nome": "Iwi",
-      "logo": "expositor_ouro_iwi.jpg",
-      "local": "Piso Inferior",
-      "site": "https://www.facebook.com/events/338914773660128/"
-    },
-    {
-      "nome": "",
+      "nome": "Sig",
       "logo": "expositor_ouro_sig_sauer.jpg",
       "local": "Piso Inferior",
       "site": "https://www.facebook.com/events/338914773660128/"
     },
     {
-      "nome": "",
+      "nome": "Maynards",
       "logo": "expositor_ouro_maynards.jpg",
       "local": "Piso Inferior",
       "site": "https://www.facebook.com/events/338914773660128/"
+    },
+    {
+      "nome": "LaLo Tactical",
+      "logo": "expositor_ouro_lalo.jpg",
+      "local": "Piso Inferior",
+      "site": "https://lalo.com/"
+    },
+    {
+      "nome": "AlfaCon",
+      "logo": "expositor_ouro_alfacon.jpg",
+      "local": "Piso Inferior",
+      "site": "https://www.alfaconcursos.com.br/"
     }
   ],
   "prata": [
@@ -205,22 +211,47 @@
       "site": "http://wd40.com.br/"
     },
     {
-      "nome": "",
+      "nome": "Sindesp",
       "logo": "expositor_bronze_sindesp.jpg",
       "local": "Piso Inferior",
       "site": "https://www.facebook.com/events/338914773660128/"
     },
     {
-      "nome": "",
+      "nome": "Mag-44",
       "logo": "expositor_bronze_mag44.jpg",
       "local": "Piso Inferior",
       "site": "https://www.facebook.com/events/338914773660128/"
     },
     {
-      "nome": "",
+      "nome": "Shopping",
       "logo": "expositor_bronze_shopping.jpg",
       "local": "Piso Inferior",
       "site": "https://www.facebook.com/events/338914773660128/"
+    },
+    {
+      "nome": "Pirata Produções",
+      "logo": "expositor_bronze_pirata.jpg",
+      "local": "Piso Inferior",
+      "site": "https://www.facebook.com/events/338914773660128/"
+    },
+    {
+      "nome": "ToCoin",
+      "logo": "expositor_bronze_tocoin.jpg",
+      "local": "Piso Inferior",
+      "site": "http://www.tocoin.com.br/"
+    },
+    {
+      "nome": "Steyr Arms",
+      "logo": "expositor_bronze_steyr.jpg",
+      "local": "Piso Inferior",
+      "site": "https://www.steyr-arms.com/"
+    },
+    {
+      "nome": "Botas Vento",
+      "logo": "expositor_bronze_botasvento.jpg",
+      "local": "Piso Inferior",
+      "site": "https://botasvento.com.br/"
     }
+
   ]
 }
