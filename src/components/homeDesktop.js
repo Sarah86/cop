@@ -73,7 +73,7 @@ const BoasVindas = () => (
     <Sublegenda>O maior evento para atividade policial da América Latina</Sublegenda>
     <Local fontSize="1em" iconSize="1.2em" className="text-left" />
     <ApresentadoPor>
-      Orgulhosamente apresentado pelo CNGC - Conselho Nacional de Comandantes Gerais
+      Orgulhosamente apresentado pelo CNCG - Conselho Nacional de Comandantes Gerais
     </ApresentadoPor>
     <Conselho>
       <Image imgName="logo_cngc.png" />

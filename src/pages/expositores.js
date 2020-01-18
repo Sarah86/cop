@@ -144,9 +144,6 @@ const ExpositoresDiamante = () => {
             style={{ fontSize: '.9em', marginBottom: '1.5em' }}
             dangerouslySetInnerHTML={{ __html: `${diamante.descricao}` }}
           />
-          <div>
-            <Local>{diamante.local}</Local>
-          </div>
           <Separador color="var(--bunker)" sm border="1px" widthTotal="100%" nomargin />
         </DiamanteBox>
       </ColDiamante>
@@ -215,9 +212,7 @@ const ExpositoresLogos = props => {
     .map(expositor => (
       <StyledCol xs={3} lg={3} key={expositor.nome}>
         <LinkedImage imgName={expositor.logo} to={expositor.site} />
-        <OuroInfo>
-          <Local>{expositor.local}</Local>
-        </OuroInfo>
+       
       </StyledCol>
     ))
 
