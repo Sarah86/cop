@@ -14,6 +14,12 @@ module.exports = {
         head: true,
       },
     },
+    {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: '489693661974423',
+      },
+    },
     `gatsby-plugin-preload-fonts`,
     `gatsby-plugin-react-helmet`,
     {

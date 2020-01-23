@@ -28,6 +28,7 @@
     "gatsby": "^2.15.14",
     "gatsby-image": "^2.2.18",
     "gatsby-plugin-analytics": "^0.2.0",
+    "gatsby-plugin-facebook-pixel": "^1.0.3",
     "gatsby-plugin-google-analytics": "^2.1.28",
     "gatsby-plugin-layout": "^1.1.14",
     "gatsby-plugin-manifest": "^2.2.16",
