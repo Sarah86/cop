@@ -253,44 +253,45 @@
       "site": "https://botasvento.com.br/"
     },
     {
-      "nome": "",
+      "nome": "Corpo de Bombeiro Militar de Santa Catarina",
       "logo": "expositor_institucional_bombeiros.jpg",
-      "site": ""
+      "site": "http://www.cbm.sc.gov.br"
     },
     {
-      "nome": "",
+      "nome": "Canil da Polícia Militar de Santa Catarina",
       "logo": "expositor_institucional_canil.jpg",
-      "site": ""
+      "site": "https://www.pm.sc.gov.br/tudo-sobre/canil"
     },
     {
-      "nome": "",
+      "nome": "Secretaria de Estado da Administração
+      Prisional e Socioeducativa",
       "logo": "expositor_institucional_deap.jpg",
-      "site": ""
+      "site": "http://www.deap.sc.gov.br/"
     },
     {
-      "nome": "",
+      "nome": "Guarda Municipal de Florianópolis",
       "logo": "expositor_institucional_gmf.jpg",
-      "site": ""
+      "site": "http://www.pmf.sc.gov.br/entidades/guardamunicipal/index.php"
     },
     {
-      "nome": "",
+      "nome": "Polícia Militar de Santa Catarina",
       "logo": "expositor_institucional_pmsc.jpg",
-      "site": ""
+      "site": "https://www.pm.sc.gov.br/"
     },
     {
-      "nome": "",
+      "nome": "Polícia Rodoviária Federal",
       "logo": "expositor_institucional_prf.jpg",
-      "site": ""
+      "site": "https://portal.prf.gov.br/"
     },
     {
-      "nome": "",
+      "nome": "Confederação Brasileira de Tiro Prático",
       "logo": "expositor_bronze_cbtp.jpg",
-      "site": ""
+      "site": "https://www.cbtp.org.br/"
     },
     {
-      "nome": "",
+      "nome": "CZ - USA",
       "logo": "expositor_prata_cz.jpg",
-      "site": ""
+      "site": "https://cz-usa.com/"
     }
   ]
 }
