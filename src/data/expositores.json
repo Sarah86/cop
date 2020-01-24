@@ -251,7 +251,46 @@
       "logo": "expositor_bronze_botasvento.jpg",
       "local": "Piso Inferior",
       "site": "https://botasvento.com.br/"
+    },
+    {
+      "nome": "",
+      "logo": "expositor_institucional_bombeiros.jpg",
+      "site": ""
+    },
+    {
+      "nome": "",
+      "logo": "expositor_institucional_canil.jpg",
+      "site": ""
+    },
+    {
+      "nome": "",
+      "logo": "expositor_institucional_deap.jpg",
+      "site": ""
+    },
+    {
+      "nome": "",
+      "logo": "expositor_institucional_gmf.jpg",
+      "site": ""
+    },
+    {
+      "nome": "",
+      "logo": "expositor_institucional_pmsc.jpg",
+      "site": ""
+    },
+    {
+      "nome": "",
+      "logo": "expositor_institucional_prf.jpg",
+      "site": ""
+    },
+    {
+      "nome": "",
+      "logo": "expositor_bronze_cbtp.jpg",
+      "site": ""
+    },
+    {
+      "nome": "",
+      "logo": "expositor_prata_cz.jpg",
+      "site": ""
     }
-
   ]
 }
