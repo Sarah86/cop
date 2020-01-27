@@ -209,8 +209,8 @@ const ExpositoresLogos = props => {
 
   const Expositor = ExpositorCategory
     //.sort((a, b) => (a.local > b.local ? 1 : -1))
-    .map(expositor => (
-      <StyledCol xs={3} lg={3} key={expositor.nome}>
+    .map((expositor, i) => (
+      <StyledCol xs={3} lg={3} key={i}>
         <LinkedImage imgName={expositor.logo} to={expositor.site} />
        
       </StyledCol>
