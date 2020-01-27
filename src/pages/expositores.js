@@ -83,7 +83,7 @@ const DiamanteBox = styled.div`
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: start;
 `
 const TitleWrapper = styled.div`
   padding: 1.5em;
@@ -212,7 +212,6 @@ const ExpositoresLogos = props => {
     .map((expositor, i) => (
       <StyledCol xs={3} lg={3} key={i}>
         <LinkedImage imgName={expositor.logo} to={expositor.site} />
-       
       </StyledCol>
     ))
 

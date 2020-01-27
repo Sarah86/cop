@@ -48,6 +48,17 @@
         "titulo": "A crise dos poderes e a sua repercussão na segurança pública"
       },
       {
+        "descricao": [],
+        "ordemGaleriaOCongresso": 12,
+        "hora": "16:00h",
+        "imagem": "palestrante_nivaldo.jpg",
+        "news": "https://www.conjur.com.br/2019-abr-07/entrevista-nivaldo-restivo-secretario-sap-sao-paulo",
+        "palestrante": "Coronel Nivaldo Restivo",
+        "qualificacao": "Secretário da Administração Penitenciária do Estado de São Paulo",
+        "slug": "cel-nivaldo-restivo",
+        "titulo": "Sistema Penitenciário"
+      },
+      {
         "hora": "18:00h",
         "titulo": "Encerramento"
       }

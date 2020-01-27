@@ -3,12 +3,12 @@ import { Link } from 'gatsby'
 import { Accordion, Tab, Row, Col, Nav, Container } from 'react-bootstrap'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
+import { faCaretDown, faNewspaper } from '@fortawesome/free-solid-svg-icons'
 import {
   faFacebookF,
   faInstagram,
   faLinkedinIn,
-  faYoutube,
+  faYoutube
 } from '@fortawesome/free-brands-svg-icons'
 
 import { device } from '../components/device'
@@ -201,26 +201,31 @@ export const AgendaMobile = ({ defaultActiveKeyAccordion, defaultActiveKeyTab })
                   <SocialPalestrante>
                     Siga o palestrante:
                     <SocialIcons>
-                      {atividade.facebook == null ? null : (
+                      {atividade.facebook ? (
                         <a href={atividade.facebook} target="_blank" rel="noopener noreferrer">
                           <FontAwesomeIcon icon={faFacebookF} />
                         </a>
-                      )}
-                      {atividade.instagram == null ? null : (
+                      ) : null}
+                      {atividade.instagram ? (
                         <a href={atividade.instagram} target="_blank" rel="noopener noreferrer">
                           <FontAwesomeIcon icon={faInstagram} />
                         </a>
-                      )}
-                      {atividade.linkedin == null ? null : (
+                      ) : null}
+                      {atividade.linkedin ? (
                         <a href={atividade.linkedin} target="_blank" rel="noopener noreferrer">
                           <FontAwesomeIcon icon={faLinkedinIn} />
                         </a>
-                      )}
-                      {atividade.youtube == null ? null : (
+                      ) : null}
+                      {atividade.youtube ? (
                         <a href={atividade.youtube} target="_blank" rel="noopener noreferrer">
                           <FontAwesomeIcon icon={faYoutube} />
                         </a>
-                      )}
+                      ) : null}
+                      {atividade.news ? (
+                        <a href={atividade.news} target="_blank" rel="noopener noreferrer">
+                          <FontAwesomeIcon icon={faNewspaper} />
+                        </a>
+                      ) : null}
                     </SocialIcons>
                     {atividade.site == null ? null : (
                       <div style={{ display: 'block' }}>
@@ -530,6 +535,11 @@ export const AgendaDesktop = ({
                               <FontAwesomeIcon icon={faYoutube} />
                             </a>
                           )}
+                          {atividade.news ? (
+                        <a href={atividade.news} target="_blank" rel="noopener noreferrer">
+                          <FontAwesomeIcon icon={faNewspaper} />
+                        </a>
+                      ) : null}
                         </SocialIcons>
                         {atividade.site == null ? null : (
                           <div style={{ display: 'block' }}>
