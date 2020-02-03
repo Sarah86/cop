@@ -69,6 +69,12 @@
   ],
   "ouro": [
     {
+      "nome": "CBC",
+      "logo": "expositor_diamante_cbc.jpg",
+      "local": "",
+      "site": "https://www.cbc.com.br/"
+    },
+    {
       "nome": "5.11",
       "logo": "expositor_ouro_511.jpg",
       "local": "Piso Superior - Stand 03",
