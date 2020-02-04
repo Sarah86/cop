@@ -7,10 +7,9 @@
 // You can delete this file if you're not using it
 const path = require(`path`)
 const fs = require("fs")
-const yaml = require("js-yaml")
 const cronograma = require('./src/data/cronograma.json')
 
-exports.createPages = async ({ actions }) => {
+exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
   
   cronograma.forEach(dataContext => {
@@ -22,15 +21,34 @@ exports.createPages = async ({ actions }) => {
       })
     })
   })
-  const ymlDoc = yaml.safeLoad(fs.readFileSync("./src/content/index.yaml", "utf-8"))
-  ymlDoc.forEach(element => {
+
+  const blogPostTemplate = path.resolve(`src/templates/Noticias.js`)
+  const result = await graphql(`
+    {
+      allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___date] }
+        limit: 1000
+      ) {
+        edges {
+          node {
+            frontmatter {
+              path
+            }
+          }
+        }
+      }
+    }
+  `)
+  // Handle errors
+  if (result.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`)
+    return
+  }
+  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
-      path: element.path,
-      component: require.resolve("./src/templates/Noticias.js"),
-      context: {
-        pageContent: element.content,
-        links: element.links,
-      },
+      path: node.frontmatter.path,
+      component: blogPostTemplate,
+      context: {}, // additional data can be passed via context
     })
   })
 }

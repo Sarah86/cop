@@ -379,6 +379,7 @@ const SocialPalestrante = styled.div`
     &:hover {
       color: var(--amber);
     }
+  }
 `
 
 const SocialIcons = styled.div`

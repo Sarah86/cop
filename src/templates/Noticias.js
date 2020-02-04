@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 import { Link } from "gatsby"
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -10,6 +11,8 @@ import {
   faYoutube
 } from '@fortawesome/free-brands-svg-icons'
 
+import Layout from '../components/layout'
+import SEO from '../components/seo'
 import Photo from '../components/photo'
 import { FadeParagraphTitle } from '../components/FadeElements'
 import { PaddedContentBox, Paragraph, PaddedText, TitleH3, ParagraphTitle } from '../components/typography'
@@ -35,50 +38,55 @@ const SocialPalestrante = styled.div`
     &:hover {
       color: var(--amber);
     }
+  }
+`
+const Subtitulo = styled.div`
+    font-family: 'TTSupermolotNeue';
+    color: var(--lemongrass);
+    font-size: 1.1em;
 `
 
-const NoticiasTemplate = props => {
-  const { pageContext } = props
-  const { pageContent, links } = pageContext
+
+
+const NoticiasTemplate = ({ data }) => {
+  const { markdownRemark } = data
+  const { frontmatter, html } = markdownRemark
   return (
-    <div>
-      {pageContent.map((content, index) => {
-        return (
-           <div style={{ minHeight: '650px' }} key={`content_item_${index}`}>
-            <StyledPhoto>
-              <Photo imgName={content.imagem} />
-            </StyledPhoto>
-            <div style={{ padding: '2em', paddingTop: '0' }}>
-              <FadeParagraphTitle sm style={{ marginBottom: '.2em' }}>
-                {content.titulo}
-              </FadeParagraphTitle>
-            <div
-              style={{
-                fontFamily: 'TTSupermolotNeue',
-                color: 'var(--lemongrass)',
-                fontSize: '1.1em',
-              }}
-            >
-              {content.subtitulo}
-            </div>
-            <PaddedText style={{ padding: '0', textAlign: 'justify' }}>
-              {content.texto}
-            </PaddedText>
-            <SocialPalestrante>
-              Siga o palestrante:
-                        <SocialIcons>
-
-                <a href="#" target="_blank" rel="noopener noreferrer">
-                  <FontAwesomeIcon icon={faFacebookF} />
-                </a>
-
-              </SocialIcons>
-            </SocialPalestrante>
-          </div>
-        </div>
-        )
-      })}
-    </div>
+    <Layout>
+    <SEO title={frontmatter.titulo} />
+      <StyledPhoto>
+        <Photo imgName={frontmatter.imagem} />
+      </StyledPhoto>
+      <div style={{ padding: '2em', paddingTop: '0' }}>
+        <FadeParagraphTitle sm style={{ marginBottom: '.2em' }}>
+          {frontmatter.titulo}
+        </FadeParagraphTitle>
+        <Subtitulo>
+          {frontmatter.subtitulo}
+        </Subtitulo>
+      </div>
+      <PaddedText style={{ padding: '1em', textAlign: 'justify' }}>
+        <Paragraph as="div"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
+      </PaddedText>
+    </Layout>
   )
 }
+
+export const pageQuery = graphql`
+  query($path: String!) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
+      html
+      frontmatter {
+        date(formatString: "MMMM DD, YYYY")
+        path
+        titulo
+        subtitulo
+        imagem
+      }
+    }
+  }
+`
+
 export default NoticiasTemplate
