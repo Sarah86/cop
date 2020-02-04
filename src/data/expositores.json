@@ -12,15 +12,15 @@
       "site": "https://www.condornaoletal.com.br"
     },
     {
-      "nome": "Dahua",
+      "nome": "Dahua / Digifort / Coringa",
       "ordem": 5,
       "ordemThumbnailExpositores": 3,
       "ramo": "Tecnologia e Vigilância",
       "logo": "expositor_diamante_dahua2.jpg",
-      "thumbnail": "expositor_diamante_ahua.jpg",
-      "descricao": "Zhejiang Dahua Technology Co., Ltd. (Dahua Technology) é uma provedora líder de soluções e serviços de IoT inteligente especializada em vídeo. Pautada em inovações tecnológicas, a Dahua oferece soluções, sistemas e serviços de segurança 'end-to-end' para  controle urbano, gerenciamento corporativo e consumidores.",
+      "thumbnail": "expositor_diamante_dahua.jpg",
+      "descricao": "Dahua Technology, Digifort e Coringa são 3 grandes empresas do setor de tecnologia focadas em segurança privada e urbana com clientes de todos os portes; de consumidores finais a órgãos governamentais.",
       "local": "Piso Superior - Stand 01",
-      "site": "https://www.dahuasecurity.com/"
+      "site": "http://www.coringanet.com.br/"
     },
     {
       "nome": "DITEC Smart Solutions",
@@ -45,13 +45,13 @@
       "site": "https://www.invictus.com.br/"
     },
     {
-      "nome": "Taurus",
+      "nome": "CBC / Taurus",
       "ordem": 3,
       "ordemThumbnailExpositores": 5,
       "ramo": "Armas",
       "logo": "expositor_diamante_taurus2.jpg",
       "thumbnail": "expositor_diamante_taurus.jpg",
-      "descricao": "A Taurus é uma Empresa Estratégica de Defesa, com 80 anos de história e reputação sólida. Sediada em São Leopoldo, no Rio Grande do Sul, emprega mais de 1.800 pessoas no país e exporta para mais de 100 países. ",
+      "descricao": "A Taurus é uma das maiores fabricantes de armas leves do mundo. Com uma ampla gama de modelos, seus produtos são exportados para mais de 100 países e já receberam dezenas de prêmios pelos elevados padrões de qualidade e inovação.",
       "local": "Piso Superior - Stand 03",
       "site": "https://www.taurusarmas.com.br/"
     },
@@ -68,6 +68,12 @@
     }
   ],
   "ouro": [
+    {
+      "nome": "Digifort",
+      "logo": "expositor_diamante_digifort.jpg",
+      "local": "",
+      "site": "https://www.digifort.com.br/"
+    },
     {
       "nome": "CBC",
       "logo": "expositor_diamante_cbc.jpg",
@@ -227,6 +233,12 @@
       "logo": "expositor_bronze_mag44.jpg",
       "local": "Piso Inferior",
       "site": "https://www.facebook.com/events/338914773660128/"
+    },
+    {
+      "nome": "Guns e Coffee",
+      "logo": "expositor_bronze_gunscoffee.jpg",
+      "local": "",
+      "site": "https://www.gunsecoffee.com.br/"
     },
     {
       "nome": "Shopping",

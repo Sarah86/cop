@@ -125,7 +125,11 @@ const ExpositoresDiamante = () => {
     .sort((a, b) => (a.ordemThumbnailExpositores > b.ordemThumbnailExpositores ? 1 : -1))
     .map(diamante => (
       <ColDiamante sm={12} lg={6} key={diamante.nome}>
+      {diamante.site ? 
         <LinkedShadowedImage imgName={diamante.thumbnail} to={diamante.site} nomargin />
+      : 
+        <ShadowedImage imgName={diamante.thumbnail} nomargin />
+      }
         <DiamanteBox>
           <h4 style={{ fontFamily: 'TilliumWeb', fontSize: '1.2em', marginBottom: '0' }}>
             {diamante.nome}
