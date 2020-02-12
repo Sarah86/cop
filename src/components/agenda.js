@@ -199,7 +199,10 @@ export const AgendaMobile = ({ defaultActiveKeyAccordion, defaultActiveKeyTab })
                     )}
                   </PaddedText>
                   <SocialPalestrante>
-                    Siga o palestrante:
+                    { atividade.facebook || atividade.instagram || atividade.site ||atividade.instagram || atividade.linkedin || atividade.youtube || atividade.news
+                      ? ("Siga o palestrante:")
+                      : null
+                    }
                     <SocialIcons>
                       {atividade.facebook ? (
                         <a href={atividade.facebook} target="_blank" rel="noopener noreferrer">
@@ -514,7 +517,10 @@ export const AgendaDesktop = ({
                         )}
                       </PaddedText>
                       <SocialPalestrante>
-                        Siga o palestrante:
+                        { atividade.facebook || atividade.instagram || atividade.site ||atividade.instagram || atividade.linkedin || atividade.youtube || atividade.news
+                        ? ("Siga o palestrante:")
+                        : null
+                      }
                         <SocialIcons>
                           {atividade.facebook == null ? null : (
                             <a href={atividade.facebook} target="_blank" rel="noopener noreferrer">

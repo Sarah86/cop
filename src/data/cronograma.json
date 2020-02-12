@@ -101,14 +101,17 @@
         "titulo": "Proteção Avançado do Dignatário"
       },
       {
-        "hora": "11:00h",
+        "hora": "12:30h",
         "titulo": "Almoço & Exposição"
       },
       {
-        "hora": "13:30h",
-        "ordemGaleriaOCongresso": 10,
         "imagem": "palestrante_placeholder.jpg",
-        "palestrante": "A Confirmar - Internacional"
+        "palestrante": "Rigo Durazo",
+        "facebook": "https://www.facebook.com/Tacflow/",
+        "hora": "13:30h",
+        "slug": "rigo-durazo",
+        "titulo": "Combative Transition",
+        "site": "https://www.tacflow.com/tacflow-lead-instructors/"
       },
       {
         "descricao": [],
@@ -122,7 +125,7 @@
         "palestrante": "Eduardo Betini",
         "qualificacao": " Coordenador Geral de Fronteiras da SEOPI/MJSP",
         "slug": "eduardo-betini",
-        "titulo": "Importância do planejamento estratégico para atividade policial.",
+        "titulo": "Modificando Ambientes - A simplicidade e propósito do Programa VIGIA e a gestão com foco no resultado.",
         "youtube": "https://www.youtube.com/watch?v=jqtzMcDPdyU"
       },
       {
@@ -142,13 +145,21 @@
         "titulo": "Credenciamento"
       },
       {
+        "imagem": "palestrante_placeholder.jpg",
+        "palestrante": "Dep. Federal Capitão Derrite",
+        "hora": "08:00h",
+        "slug": "capitao-derrite",
+        "titulo": "Os desafios da Segurança Pública no Congresso Nacional",
+        "descricao": []
+      },
+      {
         "hora": "10:30h",
         "ordemGaleriaOCongresso": 11,
         "imagem": "palestrante_placeholder.jpg",
         "palestrante": "A Confirmar - Internacional"
       },
       {
-        "hora": "11:00h",
+        "hora": "12:30h",
         "titulo": "Almoço & Exposição"
       },
       {
