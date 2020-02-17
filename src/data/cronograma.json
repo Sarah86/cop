@@ -105,7 +105,8 @@
         "titulo": "Almoço & Exposição"
       },
       {
-        "imagem": "palestrante_placeholder.jpg",
+        "descricao": [],
+        "imagem": "palestrante_rigo.jpg",
         "palestrante": "Rigo Durazo",
         "facebook": "https://www.facebook.com/Tacflow/",
         "hora": "13:30h",
@@ -145,7 +146,7 @@
         "titulo": "Credenciamento"
       },
       {
-        "imagem": "palestrante_placeholder.jpg",
+        "imagem": "palestrante_derrite.jpg",
         "palestrante": "Dep. Federal Capitão Derrite",
         "hora": "08:00h",
         "slug": "capitao-derrite",
