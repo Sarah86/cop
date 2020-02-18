@@ -143,8 +143,8 @@ export const WorkshopsMobile = ({ defaultActiveKeyAccordion, defaultActiveKeyTab
                 >
                   <span style={{ textAlign: 'right', flexBasis: '30%' }}>{atividade.hora}</span>
                   <div style={{flexBasis: '65%', color:'var(--lemongrass'}}> 
-                      <span style={{display: 'block', lineHeight: '1em'}}>{atividade.titulo}</span>
-                      <span style={{fontSize: '.7em', lineHeight: '1em', display: 'block', marginTop: '.2em'}}>{atividade.palestranteAbreviado ? atividade.palestranteAbreviado : atividade.palestrante}</span> 
+                      <span style={{display: 'block', lineHeight: '1em'}}>{atividade.palestranteAbreviado ? atividade.palestranteAbreviado : atividade.palestrante}</span>
+                      <span style={{fontSize: '.8em', lineHeight: '1em', display: 'block', marginTop: '.2em'}}>{atividade.titulo}</span> 
               </div>
                 </Accordion.Toggle>
               )}
@@ -318,8 +318,8 @@ export const WorkshopTabelaDesktop = () => {
                   </TabelaLink>
                 ) : (
                   <div style={{marginBottom: '1em', color:'var(--lemongrass'}}> 
-                      <span style={{display: 'block', lineHeight: '1em'}}>{atividade.titulo}</span>
-                      <span style={{fontSize: '.7em', lineHeight: '1em', display: 'block', marginTop: '.2em'}}>{atividade.palestranteAbreviado ? atividade.palestranteAbreviado : atividade.palestrante}</span> 
+                      <span style={{display: 'block', lineHeight: '1em'}}>{atividade.palestranteAbreviado ? atividade.palestranteAbreviado : atividade.palestrante}</span>
+                      <span style={{fontSize: '.8em', lineHeight: '1em', display: 'block', marginTop: '.2em'}}>{atividade.titulo}</span> 
                   </div>
                 )}
               </>

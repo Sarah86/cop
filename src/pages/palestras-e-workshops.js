@@ -16,15 +16,15 @@ const Palestrantes = () => (
     </PaddedText>
     <AgendaEPalestrantesCarousel />
     <MediaQuery maxWidth={991}>
-    <div style={{ height: '1em' }}/>
+      <div style={{ height: '1em' }} />
       <AgendaMobile defaultActiveKeyAccordion="0" defaultActiveKeyTab="17.mar" />
-      <div style={{ height: '1em' }}/>
+      <div style={{ height: '1em' }} />
       <WorkshopsMobile defaultActiveKeyAccordion="0" defaultActiveKeyTab="17.mar" />
     </MediaQuery>
     <MediaQuery minWidth={992}>
-    <div style={{ height: '2em' }}/>
+      <div style={{ height: '2em' }} />
       <AgendaTabelaDesktop />
-      <div style={{ height: '2em' }}/>
+      <div style={{ height: '2em' }} />
       <WorkshopTabelaDesktop />
     </MediaQuery>
   </Layout>
