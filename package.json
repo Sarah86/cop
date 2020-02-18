@@ -26,7 +26,7 @@
     "firebase-tools": "^7.7.0",
     "fs": "^0.0.1-security",
     "gatsby": "^2.15.14",
-    "gatsby-cli": "^2.8.29",
+    "gatsby-cli": "^2.8.30",
     "gatsby-image": "^2.2.18",
     "gatsby-plugin-analytics": "^0.2.0",
     "gatsby-plugin-facebook-pixel": "^1.0.3",

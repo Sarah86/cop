@@ -29,7 +29,7 @@ const Botoes = () => (
     style={{ height: '9em' }}
   >
     <Botao texto="Inscreva-se Agora!" width="12em" to={Dados.linkInscricao} />
-    <InternalBotao texto="Confira  a Programação" width="12em" to="/agenda-e-palestrantes" />
+    <InternalBotao texto="Confira  a Programação" width="12em" to="/palestras-e-workshops" />
   </div>
 )
 

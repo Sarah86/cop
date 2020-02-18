@@ -119,7 +119,7 @@ export const AgendaMobile = ({ defaultActiveKeyAccordion, defaultActiveKeyTab })
               {atividade.descricao ? (
                 <Accordion.Toggle as="div" eventKey={atividade.slug} key={atividade.slug}>
                   <Link
-                    to={`/agenda-e-palestrantes/${atividade.slug}`}
+                    to={`/palestras-e-workshops/${atividade.slug}`}
                     activeClassName="opened-accordion"
                     className="d-flex justify-content-between has-content"
                   >
@@ -250,6 +250,7 @@ export const AgendaMobile = ({ defaultActiveKeyAccordion, defaultActiveKeyTab })
   ))
   return (
     <Tab.Container defaultActiveKey={defaultActiveKeyTab} id="cronograma">
+    <FadeParagraphTitle style={{margin: '.5em .3em'}}>palestras</FadeParagraphTitle>
       <div>
         <div>
           <StyledNav>{NavItem}</StyledNav>
@@ -300,7 +301,7 @@ export const AgendaTabelaDesktop = () => {
             {atividade.descricao == null ? (
               <>{atividade.hora}</>
             ) : (
-              <TabelaLink to={`/agenda-e-palestrantes/${atividade.slug}`}>
+              <TabelaLink to={`/palestras-e-workshops/${atividade.slug}`}>
                 {atividade.hora}
               </TabelaLink>
             )}
@@ -309,11 +310,11 @@ export const AgendaTabelaDesktop = () => {
             {atividade.palestrante ? (
               <>
                 {atividade.descricao ? (
-                  <TabelaLink to={`/agenda-e-palestrantes/${atividade.slug}`}>
-                    {atividade.palestrante}
+                  <TabelaLink to={`/palestras-e-workshops/${atividade.slug}`}>
+                    {atividade.palestranteAbreviado ? atividade.palestranteAbreviado : atividade.palestrante}
                   </TabelaLink>
                 ) : (
-                  <>{atividade.palestrante}</>
+                  <> {atividade.palestranteAbreviado ? atividade.palestranteAbreviado : atividade.palestrante}</>
                 )}
               </>
             ) : (
@@ -326,7 +327,7 @@ export const AgendaTabelaDesktop = () => {
   ))
   return (
     <Container style={{ marginTop: '1em' }}>
-      <TitleH3>datas</TitleH3>
+      <TitleH3>Palestras</TitleH3>
       <div style={{ position: 'relative' }}>
         <FullWidth
           style={{
@@ -429,7 +430,7 @@ export const AgendaDesktop = ({
                             <>{atividade.hora}</>
                           ) : (
                             <StyledLink
-                              to={`/agenda-e-palestrantes/${atividade.slug}`}
+                              to={`/palestras-e-workshops/${atividade.slug}`}
                               activeClassName="atividadeActive"
                             >
                               {atividade.hora}
@@ -441,7 +442,7 @@ export const AgendaDesktop = ({
                             <>
                               {atividade.descricao ? (
                                 <StyledLink
-                                  to={`/agenda-e-palestrantes/${atividade.slug}`}
+                                  to={`/palestras-e-workshops/${atividade.slug}`}
                                   activeClassName="atividadeActive"
                                 >
                                   {atividade.palestranteAbreviado ? atividade.palestranteAbreviado : atividade.palestrante}
@@ -571,7 +572,7 @@ export const AgendaDesktop = ({
     <>
       <Tab.Container defaultActiveKey={defaultActiveKeyTabContainer} id="cronograma">
         <div style={{ position: 'absolute', zIndex: '2' }}>
-          <TitleH3>datas</TitleH3>
+          <TitleH3>Palestras</TitleH3>
           <StyledNav>{NavItem}</StyledNav>
         </div>
         <Tab.Content style={{ paddingTop: '0', paddingBottom: '2em', marginTop: '-1.5em' }}>

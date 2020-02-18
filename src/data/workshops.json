@@ -1,0 +1,81 @@
+[
+  {
+    "dia": "17.mar",
+    "diaLongo": "ter.17.mar",
+    "diaCompleto": "Terça, 17 de Março",
+    "diaFooter": "Dia 01 - 17/03",
+    "atividades": [
+      {
+        "hora": "12:00h",
+        "palestrante": "TESP Treinamento",
+        "titulo": "Sobrevivência policial"
+      },
+      {
+        "hora": "15:00h",
+        "palestrante": "Luiz Charneski",
+        "titulo": "Retenção e contra retenção de armas de fogo com"
+      },
+      {
+        "hora": "17:00h",
+        "palestrante": "Marcelo Esperandio",
+        "titulo": "Combat Mindset aplicado as Instruções com armas de fogo"
+      }
+    ]
+  },
+  {
+    "dia": "18.mar",
+    "diaLongo": "qua.18.mar",
+    "diaCompleto": "Quarta, 18 de Março",
+    "diaFooter": "Dia 02 - 18/03",
+    "atividades": [
+      {
+        "hora": "10:00h",
+        "palestrante": "Felipe Lessa e Sergio Magnilia",
+        "titulo": "APH Tático"
+      },
+      {
+        "hora": "12:00h",
+        "palestrante": "Vicente Ancona",
+        "titulo": "Balística terminal"
+      },
+      {
+        "hora": "15:00h",
+        "palestrante": "Cláudio Andrade da Acombat Tactical",
+        "titulo": "Combate Velado"
+      },
+      {
+        "hora": "17:00h",
+        "palestrante": "Bene Barbosa",
+        "titulo": "O desarmamento civil e os seus resultados para Segurança Pública"
+      }
+    ]
+  },
+  {
+    "dia": "19.mar",
+    "diaLongo": "qui.19.mar",
+    "diaCompleto": "Quinta, 19 de Março",
+    "diaFooter": "Dia 03 - 19/03",
+    "atividades": [
+      {
+        "hora": "10:00h",
+        "palestrante": "Marco Matos",
+        "titulo": "Realidade sobre extorsão mediante sequestro no Brasil"
+      },
+      {
+        "hora": "12:00h",
+        "palestrante": "Rangel Cunha",
+        "titulo": "CAR System"
+      },
+      {
+        "hora": "15:00h",
+        "palestrante": "Rodrigo Lopes e Tarcisio Jardim",
+        "titulo": "Entradas táticas"
+      },
+      {
+        "hora": "17:00h",
+        "palestrante": "Waldervir Junior",
+        "titulo": "Combate com Faca"
+      }
+    ]
+  }
+]

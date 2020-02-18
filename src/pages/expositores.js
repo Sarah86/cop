@@ -15,7 +15,6 @@ import { device } from '../components/device'
 import ShadowedImage from '../components/shadowedimage'
 import LinkedImage from '../components/LinkedImage'
 import LinkedShadowedImage from '../components/LinkedShadowedImage'
-import SeparadorInverted from '../components/separadorInverted'
 
 const Expositores = require('../data/expositores.json')
 const Dados = require('../data/dados.json')
@@ -91,24 +90,6 @@ const TitleWrapper = styled.div`
     padding-left: 0;
   }
 `
-const Local = styled.p`
-  font-family: TilliumWeb;
-  color: var(--lemongrass);
-  font-size: 0.9em;
-  font-weight: bold;
-  margin-bottom: 0;
-`
-
-const Site = styled.a`
-  color: var(--amber);
-  font-family: TilliumWeb;
-  font-size: 0.7em;
-  text-decoration: underline;
-  &:hover {
-    color: var(--amber);
-  }
-`
-
 const ExpositoresCategory = props => (
   <TitleWrapper>
     <StyledFadeParagraphTitle color={props.color} fontSize={props.fontSize}>
@@ -191,15 +172,6 @@ const SpacerInterBlocks = styled.div`
   padding-top: 2em;
   @media ${device.desktop} {
     margin-top: 5em;
-  }
-`
-
-const OuroInfo = styled.div`
-  display: none;
-  @media ${device.desktop} {
-    display: block;
-    text-align: center;
-    margin: 1.5em;
   }
 `
 const ExpositoresLogos = props => {

@@ -113,7 +113,7 @@ const CongressoPalestrantes = () => {
             <LinkedPhoto
               imgName={atividade.imagem}
               title={atividade.palestrante}
-              to={`/agenda-e-palestrantes/${atividade.slug}`}
+              to={`/palestras-e-workshops/${atividade.slug}`}
               subtitle={atividade.qualificacao}
             />
           </Col>
@@ -165,7 +165,7 @@ const CongressoPalestrantes = () => {
         <Col className="d-flex flex-column justify-content-between mt-5">
           <FadeParagraphTitle>palestrantes</FadeParagraphTitle>
           <Row noGutters>{PalestranteDestaque}</Row>
-          <ReadMore className="align-self-end" to="/agenda-e-palestrantes">
+          <ReadMore className="align-self-end" to="/palestras-e-workshops">
             conheça todos os palestrantes
           </ReadMore>
         </Col>

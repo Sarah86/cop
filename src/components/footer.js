@@ -209,7 +209,7 @@ const Sitemap = () => {
           <>
             {atividade.descricao ? (
               <FooterMenuItem
-                link={`/agenda-e-palestrantes/${atividade.slug}`}
+                link={`/palestras-e-workshops/${atividade.slug}`}
                 title={atividade.palestrante}
                 key={atividade.slug}
               />
@@ -243,7 +243,7 @@ const Sitemap = () => {
         <SitemapUl>
           <FooterMenuItem page link="/" title="Home" />
           <FooterMenuItem page link="/ocongresso" title="O Congresso" />
-          <FooterMenuItem page link="/agenda-e-palestrantes" title="Agenda & Palestrantes" />
+          <FooterMenuItem page link="/palestras-e-workshops" title="Palestras & Workshops" />
           {Palestrantes}
           <FooterMenuItem page link="/expositores" title="Expositores" />
           {Expositores}

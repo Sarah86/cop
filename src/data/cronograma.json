@@ -10,8 +10,8 @@
         "titulo": "Credenciamento"
       },
       {
-        "hora": "08:30h",
-        "titulo": "Abertura dos Trabalhos"
+        "hora": "09:00h",
+        "titulo": "Grande Abertura"
       },
       {
         "descricao": [],
@@ -27,10 +27,6 @@
         "qualificacao": "Presidente CNCG e Secretário de Segurança Pública de SC",
         "slug": "cel-araujo-gomes",
         "titulo": "Palestra Magna"
-      },
-      {
-        "hora": "11:00h",
-        "titulo": "Almoço & Exposição"
       },
       {
         "descricao": [],
@@ -54,13 +50,10 @@
         "imagem": "palestrante_nivaldo.jpg",
         "news": "https://www.conjur.com.br/2019-abr-07/entrevista-nivaldo-restivo-secretario-sap-sao-paulo",
         "palestrante": "Coronel Nivaldo Restivo",
+        "palestranteAbreviado": "Cel. Nivaldo Restivo",
         "qualificacao": "Secretário da Administração Penitenciária do Estado de São Paulo",
         "slug": "cel-nivaldo-restivo",
         "titulo": "Sistema Penitenciário"
-      },
-      {
-        "hora": "18:00h",
-        "titulo": "Encerramento"
       }
     ]
   },
@@ -76,16 +69,13 @@
       },
       {
         "descricao": [],
-        "hora": "08:30h",
-        "destaque": true,
-        "destaqueOrdem": 7,
-        "ordemGaleriaOCongresso": 7,
-        "imagem": "palestrante_alexandre_abrahao.jpg",
-        "palestrante": "Juiz Alexandre Abrahão",
-        "qualificacao": " Presidente do Tribunal do Júri do estado do RJ",
-        "slug": "juiz-alexandre-abrahao",
-        "titulo": "Legalidade do tiro do Sniper e possibilidades de emprego",
-        "youtube": "https://www.youtube.com/watch?v=q_QPiaBAYpo"
+        "hora": "08:00h",
+        "imagem": "palestrante_fuentes.jpg",
+        "palestrante": "Ten. Coronel Mayer Fuentes",
+        "palestranteAbreviado": "Ten. Cel Mayer Fuentes",
+        "slug": "mayer-fuentes",
+        "titulo": "Manifestações no Chile 2019",
+        "linkedin": "https://www.linkedin.com/in/luis-fernando-mayer-fuentes-47456066/?originalSubdomain=cl"
       },
       {
         "descricao": [],
@@ -94,22 +84,20 @@
         "ordemGaleriaOCongresso": 8,
         "imagem": "palestrante_rocha_junior.jpg",
         "linkedin": "https://www.linkedin.com/in/humberto-antunes-rocha-j%C3%BAnior-b099b27a",
-        "palestrante": "Coronel EB Rocha Junior",
-        "palestranteAbreviado": "Cel. EB Rocha Junior",
+        "palestrante": "Coronel Rocha Junior",
+        "palestranteAbreviado": "Cel. Rocha Junior",
         "qualificacao": "Assessor Militar do Gabinete de Segurança Institucional da Presidência da República – GSI",
         "slug": "cel-rocha-junior",
         "titulo": "Proteção Avançado do Dignatário"
       },
       {
-        "hora": "12:30h",
-        "titulo": "Almoço & Exposição"
-      },
-      {
         "descricao": [],
         "imagem": "palestrante_rigo.jpg",
+        "destaque": true,
+        "destaqueOrdem": 9,
         "palestrante": "Rigo Durazo",
         "facebook": "https://www.facebook.com/Tacflow/",
-        "hora": "13:30h",
+        "hora": "14:00h",
         "slug": "rigo-durazo",
         "titulo": "Combative Transition",
         "site": "https://www.tacflow.com/tacflow-lead-instructors/"
@@ -128,10 +116,6 @@
         "slug": "eduardo-betini",
         "titulo": "Modificando Ambientes - A simplicidade e propósito do Programa VIGIA e a gestão com foco no resultado.",
         "youtube": "https://www.youtube.com/watch?v=jqtzMcDPdyU"
-      },
-      {
-        "hora": "18:00h",
-        "titulo": "Encerramento"
       }
     ]
   },
@@ -147,27 +131,33 @@
       },
       {
         "imagem": "palestrante_derrite.jpg",
-        "palestrante": "Dep. Federal Capitão Derrite",
+        "destaque": true,
+        "destaqueOrdem": 8,
+        "palestrante": "Deputado Federal Capitão Derrite",
+        "palestranteAbreviado": "Dep. Fed. Capitão Derrite",
         "hora": "08:00h",
         "slug": "capitao-derrite",
         "titulo": "Os desafios da Segurança Pública no Congresso Nacional",
         "descricao": []
       },
       {
+        "descricao": [],
         "hora": "10:30h",
-        "ordemGaleriaOCongresso": 11,
-        "imagem": "palestrante_placeholder.jpg",
-        "palestrante": "A Confirmar - Internacional"
-      },
-      {
-        "hora": "12:30h",
-        "titulo": "Almoço & Exposição"
+        "destaque": true,
+        "destaqueOrdem": 7,
+        "ordemGaleriaOCongresso": 7,
+        "imagem": "palestrante_alexandre_abrahao.jpg",
+        "palestrante": "Juiz Alexandre Abrahão",
+        "qualificacao": " Presidente do Tribunal do Júri do estado do RJ",
+        "slug": "juiz-alexandre-abrahao",
+        "titulo": "Legalidade do tiro do Sniper e possibilidades de emprego",
+        "youtube": "https://www.youtube.com/watch?v=q_QPiaBAYpo"
       },
       {
         "destaque": true,
         "destaqueOrdem": 2,
         "ordemGaleriaOCongresso": 2,
-        "hora": "13:30h",
+        "hora": "14:00h",
         "titulo": "Gerenciamento de Crise - Case: Sequestro na ponte Rio-Niterói",
         "palestrante": "Tenente Coronel PM Maurílio Nunes",
         "palestranteAbreviado": "Ten. Coronel PM Nunes",
@@ -191,10 +181,6 @@
         "twitter": "https://twitter.com/galtheophilo",
         "facebook": "https://www.facebook.com/pg/GeneralTheophilo",
         "instagram": "https://www.instagram.com/generaltheophilo/"
-      },
-      {
-        "hora": "18:00h",
-        "titulo": "Encerramento"
       }
     ]
   }

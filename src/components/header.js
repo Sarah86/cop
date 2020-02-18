@@ -219,8 +219,8 @@ const MobilePages = [
     nome: 'O Congresso',
   },
   {
-    link: '/agenda-e-palestrantes',
-    nome: 'Agenda e Palestrantes',
+    link: '/palestras-e-workshops',
+    nome: 'Palestras e Workshops',
   },
   {
     link: '/expositores',
@@ -238,8 +238,8 @@ const DesktopPages = [
     nome: 'O Congresso',
   },
   {
-    link: '/agenda-e-palestrantes',
-    nome: 'Agenda e Palestrantes',
+    link: '/palestras-e-workshops',
+    nome: 'Palestras e Workshops',
   },
   {
     link: '/expositores',

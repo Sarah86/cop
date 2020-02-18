@@ -54,8 +54,8 @@ export const CongressoSecondBlock = () => (
       </List>
       <Paragraph>
         A intensa programação de{' '}
-        <InternalParagraphLink to="/agenda-e-palestrantes">Palestras</InternalParagraphLink> e{' '}
-        <InternalParagraphLink to="/agenda-e-palestrantes">Exposições</InternalParagraphLink> será
+        <InternalParagraphLink to="/palestras-e-workshops">Palestras</InternalParagraphLink> e{' '}
+        <InternalParagraphLink to="/palestras-e-workshops">Exposições</InternalParagraphLink> será
         uma oportunidade única adquirir conhecimento, ter contato com o que existe de mais moderno
         em táticas e equipamentos de defesa e debater pontos críticos da segurança pública; sempre
         na direção de uma sociedade mais segura.

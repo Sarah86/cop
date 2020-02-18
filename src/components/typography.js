@@ -157,6 +157,7 @@ export const TitleH3 = styled.h3`
   letter-spacing: var(--lp1);
   line-height: 0.95em;
   margin-bottom: 0.4em;
+  text-transform: lowercase;
   @media ${device.desktop} {
     font-size: 2.5em;
   }

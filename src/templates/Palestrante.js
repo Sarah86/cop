@@ -9,6 +9,7 @@ import Photo from '../components/photo'
 import { PaddedText, ParagraphTitle } from '../components/typography'
 import FullWidth from '../components/fullwidth'
 import { AgendaMobile, AgendaDesktop } from '../components/agenda'
+import { WorkshopsMobile } from '../components/workshops'
 
 const StyledPaddedText = styled(PaddedText)`
   @media ${device.desktop} {
@@ -25,9 +26,9 @@ const PhotoWrapper = styled.div`
 
 const Body = ({ children }) => (
   <Layout>
-    <SEO title="Agenda e Palestrantes" />
+    <SEO title="Palestras e Workshops" />
     <StyledPaddedText>
-      <ParagraphTitle>agenda & palestrantes</ParagraphTitle>
+      <ParagraphTitle>palestras & workshops</ParagraphTitle>
     </StyledPaddedText>
     <FullWidth>
       <PhotoWrapper>
@@ -61,6 +62,11 @@ const Palestrante = props => {
           defaultActiveKeyAccordion={atividadeContext.slug}
           defaultActiveKeyTab={dataContext.dia}
         />
+          <WorkshopsMobile
+            defaultActiveKeyAccordion={atividadeContext.slug}
+            defaultActiveKeyTab={dataContext.dia}
+          />
+
       </MediaQuery>
       <MediaQuery minWidth={992}>
         <AgendaDesktop

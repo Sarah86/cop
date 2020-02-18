@@ -15,7 +15,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   cronograma.forEach(dataContext => {
     dataContext.atividades.forEach(atividadeContext => {
       createPage({
-        path: `/agenda-e-palestrantes/${atividadeContext.slug}/`,
+        path: `/palestras-e-workshops/${atividadeContext.slug}/`,
         component: path.resolve('./src/templates/Palestrante.js'),
         context: { dataContext, atividadeContext },
       })

@@ -8,7 +8,6 @@ import Image from '../components/image'
 import { PaddedContentBox, Paragraph, ListOl, PaddedText, ReadMore, ListUl } from '../components/typography'
 import Photo from '../components/photo'
 import LinkedPhoto from '../components/LinkedPhoto'
-import FramedVideo from '../components/framedVideo'
 import Botao from '../components/botao'
 import Background from '../components/background'
 import FullWidth from '../components/fullwidth'
@@ -201,7 +200,7 @@ const OCongressoDesktopForthBlock = () => {
                 imgName={atividade.imagem}
                 title={atividade.palestrante}
                 subtitle={atividade.qualificacao}
-                to={`/agenda-e-palestrantes/${atividade.slug}`}
+                to={`/palestras-e-workshops/${atividade.slug}`}
               />
             </Col>
           ) : null}
@@ -214,7 +213,7 @@ const OCongressoDesktopForthBlock = () => {
       <Background />
       <FadeParagraphTitle>palestrantes</FadeParagraphTitle>
       <Row noGutters>{PalestranteContainer}</Row>
-      <ReadMore className="align-self-end" to="/agenda-e-palestrantes">
+      <ReadMore className="align-self-end" to="/palestras-e-workshops">
         veja a programação
       </ReadMore>
     </Container>
