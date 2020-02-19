@@ -9,6 +9,7 @@ import Video from './bgvideo'
 import Local from './location'
 
 import BackgroundVideo from '../videos/video-home-mobile.mp4'
+import { Espaco } from './homeDesktop'
 
 const Dados = require('../data/dados.json')
 

@@ -17,6 +17,9 @@ import FullWidth from './fullwidth'
 import Photo from './photo'
 import VideoDesktop from '../videos/COP-VIDEO-PROMO-FULL-HD-1920x1080-60s.mp4'
 import { HomeImagesOCongresso } from './carousels'
+import VideoEnpoe from '../videos/Enpoe-Quadrado.mp4'
+import VideoCanil from '../videos/Canil-Quadrado.mp4'
+import FramedVideo from './framedVideo'
 
 const Cronograma = require('../data/cronograma.json')
 const dadosExpositores = require('../data/expositores.json')
@@ -228,36 +231,22 @@ const Expositores = () => {
   )
 }
 
-const Espaco = () => (
+export const Espaco = ({widthTitle, styleSeparador, styleWordBreak}) => (
   <Container className="mt-5 d-flex flex-column justify-content-between position-relative">
     <Background left="-45%" position="left top" />
     <Row className="pt-5">
       <Col>
-        <FadeParagraphTitle size="2.5em" width="3.5em">
+       <FadeParagraphTitle size="2.5em" width="3.5em">
           4º enpoe 2020
         </FadeParagraphTitle>
-        <LinkedPhoto imgName="destaque_triplo_home_1.jpg" to="/ocongresso/" />
-        <Paragraph>
-        O <strong>4° Encontro Nacional de Profissionais de Operações Especiais (ENPOE)</strong> acontecerá dentro do COP 2020, com diversas atividades paralelas e auditório exclusivo para deliberar assuntos do tema.
-        </Paragraph>
+        <FramedVideo url={VideoEnpoe} controls width="100%" height="100%"/>
       </Col>
-      {/* <Col>
-        <FadeParagraphTitle size="2.5em" width="5em">
-          reunião técnica de fronteiras
-        </FadeParagraphTitle>
-        <Photo imgName="destaque_triplo_home_2.jpg" />
-        <Paragraph>
-        O COP 2020 receberá também a Reunião Técnica da Coordenadoria Geral de fronteiras da Secretaria de Op. Integradas do Ministério da Justiça e Segurança Pública.
-        </Paragraph>
-      </Col> */}
+      <div style={styleSeparador}/>
       <Col>
-        <FadeParagraphTitle size="2.5em" width="3.77em">
-          clínicas & {''} workshops
+        <FadeParagraphTitle size="2.5em" width="6.5em" width={widthTitle}>
+          certificação <span style={styleWordBreak}/>nacional de cão de polícia
         </FadeParagraphTitle>
-        <Photo imgName="destaque_triplo_home_3.jpg" />
-        <Paragraph>
-        Durante os três dias de evento serão oferecidas clínicas e workshops com grandes nomes e instrutores do cenário policial nacional.
-        </Paragraph>
+        <FramedVideo url={VideoCanil} controls width="100%" height="100%"/>
       </Col>
     </Row>
   </Container>

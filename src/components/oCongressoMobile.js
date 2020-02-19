@@ -10,6 +10,7 @@ import { CongressoFirstCarousel, CongressoSecondCarousel } from './carousels'
 import VideoMobile from '../videos/COP-VIDEO-PROMO-QUADRADO-1080x1080-60s.mp4'
 import { PaddedContentBox } from '../components/typography'
 import SquareVideo from './squareVideo'
+import { Espaco } from './homeDesktop'
 
 const Dados = require('../data/dados.json')
 
@@ -43,6 +44,7 @@ const OCongressoMobile = props => (
       <CongressoFirstCarousel />
       <CongressoSecondBlock />
       <CongressoSecondCarousel />
+      <Espaco widthTitle="5.5em" styleSeparador={{height: '2em', width: '100%'}}/>
       <Botoes />
     </div>
   </MediaQuery>
