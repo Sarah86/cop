@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import ReactPlayer from 'react-player'
 import { Container, Row, Col } from 'react-bootstrap'
 
+
+import { device } from '../components/device'
 import Botao from './botao'
 import Local from './location'
 import { MolduraTop, MolduraBottom } from './moldura'
@@ -20,6 +22,9 @@ import { HomeImagesOCongresso } from './carousels'
 import VideoEnpoe from '../videos/Enpoe-Quadrado.mp4'
 import VideoCanil from '../videos/Canil-Quadrado.mp4'
 import FramedVideo from './framedVideo'
+import CoverVideoTopo from '../images/poster-video-home.png'
+import CoverVideoCanil from '../images/Cover_Video.jpg'
+import CoverVideoEnpoe from '../images/Cover_Video-enpoe.jpg'
 
 const Cronograma = require('../data/cronograma.json')
 const dadosExpositores = require('../data/expositores.json')
@@ -66,6 +71,23 @@ const VideoContainer = styled.div`
   margin-right: calc(50% - 50vw);
 `
 
+const StyledFramedVideo = styled(FramedVideo)`
+
+.react-player__preview {
+    height: 90vw !important;
+    }
+  @media ${device.tablet}{
+    .react-player__preview {
+    height: 690px !important;
+    }
+  }
+  @media ${device.desktop}{
+    .react-player__preview {
+    height: 450px !important;
+    }
+  }
+`
+
 const BoasVindas = () => (
   <div style={{ position: 'relative', paddingBottom: '3em' }}>
     <Background />
@@ -88,7 +110,12 @@ const Video = () => (
   <VideoContainer>
     <div style={{ position: 'relative' }}>
       <MolduraTop />
-      <ReactPlayer url={VideoDesktop} controls width="910px" height="100%" />
+      <ReactPlayer 
+        fileConfig={{ attributes: { poster: `${CoverVideoTopo}` } }}
+        url={VideoDesktop} 
+        controls 
+        width="910px" 
+        height="100%" />
       <MolduraBottom />
       <Shadow />
     </div>
@@ -110,7 +137,7 @@ const CongressoPalestrantes = () => {
           <Col
             xs={6}
             className="pl-1 pr-1"
-            key={atividade.destaqueOrdem}
+            key={`destaque-${i}`}
             style={{ order: `${atividade.destaqueOrdem}` }}
           >
             <LinkedPhoto
@@ -239,14 +266,28 @@ export const Espaco = ({widthTitle, styleSeparador, styleWordBreak}) => (
        <FadeParagraphTitle size="2.5em" width="3.5em">
           4º enpoe 2020
         </FadeParagraphTitle>
-        <FramedVideo url={VideoEnpoe} controls width="100%" height="100%"/>
+        <StyledFramedVideo url={VideoEnpoe}
+          fileConfig={{ attributes: { poster: `${CoverVideoEnpoe}` } }}
+          light = {CoverVideoEnpoe}
+          controls 
+          width="100%" 
+          height="100%"/>
       </Col>
       <div style={styleSeparador}/>
       <Col>
         <FadeParagraphTitle size="2.5em" width="6.5em" width={widthTitle}>
           certificação <span style={styleWordBreak}/>nacional de cão de polícia
         </FadeParagraphTitle>
-        <FramedVideo url={VideoCanil} controls width="100%" height="100%"/>
+        <StyledFramedVideo url={VideoCanil} 
+          fileConfig={{ 
+            attributes: { 
+              poster: `${CoverVideoCanil}` 
+              } 
+          }}
+          light = {CoverVideoCanil}
+          controls 
+          width="100%" 
+          height="100%"/>
       </Col>
     </Row>
   </Container>

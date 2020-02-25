@@ -199,8 +199,8 @@ const FooterMenuItemExternal = props => (
 )
 
 const Sitemap = () => {
-  const Palestrantes = Cronograma.map(data => (
-    <SitemapUl key={data.dia}>
+  const Palestrantes = Cronograma.map((data, i) => (
+    <SitemapUl key={`data-${i}`}>
       <StyledDiaFooter>
         <span>{data.diaFooter}</span>
       </StyledDiaFooter>
@@ -211,11 +211,11 @@ const Sitemap = () => {
               <FooterMenuItem
                 link={`/palestras-e-workshops/${atividade.slug}`}
                 title={atividade.palestrante}
-                key={atividade.slug}
+                key={`atividade-${i}`}
               />
             ) : atividade.palestrante ? (
               <li key={i}>
-                <DisabledLink key={atividade.slug}>{atividade.palestrante}</DisabledLink>
+                <DisabledLink key={`atividade-${i}`}>{atividade.palestrante}</DisabledLink>
               </li>
             ) : null}
           </>
@@ -367,8 +367,8 @@ const PatrocinadoresUnificado = props => {
 
   // .sort((a, b) => a.nome > b.nome ? 1 : -1)
 
-  const Expositor = ExpositorCategory.map(expositor => (
-    <StyledCol sm="2" key={expositor.id}>
+  const Expositor = ExpositorCategory.map((expositor, i) => (
+    <StyledCol sm="2" key={`expositor-${i}`}>
       <PatrocinadoresImage
         noyellowlayer
         imgName={expositor.logo}
@@ -416,8 +416,8 @@ const PatrocinadoresUnificado = props => {
 const Apoiadores = props => {
   // .sort((a, b) => a.nome > b.nome ? 1 : -1)
 
-  const Apoiador = Apoio.map(apoiador => (
-    <StyledCol sm="2" key={apoiador.id}>
+  const Apoiador = Apoio.map((apoiador, i) => (
+    <StyledCol sm="2" key={`apoiador-${i}`}>
       <PatrocinadoresImage
         noyellowlayer
         imgName={apoiador.logo}
@@ -465,8 +465,8 @@ const Apoiadores = props => {
 const ApoiadoresInstitucionais = props => {
   // .sort((a, b) => a.nome > b.nome ? 1 : -1)
 
-  const ApoiadorInstitucionalItem = ApoioInstitucional.map(apoiadorinstitucional => (
-    <StyledCol sm="2" key={apoiadorinstitucional.id}>
+  const ApoiadorInstitucionalItem = ApoioInstitucional.map((apoiadorinstitucional, i) => (
+    <StyledCol sm="2" key={`apoiador-${i}`}>
       <PatrocinadoresImage
         noyellowlayer
         imgName={apoiadorinstitucional.logo}
@@ -514,8 +514,8 @@ const ApoiadoresInstitucionais = props => {
 const ParceirosDeMidia = props => {
   // .sort((a, b) => a.nome > b.nome ? 1 : -1)
 
-  const ParceiroDeMidia = ParceirosDeMidiaFile.map(parceirodemidia => (
-    <StyledCol sm="2" key={parceirodemidia.id}>
+  const ParceiroDeMidia = ParceirosDeMidiaFile.map((parceirodemidia, i) => (
+    <StyledCol sm="2" key={`midia-${i}`}>
       <PatrocinadoresImage
         noyellowlayer
         imgName={parceirodemidia.logo}
