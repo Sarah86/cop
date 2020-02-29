@@ -156,8 +156,13 @@ const ExpositoresDiamante = () => {
 const StyledCol = styled(Col)`
   border: 0.5px solid var(--kidnapper);
   margin-left: -.15px;
+  max-height: 80px;
+  img {
+      object-fit: contain !important;
+    }
   @media ${device.desktop} {
     border-color: var(--bunker);
+    max-height: 140px;
   }
 `
 export const OuroBox = styled.div`
@@ -191,6 +196,7 @@ const ExpositoresLogos = props => {
           imgName={expositor.logo} 
           href={expositor.site} 
           mixBlendColor="#EDF8F2"
+          padding={expositor.padding}
           />
       </StyledCol>
     ))

@@ -288,7 +288,50 @@
     {
       "nome": "Prosegur",
       "logo": "logo-prosegur.jpeg",
-      "site": "https://www.prosegur.com.br/"
+      "site": "https://www.prosegur.com.br/",
+      "padding": "1em"
+    },
+    {
+      "nome": "Caravan do Brasil",
+      "logo": "logo-caravandobrasil.png",
+      "site": "https://www.caravandobrasil.com.br/",
+      "padding": ".5em"
+    },
+    {
+      "nome": "Impacto",
+      "logo": "logo-impacto.png",
+      "site": "/",
+      "padding": "1em"
+    },
+    {
+      "nome": "Kydex",
+      "logo": "logo-kydex.jpg",
+      "site": "/",
+      "padding": "1em"
+    },
+    {
+      "nome": "Royal Canin",
+      "logo": "logo-royal-canin.png",
+      "site": "https://www.royalcanin.com/br/dogs",
+      "padding": "1em"
+    },
+    {
+      "nome": "Iveco",
+      "logo": "logo_iveco.png",
+      "site": "https://www.iveco.com/brasil/pages/home-page.aspx",
+      "padding": "1em"
+    },
+    {
+      "nome": "Plasan",
+      "logo": "logo-plasan.jpg",
+      "site": "https://www.plasan.com/",
+      "padding": ".5em"
+    },
+    {
+      "nome": "Fort Atacadista",
+      "logo": "fort-atacadista.png",
+      "site": "https://www.fortatacadista.com.br/",
+      "padding": "1em"
     }
   ]
 }

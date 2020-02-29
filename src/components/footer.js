@@ -151,10 +151,15 @@ const PatrocinadoresImage = styled(LinkedImage)`
   mix-blend-mode: luminosity;
   opacity: 0.7;
   transition: all 0.3s;
+  padding: ${props => props.padding};
 `
 
 const StyledCol = styled(Col)`
   border: 0.5px solid var(--kidnapper);
+  max-height: 50px;
+  img {
+      object-fit: contain !important;
+    }
 `
 
 const Creditos = styled.div`
@@ -299,65 +304,6 @@ const FooterRealizacao = () => (
   </>
 )
 
-// const Patrocinadores = props => {
-//   const ExpositoresCategory = `${props.category}`
-//   const ExpositorLogo = Expositores[ExpositoresCategory].map(expositor => (
-//     <StyledCol sm={props.sm} key={expositor.nome}>
-//       <PatrocinadoresImage
-//         noyellowlayer
-//         imgName={expositor.logo}
-//         to={`${expositor.site}`}
-//         target="_blank"
-//         rel="noopener noreferrer"
-//       />
-//     </StyledCol>
-//   ))
-
-//   return (
-//     <>
-//       <OuroBox>
-//         <Container className="m-0 p-0">
-//           <Row noGutters className="pt-2 pb-2">
-//             {ExpositorLogo}
-//           </Row>
-//         </Container>
-//       </OuroBox>
-//     </>
-//   )
-// }
-
-// const PatrocinadoresGallery = props => (
-//   <div className="mt-3">
-//     <FooterTitleBold>
-//       <span>patrocinadores</span>
-//       {props.category}
-//     </FooterTitleBold>
-//     <div className="w-75">
-//       <div className="d-flex justify-content-center">
-//         <Separador
-//           color="var(--kidnapper)"
-//           border="1px"
-//           widthTotal="50%"
-//           widthBarra="40%"
-//           nomargin
-//           tall
-//         />
-//       </div>
-//       <Patrocinadores category={props.category} sm="2" />
-//     </div>
-//     <SeparadorInverted
-//       className="ml-n3"
-//       color="var(--kidnapper)"
-//       border="1px"
-//       widthTotal="50%"
-//       widthBarra="40%"
-//       nomargin
-//       tall
-//       translated
-//     />
-//   </div>
-// )
-
 const PatrocinadoresUnificado = props => {
   const ExpositorCategory = Expositores.diamante.concat(
     Expositores.ouro,
@@ -372,9 +318,8 @@ const PatrocinadoresUnificado = props => {
       <PatrocinadoresImage
         noyellowlayer
         imgName={expositor.logo}
-        to={`${expositor.site}`}
-        target="_blank"
-        rel="noopener noreferrer"
+        href={`${expositor.site}`}
+        padding={expositor.padding}
       />
     </StyledCol>
   ))

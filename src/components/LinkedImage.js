@@ -10,6 +10,7 @@ height: 100%;
 display: flex;
 flex-direction: column;
 justify-content: center;
+padding: ${props => props.padding && props.padding};
 ${props => props.mixBlendColor &&
   css`
     background-color: ${props => props.mixBlendColor};
@@ -125,7 +126,8 @@ const LinkedImage = props =>
     <StyledLink 
       to={props.to} 
       noyellowlayer={props.noyellowlayer} 
-      mixBlendColor={props.mixBlendColor}>
+      mixBlendColor={props.mixBlendColor}
+      padding={props.padding}>
       <StyledImage
         imgName={props.imgName}
         className={props.className}
