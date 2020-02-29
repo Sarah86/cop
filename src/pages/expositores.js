@@ -156,7 +156,7 @@ const ExpositoresDiamante = () => {
 const StyledCol = styled(Col)`
   border: 0.5px solid var(--kidnapper);
   margin-left: -.15px;
-  max-height: 80px;
+  max-height: 50px;
   img {
       object-fit: contain !important;
     }
@@ -195,7 +195,7 @@ const ExpositoresLogos = props => {
         <LinkedImage 
           imgName={expositor.logo} 
           href={expositor.site} 
-          mixBlendColor="#EDF8F2"
+          mixBlendColor="##EEFEE5"
           padding={expositor.padding}
           />
       </StyledCol>
