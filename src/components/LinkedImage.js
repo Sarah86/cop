@@ -6,6 +6,18 @@ import Image from './image'
 import target from '../images/target.png'
 
 const StyledLink = styled(Link)`
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+${props => props.mixBlendColor &&
+  css`
+    background-color: ${props => props.mixBlendColor};
+    img {
+      mix-blend-mode: darken;
+    }
+  `
+}
     &:hover {
         cursor: url("${target}"), cell;
         ${props =>
@@ -43,6 +55,10 @@ const StyledLink = styled(Link)`
 const ExternalStyledLink = styled.a`
 position: relative;
 display: block;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
 width: 100%;
     &:hover {
         cursor: url("${target}"), cell;
@@ -106,7 +122,10 @@ const LinkedImage = props =>
       />
     </ExternalStyledLink>
   ) : (
-    <StyledLink to={props.to} noyellowlayer={props.noyellowlayer}>
+    <StyledLink 
+      to={props.to} 
+      noyellowlayer={props.noyellowlayer} 
+      mixBlendColor={props.mixBlendColor}>
       <StyledImage
         imgName={props.imgName}
         className={props.className}

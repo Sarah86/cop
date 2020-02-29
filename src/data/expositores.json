@@ -279,6 +279,16 @@
       "nome": "CZ - USA",
       "logo": "expositor_prata_cz.jpg",
       "site": "https://cz-usa.com/"
+    },
+    {
+      "nome": "SegurPro",
+      "logo": "logo-segurpro.png",
+      "site": "https://www.segurpro.com.br/"
+    },
+    {
+      "nome": "Prosegur",
+      "logo": "logo-prosegur.jpeg",
+      "site": "https://www.prosegur.com.br/"
     }
   ]
 }

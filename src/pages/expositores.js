@@ -155,9 +155,9 @@ const ExpositoresDiamante = () => {
 
 const StyledCol = styled(Col)`
   border: 0.5px solid var(--kidnapper);
+  margin-left: -.15px;
   @media ${device.desktop} {
     border-color: var(--bunker);
-    background-color: var(--blackpearl);
   }
 `
 export const OuroBox = styled.div`
@@ -187,7 +187,11 @@ const ExpositoresLogos = props => {
     //.sort((a, b) => (a.local > b.local ? 1 : -1))
     .map((expositor, i) => (
       <StyledCol xs={3} lg={3} key={i}>
-        <LinkedImage imgName={expositor.logo} to={expositor.site} />
+        <LinkedImage 
+          imgName={expositor.logo} 
+          href={expositor.site} 
+          mixBlendColor="#EDF8F2"
+          />
       </StyledCol>
     ))
 
