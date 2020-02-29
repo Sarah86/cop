@@ -283,13 +283,14 @@
     {
       "nome": "SegurPro",
       "logo": "logo-segurpro.png",
-      "site": "https://www.segurpro.com.br/"
+      "site": "https://www.segurpro.com.br/",
+      "padding": ".5em"
     },
     {
       "nome": "Prosegur",
       "logo": "logo-prosegur.jpeg",
       "site": "https://www.prosegur.com.br/",
-      "padding": "1em"
+      "padding": ".5em"
     },
     {
       "nome": "Caravan do Brasil",
