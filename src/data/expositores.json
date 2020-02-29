@@ -332,6 +332,12 @@
       "logo": "fort-atacadista.png",
       "site": "https://www.fortatacadista.com.br/",
       "padding": "1em"
+    },
+    {
+      "nome": "RJC",
+      "logo": "logo-rjc.jpg",
+      "site": "/",
+      "padding": "1em"
     }
   ]
 }
