@@ -11,9 +11,9 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 padding: ${props => props.padding && props.padding};
-${props => props.mixBlendColor &&
+${props => props.mixblendcolor &&
   css`
-    background-color: ${props => props.mixBlendColor};
+    background-color: ${props => props.mixblendcolor};
     img {
       mix-blend-mode: darken;
     }
@@ -126,7 +126,7 @@ const LinkedImage = props =>
     <StyledLink 
       to={props.to} 
       noyellowlayer={props.noyellowlayer} 
-      mixBlendColor={props.mixBlendColor}
+      mixblendcolor={props.mixblendcolor}
       padding={props.padding}>
       <StyledImage
         imgName={props.imgName}

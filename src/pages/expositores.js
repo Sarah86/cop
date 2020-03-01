@@ -163,6 +163,7 @@ const StyledCol = styled(Col)`
   @media ${device.desktop} {
     border-color: var(--bunker);
     max-height: 140px;
+    background-color: var(--kidnapper);
   }
 `
 export const OuroBox = styled.div`
@@ -195,7 +196,7 @@ const ExpositoresLogos = props => {
         <LinkedImage 
           imgName={expositor.logo} 
           href={expositor.site} 
-          mixBlendColor="##EEFEE5"
+          mixblendcolor="##EEFEE5"
           padding={expositor.padding}
           />
       </StyledCol>

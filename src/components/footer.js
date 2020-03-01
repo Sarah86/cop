@@ -211,7 +211,7 @@ const Sitemap = () => {
       </StyledDiaFooter>
       <SitemapUl>
         {data.atividades.map((atividade, i) => (
-          <>
+          <div key={i}>
             {atividade.descricao ? (
               <FooterMenuItem
                 link={`/palestras-e-workshops/${atividade.slug}`}
@@ -219,11 +219,11 @@ const Sitemap = () => {
                 key={`atividade-${i}`}
               />
             ) : atividade.palestrante ? (
-              <li key={i}>
+              <li>
                 <DisabledLink key={`atividade-${i}`}>{atividade.palestrante}</DisabledLink>
               </li>
             ) : null}
-          </>
+          </div>
         ))}
       </SitemapUl>
     </SitemapUl>
@@ -246,11 +246,11 @@ const Sitemap = () => {
       <SitemapTitle>sitemap</SitemapTitle>
       <div>
         <SitemapUl>
-          <FooterMenuItem page link="/" title="Home" />
-          <FooterMenuItem page link="/ocongresso" title="O Congresso" />
-          <FooterMenuItem page link="/palestras-e-workshops" title="Palestras & Workshops" />
+          <FooterMenuItem page="true" link="/" title="Home" />
+          <FooterMenuItem page="true" link="/ocongresso" title="O Congresso" />
+          <FooterMenuItem page="true" link="/palestras-e-workshops" title="Palestras & Workshops" />
           {Palestrantes}
-          <FooterMenuItem page link="/expositores" title="Expositores" />
+          <FooterMenuItem page="true" link="/expositores" title="Expositores" />
           {Expositores}
         </SitemapUl>
       </div>
@@ -316,9 +316,9 @@ const PatrocinadoresUnificado = props => {
   const Expositor = ExpositorCategory.map((expositor, i) => (
     <StyledCol sm="2" key={`expositor-${i}`}>
       <PatrocinadoresImage
-        noyellowlayer
+        noyellowlayer="true"
         imgName={expositor.logo}
-        href={`${expositor.site}`}
+        to={`${expositor.site}`}
         padding={expositor.padding}
       />
     </StyledCol>
@@ -364,7 +364,7 @@ const Apoiadores = props => {
   const Apoiador = Apoio.map((apoiador, i) => (
     <StyledCol sm="2" key={`apoiador-${i}`}>
       <PatrocinadoresImage
-        noyellowlayer
+        noyellowlayer="true"
         imgName={apoiador.logo}
         to={`${apoiador.site}`}
         target="_blank"
@@ -413,7 +413,7 @@ const ApoiadoresInstitucionais = props => {
   const ApoiadorInstitucionalItem = ApoioInstitucional.map((apoiadorinstitucional, i) => (
     <StyledCol sm="2" key={`apoiador-${i}`}>
       <PatrocinadoresImage
-        noyellowlayer
+        noyellowlayer="true"
         imgName={apoiadorinstitucional.logo}
         to={`${apoiadorinstitucional.site}`}
         target="_blank"
@@ -462,7 +462,7 @@ const ParceirosDeMidia = props => {
   const ParceiroDeMidia = ParceirosDeMidiaFile.map((parceirodemidia, i) => (
     <StyledCol sm="2" key={`midia-${i}`}>
       <PatrocinadoresImage
-        noyellowlayer
+        noyellowlayer="true"
         imgName={parceirodemidia.logo}
         to={`${parceirodemidia.site}`}
         target="_blank"

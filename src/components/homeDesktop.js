@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import ReactPlayer from 'react-player'
 import { Container, Row, Col } from 'react-bootstrap'
@@ -16,7 +16,6 @@ import LinkedPhoto from './LinkedPhoto'
 import LinkedShadowedImage from './LinkedShadowedImage'
 import Background from './background'
 import FullWidth from './fullwidth'
-import Photo from './photo'
 import VideoDesktop from '../videos/COP-VIDEO-PROMO-FULL-HD-1920x1080-60s.mp4'
 import { HomeImagesOCongresso } from './carousels'
 import VideoEnpoe from '../videos/Enpoe-Quadrado.mp4'
@@ -88,34 +87,37 @@ const StyledFramedVideo = styled(FramedVideo)`
   }
 `
 
-const BoasVindas = () => (
-  <div style={{ position: 'relative', paddingBottom: '3em' }}>
-    <Background />
-    <BemVindo>
-      Bem vindo ao <br />
-      Congresso Internacional de Operações Policiais
-    </BemVindo>
-    <Sublegenda>O maior evento para atividade policial da América Latina</Sublegenda>
-    <Local fontSize="1em" iconSize="1.2em" className="text-left" />
-    <ApresentadoPor>
-      Orgulhosamente apresentado pelo CNCG - Conselho Nacional de Comandantes Gerais
-    </ApresentadoPor>
-    <Conselho>
-      <Image imgName="logo_cngc.png" />
-    </Conselho>
-  </div>
-)
+const BoasVindas = () => {
+
+  return (
+    <div style={{ position: 'relative', paddingBottom: '3em' }}>
+      <Background />
+      <BemVindo>
+        Bem vindo ao <br />
+        Congresso Internacional de Operações Policiais
+      </BemVindo>
+      <Sublegenda>O maior evento para atividade policial da América Latina</Sublegenda>
+      <Local fontSize="1em" iconSize="1.2em" className="text-left" />
+      <ApresentadoPor>
+        Orgulhosamente apresentado pelo CNCG - Conselho Nacional de Comandantes Gerais
+      </ApresentadoPor>
+      <Conselho>
+        <Image imgName="logo_cngc.png" />
+      </Conselho>
+    </div>
+  )
+}
 
 const Video = () => (
   <VideoContainer>
     <div style={{ position: 'relative' }}>
       <MolduraTop />
       <ReactPlayer 
-        fileConfig={{ attributes: { poster: `${CoverVideoTopo}` } }}
+        light={CoverVideoTopo}
         url={VideoDesktop} 
         controls 
         width="910px" 
-        height="100%" />
+        height="460px" />
       <MolduraBottom />
       <Shadow />
     </div>
@@ -130,7 +132,7 @@ export const BannerTemporario = () => (
 
 const CongressoPalestrantes = () => {
   const PalestranteDestaque = Cronograma.map((dia, i) => (
-    <>
+    <div key={i}>
       {dia.atividades
         .filter(atividade => atividade.destaque === true)
         .map((atividade, i) => (
@@ -148,7 +150,7 @@ const CongressoPalestrantes = () => {
             />
           </Col>
         ))}
-    </>
+    </div>
   ))
 
   return (
@@ -267,8 +269,7 @@ export const Espaco = ({widthTitle, styleSeparador, styleWordBreak}) => (
           4º enpoe 2020
         </FadeParagraphTitle>
         <StyledFramedVideo url={VideoEnpoe}
-          fileConfig={{ attributes: { poster: `${CoverVideoEnpoe}` } }}
-          light = {CoverVideoEnpoe}
+          light={CoverVideoEnpoe}
           controls 
           width="100%" 
           height="100%"/>
@@ -279,12 +280,7 @@ export const Espaco = ({widthTitle, styleSeparador, styleWordBreak}) => (
           certificação <span style={styleWordBreak}/>nacional de cão de polícia
         </FadeParagraphTitle>
         <StyledFramedVideo url={VideoCanil} 
-          fileConfig={{ 
-            attributes: { 
-              poster: `${CoverVideoCanil}` 
-              } 
-          }}
-          light = {CoverVideoCanil}
+          light={CoverVideoCanil}
           controls 
           width="100%" 
           height="100%"/>
@@ -293,14 +289,17 @@ export const Espaco = ({widthTitle, styleSeparador, styleWordBreak}) => (
   </Container>
 )
 
-const HomeDesktop = () => (
-  <>
-    <BoasVindas />
-    <Video />
-    <CongressoPalestrantes />
-    <Expositores />
-    <Espaco />
-  </>
-)
+const HomeDesktop = () => {
+
+  return(
+    <>
+        <BoasVindas />
+        <Video  />
+        <CongressoPalestrantes />
+        <Expositores />
+        <Espaco />
+    </>
+ )
+}
 
 export default HomeDesktop
