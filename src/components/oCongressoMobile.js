@@ -11,6 +11,7 @@ import VideoMobile from '../videos/COP-VIDEO-PROMO-QUADRADO-1080x1080-60s.mp4'
 import { PaddedContentBox } from '../components/typography'
 import SquareVideo from './squareVideo'
 import { Espaco } from './homeDesktop'
+import CopCover from '../images/COP-COVER.png'
 
 const Dados = require('../data/dados.json')
 
@@ -20,7 +21,7 @@ const Video = () => (
     <PaddedContentBox>
       <h1 className="mb-0 mt-4">o congresso</h1>
     </PaddedContentBox>
-    <SquareVideo url={VideoMobile} controls />
+    <SquareVideo url={VideoMobile} light={CopCover} controls />
   </>
 )
 
