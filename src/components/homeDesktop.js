@@ -131,9 +131,8 @@ export const BannerTemporario = () => (
 )
 
 const CongressoPalestrantes = () => {
-  const PalestranteDestaque = Cronograma.map((dia, i) => (
-    <div key={i}>
-      {dia.atividades
+  const PalestranteDestaque = Cronograma.map((dia) => (
+    dia.atividades
         .filter(atividade => atividade.destaque === true)
         .map((atividade, i) => (
           <Col
@@ -149,8 +148,7 @@ const CongressoPalestrantes = () => {
               subtitle={atividade.qualificacao}
             />
           </Col>
-        ))}
-    </div>
+        ))
   ))
 
   return (
