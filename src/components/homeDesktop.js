@@ -90,7 +90,7 @@ const StyledFramedVideo = styled(FramedVideo)`
 const BoasVindas = () => {
 
   return (
-    <div style={{ position: 'relative', paddingBottom: '3em' }}>
+    <div style={{position: 'relative', paddingBottom: '3em'}}>
       <Background />
       <BemVindo>
         Bem vindo ao <br />
@@ -291,14 +291,29 @@ export const Espaco = ({widthTitle, styleSeparador, styleWordBreak}) => (
 
 const HomeDesktop = () => {
 
+  const [isBoasVindasLoaded, setIsBoasVindasLoaded] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsBoasVindasLoaded(true)
+    }, 100);
+  })
+
   return(
     <>
+    {
+      isBoasVindasLoaded && 
+        <>
         <BoasVindas />
         <Video  />
         <CongressoPalestrantes />
         <Expositores />
         <Espaco />
-    </>
+        </>
+        ||    
+        <BoasVindas />
+      }
+      </>
  )
 }
 
