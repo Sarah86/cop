@@ -152,6 +152,11 @@ const PatrocinadoresImage = styled(LinkedImage)`
   opacity: 0.7;
   transition: all 0.3s;
   padding: ${props => props.padding};
+  height: 100%;
+  img {
+    padding: calc(${props => props.padding}/3);
+    mix-blend-mode: multiply;
+  }
 `
 
 const StyledCol = styled(Col)`
