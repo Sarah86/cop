@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import ReactPlayer from 'react-player'
 import { Container, Row, Col } from 'react-bootstrap'
 
 
 import { device } from '../components/device'
 import Botao from './botao'
 import Local from './location'
-import { MolduraTop, MolduraBottom } from './moldura'
-import Shadow from './shadow'
 import { Paragraph, ParagraphLink, ReadMore } from './typography'
 import { FadeParagraphTitle } from './FadeElements'
 import Image from './image'
@@ -16,14 +13,16 @@ import LinkedPhoto from './LinkedPhoto'
 import LinkedShadowedImage from './LinkedShadowedImage'
 import Background from './background'
 import FullWidth from './fullwidth'
-import VideoDesktop from '../videos/COP-VIDEO-PROMO-FULL-HD-1920x1080-60s.mp4'
+
 import { HomeImagesOCongresso } from './carousels'
 import VideoEnpoe from '../videos/Enpoe-Quadrado.mp4'
 import VideoCanil from '../videos/Canil-Quadrado.mp4'
 import FramedVideo from './framedVideo'
-import CoverVideoTopo from '../images/poster-video-home.png'
-import CoverVideoCanil from '../images/Cover_Video.jpg'
-import CoverVideoEnpoe from '../images/Cover_Video-enpoe.jpg'
+import CoverVideoEnpoe from '../images/Cover-Cop-Video-Enpoe.jpg'
+import CoverVideoCanil from '../images/Cover-Cop-Video-Canil.jpg'
+import VideoTopoDesktop from './videoTopoDesktop'
+import { useStaticQuery } from 'gatsby'
+
 
 const Cronograma = require('../data/cronograma.json')
 const dadosExpositores = require('../data/expositores.json')
@@ -61,15 +60,6 @@ const Conselho = styled.div`
   right: 1em;
 `
 
-const VideoContainer = styled.div`
-  background-color: var(--firefly);
-  display: flex;
-  justify-content: center;
-  padding-bottom: 0.21em;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-`
-
 const StyledFramedVideo = styled(FramedVideo)`
 
 .react-player__preview {
@@ -90,7 +80,7 @@ const StyledFramedVideo = styled(FramedVideo)`
 const BoasVindas = () => {
 
   return (
-    <div style={{position: 'relative', paddingBottom: '3em'}}>
+    <div style={{ position: 'relative', paddingBottom: '3em' }}>
       <Background />
       <BemVindo>
         Bem vindo ao <br />
@@ -108,21 +98,6 @@ const BoasVindas = () => {
   )
 }
 
-const Video = () => (
-  <VideoContainer>
-    <div style={{ position: 'relative' }}>
-      <MolduraTop />
-      <ReactPlayer 
-        light={CoverVideoTopo}
-        url={VideoDesktop} 
-        controls 
-        width="910px" 
-        height="460px" />
-      <MolduraBottom />
-      <Shadow />
-    </div>
-  </VideoContainer>
-)
 
 export const BannerTemporario = () => (
   <FullWidth>
@@ -133,22 +108,22 @@ export const BannerTemporario = () => (
 const CongressoPalestrantes = () => {
   const PalestranteDestaque = Cronograma.map((dia) => (
     dia.atividades
-        .filter(atividade => atividade.destaque === true)
-        .map((atividade, i) => (
-          <Col
-            xs={6}
-            className="pl-1 pr-1"
-            key={`destaque-${i}`}
-            style={{ order: `${atividade.destaqueOrdem}` }}
-          >
-            <LinkedPhoto
-              imgName={atividade.imagem}
-              title={atividade.palestrante}
-              to={`/palestras-e-workshops/${atividade.slug}`}
-              subtitle={atividade.qualificacao}
-            />
-          </Col>
-        ))
+      .filter(atividade => atividade.destaque === true)
+      .map((atividade, i) => (
+        <Col
+          xs={6}
+          className="pl-1 pr-1"
+          key={`destaque-${i}`}
+          style={{ order: `${atividade.destaqueOrdem}` }}
+        >
+          <LinkedPhoto
+            imgName={atividade.imagem}
+            title={atividade.palestrante}
+            to={`/palestras-e-workshops/${atividade.slug}`}
+            subtitle={atividade.qualificacao}
+          />
+        </Col>
+      ))
   ))
 
   return (
@@ -188,7 +163,7 @@ const CongressoPalestrantes = () => {
           <ReadMore to="/ocongresso">leia mais</ReadMore>
         </Col>
         <Col className="d-flex flex-column justify-content-center">
-            <HomeImagesOCongresso/>
+          <HomeImagesOCongresso />
         </Col>
       </Row>
       <Row>
@@ -232,7 +207,7 @@ const Expositores = () => {
         <Col className="mt-5 pt-5">
           <FadeParagraphTitle>expositores</FadeParagraphTitle>
           <Paragraph>
-           Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em segurança e defesa estarão expondo seus produtos e soluções.
+            Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em segurança e defesa estarão expondo seus produtos e soluções.
           </Paragraph>
           <Paragraph>
             Será uma oportunidade única de se atualizar e se conectar con o que há de melhor e mais
@@ -258,34 +233,60 @@ const Expositores = () => {
   )
 }
 
-export const Espaco = ({widthTitle, styleSeparador, styleWordBreak}) => (
-  <Container className="mt-5 d-flex flex-column justify-content-between position-relative">
-    <Background left="-45%" position="left top" />
-    <Row className="pt-5">
-      <Col>
-       <FadeParagraphTitle size="2.5em" width="3.5em">
-          4º enpoe 2020
-        </FadeParagraphTitle>
-        <StyledFramedVideo url={VideoEnpoe}
-          light={CoverVideoEnpoe}
-          controls 
-          width="100%" 
-          height="100%"/>
-      </Col>
-      <div style={styleSeparador}/>
-      <Col>
-        <FadeParagraphTitle size="2.5em" width="6.5em" width={widthTitle}>
-          certificação <span style={styleWordBreak}/>nacional de cão de polícia
-        </FadeParagraphTitle>
-        <StyledFramedVideo url={VideoCanil} 
-          light={CoverVideoCanil}
-          controls 
-          width="100%" 
-          height="100%"/>
-      </Col>
-    </Row>
-  </Container>
-)
+export const Espaco = ({ widthTitle, styleSeparador, styleWordBreak }) => {
+  const data = useStaticQuery(
+    graphql`{
+      CoverEnpoe: file(name: {eq: "Cover-Cop-Video-Enpoe"}) {
+        childImageSharp {
+          fluid(maxWidth: 1000, traceSVG: {color: "#000"}) {
+            src
+          }
+        }
+      }
+      CoverCanil: file(name: {eq: "Cover-Cop-Video-Canil"}) {
+        childImageSharp {
+          fluid(maxWidth: 1000) {
+            src
+          }
+        }
+      }
+      }
+    `
+  )
+  const imageEnpoe =  data.CoverEnpoe.childImageSharp.fluid.src;
+  const imageCanil =  data.CoverCanil.childImageSharp.fluid.src;
+
+  return (
+    <Container className="mt-5 d-flex flex-column justify-content-between position-relative">
+      <Background left="-45%" position="left top" />
+      <Row className="pt-5">
+        <Col>
+          <FadeParagraphTitle size="2.5em" width="3.5em">
+            4º enpoe 2020
+          </FadeParagraphTitle>
+          <StyledFramedVideo url={VideoEnpoe}
+            light={`${imageEnpoe}`}
+            controls
+            width="100%"
+            height="100%" />
+        </Col>
+        <div style={styleSeparador} />
+        <Col>
+          <FadeParagraphTitle size="2.5em" width="6.5em" width={widthTitle}>
+            certificação <span style={styleWordBreak} />nacional de cão de polícia
+          </FadeParagraphTitle>
+          <StyledFramedVideo url={VideoCanil}
+             light={`${imageCanil}`}
+            controls
+            width="100%"
+            height="100%" />
+        </Col>
+      </Row>
+    </Container>
+  )
+
+}
+
 
 const HomeDesktop = () => {
 
@@ -297,22 +298,22 @@ const HomeDesktop = () => {
     }, 100);
   })
 
-  return(
+  return (
     <>
-    {
-      isBoasVindasLoaded && 
-        <>
-        <BoasVindas />
-        <Video  />
-        <CongressoPalestrantes />
-        <Expositores />
-        <Espaco />
-        </>
-        ||    
-        <BoasVindas />
+      {
+        isBoasVindasLoaded ?
+          <>
+            <BoasVindas />
+            <VideoTopoDesktop />
+            <CongressoPalestrantes />
+            <Expositores />
+            <Espaco />
+          </>
+          :
+          <BoasVindas />
       }
-      </>
- )
+    </>
+  )
 }
 
 export default HomeDesktop
