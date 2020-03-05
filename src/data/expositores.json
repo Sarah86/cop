@@ -301,13 +301,13 @@
     {
       "nome": "Impacto",
       "logo": "logo-impacto.png",
-      "site": "/",
-      "padding": "1em"
+      "site": "https://www.facebook.com/impactoequipamentostaticos/",
+      "padding": "2em"
     },
     {
       "nome": "Kydex",
       "logo": "logo-kydex.png",
-      "site": "/",
+      "site": "https://www.kydexholsters.com.br/",
       "padding": "1em"
     },
     {
@@ -332,13 +332,19 @@
       "nome": "Fort Atacadista",
       "logo": "fort-atacadista.png",
       "site": "https://www.fortatacadista.com.br/",
-      "padding": "1em"
+      "padding": "2em"
     },
     {
       "nome": "RJC",
       "logo": "logo-rjc.jpg",
-      "site": "/",
-      "padding": "1em"
+      "site": "https://www.rjc.com.br/",
+      "padding": "2em"
+    },
+    {
+      "nome": "Eloo",
+      "logo": "eloo-logo.png",
+      "site": "https://elootatico.com.br/",
+      "padding": "2em"
     }
   ]
 }

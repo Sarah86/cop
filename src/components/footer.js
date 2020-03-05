@@ -257,6 +257,7 @@ const Sitemap = () => {
           {Palestrantes}
           <FooterMenuItem page="true" link="/expositores" title="Expositores" />
           {Expositores}
+          <FooterMenuItem page="true" link="/hoteisparceiros" title="Hotéis Parceiros" />
         </SitemapUl>
       </div>
     </>

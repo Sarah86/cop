@@ -57,7 +57,7 @@ const NoticiasTemplate = ({ data }) => {
       <StyledPhoto>
         <Photo imgName={frontmatter.imagem} />
       </StyledPhoto>
-      <div style={{ padding: '2em', paddingTop: '0' }}>
+      <div style={{ padding: '1em', paddingTop: '0' }}>
         <FadeParagraphTitle sm style={{ marginBottom: '.2em' }}>
           {frontmatter.titulo}
         </FadeParagraphTitle>
@@ -65,7 +65,7 @@ const NoticiasTemplate = ({ data }) => {
           {frontmatter.subtitulo}
         </Subtitulo>
       </div>
-      <PaddedText style={{ padding: '1em', textAlign: 'justify' }}>
+      <PaddedText style={{ padding: '1em', textAlign: 'left' }}>
         <Paragraph as="div"
           dangerouslySetInnerHTML={{ __html: html }}
         />

@@ -226,6 +226,10 @@ const MobilePages = [
     link: '/expositores',
     nome: 'Expositores',
   },
+  {
+    link: '/hoteisparceiros',
+    nome: 'Hotéis Parceiros',
+  }
 ]
 
 const DesktopPages = [
@@ -245,6 +249,10 @@ const DesktopPages = [
     link: '/expositores',
     nome: 'Expositores',
   },
+  {
+    link: '/hoteisparceiros',
+    nome: 'Hotéis Parceiros',
+  }
 ]
 
 const BotaoInscrevase = () => (
