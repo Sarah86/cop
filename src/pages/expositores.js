@@ -11,7 +11,7 @@ import Separador from '../components/separador'
 import { Container, Col, Row } from 'react-bootstrap'
 import Botao from '../components/botao'
 import Background from '../components/background'
-import { device } from '../components/device'
+import { device, DevicesQueries } from '../components/device'
 import ShadowedImage from '../components/shadowedimage'
 import LinkedImage from '../components/LinkedImage'
 import LinkedShadowedImage from '../components/LinkedShadowedImage'
@@ -185,7 +185,7 @@ const ExpositoresLogos = props => {
     Expositores.ouro,
     Expositores.prata,
     Expositores.bronze
-  )
+)
 
   // .sort((a, b) => a.nome > b.nome ? 1 : -1)
 
@@ -193,12 +193,22 @@ const ExpositoresLogos = props => {
     //.sort((a, b) => (a.local > b.local ? 1 : -1))
     .map((expositor, i) => (
       <StyledCol xs={3} lg={3} key={i}>
-        <LinkedImage 
-          imgName={expositor.logo} 
-          href={expositor.site} 
-          mixblendcolor="##EEFEE5"
-          padding={expositor.padding}
-          />
+          <MediaQuery minWidth={992}>
+            <LinkedImage 
+            imgName={expositor.logo} 
+            href={expositor.site} 
+            mixblendcolor="#EEFEE5"
+            padding={expositor.padding}
+            />
+          </MediaQuery>
+          <MediaQuery maxWidth={991}>
+            <LinkedImage 
+            imgName={expositor.logo} 
+            href={expositor.site} 
+            mixblendcolor="#EEFEE5"
+            padding={expositor.paddingMobile}
+            />
+          </MediaQuery>
       </StyledCol>
     ))
 

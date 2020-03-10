@@ -296,49 +296,66 @@
       "nome": "Impacto",
       "logo": "logo-impacto.png",
       "site": "https://www.facebook.com/impactoequipamentostaticos/",
-      "padding": "2em"
+      "padding": "2em",
+      "paddingMobile": ".5em"
     },
     {
       "nome": "Kydex",
       "logo": "logo-kydex.png",
       "site": "https://www.kydexholsters.com.br/",
-      "padding": "1em"
+      "padding": "1em",
+      "paddingMobile": ".5em"
     },
     {
       "nome": "Royal Canin",
       "logo": "logo-royal-canin.png",
       "site": "https://www.royalcanin.com/br/dogs",
-      "padding": "1em"
+      "padding": "1em",
+      "paddingMobile": ".5em"
     },
     {
       "nome": "Iveco",
       "logo": "logo_iveco.png",
       "site": "https://www.iveco.com/brasil/pages/home-page.aspx",
-      "padding": "1em"
+      "padding": "1em",
+      "paddingMobile": "1em"
     },
     {
       "nome": "Plasan",
       "logo": "logo-plasan.jpg",
       "site": "https://www.plasan.com/",
-      "padding": ".5em"
+      "padding": ".5em",
+      "paddingMobile": ".25em"
     },
     {
       "nome": "Fort Atacadista",
       "logo": "fort-atacadista.png",
       "site": "https://www.fortatacadista.com.br/",
-      "padding": "2em"
+      "padding": "2em",
+      "paddingMobile": "1em"
+
     },
     {
       "nome": "RJC",
       "logo": "logo-rjc.jpg",
       "site": "https://www.rjc.com.br/",
-      "padding": "2em"
+      "padding": "2em",
+      "paddingMobile": ".7em"
+
     },
     {
       "nome": "Eloo",
       "logo": "eloo-logo.png",
       "site": "https://elootatico.com.br/",
-      "padding": "2em"
+      "padding": "2em",
+      "paddingMobile": "1em"
+    },
+    {
+      "nome": "Polydefensor",
+      "logo": "polydefensor-logo-2.png",
+      "site": "https://www.polydefensor.com.br/",
+      "padding": "1em",
+      "paddingMobile": ".5em"
     }
   ]
 }

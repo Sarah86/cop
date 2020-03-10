@@ -18,8 +18,6 @@ import { HomeImagesOCongresso } from './carousels'
 import VideoEnpoe from '../videos/Enpoe-Quadrado.mp4'
 import VideoCanil from '../videos/Canil-Quadrado.mp4'
 import FramedVideo from './framedVideo'
-import CoverVideoEnpoe from '../images/Cover-Cop-Video-Enpoe.jpg'
-import CoverVideoCanil from '../images/Cover-Cop-Video-Canil.jpg'
 import VideoTopoDesktop from './videoTopoDesktop'
 import { useStaticQuery } from 'gatsby'
 
@@ -178,20 +176,6 @@ const CongressoPalestrantes = () => {
     </Container>
   )
 }
-
-//Funcao para gerar randomicamente os thumbnails. Substituido por ordem especifica
-// function getRandom(arr, n) {
-//   var result = new Array(n),
-//     len = arr.length,
-//     taken = new Array(len)
-//   if (n > len) throw new RangeError('getRandom: more elements taken than available')
-//   while (n--) {
-//     var x = Math.floor(Math.random() * len)
-//     result[n] = arr[x in taken ? taken[x] : x]
-//     taken[x] = --len in taken ? taken[len] : len
-//   }
-//   return result
-// }
 
 const Expositores = () => {
   const ThumbnailsExpositores = dadosExpositores.diamante.map((diamante, i) => (

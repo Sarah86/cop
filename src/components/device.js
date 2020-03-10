@@ -1,3 +1,5 @@
+import { useMediaQuery } from "react-responsive"
+
 const size = {
   upXS: '',
   upSM: '576px',
@@ -19,4 +21,13 @@ export const device = {
   desktop: `(min-width: ${size.upLG})`,
   // Extra large devices (large desktops, 1200px and up)
   largeDesktop: `(min-width: ${size.upXL})`,
+}
+
+export const DevicesQueries = () => {
+  const isDesktopOrLaptop = useMediaQuery({ minDeviceWidth: 1200 })
+  const isBigScreen = useMediaQuery({ minDeviceWidth: 992 })
+  const isTablet = useMediaQuery({ minWidth: 768 })
+  const isMobile = useMediaQuery({ maxWidth: 576 })
+  const isPortrait = useMediaQuery({ orientation: 'portrait' })
+  const isRetina = useMediaQuery({ minResolution: '2dppx' })
 }
