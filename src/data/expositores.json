@@ -356,6 +356,90 @@
       "site": "https://www.polydefensor.com.br/",
       "padding": "1em",
       "paddingMobile": ".5em"
+    },
+    {
+      "nome": "Vortex",
+      "logo": "logo-vortex.png",
+      "site": "https://vortexoptics.com/",
+      "padding": "1em",
+      "paddingMobile": ".5em"
+    },
+    {
+      "nome": "Ultramar",
+      "logo": "logo-ultramar.jpeg",
+      "site": "http://ultramar.ca/",
+      "padding": "1em",
+      "paddingMobile": ".5em"
+    },
+    {
+      "nome": "Mormaii",
+      "logo": "logo-mormaii.png",
+      "site": "http://mormaii.com/",
+      "padding": "2em",
+      "paddingMobile": "1em"
+    },
+    {
+      "nome": "Sc Fire",
+      "logo": "logo-scfire.png",
+      "site": "http://scfire.com.br/",
+      "padding": "2em",
+      "paddingMobile": "1em"
+    },
+    {
+      "nome": "Academia do Mergulho",
+      "logo": "logo-academiamergulho.jpg",
+      "site": "http://academiadomergulho.com.br/site/",
+      "padding": "1em",
+      "paddingMobile": ".5em"
+    },
+    {
+      "nome": "Guartelá",
+      "logo": "logo-guartela.jpeg",
+      "site": "http://www.guartela.com.br/",
+      "padding": "1em",
+      "paddingMobile": ".5em"
+    },
+    {
+      "nome": "Fortline",
+      "logo": "logo-fortline.png",
+      "site": "http://www.fortlinecalcados.com.br/",
+      "padding": "1em",
+      "paddingMobile": ".5em"
+    },
+    {
+      "nome": "FNCP",
+      "logo": "logo-fncp.png",
+      "site": "http://fncp.org.br/",
+      "padding": "1em",
+      "paddingMobile": ".5em"
+    },
+    {
+      "nome": "Gespi",
+      "logo": "logo-gespi.png",
+      "site": "http://gespi.com.br/",
+      "padding": "0",
+      "paddingMobile": "0"
+    },
+    {
+      "nome": "Khronos",
+      "logo": "logo-khronos.jpeg",
+      "site": "http://grupokhronos.com.br/",
+      "padding": "0",
+      "paddingMobile": "0"
+    },
+    {
+      "nome": "Imbel",
+      "logo": "logo-imbel.png",
+      "site": "http://imbel.gov.br/",
+      "padding": "1em",
+      "paddingMobile": ".5em"
+    },
+    {
+      "nome": "Triumph",
+      "logo": "logo-triumph.jpeg",
+      "site": "https://motorcycle-logos.com/triumph-logo/",
+      "padding": "1em",
+      "paddingMobile": ".5em"
     }
   ]
 }
