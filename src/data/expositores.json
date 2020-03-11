@@ -382,8 +382,8 @@
       "nome": "Sc Fire",
       "logo": "logo-scfire.png",
       "site": "http://scfire.com.br/",
-      "padding": "2em",
-      "paddingMobile": "1em"
+      "padding": "1em",
+      "paddingMobile": ".5em"
     },
     {
       "nome": "Academia do Mergulho",
