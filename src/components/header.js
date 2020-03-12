@@ -32,6 +32,7 @@ const StyledNavbar = styled(Navbar)`
     z-index: 1000;
     background-color: var(--firefly);
     padding: 0;
+    max-width: 100vw;
     @media ${device.desktop} {
       top: 0;
       bottom: auto;
