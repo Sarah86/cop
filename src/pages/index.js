@@ -7,6 +7,7 @@ import SEO from '../components/seo'
 import HomeMobile from '../components/homeMobile'
 import HomeDesktop from '../components/homeDesktop'
 import OCongressoMobile from '../components/oCongressoMobile'
+import ModalCorona from '../components/modal'
 
 const HomeMobileWrapper = styled.div``
 
@@ -14,6 +15,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="COP 2020 - Congresso de Operações Policiais" />
+      <ModalCorona/>
       <MediaQuery maxWidth={991}>
         <HomeMobileWrapper>
           <HomeMobile id="home" />
