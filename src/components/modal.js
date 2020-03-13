@@ -31,9 +31,19 @@ const ModalCorona = () => {
             <TitleH3>COMUNICADO DO <strong>CONGRESSO INTERNACIONAL DE OPERAÇÕES POLICIAIS </strong> SOBRE O CORONAVÍRUS</TitleH3>
           </Modal.Header>
           <Modal.Body>
-            <Paragraph><strong>O COP 2020</strong>, preocupado com a transmissão do <strong>SARS-CoV-2 (Covid-19)</strong>, e com a saúde e bem-estar de seu público, seguindo as orientações do Ministério da Saúde e das Secretárias estadual e municipal de saúde, entidades que estão monitorando o possível avanço do vírus em Santa Catarina, vem tomando em conjunto com a organização do evento as medidas que minimizem 
-            o risco de infecção, sem risco para a realização do evento, no qual <strong>está garantida a sua realização.</strong></Paragraph>
-            <Paragraph>O <strong>COP</strong> reforça que, aqueles que tenham viajado para o exterior nas últimas duas semanas ou tenham tido contato com pessoas que tenham voltado de viagem neste período, <strong>redobrem a atenção aos sintomas.</strong></Paragraph>
+            <Paragraph>
+            Por motivo de possível expansão do vírus <strong>(COVID-19)</strong> no estado de Santa Catarina e seguindo recomendação do Ministério da Saúde, das secretarias: Estadual e Municipal de Florianópolis, e em cumprimento ao decreto N. 21.340 publicado na data de hoje (<strong>sexta-feira - 13 de março de 2020</strong>), a organização do COP Internacional comunica o <strong>adiamento do Congresso Internacional de 2020 que aconteceria nos dias 17, 18 e 19 de março de 2020</strong>, no Centro de Eventos Luiz Henrique da Silveira.
+            </Paragraph>
+            <Paragraph>
+            <strong>A nova data está sendo programada para o segundo semestre de 2020</strong>, estando normalizado a crise nacional sobre Coronavírus.
+            </Paragraph>
+            <Paragraph style={{paddingLeft: '2em'}}>
+            “Informo a todos que está <strong>proibida</strong>, a partir de segunda-feira, <strong>16 de março</strong>, a realização de eventos na cidade de Florianópolis com mais de 250 pessoas, ao ar livre, e 100 pessoas, em ambientes fechados. A medida, decidida junto a nossa área técnica da saúde, e baseada em resultados internacionais e recomendações nacionais, visa diminuir o risco exponencial de contágio.”<br></br>
+            <strong>Gean Loureiro - Prefeito de Florianópolis</strong>
+            </Paragraph>
+            <Paragraph>
+            Agradecemos a compreensão de todos os envolvidos como autoridades, expositores, fornecedores e os mais de cinco mil congressistas confirmados no COP 2020.
+            </Paragraph>
           </Modal.Body>
         </StyledModal>
       </>

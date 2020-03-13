@@ -15,7 +15,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="COP 2020 - Congresso de Operações Policiais" />
-      {/* <ModalCorona/> */}
+      <ModalCorona/>
       <MediaQuery maxWidth={991}>
         <HomeMobileWrapper>
           <HomeMobile id="home" />
