@@ -3,6 +3,7 @@ import { Modal, Button } from "react-bootstrap"
 import styled from "styled-components"
 
 import {Paragraph, TitleH3} from "../components/typography"
+import "../components/modal.css"
 
 const StyledModal = styled(Modal)`
     .modal-content  {
@@ -11,7 +12,6 @@ const StyledModal = styled(Modal)`
     .close {
         color: white;
     }
-    
 `
 
 const ModalCorona = () => {
