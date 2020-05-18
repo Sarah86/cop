@@ -135,7 +135,7 @@ const CongressoPalestrantes = () => {
               marcas do setor, e a sociedade civil. Em contato direto por 3 dias.
             </Paragraph>
             <Paragraph>
-              Congresso se realizará de forma gratuita nos dias 17, 18 e 19 de Março de 2020 para um
+              Congresso se realizará de forma gratuita nos dias 03, 04 e 05 de Novembro de 2020 para um
               público diário de aproximadamente 2000 pessoas.
             </Paragraph>
             <Paragraph>

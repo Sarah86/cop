@@ -33,7 +33,7 @@ const OCongressoMobile = props => (
       <CongressoFirstCarousel />
       <CongressoSecondBlock />
       <CongressoSecondCarousel />
-      <Espaco widthTitle="5.5em" styleSeparador={{height: '2em', width: '100%'}}/>
+      <Espaco widthTitle="5.5em" styleSeparador={{ height: '2em', width: '100%' }} />
       <Botoes />
     </div>
   </MediaQuery>

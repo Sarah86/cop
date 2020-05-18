@@ -1,9 +1,9 @@
 [
   {
-    "dia": "17.mar",
-    "diaLongo": "ter.17.mar",
-    "diaCompleto": "Terça, 17 de Março",
-    "diaFooter": "Dia 01 - 17/03",
+    "dia": "05.nov",
+    "diaLongo": "ter.03.nov",
+    "diaCompleto": "Terça, 03 de Novembro",
+    "diaFooter": "Dia 01 - 03/11",
     "atividades": [
       {
         "hora": "07:30h",
@@ -57,10 +57,10 @@
     ]
   },
   {
-    "dia": "18.mar",
-    "diaLongo": "qua.18.mar",
-    "diaCompleto": "Quarta, 18 de Março",
-    "diaFooter": "Dia 02 - 18/03",
+    "dia": "04.nov",
+    "diaLongo": "qua.04.nov",
+    "diaCompleto": "Quarta, 04 de Novembro",
+    "diaFooter": "Dia 02 - 04/11",
     "atividades": [
       {
         "hora": "07:30h",
@@ -84,7 +84,7 @@
         "ordemGaleriaOCongresso": 8,
         "imagem": "palestrante_rocha_junior.jpg",
         "linkedin": "https://www.linkedin.com/in/humberto-antunes-rocha-j%C3%BAnior-b099b27a",
-        "palestrante": "Coronel do Exército Brasileiro Rocha Junior",
+        "palestrante": "Cel. do Exército Brasileiro Rocha Junior",
         "palestranteAbreviado": "Cel. Rocha Junior",
         "qualificacao": "Coordenador Militar do Gabinete de Segurança Institucional da Presidência da República – GSI",
         "slug": "cel-rocha-junior",
@@ -122,10 +122,10 @@
     ]
   },
   {
-    "dia": "19.mar",
-    "diaLongo": "qui.19.mar",
-    "diaCompleto": "Quinta, 19 de Março",
-    "diaFooter": "Dia 03 - 19/03",
+    "dia": "05.nov",
+    "diaLongo": "qui.05.nov",
+    "diaCompleto": "Quinta, 05 de Novembro",
+    "diaFooter": "Dia 03 - 05/11",
     "atividades": [
       {
         "hora": "07:30h",
