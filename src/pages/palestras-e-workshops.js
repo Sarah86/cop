@@ -17,9 +17,9 @@ const Palestrantes = () => (
     <AgendaEPalestrantesCarousel />
     <MediaQuery maxWidth={991}>
       <div style={{ height: '1em' }} />
-      <AgendaMobile defaultActiveKeyAccordion="0" defaultActiveKeyTab="17.mar" />
+      <AgendaMobile defaultActiveKeyAccordion="0" defaultActiveKeyTab="03.nov" />
       <div style={{ height: '1em' }} />
-      <WorkshopsMobile defaultActiveKeyAccordion="0" defaultActiveKeyTab="17.mar" />
+      <WorkshopsMobile defaultActiveKeyAccordion="0" defaultActiveKeyTab="03.nov" />
     </MediaQuery>
     <MediaQuery minWidth={992}>
       <div style={{ height: '2em' }} />
