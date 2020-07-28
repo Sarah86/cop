@@ -25,7 +25,8 @@ const ExpositoresIntroduction = () => (
     <Row>
       <Col>
         <Paragraph>
-          Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em segurança e defesa estarão expondo seus produtos e soluções.
+          Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em segurança e defesa
+          estarão expondo seus produtos e soluções.
         </Paragraph>
         <Paragraph>
           Será uma oportunidade única de se atualizar e se conectar com o que há de melhor e mais
@@ -106,11 +107,11 @@ const ExpositoresDiamante = () => {
     .sort((a, b) => (a.ordemThumbnailExpositores > b.ordemThumbnailExpositores ? 1 : -1))
     .map(diamante => (
       <ColDiamante sm={12} lg={6} key={diamante.nome}>
-      {diamante.site ? 
-        <LinkedShadowedImage imgName={diamante.thumbnail} to={diamante.site} nomargin />
-      : 
-        <ShadowedImage imgName={diamante.thumbnail} nomargin />
-      }
+        {diamante.site ? (
+          <LinkedShadowedImage imgName={diamante.thumbnail} to={diamante.site} nomargin />
+        ) : (
+          <ShadowedImage imgName={diamante.thumbnail} nomargin />
+        )}
         <DiamanteBox>
           <h4 style={{ fontFamily: 'TilliumWeb', fontSize: '1.2em', marginBottom: '0' }}>
             {diamante.nome}
@@ -155,11 +156,11 @@ const ExpositoresDiamante = () => {
 
 const StyledCol = styled(Col)`
   border: 0.5px solid var(--kidnapper);
-  margin-left: -.15px;
+  margin-left: -0.15px;
   max-height: 50px;
   img {
-      object-fit: contain !important;
-    }
+    object-fit: contain !important;
+  }
   @media ${device.desktop} {
     border-color: var(--bunker);
     max-height: 140px;
@@ -185,7 +186,7 @@ const ExpositoresLogos = props => {
     Expositores.ouro,
     Expositores.prata,
     Expositores.bronze
-)
+  )
 
   // .sort((a, b) => a.nome > b.nome ? 1 : -1)
 
@@ -193,57 +194,49 @@ const ExpositoresLogos = props => {
     //.sort((a, b) => (a.local > b.local ? 1 : -1))
     .map((expositor, i) => (
       <StyledCol xs={3} lg={3} key={i}>
-          <MediaQuery minWidth={992}>
-            <LinkedImage 
-            imgName={expositor.logo} 
-            href={expositor.site} 
+        <MediaQuery minWidth={992}>
+          <LinkedImage
+            imgName={expositor.logo}
+            href={expositor.site}
             mixblendcolor="#EEFEE5"
             padding={expositor.padding}
-            />
-          </MediaQuery>
-          <MediaQuery maxWidth={991}>
-            <LinkedImage 
-            imgName={expositor.logo} 
-            href={expositor.site} 
+          />
+        </MediaQuery>
+        <MediaQuery maxWidth={991}>
+          <LinkedImage
+            imgName={expositor.logo}
+            href={expositor.site}
             mixblendcolor="#EEFEE5"
             padding={expositor.paddingMobile}
-            />
-          </MediaQuery>
+          />
+        </MediaQuery>
       </StyledCol>
     ))
 
   return (
     <>
-       <OuroBox>
-          <SpacerInterBlocks />
-          <MediaQuery maxWidth={991}>
-            <ExpositoresCategory
-              fontSize="2.5em"
-              fontSizeSubtitulo="2.5em"
-              color="var(--firefly)"
-            />
-            <div className="d-flex justify-content-end">
-              <Separador color="var(--kidnapper)" border="1px" widthTotal="50%" nomargin />
-            </div>
-          </MediaQuery>
-          <MediaQuery minWidth={992}>
-            <ExpositoresCategory
-              fontSize="2.5em"
-              fontSizeSubtitulo="2.5em"
-              color="var(--narvik)"
-            />
-          </MediaQuery>
-          <Container className="m-auto p-0">
-            <Row noGutters className="pt-2 pb-2">
-              {Expositor}
-            </Row>
-          </Container>
-          <MediaQuery maxWidth={991}>
-            <div className="d-flex justify-content-end mt-n5">
-              <Separador color="var(--kidnapper)" border="1px" widthTotal="50%" />
-            </div>
-          </MediaQuery>
-        </OuroBox>
+      <OuroBox>
+        <SpacerInterBlocks />
+        <MediaQuery maxWidth={991}>
+          <ExpositoresCategory fontSize="2.5em" fontSizeSubtitulo="2.5em" color="var(--firefly)" />
+          <div className="d-flex justify-content-end">
+            <Separador color="var(--kidnapper)" border="1px" widthTotal="50%" nomargin />
+          </div>
+        </MediaQuery>
+        <MediaQuery minWidth={992}>
+          <ExpositoresCategory fontSize="2.5em" fontSizeSubtitulo="2.5em" color="var(--narvik)" />
+        </MediaQuery>
+        <Container className="m-auto p-0">
+          <Row noGutters className="pt-2 pb-2">
+            {Expositor}
+          </Row>
+        </Container>
+        <MediaQuery maxWidth={991}>
+          <div className="d-flex justify-content-end mt-n5">
+            <Separador color="var(--kidnapper)" border="1px" widthTotal="50%" />
+          </div>
+        </MediaQuery>
+      </OuroBox>
     </>
   )
 }

@@ -1,5 +1,5 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import ReactPlayer from 'react-player'
 
@@ -18,34 +18,29 @@ const VideoContainer = styled.div`
 
 const VideoTopoDesktop = () => {
   const data = useStaticQuery(
-    graphql`{
-      file(name: {eq: "Cover-Cop-Video-Wide"}) {
-        childImageSharp {
-          fluid(maxWidth: 1000) {
-            src
+    graphql`
+      {
+        file(name: { eq: "Cover-Cop-Video-Wide" }) {
+          childImageSharp {
+            fluid(maxWidth: 1000) {
+              src
+            }
           }
         }
       }
-      }
     `
   )
-  const image =  data.file.childImageSharp.fluid.src
+  const image = data.file.childImageSharp.fluid.src
   return (
     <VideoContainer>
       <div style={{ position: 'relative' }}>
         <MolduraTop />
-        <ReactPlayer
-          light={image}
-          url={VideoDesktop}
-          controls
-          width="910px"
-          height="460px" />
+        <ReactPlayer light={image} url={VideoDesktop} controls width="910px" height="460px" />
         <MolduraBottom />
         <Shadow />
       </div>
     </VideoContainer>
   )
-   
 }
 
 export default VideoTopoDesktop

@@ -21,11 +21,6 @@ const Apoio = require('../data/apoio.json')
 const ApoioInstitucional = require('../data/apoio-institucional.json')
 const ParceirosDeMidiaFile = require('../data/parceiros-midia.json')
 
-
-
-
-
-
 const ColunaA = styled(Col)`
   background-color: var(--firefly);
   padding: 1.5em;
@@ -148,14 +143,11 @@ const StyledImage = styled(Image)`
   opacity: 0.7;
 `
 const PatrocinadoresImage = styled(LinkedImage)`
-  mix-blend-mode: luminosity;
+  mix-blend-mode: darken;
   opacity: 0.7;
-  transition: all 0.3s;
-  padding: ${props => props.padding};
   height: 100%;
   img {
-    padding: calc(${props => props.padding}/3);
-    mix-blend-mode: multiply;
+    padding: calc(${props => props.padding} / 3);
   }
 `
 
@@ -163,8 +155,8 @@ const StyledCol = styled(Col)`
   border: 0.5px solid var(--kidnapper);
   max-height: 50px;
   img {
-      object-fit: contain !important;
-    }
+    object-fit: contain !important;
+  }
 `
 
 const Creditos = styled.div`
@@ -294,7 +286,6 @@ const FooterRealizacao = () => (
           tall
         />
       </div>
-      <StyledImage imgName="logo_cngc.png" />
       <StyledImage imgName="logo_sansone.png" />
       <div className="d-flex justify-content-center w-75">
         <SeparadorInverted
@@ -325,6 +316,8 @@ const PatrocinadoresUnificado = props => {
         noyellowlayer="true"
         imgName={expositor.logo}
         to={`${expositor.site}`}
+        target="_blank"
+        rel="noopener noreferrer"
         padding={expositor.padding}
       />
     </StyledCol>
@@ -375,6 +368,7 @@ const Apoiadores = props => {
         to={`${apoiador.site}`}
         target="_blank"
         rel="noopener noreferrer"
+        padding={apoiador.padding}
       />
     </StyledCol>
   ))
@@ -510,7 +504,6 @@ const ParceirosDeMidia = props => {
     </>
   )
 }
-
 
 const CreditosSection = () => (
   <Creditos className="text-center">

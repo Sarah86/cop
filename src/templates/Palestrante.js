@@ -62,11 +62,10 @@ const Palestrante = props => {
           defaultActiveKeyAccordion={atividadeContext.slug}
           defaultActiveKeyTab={dataContext.dia}
         />
-          <WorkshopsMobile
-            defaultActiveKeyAccordion={atividadeContext.slug}
-            defaultActiveKeyTab={dataContext.dia}
-          />
-
+        <WorkshopsMobile
+          defaultActiveKeyAccordion={atividadeContext.slug}
+          defaultActiveKeyTab={dataContext.dia}
+        />
       </MediaQuery>
       <MediaQuery minWidth={992}>
         <AgendaDesktop

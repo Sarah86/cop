@@ -7,10 +7,37 @@ module.exports = {
     author: `Alvaro Marques e Sarah Gonçalves`,
   },
   plugins: [
+    `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-preload-fonts`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 590,
+              linkImagesToOriginal: false,
+              backgroundColor: 'none',
+              withWebp: true,
+              tracedSVG: true,
+              wrapperStyle: fluidResult => fluidResult.originalName.includes('logo') && `max-width: 150px; margin-left: 0 !important;`,
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-152803216-1",
+        trackingId: 'UA-152803216-1',
         head: true,
       },
     },
@@ -20,8 +47,6 @@ module.exports = {
         pixelId: '489693661974423',
       },
     },
-    `gatsby-plugin-preload-fonts`,
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -36,10 +61,6 @@ module.exports = {
         path: `${__dirname}/src/markdown-pages`,
       },
     },
-    `gatsby-transformer-remark`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

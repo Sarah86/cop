@@ -1,0 +1,57 @@
+[
+  {
+    "dia": "03.nov",
+    "diaLongo": "ter.03.nov",
+    "diaCompleto": "Terça, 03 de Novembro",
+    "diaFooter": "Dia 01 - 03/11",
+    "atividades": []
+  },
+  {
+    "dia": "04.nov",
+    "diaLongo": "qua.04.nov",
+    "diaCompleto": "Quarta, 04 de Novembro",
+    "diaFooter": "Dia 02 - 04/11",
+    "atividades": [
+      {
+        "hora": "08:00h",
+        "palestrante": "Capitão Pinheiro"
+      },
+      {
+        "hora": "10:00h",
+        "palestrante": "Ten. Coronel Schelavin"
+      },
+      {
+        "hora": "15:00h",
+        "palestrante": "Major Cardoso"
+      },
+      {
+        "hora": "17:00h",
+        "palestrante": "Coronel Agnaldo"
+      },
+      {
+        "hora": "18:00h",
+        "palestrante": "Mesa de debates"
+      }
+    ]
+  },
+  {
+    "dia": "05.nov",
+    "diaLongo": "qui.05.nov",
+    "diaCompleto": "Quinta, 05 de Novembro",
+    "diaFooter": "Dia 03 - 05/11",
+    "atividades": [
+      {
+        "hora": "08:00h",
+        "palestrante": "1º Tenente Daniela Monteiro "
+      },
+      {
+        "hora": "09:00h",
+        "palestrante": "PRF André Wilson"
+      },
+      {
+        "hora": "12:00h",
+        "palestrante": "Ten. Coronel Wilmar"
+      }
+    ]
+  }
+]

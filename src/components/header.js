@@ -230,17 +230,13 @@ const MobilePages = [
   {
     link: '/hoteisparceiros',
     nome: 'Hotéis Parceiros',
-  }
+  },
 ]
 
 const DesktopPages = [
   {
     link: '/',
     nome: 'Home',
-  },
-  {
-    link: '/ocongresso',
-    nome: 'O Congresso',
   },
   {
     link: '/palestras-e-workshops',
@@ -253,7 +249,7 @@ const DesktopPages = [
   {
     link: '/hoteisparceiros',
     nome: 'Hotéis Parceiros',
-  }
+  },
 ]
 
 const BotaoInscrevase = () => (
@@ -306,6 +302,15 @@ class Header extends React.Component {
       navExpanded: !this.state,
     })
     this.HamburgerButton.current.toggleButton()
+  }
+
+  componentDidMount() {
+    const script = document.createElement('script')
+
+    script.src = '/scripts/main.js'
+    script.async = true
+
+    document.body.appendChild(script)
   }
 
   render() {

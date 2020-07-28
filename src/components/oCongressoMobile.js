@@ -8,8 +8,7 @@ import Botao, { InternalBotao } from '../components/botao'
 import { CongressoFirstBlock, CongressoSecondBlock } from '../components/textBlocks'
 import { CongressoFirstCarousel, CongressoSecondCarousel } from './carousels'
 import { Espaco } from './homeDesktop'
-import VideoTopoMobile from "./videoTopoMobile"
-
+import VideoTopoMobile from './videoTopoMobile'
 
 const Dados = require('../data/dados.json')
 

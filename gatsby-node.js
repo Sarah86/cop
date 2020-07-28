@@ -6,12 +6,12 @@
 
 // You can delete this file if you're not using it
 const path = require(`path`)
-const fs = require("fs")
+const fs = require('fs')
 const cronograma = require('./src/data/cronograma.json')
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
-  
+
   cronograma.forEach(dataContext => {
     dataContext.atividades.forEach(atividadeContext => {
       createPage({
@@ -25,10 +25,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const blogPostTemplate = path.resolve(`src/templates/Noticias.js`)
   const result = await graphql(`
     {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
-      ) {
+      allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }, limit: 1000) {
         edges {
           node {
             frontmatter {

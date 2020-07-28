@@ -1,0 +1,48 @@
+backend:
+  name: github
+  repo: Sarah86/cop
+media_folder: static/assets
+public_folder: /assets
+collections:
+  - name: palestrante
+    label: Palestrante
+    folder: palestrante
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: nome, label: Nome, widget: string }
+      - { name: data, label: Data, widget: datetime }
+      - { name: slug, label: Slug }
+      - { name: nome_abreviado, label: Nome abreviado }
+      - name: redes_sociais
+        label: Redes Sociais
+        widget: object
+        fields:
+          - { name: site, label: Site }
+          - { name: facebook, label: Facebook URL }
+          - { name: linkedin, label: LinkedIn URL }
+      - { name: foto, label: Foto, widget: image }
+      - { name: qualificacacao, label: Qualificação }
+  - name: palestra
+    label: Palestra
+    folder: palestra
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: dia_curto, label: Dia Curto, widget: string }
+      - { name: dia_longo, label: Dia Longo, widget: string }
+      - { name: dia_completo, label: Dia Completo, widget: string }
+      - { name: dia_footer, label: Dia Rodapé, widget: string }
+      - name: programacao
+        label: Programação
+        widget: list
+        fields:
+          - { name: hora, label: Hora, widget: string}
+          - name: palestrante
+            label: Palestrante
+            widget: relation
+            collection: palestrante
+            searchFields: ['nome']
+            valueField: nome
+            displayFields: ["nome"]
+          - { name: titulo, label: Título da Palestra, widget: string }

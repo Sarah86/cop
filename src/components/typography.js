@@ -72,7 +72,7 @@ export const PaddedContentBox = styled.div`
   padding-left: 1em;
   padding-right: 1em;
   @media ${device.desktop} {
-    transform: ${props => (props.skewedOnDesktop ? 'skewX(-12deg)' : '')};
+    transform: ${props => props.skewedOnDesktop && 'skewX(-12deg)'};
   }
 `
 
@@ -102,11 +102,14 @@ export const Paragraph = styled.p`
       cursor: pointer;
     }
   }
+  ul {
+    list-style-type: ${props => props.listTypeNone && 'none'};
+  }
   @media ${device.desktop} {
     font-size: 0.87em;
     letter-spacing: initial;
-    text-align-last: ${props => (props.lastLineRightDesktop ? 'end' : '')};
-    transform: ${props => (props.reversedSkew ? 'skewX(7deg)' : '')};
+    text-align-last: ${props => props.lastLineRightDesktop && 'end'};
+    transform: ${props => props.reversedSkew && 'skewX(7deg)'};
   }
 `
 // o a é necessario para o dangerouslySetInnerHTML usado no render do data.js

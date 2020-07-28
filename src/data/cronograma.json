@@ -45,6 +45,7 @@
       },
       {
         "descricao": [],
+        "destaque": true,
         "ordemGaleriaOCongresso": 12,
         "hora": "16:00h",
         "imagem": "palestrante_natan.jpg",
@@ -68,6 +69,7 @@
       },
       {
         "descricao": [],
+        "destaque": true,
         "hora": "08:00h",
         "imagem": "palestrante_fuentes.jpg",
         "palestrante": "Ten. Coronel Mayer Fuentes",
@@ -79,6 +81,7 @@
       },
       {
         "descricao": [],
+        "destaque": true,
         "hora": "10:30h",
         "destaqueOrdem": 8,
         "ordemGaleriaOCongresso": 8,
@@ -145,8 +148,8 @@
       },
       {
         "descricao": [],
-        "hora": "10:30h",
         "destaque": true,
+        "hora": "10:30h",
         "destaqueOrdem": 7,
         "ordemGaleriaOCongresso": 7,
         "imagem": "palestrante_alexandre_abrahao.jpg",
@@ -157,6 +160,7 @@
         "youtube": "https://www.youtube.com/watch?v=q_QPiaBAYpo"
       },
       {
+        "descricao": [],
         "destaque": true,
         "destaqueOrdem": 2,
         "ordemGaleriaOCongresso": 2,
@@ -167,7 +171,6 @@
         "qualificacao": "Comandante do Batalhão de Operações Policiais Especiais - BOPE do estado do Rio de Janeiro",
         "slug": "ten-cel-nunes-bope",
         "imagem": "palestrante_coronel_nunes.jpg",
-        "descricao": [],
         "youtube": "http://g1.globo.com/globo-news/jornal-globo-news/videos/v/comandante-do-bope-fala-sobre-operacao-na-ponte-rio-niteroi/7856723/"
       },
       {

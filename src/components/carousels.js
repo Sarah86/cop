@@ -211,7 +211,7 @@ export const HomeImagesOCongresso = () => {
     },
     {
       imagem: 'home_foto_ocongresso_04.jpg',
-      caption: 'CE Gov. Henrique da Silveira'
+      caption: 'CE Gov. Henrique da Silveira',
     },
     {
       imagem: 'home_foto_ocongresso_05.jpg',
@@ -229,6 +229,27 @@ export const HomeImagesOCongresso = () => {
       <StyledCarouselCaption>
         <CarouselCaptionTitle>{slide.caption}</CarouselCaptionTitle>
       </StyledCarouselCaption>
+    </Carousel.Item>
+  ))
+  return (
+    <div style={{ position: 'relative' }}>
+      <MolduraTop />
+      <Carousel indicators={false} interval={2000} fade={true}>
+        {CarouselItem}
+      </Carousel>
+      <MolduraBottom />
+      <Shadow />
+    </div>
+  )
+}
+
+export const defaultCarousel = ({slides}) => {
+  
+  var slidesImages = slides.split(',');
+
+  const CarouselItem = slidesImages.map((slide, i) => (
+    <Carousel.Item key={i} style={{}}>
+      <Image imgName={slide} style={{maxHeight: 'calc(50vh - 10rem)' }}/>
     </Carousel.Item>
   ))
   return (

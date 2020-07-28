@@ -1,32 +1,38 @@
 [
-    {
-        "nome": "",
-        "logo": "apoio_prosegur.jpg",
-        "site": ""
-    },
-    {
-        "nome": "",
-        "logo": "apoio_beiramar.jpg",
-        "site": ""
-    },
-    {
-        "nome": "",
-        "logo": "apoio_costao.jpg",
-        "site": ""
-    },
-    {
-        "nome": "",
-        "logo": "apoio_canasvieiras.jpg",
-        "site": ""
-    },
-    {
-        "nome": "",
-        "logo": "apoio_redbull.jpg",
-        "site": ""
-    },
-    {
-        "nome": "",
-        "logo": "apoio_badboy.jpg",
-        "site": ""
-    }
+  {
+    "nome": "Prosegur",
+    "logo": "prosegur-logo.png",
+    "site": "",
+    "padding": ".2em"
+  },
+  {
+    "nome": "Beiramar Shopping",
+    "logo": "logo-beiramar.png",
+    "site": "",
+    "padding": ".2em"
+  },
+  {
+    "nome": "Costão do Santinho",
+    "logo": "costao-logo.png",
+    "site": "",
+    "padding": ".1em"
+  },
+  {
+    "nome": "Mar de Canasvieiras",
+    "logo": "mar-canasvieiras-logo-02.png",
+    "site": "",
+    "padding": ".2em"
+  },
+  {
+    "nome": "RedBull",
+    "logo": "redbull-logo.png",
+    "site": "",
+    "padding": ".2em"
+  },
+  {
+    "nome": "BadBoy",
+    "logo": "badboy-logo.png",
+    "site": "",
+    "padding": ".2em"
+  }
 ]

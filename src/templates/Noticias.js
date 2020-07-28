@@ -1,59 +1,38 @@
-import React from "react"
-import { graphql } from "gatsby"
-import { Link } from "gatsby"
+import React from 'react'
+import { graphql } from 'gatsby'
 import styled from 'styled-components'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCaretDown, faNewspaper } from '@fortawesome/free-solid-svg-icons'
-import {
-  faFacebookF,
-  faInstagram,
-  faLinkedinIn,
-  faYoutube
-} from '@fortawesome/free-brands-svg-icons'
+import rehypeReact from 'rehype-react'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Photo from '../components/photo'
 import { FadeParagraphTitle } from '../components/FadeElements'
-import { PaddedContentBox, Paragraph, PaddedText, TitleH3, ParagraphTitle } from '../components/typography'
+import { Paragraph, PaddedText } from '../components/typography'
+import { defaultCarousel } from '../components/carousels'
 
-const SocialIcons = styled.div`
-  display: inline-flex;
-  padding: 0 1em;
-`
+const renderAst = new rehypeReact({
+  createElement: React.createElement,
+  components: { carousel: defaultCarousel },
+}).Compiler
 
 const StyledPhoto = styled.div`
   .gatsby-image-wrapper {
     max-height: 350px !important;
   }
 `
-const SocialPalestrante = styled.div`
-  color: var(--narvik);
-  font-family:"TilliumWeb";
-  font-size: 0.8em;
-  a {
-    color: var(--amber);
-    padding: .5em;
-    text-decoration: underline;
-    &:hover {
-      color: var(--amber);
-    }
-  }
-`
+
 const Subtitulo = styled.div`
-    font-family: 'TTSupermolotNeue';
-    color: var(--lemongrass);
-    font-size: 1.1em;
+  font-family: 'TTSupermolotNeue';
+  color: var(--lemongrass);
+  font-size: 1.1em;
 `
-
-
 
 const NoticiasTemplate = ({ data }) => {
   const { markdownRemark } = data
-  const { frontmatter, html } = markdownRemark
+  const { frontmatter, htmlAst } = markdownRemark
   return (
     <Layout>
-    <SEO title={frontmatter.titulo} />
+      <SEO title={frontmatter.titulo} />
       <StyledPhoto>
         <Photo imgName={frontmatter.imagem} />
       </StyledPhoto>
@@ -61,14 +40,16 @@ const NoticiasTemplate = ({ data }) => {
         <FadeParagraphTitle sm style={{ marginBottom: '.2em' }}>
           {frontmatter.titulo}
         </FadeParagraphTitle>
-        <Subtitulo>
-          {frontmatter.subtitulo}
-        </Subtitulo>
+        <Subtitulo>{frontmatter.subtitulo}</Subtitulo>
       </div>
       <PaddedText style={{ padding: '1em', textAlign: 'left' }}>
-        <Paragraph as="div"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
+        {frontmatter.listTypeNone ? (
+          <Paragraph as="div" listTypeNone>
+            {renderAst(htmlAst)}
+          </Paragraph>
+        ) : (
+          <Paragraph as="div">{renderAst(htmlAst)}</Paragraph>
+        )}
       </PaddedText>
     </Layout>
   )
@@ -77,13 +58,14 @@ const NoticiasTemplate = ({ data }) => {
 export const pageQuery = graphql`
   query($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
+      htmlAst
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         path
         titulo
         subtitulo
         imagem
+        listTypeNone
       }
     }
   }

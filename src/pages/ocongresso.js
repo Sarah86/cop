@@ -5,7 +5,14 @@ import MediaQuery from 'react-responsive'
 
 import Layout from '../components/layout'
 import Image from '../components/image'
-import { PaddedContentBox, Paragraph, ListOl, PaddedText, ReadMore, ListUl } from '../components/typography'
+import {
+  PaddedContentBox,
+  Paragraph,
+  ListOl,
+  PaddedText,
+  ReadMore,
+  ListUl,
+} from '../components/typography'
 import Photo from '../components/photo'
 import LinkedPhoto from '../components/LinkedPhoto'
 import Botao from '../components/botao'
@@ -100,7 +107,10 @@ const OCongressoDesktopThirdBlock = () => (
         <div className="d-flex flex-column justify-content-between flex-grow-1">
           <PaddedText>
             <Paragraph>
-            O <strong>4° Encontro Nacional de Profissionais de Operações Especiais (ENPOE)</strong> acontecerá dentro do COP 2020, com diversas atividades paralelas e auditório exclusivo para deliberar assuntos do tema.
+              O{' '}
+              <strong>4° Encontro Nacional de Profissionais de Operações Especiais (ENPOE)</strong>{' '}
+              acontecerá dentro do COP 2020, com diversas atividades paralelas e auditório exclusivo
+              para deliberar assuntos do tema.
             </Paragraph>
             <LinkedImage
               imgName="ocongresso_logos_sociais_abopesp.png"
@@ -118,30 +128,17 @@ const OCongressoDesktopThirdBlock = () => (
           clínicas & {''} workshops
         </FadeParagraphTitle>
         <Paragraph>
-          Durante os três dias de evento serão oferecidas clínicas e workshops com grandes nomes e instrutores do cenário policial nacional.
+          Durante os três dias de evento serão oferecidas clínicas e workshops com grandes nomes e
+          instrutores do cenário policial nacional.
         </Paragraph>
         <ListUl>
-          <li>
-            Sobrevivência Policial (TESP Treinamento)
-          </li>
-          <li>
-            Retenção e Contra Retenção de Arma de Fogo (Luiz Charneski)
-</li>
-          <li>
-            Extorsão Mediante Sequestro (CORE MG)
-</li>
-          <li>
-            Técnicas de Algemamento (Tarcísio Jardim)
-</li>
-          <li>
-            Combate com Faca (Waldevir Junior)
-</li>
-          <li>
-            Entradas Táticas (Rodrigo Lopes)
-</li>
-          <li>
-            APH de Combate (Felipe Lessa)
-</li>
+          <li>Sobrevivência Policial (TESP Treinamento)</li>
+          <li>Retenção e Contra Retenção de Arma de Fogo (Luiz Charneski)</li>
+          <li>Extorsão Mediante Sequestro (CORE MG)</li>
+          <li>Técnicas de Algemamento (Tarcísio Jardim)</li>
+          <li>Combate com Faca (Waldevir Junior)</li>
+          <li>Entradas Táticas (Rodrigo Lopes)</li>
+          <li>APH de Combate (Felipe Lessa)</li>
         </ListUl>
       </Col>
       <Col className="text-justify d-flex flex-column">

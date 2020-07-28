@@ -11,21 +11,20 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 padding: ${props => props.padding && props.padding};
-${props => props.mixblendcolor &&
+${props =>
+  props.mixblendcolor &&
   css`
     background-color: ${props => props.mixblendcolor};
     img {
       mix-blend-mode: darken;
     }
-  `
-}
+  `}
     &:hover {
         cursor: url("${target}"), cell;
         ${props =>
           props.noyellowlayer &&
           css`
             ${StyledImage} {
-              mix-blend-mode: unset;
               opacity: 1;
             }
           `}
@@ -67,7 +66,6 @@ width: 100%;
           props.noyellowlayer &&
           css`
             ${StyledImage} {
-              mix-blend-mode: unset;
               opacity: 1;
             }
           `}
@@ -99,11 +97,7 @@ const StyledImage = styled(Image)`
   &:hover {
     filter: grayscale(1);
     transition: all 0.3s;
-    ${props =>
-      props.noyellowlayer &&
-      css`
-        filter: unset;
-      `}
+    }
 `
 
 const InternaURL = /^https?:\/\//
@@ -123,11 +117,12 @@ const LinkedImage = props =>
       />
     </ExternalStyledLink>
   ) : (
-    <StyledLink 
-      to={props.to} 
-      noyellowlayer={props.noyellowlayer} 
+    <StyledLink
+      to={props.to}
+      noyellowlayer={props.noyellowlayer}
       mixblendcolor={props.mixblendcolor}
-      padding={props.padding}>
+      padding={props.padding}
+    >
       <StyledImage
         imgName={props.imgName}
         className={props.className}

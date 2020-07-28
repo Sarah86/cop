@@ -8,7 +8,7 @@ import {
   faFacebookF,
   faInstagram,
   faLinkedinIn,
-  faYoutube
+  faYoutube,
 } from '@fortawesome/free-brands-svg-icons'
 
 import { device } from '../components/device'
@@ -125,7 +125,11 @@ export const AgendaMobile = ({ defaultActiveKeyAccordion, defaultActiveKeyTab })
                   >
                     <span style={{ textAlign: 'right', flexBasis: '30%' }}>{atividade.hora}</span>
                     <div className="d-flex justify-content-between" style={{ flexBasis: '65%' }}>
-                      <span>{atividade.palestranteAbreviado ? atividade.palestranteAbreviado : atividade.palestrante}</span>
+                      <span>
+                        {atividade.palestranteAbreviado
+                          ? atividade.palestranteAbreviado
+                          : atividade.palestrante}
+                      </span>
                       <FontAwesomeIcon
                         size="xs"
                         icon={faCaretDown}
@@ -199,10 +203,15 @@ export const AgendaMobile = ({ defaultActiveKeyAccordion, defaultActiveKeyTab })
                     )}
                   </PaddedText>
                   <SocialPalestrante>
-                    { atividade.facebook || atividade.instagram || atividade.site ||atividade.instagram || atividade.linkedin || atividade.youtube || atividade.news
-                      ? ("Siga o palestrante:")
-                      : null
-                    }
+                    {atividade.facebook ||
+                    atividade.instagram ||
+                    atividade.site ||
+                    atividade.instagram ||
+                    atividade.linkedin ||
+                    atividade.youtube ||
+                    atividade.news
+                      ? 'Siga o palestrante:'
+                      : null}
                     <SocialIcons>
                       {atividade.facebook ? (
                         <a href={atividade.facebook} target="_blank" rel="noopener noreferrer">
@@ -250,7 +259,7 @@ export const AgendaMobile = ({ defaultActiveKeyAccordion, defaultActiveKeyTab })
   ))
   return (
     <Tab.Container defaultActiveKey={defaultActiveKeyTab} id="cronograma">
-    <FadeParagraphTitle style={{margin: '.5em .3em'}}>palestras</FadeParagraphTitle>
+      <FadeParagraphTitle style={{ margin: '.5em .3em' }}>palestras</FadeParagraphTitle>
       <div>
         <div>
           <StyledNav>{NavItem}</StyledNav>
@@ -311,10 +320,17 @@ export const AgendaTabelaDesktop = () => {
               <>
                 {atividade.descricao ? (
                   <TabelaLink to={`/palestras-e-workshops/${atividade.slug}`}>
-                    {atividade.palestranteAbreviado ? atividade.palestranteAbreviado : atividade.palestrante}
+                    {atividade.palestranteAbreviado
+                      ? atividade.palestranteAbreviado
+                      : atividade.palestrante}
                   </TabelaLink>
                 ) : (
-                  <> {atividade.palestranteAbreviado ? atividade.palestranteAbreviado : atividade.palestrante}</>
+                  <>
+                    {' '}
+                    {atividade.palestranteAbreviado
+                      ? atividade.palestranteAbreviado
+                      : atividade.palestrante}
+                  </>
                 )}
               </>
             ) : (
@@ -374,11 +390,11 @@ const StyledLink = styled(Link)`
 
 const SocialPalestrante = styled.div`
   color: var(--narvik);
-  font-family:"TilliumWeb";
+  font-family: 'TilliumWeb';
   font-size: 0.8em;
   a {
     color: var(--amber);
-    padding: .5em;
+    padding: 0.5em;
     text-decoration: underline;
     &:hover {
       color: var(--amber);
@@ -445,10 +461,16 @@ export const AgendaDesktop = ({
                                   to={`/palestras-e-workshops/${atividade.slug}`}
                                   activeClassName="atividadeActive"
                                 >
-                                  {atividade.palestranteAbreviado ? atividade.palestranteAbreviado : atividade.palestrante}
+                                  {atividade.palestranteAbreviado
+                                    ? atividade.palestranteAbreviado
+                                    : atividade.palestrante}
                                 </StyledLink>
                               ) : (
-                                <>{atividade.palestranteAbreviado ? atividade.palestranteAbreviado : atividade.palestrante}</>
+                                <>
+                                  {atividade.palestranteAbreviado
+                                    ? atividade.palestranteAbreviado
+                                    : atividade.palestrante}
+                                </>
                               )}
                             </>
                           ) : (
@@ -518,10 +540,15 @@ export const AgendaDesktop = ({
                         )}
                       </PaddedText>
                       <SocialPalestrante>
-                        { atividade.facebook || atividade.instagram || atividade.site ||atividade.instagram || atividade.linkedin || atividade.youtube || atividade.news
-                        ? ("Siga o palestrante:")
-                        : null
-                      }
+                        {atividade.facebook ||
+                        atividade.instagram ||
+                        atividade.site ||
+                        atividade.instagram ||
+                        atividade.linkedin ||
+                        atividade.youtube ||
+                        atividade.news
+                          ? 'Siga o palestrante:'
+                          : null}
                         <SocialIcons>
                           {atividade.facebook == null ? null : (
                             <a href={atividade.facebook} target="_blank" rel="noopener noreferrer">
@@ -544,10 +571,10 @@ export const AgendaDesktop = ({
                             </a>
                           )}
                           {atividade.news ? (
-                        <a href={atividade.news} target="_blank" rel="noopener noreferrer">
-                          <FontAwesomeIcon icon={faNewspaper} />
-                        </a>
-                      ) : null}
+                            <a href={atividade.news} target="_blank" rel="noopener noreferrer">
+                              <FontAwesomeIcon icon={faNewspaper} />
+                            </a>
+                          ) : null}
                         </SocialIcons>
                         {atividade.site == null ? null : (
                           <div style={{ display: 'block' }}>

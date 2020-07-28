@@ -7,7 +7,7 @@ import SEO from '../components/seo'
 import HomeMobile from '../components/homeMobile'
 import HomeDesktop from '../components/homeDesktop'
 import OCongressoMobile from '../components/oCongressoMobile'
-import ModalCorona from '../components/modal'
+//import ModalCorona from '../components/modal'
 
 const HomeMobileWrapper = styled.div``
 

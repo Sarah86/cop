@@ -1,27 +1,27 @@
 [
-    {
-        "nome": "",
-        "logo": "parceiros_midia_defesanet.jpg",
-        "site": ""
-    },
-    {
-        "nome": "",
-        "logo": "parceiros_midia_sbt.jpg",
-        "site": ""
-    },
-    {
-        "nome": "",
-        "logo": "parceiros_midia_segnews.jpg",
-        "site": ""
-    },
-    {
-        "nome": "",
-        "logo": "parceiros_midia_seguranca_defesa.jpg",
-        "site": ""
-    },
-    {
-        "nome": "",
-        "logo": "parceiros_midia_tecnologia_defesa.jpg",
-        "site": ""
-    }
+  {
+    "nome": "",
+    "logo": "parceiros_midia_defesanet.jpg",
+    "site": ""
+  },
+  {
+    "nome": "",
+    "logo": "parceiros_midia_sbt.jpg",
+    "site": ""
+  },
+  {
+    "nome": "",
+    "logo": "parceiros_midia_segnews.jpg",
+    "site": ""
+  },
+  {
+    "nome": "",
+    "logo": "parceiros_midia_seguranca_defesa.jpg",
+    "site": ""
+  },
+  {
+    "nome": "",
+    "logo": "parceiros_midia_tecnologia_defesa.jpg",
+    "site": ""
+  }
 ]

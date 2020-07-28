@@ -1,81 +1,107 @@
 ---
-path: "/hoteisparceiros"
-date: "2020-03-05"
-imagem: "hotel-header.jpg"
-titulo: "Hotéis Parceiros"
-subtitulo: "Veja a lista de hotéis parceiros do COP Internacional 2020 "
+path: '/hoteisparceiros'
+date: '2020-03-05'
+imagem: 'hotel-header.jpg'
+titulo: 'Hotéis Parceiros'
+subtitulo: 'Veja a lista de hotéis parceiros do COP Internacional 2020'
+listTypeNone: true
 ---
 
-INFORMAR O CÓDIGO **COP2020** PARA DESCONTOS DE 5% A 15%
+INFORMAR O CÓDIGO **COP2021** PARA DESCONTOS DE 5% A 15%
 
-- ## Palace Praia Hotel
-    - **Localização:** Canasvieiras
-    - **Média de Preço:** R$ 300,00 a R$ 600,00
-    - **Contato:** http://www.palacepraia.com.br
+---
+
+![Costão do Santinho](../images/costao-logo-01.png)
+## Costão do Santinho
+<carousel slides='costao-santinho-01.jpg,costao-santinho-02.webp,costao-santinho-03.jpg,costao-santinho-04.jpg'></carousel>
+- 📍 Praia do Santinho
+- https://costao.com.br/
+- **\$\$\$\$**
 
 ***
 
+- ![Mar de Canasvieiras](../images/mar-canasvieiras-logo-01.png)
+## Mar de Canasvieiras
+<carousel slides='mar-canasvieiras-01.jpg,mar-canasvieiras-02.jpg,mar-canasvieiras-03.jpg'></carousel>
+- 📍 Canasvieiras
+- https://www.redemardecanasvieiras.com.br/
+- **\$\$**\$\$
+
+---
+
+- ![Il Campanário](../images/il-campanario-logo.png)
+## Il Campanario
+<carousel slides='il-campanario-01.jpg,il-campanario-02.jpg,il-campanario-03.jpg'></carousel>
+- 📍 Jurerê Internacional (15 mins do evento)
+- http://www.ilcampanario.com.
+- **\$\$\$\$**
+
+---
+
+- ![Jurerê Beach Village](../images/jurere-logo.png)
+## Beach Village
+<carousel slides='jurere-01.jpg,jurere-02.jpg,jurere-03.jpg,jurere-04.jpg'></carousel>
+- 📍 Jurerê Internacional (15 mins do evento)
+- https://www.jurerebeachvillage.com.br
+- **\$\$\$**\$
+
+---
+
+---
+
+- ![Palace Praia Hotel](../images/palace-logo.png)
+## Palace Praia Hotel
+- 📍 Canasvieiras
+- http://www.palacepraia.com.br
+- **\$\$\$**\$
+
+---
+
+- ![Torres da Cachoeira](../images/torres-logo.png)
 - ## Hotel Torres da Cachoeira
-    - **Localização:** Cachoeira do Bom Jesus ( 10 min do evento)
-    - **Média de Preço:** R$ 300,00 a R$ 600,00/ 15% de desconto
-    - **Contato:**  https://www.hoteltorresdacachoeira.com
-    - **Código de desconto:** COP20
+- 📍 Cachoeira do Bom Jesus ( 10 min do evento)
+- https://www.hoteltorresdacachoeira.com
+- **\$\$\$**\$
 
-***
+---
 
-- ## Beach Village
-    - **Localização:** Jurerê Internacional (15 mins do evento)
-    - **Média de Preço:** R$ 450 a R$ 750,00 / 15% de desconto
-    - **Contato:**   https://www.jurerebeachvillage.com.br
-    - **Código de desconto:** COP2020
 
-***
+- ![Mercure](../images/mercure-logo.png)
+- ## Mercure
+- 📍 Itacurubi (25 mins do evento)
+- 48 3231-1703 / h5693-re@accor.com.br
+- **\$\$**\$\$\$
 
-- ## Il Campanario
-    - **Localização:** Jurerê Internacional (15 mins do evento)
-    - **Média de Preço:** R$ 450 a R$ 800,00 / 15% de desconto
-    - **Contato:**   http://www.ilcampanario.com.br
-    - **Código de desconto:** COP2020
+---
 
-***
-
-- ## Mercure 
-    - **Localização:** Itacurubi (25 mins do evento)
-    - **Média de Preço:** R$230,00 a R$500,00
-    - **Contato:**   48 3231-1703 / h5693-re@accor.com.br
-    - **Código de desconto:** COP2020
-
-***
-
+- ![Slaviero](../images/slaviero-logo-01.png)
 - ## Slavieiro
-    - **Localização:** Ingleses ( 20 mins do evento)
-    - **Média de Preço:** R$ 580,00 a R$ 780,00
-    - **Contato:**   https://www.slavierohoteis.com.br
-    - **Código de desconto:** Informar que participará do COP 2020
+- 📍 Ingleses ( 20 mins do evento)
+- https://www.slavierohoteis.com.br
+- **\$\$\$\$**
 
-***
+---
 
+- ![Novotel](../images/novotel-logo.png)
 - ## Novotel
-    - **Localização:** Beira Mar- Centro (40 mins do evento)
-    - **Média de Preço:** R$300,00 a R$550,00
-    - **Contato:** h5947-re1@accor.com /  48 3202-61
-    - **Código de desconto:** COP2020
+- 📍 Beira Mar- Centro (40 mins do evento)
+- h5947-re1@accor.com / 48 3202-61
+- **\$\$\$**\$
 
+---
 
-***
+- ![Castelmar](../images/castel-logo.png)
+- ## Castelmar
+- 📍 Centro (45 mins do evento)
+- reservas@castelmarhotel.com.br / (48) 3952.3218
+- **\$\$**\$\$\$
 
-- ## Castel Mar
-    - **Localização:** Centro (45 mins do evento)
-    - **Média de Preço:** R$250,00 a R$560,00 / 12% de desconto
-    - **Contato:** reservas@castelmarhotel.com.br / (48)3952.3218
-    - **Código de desconto:** Informar que participará do COP 2020
+---
 
-***
-
+- ![Maria do Mar](../images/maria-mar-logo.png)
 - ## Maria do Mar
-    - **Localização:** João Paulo (20 mins do evento)
-    - **Média de Preço:** R$ 250,00 a R$ 750,00
-    - **Contato:** http://www.mariadomar.com.br
-    - **Código de desconto:** COP15
+- 📍 João Paulo (20 mins do evento)
+- http://www.mariadomar.com.br
+- **\$\$**\$\$\$
 
-***
+---

@@ -8,7 +8,7 @@ import {
   faFacebookF,
   faInstagram,
   faLinkedinIn,
-  faYoutube
+  faYoutube,
 } from '@fortawesome/free-brands-svg-icons'
 
 import { device } from './device'
@@ -113,7 +113,11 @@ export const WorkshopsMobile = ({ defaultActiveKeyAccordion, defaultActiveKeyTab
   const TabPane = Programacao.map((dia, i) => (
     <Tab.Pane eventKey={dia.dia} key={i}>
       {dia.atividades.map((atividade, i) => (
-        <StyledAccordion style={{padding:'1em'}} defaultActiveKey={defaultActiveKeyAccordion} key={i}>
+        <StyledAccordion
+          style={{ padding: '1em' }}
+          defaultActiveKey={defaultActiveKeyAccordion}
+          key={i}
+        >
           {atividade.palestrante ? (
             <>
               {atividade.descricao ? (
@@ -125,7 +129,11 @@ export const WorkshopsMobile = ({ defaultActiveKeyAccordion, defaultActiveKeyTab
                   >
                     <span style={{ textAlign: 'right', flexBasis: '30%' }}>{atividade.hora}</span>
                     <div className="d-flex justify-content-between" style={{ flexBasis: '65%' }}>
-                      <span>{atividade.palestranteAbreviado ? atividade.palestranteAbreviado : atividade.palestrante}</span>
+                      <span>
+                        {atividade.palestranteAbreviado
+                          ? atividade.palestranteAbreviado
+                          : atividade.palestrante}
+                      </span>
                       <FontAwesomeIcon
                         size="xs"
                         icon={faCaretDown}
@@ -142,10 +150,23 @@ export const WorkshopsMobile = ({ defaultActiveKeyAccordion, defaultActiveKeyTab
                   className="d-flex justify-content-between"
                 >
                   <span style={{ textAlign: 'right', flexBasis: '30%' }}>{atividade.hora}</span>
-                  <div style={{flexBasis: '65%', color:'var(--lemongrass'}}> 
-                      <span style={{display: 'block', lineHeight: '1em'}}>{atividade.palestranteAbreviado ? atividade.palestranteAbreviado : atividade.palestrante}</span>
-                      <span style={{fontSize: '.8em', lineHeight: '1em', display: 'block', marginTop: '.2em'}}>{atividade.titulo}</span> 
-              </div>
+                  <div style={{ flexBasis: '65%', color: 'var(--lemongrass' }}>
+                    <span style={{ display: 'block', lineHeight: '1em' }}>
+                      {atividade.palestranteAbreviado
+                        ? atividade.palestranteAbreviado
+                        : atividade.palestrante}
+                    </span>
+                    <span
+                      style={{
+                        fontSize: '.8em',
+                        lineHeight: '1em',
+                        display: 'block',
+                        marginTop: '.2em',
+                      }}
+                    >
+                      {atividade.titulo}
+                    </span>
+                  </div>
                 </Accordion.Toggle>
               )}
             </>
@@ -202,10 +223,15 @@ export const WorkshopsMobile = ({ defaultActiveKeyAccordion, defaultActiveKeyTab
                     )}
                   </PaddedText>
                   <SocialPalestrante>
-                    { atividade.facebook || atividade.instagram || atividade.site ||atividade.instagram || atividade.linkedin || atividade.youtube || atividade.news
-                      ? ("Siga o palestrante:")
-                      : null
-                    }
+                    {atividade.facebook ||
+                    atividade.instagram ||
+                    atividade.site ||
+                    atividade.instagram ||
+                    atividade.linkedin ||
+                    atividade.youtube ||
+                    atividade.news
+                      ? 'Siga o palestrante:'
+                      : null}
                     <SocialIcons>
                       {atividade.facebook ? (
                         <a href={atividade.facebook} target="_blank" rel="noopener noreferrer">
@@ -253,7 +279,7 @@ export const WorkshopsMobile = ({ defaultActiveKeyAccordion, defaultActiveKeyTab
   ))
   return (
     <Tab.Container defaultActiveKey={defaultActiveKeyTab} id="workshops">
-    <FadeParagraphTitle style={{margin: '.5em .3em'}}>workshops</FadeParagraphTitle>
+      <FadeParagraphTitle style={{ margin: '.5em .3em' }}>workshops</FadeParagraphTitle>
       <div>
         <div>
           <StyledNav>{NavItem}</StyledNav>
@@ -302,7 +328,7 @@ export const WorkshopTabelaDesktop = () => {
         <StyledRow key={i}>
           <Col lg={4}>
             {atividade.descricao == null ? (
-              <span style={{color:'var(--lemongrass'}}>{atividade.hora}</span>
+              <span style={{ color: 'var(--lemongrass' }}>{atividade.hora}</span>
             ) : (
               <TabelaLink to={`/palestras-e-workshops/${atividade.slug}`}>
                 {atividade.hora}
@@ -314,12 +340,27 @@ export const WorkshopTabelaDesktop = () => {
               <>
                 {atividade.descricao ? (
                   <TabelaLink to={`/palestras-e-workshops/${atividade.slug}`}>
-                  {atividade.palestranteAbreviado ? atividade.palestranteAbreviado : atividade.palestrante}
+                    {atividade.palestranteAbreviado
+                      ? atividade.palestranteAbreviado
+                      : atividade.palestrante}
                   </TabelaLink>
                 ) : (
-                  <div style={{marginBottom: '1em', color:'var(--lemongrass'}}> 
-                      <span style={{display: 'block', lineHeight: '1em'}}>{atividade.palestranteAbreviado ? atividade.palestranteAbreviado : atividade.palestrante}</span>
-                      <span style={{fontSize: '.8em', lineHeight: '1em', display: 'block', marginTop: '.2em'}}>{atividade.titulo}</span> 
+                  <div style={{ marginBottom: '1em', color: 'var(--lemongrass' }}>
+                    <span style={{ display: 'block', lineHeight: '1em' }}>
+                      {atividade.palestranteAbreviado
+                        ? atividade.palestranteAbreviado
+                        : atividade.palestrante}
+                    </span>
+                    <span
+                      style={{
+                        fontSize: '.8em',
+                        lineHeight: '1em',
+                        display: 'block',
+                        marginTop: '.2em',
+                      }}
+                    >
+                      {atividade.titulo}
+                    </span>
                   </div>
                 )}
               </>
@@ -380,11 +421,11 @@ const StyledLink = styled(Link)`
 
 const SocialPalestrante = styled.div`
   color: var(--narvik);
-  font-family:"TilliumWeb";
+  font-family: 'TilliumWeb';
   font-size: 0.8em;
   a {
     color: var(--amber);
-    padding: .5em;
+    padding: 0.5em;
     text-decoration: underline;
     &:hover {
       color: var(--amber);
@@ -451,10 +492,16 @@ export const WorkshopsDesktop = ({
                                   to={`/palestras-e-workshops/${atividade.slug}`}
                                   activeClassName="atividadeActive"
                                 >
-                                  {atividade.palestranteAbreviado ? atividade.palestranteAbreviado : atividade.palestrante}
+                                  {atividade.palestranteAbreviado
+                                    ? atividade.palestranteAbreviado
+                                    : atividade.palestrante}
                                 </StyledLink>
                               ) : (
-                                <>{atividade.palestranteAbreviado ? atividade.palestranteAbreviado : atividade.palestrante}</>
+                                <>
+                                  {atividade.palestranteAbreviado
+                                    ? atividade.palestranteAbreviado
+                                    : atividade.palestrante}
+                                </>
                               )}
                             </>
                           ) : (
@@ -524,10 +571,15 @@ export const WorkshopsDesktop = ({
                         )}
                       </PaddedText>
                       <SocialPalestrante>
-                        { atividade.facebook || atividade.instagram || atividade.site ||atividade.instagram || atividade.linkedin || atividade.youtube || atividade.news
-                        ? ("Siga o palestrante:")
-                        : null
-                      }
+                        {atividade.facebook ||
+                        atividade.instagram ||
+                        atividade.site ||
+                        atividade.instagram ||
+                        atividade.linkedin ||
+                        atividade.youtube ||
+                        atividade.news
+                          ? 'Siga o palestrante:'
+                          : null}
                         <SocialIcons>
                           {atividade.facebook == null ? null : (
                             <a href={atividade.facebook} target="_blank" rel="noopener noreferrer">
@@ -550,10 +602,10 @@ export const WorkshopsDesktop = ({
                             </a>
                           )}
                           {atividade.news ? (
-                        <a href={atividade.news} target="_blank" rel="noopener noreferrer">
-                          <FontAwesomeIcon icon={faNewspaper} />
-                        </a>
-                      ) : null}
+                            <a href={atividade.news} target="_blank" rel="noopener noreferrer">
+                              <FontAwesomeIcon icon={faNewspaper} />
+                            </a>
+                          ) : null}
                         </SocialIcons>
                         {atividade.site == null ? null : (
                           <div style={{ display: 'block' }}>

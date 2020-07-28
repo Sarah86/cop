@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 
 
-import { device } from '../components/device'
 import Botao from './botao'
 import Local from './location'
 import { Paragraph, ParagraphLink, ReadMore } from './typography'
@@ -15,12 +14,8 @@ import Background from './background'
 import FullWidth from './fullwidth'
 
 import { HomeImagesOCongresso } from './carousels'
-import VideoEnpoe from '../videos/Enpoe-Quadrado.mp4'
-import VideoCanil from '../videos/Canil-Quadrado.mp4'
-import FramedVideo from './framedVideo'
 import VideoTopoDesktop from './videoTopoDesktop'
-import { useStaticQuery } from 'gatsby'
-
+import BotaoInscricao from '../components/botaoInscricao'
 
 const Cronograma = require('../data/cronograma.json')
 const dadosExpositores = require('../data/expositores.json')
@@ -58,25 +53,7 @@ const Conselho = styled.div`
   right: 1em;
 `
 
-const StyledFramedVideo = styled(FramedVideo)`
-
-.react-player__preview {
-    height: 90vw !important;
-    }
-  @media ${device.tablet}{
-    .react-player__preview {
-    height: 690px !important;
-    }
-  }
-  @media ${device.desktop}{
-    .react-player__preview {
-    height: 450px !important;
-    }
-  }
-`
-
 const BoasVindas = () => {
-
   return (
     <div style={{ position: 'relative', paddingBottom: '3em' }}>
       <Background />
@@ -96,7 +73,6 @@ const BoasVindas = () => {
   )
 }
 
-
 export const BannerTemporario = () => (
   <FullWidth>
     <Image imgName="home_temp_banner.jpg" />
@@ -104,7 +80,7 @@ export const BannerTemporario = () => (
 )
 
 const CongressoPalestrantes = () => {
-  const PalestranteDestaque = Cronograma.map((dia) => (
+  const PalestranteDestaque = Cronograma.map(dia =>
     dia.atividades
       .filter(atividade => atividade.destaque === true)
       .map((atividade, i) => (
@@ -122,7 +98,7 @@ const CongressoPalestrantes = () => {
           />
         </Col>
       ))
-  ))
+  )
 
   return (
     <Container className="mt-5">
@@ -130,14 +106,6 @@ const CongressoPalestrantes = () => {
         <Col className="text-justify">
           <FadeParagraphTitle>o congresso</FadeParagraphTitle>
           <div>
-            <Paragraph>
-              Autoridades nacionais e internacionais, agentes de segurança pública, as principais
-              marcas do setor, e a sociedade civil. Em contato direto por 3 dias.
-            </Paragraph>
-            <Paragraph>
-              Congresso se realizará de forma gratuita nos dias 03, 04 e 05 de Novembro de 2020 para um
-              público diário de aproximadamente 2000 pessoas.
-            </Paragraph>
             <Paragraph>
               A cidade-sede escolhida é pelo segundo ano consecutivo a belíssima{' '}
               <ParagraphLink
@@ -169,7 +137,7 @@ const CongressoPalestrantes = () => {
           <FadeParagraphTitle>palestrantes</FadeParagraphTitle>
           <Row noGutters>{PalestranteDestaque}</Row>
           <ReadMore className="align-self-end" to="/palestras-e-workshops">
-            conheça todos os palestrantes
+            veja a programação
           </ReadMore>
         </Col>
       </Row>
@@ -191,7 +159,8 @@ const Expositores = () => {
         <Col className="mt-5 pt-5">
           <FadeParagraphTitle>expositores</FadeParagraphTitle>
           <Paragraph>
-            Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em segurança e defesa estarão expondo seus produtos e soluções.
+            Durante os 3 dias de evento, as maiores marcas do Brasil e do mundo em segurança e
+            defesa estarão expondo seus produtos e soluções.
           </Paragraph>
           <Paragraph>
             Será uma oportunidade única de se atualizar e se conectar con o que há de melhor e mais
@@ -218,28 +187,6 @@ const Expositores = () => {
 }
 
 export const Espaco = ({ widthTitle, styleSeparador, styleWordBreak }) => {
-  const data = useStaticQuery(
-    graphql`{
-      CoverEnpoe: file(name: {eq: "Cover-Cop-Video-Enpoe"}) {
-        childImageSharp {
-          fluid(maxWidth: 1000, traceSVG: {color: "#000"}) {
-            src
-          }
-        }
-      }
-      CoverCanil: file(name: {eq: "Cover-Cop-Video-Canil"}) {
-        childImageSharp {
-          fluid(maxWidth: 1000) {
-            src
-          }
-        }
-      }
-      }
-    `
-  )
-  const imageEnpoe =  data.CoverEnpoe.childImageSharp.fluid.src;
-  const imageCanil =  data.CoverCanil.childImageSharp.fluid.src;
-
   return (
     <Container className="mt-5 d-flex flex-column justify-content-between position-relative">
       <Background left="-45%" position="left top" />
@@ -248,54 +195,44 @@ export const Espaco = ({ widthTitle, styleSeparador, styleWordBreak }) => {
           <FadeParagraphTitle size="2.5em" width="3.5em">
             4º enpoe 2020
           </FadeParagraphTitle>
-          <StyledFramedVideo url={VideoEnpoe}
-            light={`${imageEnpoe}`}
-            controls
-            width="100%"
-            height="100%" />
+          <LinkedPhoto imgName="Cover-Cop-Video-Enpoe.jpg" to="/palestras-e-workshops" />
         </Col>
         <div style={styleSeparador} />
         <Col>
           <FadeParagraphTitle size="2.5em" width="6.5em" width={widthTitle}>
-            certificação <span style={styleWordBreak} />nacional de cão de polícia
+            certificação <span style={styleWordBreak} />
+            nacional de cão de polícia
           </FadeParagraphTitle>
-          <StyledFramedVideo url={VideoCanil}
-             light={`${imageCanil}`}
-            controls
-            width="100%"
-            height="100%" />
+          <LinkedPhoto imgName="Cover-Cop-Video-Canil.jpg" to="/palestras-e-workshops" />
         </Col>
       </Row>
     </Container>
   )
-
 }
 
-
 const HomeDesktop = () => {
-
-  const [isBoasVindasLoaded, setIsBoasVindasLoaded] = useState(false);
+  const [isBoasVindasLoaded, setIsBoasVindasLoaded] = useState(false)
 
   useEffect(() => {
     setTimeout(() => {
       setIsBoasVindasLoaded(true)
-    }, 100);
+    }, 100)
   })
 
   return (
     <>
-      {
-        isBoasVindasLoaded ?
-          <>
-            <BoasVindas />
-            <VideoTopoDesktop />
-            <CongressoPalestrantes />
-            <Expositores />
-            <Espaco />
-          </>
-          :
+      {isBoasVindasLoaded ? (
+        <>
           <BoasVindas />
-      }
+          <VideoTopoDesktop />
+          <CongressoPalestrantes />
+          <BotaoInscricao />
+          <Expositores />
+          <Espaco />
+        </>
+      ) : (
+        <BoasVindas />
+      )}
     </>
   )
 }
