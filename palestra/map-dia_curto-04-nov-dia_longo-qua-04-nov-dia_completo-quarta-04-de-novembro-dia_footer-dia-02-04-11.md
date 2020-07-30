@@ -1,6 +1,6 @@
 ---
-dia_curto: 04.nov
-dia_longo: qua.04.nov
-dia_completo: Quarta, 04 de Novembro
-dia_footer: Dia 02 - 04/11
+dia_curto: 03.mar
+dia_longo: qua.03.mar
+dia_completo: Quarta, 03 de Março
+dia_footer: Dia 02 - 03/03
 ---

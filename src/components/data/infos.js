@@ -1,4 +1,4 @@
 export const Infos = {
-  dataLocal: '03, 04 e 05 de Novembro - Florianópolis/SC',
+  dataLocal: '02, 03 e 04 de Março - Florianópolis/SC',
   location: '',
 }
