@@ -1,16 +1,37 @@
 [
   {
-    "dia": "02.mar",
-    "diaLongo": "ter.02.mar",
-    "diaCompleto": "Terça, 02 de Março",
-    "diaFooter": "Dia 01 - 02/03",
-    "atividades": []
+    "dia": "20.abr",
+    "diaLongo": "ter.20.abr",
+    "diaCompleto": "Terça, 20 de Abril",
+    "diaFooter": "Dia 01 - 20/04",
+    "atividades": [
+      {
+        "hora": "11:00h",
+        "palestrante": "Certificação Nacional de Cão de Polícia"
+      },
+      {
+        "hora": "13:00h",
+        "palestrante": "Certificação Nacional de Cão de Polícia"
+      },
+      {
+        "hora": "14:00h",
+        "palestrante": "Certificação Nacional de Cão de Polícia"
+      },
+      {
+        "hora": "17:00h",
+        "palestrante": "Certificação Nacional de Cão de Polícia"
+      },
+      {
+        "hora": "18:00h",
+        "palestrante": "Certificação Nacional de Cão de Polícia"
+      }
+    ]
   },
   {
-    "dia": "03.mar",
-    "diaLongo": "qua.03.mar",
-    "diaCompleto": "Quarta, 03 de Março",
-    "diaFooter": "Dia 02 - 03/03",
+    "dia": "21.abr",
+    "diaLongo": "qua.21.abr",
+    "diaCompleto": "Quarta, 21 de Abril",
+    "diaFooter": "Dia 02 - 21/04",
     "atividades": [
       {
         "hora": "08:00h",
@@ -19,6 +40,10 @@
       {
         "hora": "10:00h",
         "palestrante": "Ten. Coronel Schelavin"
+      },
+      {
+        "hora": "12:00h",
+        "palestrante": "Policial Federal Francisco Costa da Silva "
       },
       {
         "hora": "15:00h",
@@ -35,10 +60,10 @@
     ]
   },
   {
-    "dia": "04.mar",
-    "diaLongo": "qui.04.mar",
-    "diaCompleto": "Quinta, 04 de Março",
-    "diaFooter": "Dia 03 - 05/03",
+    "dia": "22.abr",
+    "diaLongo": "qui.22.abr",
+    "diaCompleto": "Quinta, 22 de Abril",
+    "diaFooter": "Dia 03 - 22/04",
     "atividades": [
       {
         "hora": "08:00h",
@@ -51,6 +76,10 @@
       {
         "hora": "12:00h",
         "palestrante": "Ten. Coronel Wilmar"
+      },
+      {
+        "hora": "18:00h",
+        "palestrante": "Encerramento"
       }
     ]
   }

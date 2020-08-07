@@ -1,16 +1,16 @@
 [
   {
-    "dia": "02.mar",
-    "diaLongo": "ter.02.mar",
-    "diaCompleto": "Terça, 02 de Março",
-    "diaFooter": "Dia 01 - 02/03",
+    "dia": "20.abr",
+    "diaLongo": "ter.20.abr",
+    "diaCompleto": "Terça, 20 de Abril",
+    "diaFooter": "Dia 01 - 20/04",
     "atividades": [
       {
-        "hora": "07:30h",
+        "hora": "07:00h",
         "titulo": "Credenciamento"
       },
       {
-        "hora": "09:00h",
+        "hora": "08:30h",
         "titulo": "Grande Abertura"
       },
       {
@@ -29,6 +29,14 @@
         "titulo": "Palestra Magna - Presença e Proteção: Os desafios da polícia ostensiva de preservação da ordem pública"
       },
       {
+        "destaque": true,
+        "hora": "11:00h",
+        "imagem": "palestrante_placeholder.jpg",
+        "palestrante": "Marcello Petrelli",
+        "palestranteAbreviado": "Marcello Petrelli",
+        "slug": "marcello-petrelli"
+      },
+      {
         "descricao": [],
         "destaque": true,
         "destaqueOrdem": 5,
@@ -44,27 +52,35 @@
         "titulo": "A crise dos poderes e a sua repercussão na segurança pública"
       },
       {
-        "descricao": [],
         "destaque": true,
-        "ordemGaleriaOCongresso": 12,
-        "hora": "16:00h",
-        "imagem": "palestrante_natan.jpg",
-        "palestrante": "Coronel (Ret) Natan Paz",
-        "palestranteAbreviado": "Col. (Ret) Natan Paz",
-        "qualificacao": "Ex-comandante do Sistema Penitenciário de Israel e Diretor da Masada Tactical System Israel",
-        "slug": "cel-natan-paz",
-        "titulo": "Organizações extremistas Islâmicas dentro do sistema penitenciário Israelense"
+        "hora": "15:00h",
+        "imagem": "palestrante_placeholder.jpg",
+        "palestrante": "Dep. Estadual Ruy Irigaray",
+        "palestranteAbreviado": "Dep. Estadual Ruy Irigaray",
+        "slug": "ruy-irigaray"
+      },
+      {
+        "destaque": true,
+        "hora": "17:00h",
+        "imagem": "palestrante_placeholder.jpg",
+        "palestrante": "Guy Massada",
+        "palestranteAbreviado": "Guy Massada",
+        "slug": "guy-massada"
+      },
+      {
+        "hora": "18:00h",
+        "palestrante": "Encerramento"
       }
     ]
   },
   {
-    "dia": "03.mar",
-    "diaLongo": "qua.03.mar",
-    "diaCompleto": "Quarta, 03 de Março",
-    "diaFooter": "Dia 02 - 03/03",
+    "dia": "21.abr",
+    "diaLongo": "qua.21.abr",
+    "diaCompleto": "Quarta, 21 de Abril",
+    "diaFooter": "Dia 02 - 21/04",
     "atividades": [
       {
-        "hora": "07:30h",
+        "hora": "07:00h",
         "titulo": "Credenciamento"
       },
       {
@@ -82,7 +98,7 @@
       {
         "descricao": [],
         "destaque": true,
-        "hora": "10:30h",
+        "hora": "10:00h",
         "destaqueOrdem": 8,
         "ordemGaleriaOCongresso": 8,
         "imagem": "palestrante_rocha_junior.jpg",
@@ -101,7 +117,7 @@
         "palestrante": "Rigo Durazo",
         "qualificacao": "Representante Oficial da Tacflow Academy, centro de treinamento de excelência de policiais e militares dos Estados Unidos da América",
         "facebook": "https://www.facebook.com/Tacflow/",
-        "hora": "14:00h",
+        "hora": "13:30h",
         "slug": "rigo-durazo",
         "titulo": "Mentalidade de Combate para o Trabalho Policial",
         "site": "https://www.tacflow.com/tacflow-lead-instructors/"
@@ -109,47 +125,7 @@
       {
         "descricao": [],
         "destaque": true,
-        "destaqueOrdem": 4,
-        "ordemGaleriaOCongresso": 4,
-        "facebook": "https://www.facebook.com/eduardomaia.betini",
-        "instagram": "https://www.instagram.com/e._bettini/",
-        "hora": "16:00h",
-        "imagem": "palestrante_eduardo_betini.jpg",
-        "palestrante": "Policial Federal Eduardo Betini",
-        "palestranteAbreviado": "PF Eduardo Betini",
-        "qualificacao": "Coordenador Geral de Fronteiras da SEOPI, do Ministério da Justiça e Segurança Pública.",
-        "slug": "eduardo-betini",
-        "titulo": "Modificando Ambientes, A simplicidade e o propósito do Programa Vigia e a gestão com foco no resultado",
-        "youtube": "https://www.youtube.com/watch?v=jqtzMcDPdyU"
-      }
-    ]
-  },
-  {
-    "dia": "04.mar",
-    "diaLongo": "qui.04.mar",
-    "diaCompleto": "Quinta, 04 de Março",
-    "diaFooter": "Dia 03 - 05/03",
-    "atividades": [
-      {
-        "hora": "07:30h",
-        "titulo": "Credenciamento"
-      },
-      {
-        "imagem": "palestrante_derrite.jpg",
-        "destaque": true,
-        "destaqueOrdem": 8,
-        "palestrante": "Deputado Federal Capitão Derrite",
-        "palestranteAbreviado": "Dep. Fed. Capitão Derrite",
-        "qualificacao": "Deputado Federal pelo Estado de São Paulo.",
-        "hora": "08:00h",
-        "slug": "capitao-derrite",
-        "titulo": "Os desafios da Segurança Pública no Congresso Nacional",
-        "descricao": []
-      },
-      {
-        "descricao": [],
-        "destaque": true,
-        "hora": "10:30h",
+        "hora": "15:00h",
         "destaqueOrdem": 7,
         "ordemGaleriaOCongresso": 7,
         "imagem": "palestrante_alexandre_abrahao.jpg",
@@ -160,11 +136,64 @@
         "youtube": "https://www.youtube.com/watch?v=q_QPiaBAYpo"
       },
       {
+        "imagem": "palestrante_derrite.jpg",
+        "destaque": true,
+        "destaqueOrdem": 8,
+        "palestrante": "Deputado Federal Capitão Derrite",
+        "palestranteAbreviado": "Dep. Fed. Capitão Derrite",
+        "qualificacao": "Deputado Federal pelo Estado de São Paulo.",
+        "hora": "17:00h",
+        "slug": "capitao-derrite",
+        "titulo": "Os desafios da Segurança Pública no Congresso Nacional",
+        "descricao": []
+      },
+      {
+        "hora": "18:00h",
+        "palestrante": "Encerramento"
+      }
+    ]
+  },
+  {
+    "dia": "22.abr",
+    "diaLongo": "qui.22.abr",
+    "diaCompleto": "Quinta, 22 de Abril",
+    "diaFooter": "Dia 03 - 22/04",
+    "atividades": [
+      {
+        "hora": "07:00h",
+        "titulo": "Credenciamento"
+      },
+      {
+        "hora": "08:00h",
+        "titulo": "Internacional (EUA)"
+      },
+      {
+        "descricao": [],
+        "destaque": true,
+        "destaqueOrdem": 4,
+        "ordemGaleriaOCongresso": 4,
+        "facebook": "https://www.facebook.com/eduardomaia.betini",
+        "instagram": "https://www.instagram.com/e._bettini/",
+        "hora": "10:00h",
+        "imagem": "palestrante_eduardo_betini.jpg",
+        "palestrante": "Policial Federal Eduardo Betini",
+        "palestranteAbreviado": "PF Eduardo Betini",
+        "qualificacao": "Coordenador Geral de Fronteiras da SEOPI, do Ministério da Justiça e Segurança Pública.",
+        "slug": "eduardo-betini",
+        "titulo": "Modificando Ambientes, A simplicidade e o propósito do Programa Vigia e a gestão com foco no resultado",
+        "youtube": "https://www.youtube.com/watch?v=jqtzMcDPdyU"
+      },
+      {
+        "hora": "13:30h",
+        "titulo": "Dep. Federal  Major Victor Hugo",
+        "imagem": "palestrante_placeholder.jpg"
+      },
+      {
         "descricao": [],
         "destaque": true,
         "destaqueOrdem": 2,
         "ordemGaleriaOCongresso": 2,
-        "hora": "14:00h",
+        "hora": "15:00h",
         "titulo": "Gerenciamento de Crise - Case: Sequestro na ponte Rio-Niterói",
         "palestrante": "Tenente Coronel PM Maurílio Nunes",
         "palestranteAbreviado": "Ten. Coronel PM Nunes",
@@ -177,7 +206,7 @@
         "destaque": true,
         "destaqueOrdem": 1,
         "ordemGaleriaOCongresso": 1,
-        "hora": "16:00h",
+        "hora": "17:00h",
         "titulo": "O Papel do Exército no Combate à Criminalidade Urbana e os Problemas nas Fronteiras Internacionais",
         "palestrante": "General Theóphilo",
         "qualificacao": "Secretário Nacional de Segurança Pública",
@@ -187,6 +216,10 @@
         "twitter": "https://twitter.com/galtheophilo",
         "facebook": "https://www.facebook.com/pg/GeneralTheophilo",
         "instagram": "https://www.instagram.com/generaltheophilo/"
+      },
+      {
+        "hora": "18:00h",
+        "palestrante": "Encerramento"
       }
     ]
   }

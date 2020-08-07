@@ -103,13 +103,13 @@ const OCongressoDesktopThirdBlock = () => (
     <Row>
       <Col className="text-justify d-flex flex-column">
         <Photo imgName="ocongresso_foto_abopesp.jpg" />
-        <FadeParagraphTitle sm>4º enpoe - 2020</FadeParagraphTitle>
+        <FadeParagraphTitle sm>4º enpoe - 2021</FadeParagraphTitle>
         <div className="d-flex flex-column justify-content-between flex-grow-1">
           <PaddedText>
             <Paragraph>
               O{' '}
               <strong>4° Encontro Nacional de Profissionais de Operações Especiais (ENPOE)</strong>{' '}
-              acontecerá dentro do COP 2020, com diversas atividades paralelas e auditório exclusivo
+              acontecerá dentro do COP 2021, com diversas atividades paralelas e auditório exclusivo
               para deliberar assuntos do tema.
             </Paragraph>
             <LinkedImage

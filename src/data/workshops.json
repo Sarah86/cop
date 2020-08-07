@@ -1,17 +1,21 @@
 [
   {
-    "dia": "02.mar",
-    "diaLongo": "ter.02.mar",
-    "diaCompleto": "Terça, 02 de Março",
-    "diaFooter": "Dia 01 - 02/03",
+    "dia": "20.abr",
+    "diaLongo": "ter.20.abr",
+    "diaCompleto": "Terça, 20 de Abril",
+    "diaFooter": "Dia 01 - 20/04",
     "atividades": [
       {
-        "hora": "12:00h",
+        "hora": "11:00h",
         "palestrante": "TESP Treinamento",
         "titulo": "Sobrevivência policial"
       },
       {
-        "hora": "15:00h",
+        "hora": "13:00h",
+        "palestrante": "Sá Braga"
+      },
+      {
+        "hora": "14:00h",
         "palestrante": "Luiz Charneski",
         "titulo": "Retenção e contra retenção de armas de fogo"
       },
@@ -19,27 +23,31 @@
         "hora": "17:00h",
         "palestrante": "Marcelo Esperandio",
         "titulo": "Combat Mindset aplicado as Instruções com armas de fogo"
+      },
+      {
+        "hora": "18:00h",
+        "palestrante": "Encerramento"
       }
     ]
   },
   {
-    "dia": "03.mar",
-    "diaLongo": "qua.03.mar",
-    "diaCompleto": "Quarta, 03 de Março",
-    "diaFooter": "Dia 02 - 03/03",
+    "dia": "21.abr",
+    "diaLongo": "qua.21.abr",
+    "diaCompleto": "Quarta, 21 de Abril",
+    "diaFooter": "Dia 02 - 21/04",
     "atividades": [
       {
-        "hora": "10:00h",
+        "hora": "09:00h",
         "palestrante": "Felipe Lessa e Sergio Magnilia",
         "titulo": "APH Tático"
       },
       {
-        "hora": "12:00h",
+        "hora": "11:00h",
         "palestrante": "Vicente Ancona",
         "titulo": "Balística terminal"
       },
       {
-        "hora": "15:00h",
+        "hora": "14:00h",
         "palestrante": "Cláudio Andrade da Acombat Tactical",
         "titulo": "Combate Velado"
       },
@@ -47,17 +55,21 @@
         "hora": "17:00h",
         "palestrante": "Bene Barbosa",
         "titulo": "O desarmamento civil e os seus resultados para Segurança Pública"
+      },
+      {
+        "hora": "18:00h",
+        "palestrante": "Encerramento"
       }
     ]
   },
   {
-    "dia": "04.mar",
-    "diaLongo": "qui.04.mar",
-    "diaCompleto": "Quinta, 04 de Março",
-    "diaFooter": "Dia 03 - 05/03",
+    "dia": "22.abr",
+    "diaLongo": "qui.22.abr",
+    "diaCompleto": "Quinta, 22 de Abril",
+    "diaFooter": "Dia 03 - 22/04",
     "atividades": [
       {
-        "hora": "10:00h",
+        "hora": "09:00h",
         "palestrante": "Marco Matos",
         "titulo": "Realidade sobre extorsão mediante sequestro no Brasil"
       },
@@ -75,6 +87,10 @@
         "hora": "17:00h",
         "palestrante": "Waldervir Junior",
         "titulo": "Combate com Faca"
+      },
+      {
+        "hora": "18:00h",
+        "palestrante": "Encerramento"
       }
     ]
   }

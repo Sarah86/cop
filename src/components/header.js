@@ -221,7 +221,7 @@ const MobilePages = [
   },
   {
     link: '/palestras-e-workshops',
-    nome: 'Palestras e Workshops',
+    nome: 'Programação',
   },
   {
     link: '/expositores',
@@ -240,7 +240,7 @@ const DesktopPages = [
   },
   {
     link: '/palestras-e-workshops',
-    nome: 'Palestras e Workshops',
+    nome: 'Programação',
   },
   {
     link: '/expositores',

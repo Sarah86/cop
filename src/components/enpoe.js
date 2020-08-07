@@ -279,7 +279,7 @@ export const EnpoeMobile = ({ defaultActiveKeyAccordion, defaultActiveKeyTab }) 
   ))
   return (
     <Tab.Container defaultActiveKey={defaultActiveKeyTab} id="enpoe">
-      <FadeParagraphTitle style={{ margin: '.5em .3em' }}>enpoe</FadeParagraphTitle>
+      <FadeParagraphTitle style={{ margin: '.5em .3em' }}>canil / enpoe</FadeParagraphTitle>
       <div>
         <div>
           <StyledNav>{NavItem}</StyledNav>
@@ -374,7 +374,7 @@ export const EnpoeTabelaDesktop = () => {
   ))
   return (
     <Container>
-      <TitleH3>Enpoe</TitleH3>
+      <TitleH3>palco charlie - canil / enpoe</TitleH3>
       <div style={{ position: 'relative' }}>
         <FullWidth
           style={{
@@ -450,7 +450,7 @@ export const EnpoeDesktop = ({
 }) => {
   //active do palestrante deve ser igual ao slug
   const NavItem = Programacao.map(dia => (
-    <div style={{ border: '.5px solid var(--bunker' }} key={dia.dia}>
+    <div style={{ border: '.5px solid var(--bunker)', flexGrow: 1 }} key={dia.dia}>
       <Nav.Item as="span">
         <Nav.Link eventKey={dia.dia}>{dia.diaLongo}</Nav.Link>
       </Nav.Item>
@@ -461,7 +461,7 @@ export const EnpoeDesktop = ({
     <Tab.Pane eventKey={dia.dia} key={dia.dia}>
       <Tab.Container id="palestrantes" defaultActiveKey={defaultActiveKeyTabContainerPalestrante}>
         <Row>
-          <Col sm={4} style={{ paddingTop: '9em', paddingRight: '0' }}>
+          <Col sm={4} style={{ paddingTop: '10em', paddingRight: '0' }}>
             <div style={{ marginBottom: '2em' }}>
               {dia.atividades.map((atividade, i) => (
                 <StyledNavTabela className="flex-column" style={{ flexWrap: 'nowrap' }} key={i}>
@@ -630,7 +630,7 @@ export const EnpoeDesktop = ({
     <>
       <Tab.Container defaultActiveKey={defaultActiveKeyTabContainer} id="enpoe-cronograma">
         <div style={{ position: 'absolute', zIndex: '2' }}>
-          <TitleH3>Enpoe</TitleH3>
+          <TitleH3>palco charlie - canil / enpoe</TitleH3>
           <StyledNav>{NavItem}</StyledNav>
         </div>
         <Tab.Content style={{ paddingTop: '0', paddingBottom: '2em', marginTop: '-1.5em' }}>

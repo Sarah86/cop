@@ -11,18 +11,18 @@ import { EnpoeTabelaDesktop, EnpoeMobile } from '../components/enpoe'
 
 const Palestrantes = () => (
   <Layout>
-    <SEO title="Palestras e Workshops" />
+    <SEO title="Programação" />
     <PaddedText>
-      <ParagraphTitle>palestras & workshops</ParagraphTitle>
+      <ParagraphTitle>programação</ParagraphTitle>
     </PaddedText>
     <AgendaEPalestrantesCarousel />
     <MediaQuery maxWidth={991}>
       <div style={{ height: '1em' }} />
-      <AgendaMobile defaultActiveKeyAccordion="0" defaultActiveKeyTab="02.mar" />
+      <AgendaMobile defaultActiveKeyAccordion="0" defaultActiveKeyTab="20.abr" />
       <div style={{ height: '1em' }} />
-      <WorkshopsMobile defaultActiveKeyAccordion="0" defaultActiveKeyTab="02.mar" />
+      <WorkshopsMobile defaultActiveKeyAccordion="0" defaultActiveKeyTab="20.abr" />
       <div style={{ height: '1em' }} />
-      <EnpoeMobile defaultActiveKeyAccordion="0" defaultActiveKeyTab="02.mar" />
+      <EnpoeMobile defaultActiveKeyAccordion="0" defaultActiveKeyTab="20.abr" />
     </MediaQuery>
     <MediaQuery minWidth={992}>
       <div style={{ height: '2em' }} />

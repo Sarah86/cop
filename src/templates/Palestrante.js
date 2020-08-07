@@ -26,9 +26,9 @@ const PhotoWrapper = styled.div`
 
 const Body = ({ children }) => (
   <Layout>
-    <SEO title="Palestras e Workshops" />
+    <SEO title="Programação" />
     <StyledPaddedText>
-      <ParagraphTitle>palestras & workshops</ParagraphTitle>
+      <ParagraphTitle>programação</ParagraphTitle>
     </StyledPaddedText>
     <FullWidth>
       <PhotoWrapper>

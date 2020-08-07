@@ -245,7 +245,7 @@ const Sitemap = () => {
         <SitemapUl>
           <FooterMenuItem page="true" link="/" title="Home" />
           <FooterMenuItem page="true" link="/ocongresso" title="O Congresso" />
-          <FooterMenuItem page="true" link="/palestras-e-workshops" title="Palestras & Workshops" />
+          <FooterMenuItem page="true" link="/palestras-e-workshops" title="Programação" />
           {Palestrantes}
           <FooterMenuItem page="true" link="/expositores" title="Expositores" />
           {Expositores}

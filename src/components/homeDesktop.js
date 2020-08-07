@@ -126,7 +126,6 @@ const CongressoPalestrantes = () => {
               .
             </Paragraph>
           </div>
-          <ReadMore to="/ocongresso">leia mais</ReadMore>
         </Col>
         <Col className="d-flex flex-column justify-content-center">
           <HomeImagesOCongresso />
@@ -193,13 +192,13 @@ export const Espaco = ({ widthTitle, styleSeparador, styleWordBreak }) => {
       <Row className="pt-5">
         <Col>
           <FadeParagraphTitle size="2.5em" width="3.5em">
-            4º enpoe 2020
+            4º enpoe 2021
           </FadeParagraphTitle>
           <LinkedPhoto imgName="Cover-Cop-Video-Enpoe.jpg" to="/palestras-e-workshops" />
         </Col>
         <div style={styleSeparador} />
         <Col>
-          <FadeParagraphTitle size="2.5em" width="6.5em" width={widthTitle}>
+          <FadeParagraphTitle size="2.5em" width={widthTitle}>
             certificação <span style={styleWordBreak} />
             nacional de cão de polícia
           </FadeParagraphTitle>

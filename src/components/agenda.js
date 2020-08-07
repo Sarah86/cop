@@ -343,7 +343,7 @@ export const AgendaTabelaDesktop = () => {
   ))
   return (
     <Container style={{ marginTop: '1em' }}>
-      <TitleH3>Palestras</TitleH3>
+      <TitleH3>palco alpha - palestras</TitleH3>
       <div style={{ position: 'relative' }}>
         <FullWidth
           style={{
@@ -419,7 +419,7 @@ export const AgendaDesktop = ({
 }) => {
   //active do palestrante deve ser igual ao slug
   const NavItem = Programacao.map(dia => (
-    <div style={{ border: '.5px solid var(--bunker' }} key={dia.dia}>
+    <div style={{ border: '.5px solid var(--bunker)', flexGrow: 1 }} key={dia.dia}>
       <Nav.Item as="span">
         <Nav.Link eventKey={dia.dia}>{dia.diaLongo}</Nav.Link>
       </Nav.Item>
@@ -430,7 +430,7 @@ export const AgendaDesktop = ({
     <Tab.Pane eventKey={dia.dia} key={dia.dia}>
       <Tab.Container id="palestrantes" defaultActiveKey={defaultActiveKeyTabContainerPalestrante}>
         <Row>
-          <Col sm={4} style={{ paddingTop: '9em', paddingRight: '0' }}>
+          <Col sm={4} style={{ paddingTop: '10em', paddingRight: '0' }}>
             <div style={{ marginBottom: '2em' }}>
               {dia.atividades.map((atividade, i) => (
                 <StyledNavTabela className="flex-column" style={{ flexWrap: 'nowrap' }} key={i}>
@@ -599,7 +599,7 @@ export const AgendaDesktop = ({
     <>
       <Tab.Container defaultActiveKey={defaultActiveKeyTabContainer} id="cronograma">
         <div style={{ position: 'absolute', zIndex: '2' }}>
-          <TitleH3>Palestras</TitleH3>
+          <TitleH3>palco alpha <br/> palestras</TitleH3>
           <StyledNav>{NavItem}</StyledNav>
         </div>
         <Tab.Content style={{ paddingTop: '0', paddingBottom: '2em', marginTop: '-1.5em' }}>

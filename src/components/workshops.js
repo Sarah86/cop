@@ -103,7 +103,13 @@ const TabelaLink = styled(Link)`
   }
 `
 
-export const WorkshopsMobile = ({ defaultActiveKeyAccordion, defaultActiveKeyTab }) => {
+export const WorkshopsMobile = () => {
+
+  const dias = Programacao.map((dia) => (
+    dia.dia
+  ))
+  const primeiroDia = dias[0];
+
   const NavItem = Programacao.map((dia, i) => (
     <Nav.Item as="span" key={i}>
       <Nav.Link eventKey={dia.dia}>{dia.dia}</Nav.Link>
@@ -115,7 +121,7 @@ export const WorkshopsMobile = ({ defaultActiveKeyAccordion, defaultActiveKeyTab
       {dia.atividades.map((atividade, i) => (
         <StyledAccordion
           style={{ padding: '1em' }}
-          defaultActiveKey={defaultActiveKeyAccordion}
+          defaultActiveKey={primeiroDia}
           key={i}
         >
           {atividade.palestrante ? (
@@ -278,7 +284,7 @@ export const WorkshopsMobile = ({ defaultActiveKeyAccordion, defaultActiveKeyTab
     </Tab.Pane>
   ))
   return (
-    <Tab.Container defaultActiveKey={defaultActiveKeyTab} id="workshops">
+    <Tab.Container defaultActiveKey={primeiroDia} id="workshops">
       <FadeParagraphTitle style={{ margin: '.5em .3em' }}>workshops</FadeParagraphTitle>
       <div>
         <div>
@@ -374,7 +380,7 @@ export const WorkshopTabelaDesktop = () => {
   ))
   return (
     <Container>
-      <TitleH3>Workshops</TitleH3>
+      <TitleH3>palco bravo - workshops</TitleH3>
       <div style={{ position: 'relative' }}>
         <FullWidth
           style={{
@@ -444,13 +450,16 @@ const StyledNavTabela = styled(Nav)`
   }
 `
 
-export const WorkshopsDesktop = ({
-  defaultActiveKeyTabContainer,
-  defaultActiveKeyTabContainerPalestrante,
-}) => {
+export const WorkshopsDesktop = () => {
+
+  const dias = Programacao.map((dia) => (
+    dia.dia
+  ))
+  const primeiroDia = dias[0];
+
   //active do palestrante deve ser igual ao slug
   const NavItem = Programacao.map(dia => (
-    <div style={{ border: '.5px solid var(--bunker' }} key={dia.dia}>
+    <div style={{ border: '.5px solid var(--bunker)', flexGrow: 1 }} key={dia.dia}>
       <Nav.Item as="span">
         <Nav.Link eventKey={dia.dia}>{dia.diaLongo}</Nav.Link>
       </Nav.Item>
@@ -459,9 +468,9 @@ export const WorkshopsDesktop = ({
 
   const TabPane = Programacao.map(dia => (
     <Tab.Pane eventKey={dia.dia} key={dia.dia}>
-      <Tab.Container id="palestrantes" defaultActiveKey={defaultActiveKeyTabContainerPalestrante}>
+      <Tab.Container id="palestrantes" defaultActiveKey={primeiroDia}>
         <Row>
-          <Col sm={4} style={{ paddingTop: '9em', paddingRight: '0' }}>
+          <Col sm={4} style={{ paddingTop: '10em', paddingRight: '0' }}>
             <div style={{ marginBottom: '2em' }}>
               {dia.atividades.map((atividade, i) => (
                 <StyledNavTabela className="flex-column" style={{ flexWrap: 'nowrap' }} key={i}>
@@ -628,9 +637,9 @@ export const WorkshopsDesktop = ({
   ))
   return (
     <>
-      <Tab.Container defaultActiveKey={defaultActiveKeyTabContainer} id="cronograma">
+      <Tab.Container defaultActiveKey={primeiroDia} id="cronograma">
         <div style={{ position: 'absolute', zIndex: '2' }}>
-          <TitleH3>Workshops</TitleH3>
+          <TitleH3>palco bravo - workshops</TitleH3>
           <StyledNav>{NavItem}</StyledNav>
         </div>
         <Tab.Content style={{ paddingTop: '0', paddingBottom: '2em', marginTop: '-1.5em' }}>
