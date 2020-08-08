@@ -29,7 +29,7 @@
         "titulo": "Palestra Magna - Presença e Proteção: Os desafios da polícia ostensiva de preservação da ordem pública"
       },
       {
-        "destaque": true,
+        "destaque": false,
         "hora": "11:00h",
         "imagem": "palestrante_placeholder.jpg",
         "palestrante": "Marcello Petrelli",
@@ -52,7 +52,7 @@
         "titulo": "A crise dos poderes e a sua repercussão na segurança pública"
       },
       {
-        "destaque": true,
+        "destaque": false,
         "hora": "15:00h",
         "imagem": "palestrante_placeholder.jpg",
         "palestrante": "Dep. Estadual Ruy Irigaray",
@@ -60,7 +60,7 @@
         "slug": "ruy-irigaray"
       },
       {
-        "destaque": true,
+        "destaque": false,
         "hora": "17:00h",
         "imagem": "palestrante_placeholder.jpg",
         "palestrante": "Guy Massada",
