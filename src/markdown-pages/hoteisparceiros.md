@@ -15,7 +15,7 @@ INFORMAR O CÓDIGO **COP2021** PARA DESCONTOS DE 5% A 15%
 - <carousel slides='costao-santinho-01.jpg,costao-santinho-02.webp,costao-santinho-03.jpg,costao-santinho-04.jpg'></carousel>
 - 📍 Praia do Santinho
 - https://costao.com.br/
-- **\$\$\$\$**
+- **\$\$\$\$**\$
 
 ***
 
@@ -23,7 +23,7 @@ INFORMAR O CÓDIGO **COP2021** PARA DESCONTOS DE 5% A 15%
 - <carousel slides='mar-canasvieiras-01.jpg,mar-canasvieiras-02.jpg,mar-canasvieiras-03.jpg'></carousel>
 - 📍 Canasvieiras
 - https://www.redemardecanasvieiras.com.br/
-- **\$\$**\$\$
+- **\$\$**\$\$\$
 
 ---
 
@@ -31,7 +31,7 @@ INFORMAR O CÓDIGO **COP2021** PARA DESCONTOS DE 5% A 15%
 - <carousel slides='il-campanario-01.jpg,il-campanario-02.jpg,il-campanario-03.jpg'></carousel>
 - 📍 Jurerê Internacional (15 mins do evento)
 - http://www.ilcampanario.com.
-- **\$\$\$\$**
+- **\$\$\$\$**\$
 
 ---
 
@@ -39,7 +39,7 @@ INFORMAR O CÓDIGO **COP2021** PARA DESCONTOS DE 5% A 15%
 - <carousel slides='jurere-01.jpg,jurere-02.jpg,jurere-03.jpg,jurere-04.jpg'></carousel>
 - 📍 Jurerê Internacional (15 mins do evento)
 - https://www.jurerebeachvillage.com.br
-- **\$\$\$**\$
+- **\$\$\$**\$\$
 
 ---
 
@@ -48,14 +48,14 @@ INFORMAR O CÓDIGO **COP2021** PARA DESCONTOS DE 5% A 15%
 - ## Palace Praia Hotel
 - 📍 Canasvieiras
 - http://www.palacepraia.com.br
-- **\$\$\$**\$
+- **\$\$\$**\$\$
 
 ---
 
 - ## Hotel Torres da Cachoeira
 - 📍 Cachoeira do Bom Jesus ( 10 min do evento)
 - https://www.hoteltorresdacachoeira.com
-- **\$\$\$**\$
+- **\$\$\$**\$\$
 
 ---
 
@@ -70,14 +70,14 @@ INFORMAR O CÓDIGO **COP2021** PARA DESCONTOS DE 5% A 15%
 - ## Slavieiro
 - 📍 Ingleses ( 20 mins do evento)
 - https://www.slavierohoteis.com.br
-- **\$\$\$\$**
+- **\$\$\$\$**\$
 
 ---
 
 - ## Novotel
 - 📍 Beira Mar- Centro (40 mins do evento)
 - h5947-re1@accor.com / 48 3202-61
-- **\$\$\$**\$
+- **\$\$\$**\$\$
 
 ---
 
