@@ -197,7 +197,7 @@ const ExpositoresLogos = props => {
         <MediaQuery minWidth={992}>
           <LinkedImage
             imgName={expositor.logo}
-            href={expositor.site}
+            to={expositor.site}
             mixblendcolor="#EEFEE5"
             padding={expositor.padding}
           />
@@ -205,7 +205,7 @@ const ExpositoresLogos = props => {
         <MediaQuery maxWidth={991}>
           <LinkedImage
             imgName={expositor.logo}
-            href={expositor.site}
+            to={expositor.site}
             mixblendcolor="#EEFEE5"
             padding={expositor.paddingMobile}
           />

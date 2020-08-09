@@ -60,6 +60,15 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 width: 100%;
+padding: ${props => props.padding && props.padding};
+${props =>
+  props.mixblendcolor &&
+  css`
+    background-color: ${props => props.mixblendcolor};
+    img {
+      mix-blend-mode: darken;
+    }
+  `}
     &:hover {
         cursor: url("${target}"), cell;
         ${props =>
@@ -109,6 +118,7 @@ const LinkedImage = props =>
       target="_blank"
       rel="noopener noreferrer"
       noyellowlayer={props.noyellowlayer}
+      padding={props.padding}
     >
       <StyledImage
         imgName={props.imgName}
