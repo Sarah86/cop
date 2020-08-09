@@ -1,17 +1,17 @@
 [
   {
-    "nome": "",
-    "logo": "apoio_institucional_governo.jpg",
-    "site": ""
+    "nome": "Governo de Santa Catarina",
+    "logo": "logo-governo-sc.jpg",
+    "site": "https://www.sc.gov.br/"
   },
   {
-    "nome": "",
-    "logo": "apoio_institucional_prefeitura.jpg",
-    "site": ""
+    "nome": "Prefeitura de Florianópolis",
+    "logo": "prefeitura-florianopolis.png",
+    "site": "http://www.pmf.sc.gov.br/"
   },
   {
-    "nome": "",
-    "logo": "apoio_institucional_santur.jpg",
-    "site": ""
+    "nome": "Santur",
+    "logo": "logo-santur.png",
+    "site": "http://www.santur.sc.gov.br/index.php/santur-santa-catarina-turismo"
   }
 ]

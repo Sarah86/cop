@@ -1,3 +1,8 @@
 {
-  "editor.fontSize": 16
+  "editor.fontSize": 16,
+  "cSpell.words": [
+    "destaque",
+    "imagem"
+  ],
+  "cSpell.language": "en,pt-BR,pt"
 }

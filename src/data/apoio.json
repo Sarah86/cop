@@ -2,37 +2,37 @@
   {
     "nome": "Prosegur",
     "logo": "prosegur-logo.png",
-    "site": "",
-    "padding": ".2em"
+    "site": "http://www.santur.sc.gov.br/index.php/santur-santa-catarina-turismo",
+    "padding": "1em"
   },
   {
     "nome": "Beiramar Shopping",
     "logo": "logo-beiramar.png",
-    "site": "",
-    "padding": ".2em"
+    "site": "https://beiramarshopping.com.br/",
+    "padding": "1em"
   },
   {
     "nome": "Costão do Santinho",
     "logo": "costao-logo.png",
-    "site": "",
-    "padding": ".1em"
+    "site": "https://costao.com.br/",
+    "padding": "1em"
   },
   {
     "nome": "Mar de Canasvieiras",
     "logo": "mar-canasvieiras-logo-02.png",
-    "site": "",
-    "padding": ".2em"
+    "site": "https://www.redemardecanasvieiras.com.br/en/hotel-mardecanasvieiras-florianopolis",
+    "padding": "1em"
   },
   {
     "nome": "RedBull",
     "logo": "redbull-logo.png",
-    "site": "",
-    "padding": ".2em"
+    "site": "https://www.redbull.com/it-it/energydrink",
+    "padding": "1em"
   },
   {
-    "nome": "BadBoy",
+    "nome": "BadBoy Tactical",
     "logo": "badboy-logo.png",
-    "site": "",
-    "padding": ".2em"
+    "site": "https://www.redbull.com/it-it/energydrink",
+    "padding": "1em"
   }
 ]

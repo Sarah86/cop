@@ -418,6 +418,7 @@ const ApoiadoresInstitucionais = props => {
         to={`${apoiadorinstitucional.site}`}
         target="_blank"
         rel="noopener noreferrer"
+        padding={apoiadorinstitucional.padding}
       />
     </StyledCol>
   ))
@@ -464,6 +465,7 @@ const ParceirosDeMidia = props => {
       <PatrocinadoresImage
         noyellowlayer="true"
         imgName={parceirodemidia.logo}
+        padding={parceirodemidia.padding}
         to={`${parceirodemidia.site}`}
         target="_blank"
         rel="noopener noreferrer"

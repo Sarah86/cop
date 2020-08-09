@@ -69,12 +69,6 @@
   ],
   "ouro": [
     {
-      "nome": "Digifort",
-      "logo": "expositor_diamante_digifort.jpg",
-      "local": "",
-      "site": "https://www.digifort.com.br/"
-    },
-    {
       "nome": "CBC",
       "logo": "expositor_diamante_cbc.jpg",
       "local": "",
@@ -155,49 +149,31 @@
       "site": "http://grupoinbra.com.br/"
     },
     {
-      "nome": "",
+      "nome": "FabDefense",
       "logo": "expositor_prata_fabdefense.jpg",
       "local": "Piso Inferior",
       "site": "https://www.facebook.com/events/338914773660128/"
     },
     {
-      "nome": "",
+      "nome": "Benelli",
       "logo": "expositor_prata_benelli.jpg",
       "local": "Piso Inferior",
       "site": "https://www.facebook.com/events/338914773660128/"
     },
     {
-      "nome": "",
+      "nome": "Springfield",
       "logo": "expositor_prata_springfield.jpg",
       "local": "Piso Inferior",
       "site": "https://www.facebook.com/events/338914773660128/"
     },
     {
-      "nome": "",
+      "nome": "Honeywell",
       "logo": "expositor_prata_honeywell.jpg",
-      "local": "Piso Inferior",
-      "site": "https://www.facebook.com/events/338914773660128/"
-    },
-    {
-      "nome": "",
-      "logo": "expositor_prata_cobra.jpg",
-      "local": "Piso Inferior",
-      "site": "https://www.facebook.com/events/338914773660128/"
-    },
-    {
-      "nome": "",
-      "logo": "expositor_prata_brasimplex.jpg",
       "local": "Piso Inferior",
       "site": "https://www.facebook.com/events/338914773660128/"
     }
   ],
   "bronze": [
-    {
-      "nome": "Algemas Brasil",
-      "logo": "expositor_bronze_algemas.jpg",
-      "local": "Piso Inferior - Stand 08",
-      "site": "https://www.algemasbrasil.com.br/"
-    },
     {
       "nome": "Bélica",
       "logo": "expositor_bronze_belica.jpg",
@@ -241,12 +217,6 @@
       "site": "https://www.gunsecoffee.com.br/"
     },
     {
-      "nome": "Shopping",
-      "logo": "expositor_bronze_shopping.jpg",
-      "local": "Piso Inferior",
-      "site": "https://www.facebook.com/events/338914773660128/"
-    },
-    {
       "nome": "Pirata Produções",
       "logo": "expositor_bronze_pirata.jpg",
       "local": "Piso Inferior",
@@ -259,18 +229,6 @@
       "site": "http://www.tocoin.com.br/"
     },
     {
-      "nome": "Steyr Arms",
-      "logo": "expositor_bronze_steyr.jpg",
-      "local": "Piso Inferior",
-      "site": "https://www.steyr-arms.com/"
-    },
-    {
-      "nome": "Botas Vento",
-      "logo": "expositor_bronze_botasvento.jpg",
-      "local": "Piso Inferior",
-      "site": "https://botasvento.com.br/"
-    },
-    {
       "nome": "Confederação Brasileira de Tiro Prático",
       "logo": "expositor_bronze_cbtp.jpg",
       "site": "https://www.cbtp.org.br/"
@@ -279,18 +237,6 @@
       "nome": "CZ - USA",
       "logo": "expositor_prata_cz.jpg",
       "site": "https://cz-usa.com/"
-    },
-    {
-      "nome": "SegurPro",
-      "logo": "logo-segurpro.png",
-      "site": "https://www.segurpro.com.br/",
-      "padding": ".5em"
-    },
-    {
-      "nome": "Prosegur",
-      "logo": "logo-prosegur.jpeg",
-      "site": "https://www.prosegur.com.br/",
-      "padding": ".5em"
     },
     {
       "nome": "Impacto",
@@ -364,29 +310,8 @@
     },
     {
       "nome": "Ultramar",
-      "logo": "logo-ultramar.jpeg",
-      "site": "http://ultramar.ca/",
-      "padding": "1em",
-      "paddingMobile": ".5em"
-    },
-    {
-      "nome": "Mormaii",
-      "logo": "logo-mormaii.png",
-      "site": "http://mormaii.com/",
-      "padding": "2em",
-      "paddingMobile": "1em"
-    },
-    {
-      "nome": "Sc Fire",
-      "logo": "logo-scfire.png",
-      "site": "http://scfire.com.br/",
-      "padding": "1em",
-      "paddingMobile": ".5em"
-    },
-    {
-      "nome": "Academia do Mergulho",
-      "logo": "logo-academiamergulho.jpg",
-      "site": "http://academiadomergulho.com.br/site/",
+      "logo": "logo-ultramar.png",
+      "site": "http://ultramar.com.br/",
       "padding": "1em",
       "paddingMobile": ".5em"
     },
@@ -405,23 +330,9 @@
       "paddingMobile": ".5em"
     },
     {
-      "nome": "FNCP",
-      "logo": "logo-fncp.png",
-      "site": "http://fncp.org.br/",
-      "padding": "1em",
-      "paddingMobile": ".5em"
-    },
-    {
       "nome": "Gespi",
       "logo": "logo-gespi.png",
       "site": "http://gespi.com.br/",
-      "padding": "0",
-      "paddingMobile": "0"
-    },
-    {
-      "nome": "Khronos",
-      "logo": "logo-khronos.jpeg",
-      "site": "http://grupokhronos.com.br/",
       "padding": "0",
       "paddingMobile": "0"
     },
@@ -435,7 +346,63 @@
     {
       "nome": "Triumph",
       "logo": "logo-triumph.jpeg",
-      "site": "https://motorcycle-logos.com/triumph-logo/",
+      "site": "https://www.triumphmotorcycles.com/",
+      "padding": "1em",
+      "paddingMobile": ".5em"
+    },
+    {
+      "nome": "SOSSul Resgate",
+      "logo": "logo-sossul.jpg",
+      "site": "http://www.sossul.com.br",
+      "padding": "1em",
+      "paddingMobile": ".5em"
+    },
+    {
+      "nome": "Souza Cruz",
+      "logo": "logo_souza-cruz.png",
+      "site": "http://www.souzacruz.com.br/",
+      "padding": "1em",
+      "paddingMobile": ".5em"
+    },
+    {
+      "nome": "Steyer Arms",
+      "logo": "logo-steyer01.png",
+      "site": "https://www.steyr-arms.com/",
+      "padding": "1em",
+      "paddingMobile": ".5em"
+    },
+    {
+      "nome": "Team Group",
+      "logo": "logo-team-group.png",
+      "site": "https://team-group.eu/",
+      "padding": "1em",
+      "paddingMobile": ".5em"
+    },
+    {
+      "nome": "Universal Shields",
+      "logo": "logo-universal-shield.jpg",
+      "site": "https://universal-shield.com/",
+      "padding": "1em",
+      "paddingMobile": ".5em"
+    },
+    {
+      "nome": "AR500 Brasil",
+      "logo": "logo-AR5003.png",
+      "site": "https://ar500brasil.com.br/",
+      "padding": "2em",
+      "paddingMobile": "1em"
+    },
+    {
+      "nome": "BlackBird Armament",
+      "logo": "logo-blackbird.jpg",
+      "site": "https://www.facebook.com/blackbirdarmament/",
+      "padding": "1em",
+      "paddingMobile": ".5em"
+    },
+    {
+      "nome": "Devtac",
+      "logo": "logo-devtacjpg.jpg",
+      "site": "https://www.facebook.com/DEVTAC",
       "padding": "1em",
       "paddingMobile": ".5em"
     }
