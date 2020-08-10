@@ -242,168 +242,168 @@
       "nome": "Impacto",
       "logo": "logo-impacto.png",
       "site": "https://www.facebook.com/impactoequipamentostaticos/",
-      "padding": "2em",
+      "padding": ".2em",
       "paddingMobile": ".5em"
     },
     {
       "nome": "Kydex",
       "logo": "logo-kydex.png",
       "site": "https://www.kydexholsters.com.br/",
-      "padding": "1em",
+      "padding": ".2em",
       "paddingMobile": ".5em"
     },
     {
       "nome": "Royal Canin",
       "logo": "logo-royal-canin.png",
       "site": "https://www.royalcanin.com/br/dogs",
-      "padding": "2em",
+      "padding": ".2em",
       "paddingMobile": ".5em"
     },
     {
       "nome": "Iveco",
       "logo": "logo_iveco.png",
       "site": "https://www.iveco.com/brasil/pages/home-page.aspx",
-      "padding": "2em",
+      "padding": ".5em",
       "paddingMobile": "1em"
     },
     {
       "nome": "Plasan",
       "logo": "logo-plasan.jpg",
       "site": "https://www.plasan.com/",
-      "padding": ".5em",
+      "padding": "0",
       "paddingMobile": ".25em"
     },
     {
       "nome": "Fort Atacadista",
       "logo": "fort-atacadista.png",
       "site": "https://www.fortatacadista.com.br/",
-      "padding": "2em",
+      "padding": ".5em",
       "paddingMobile": "1em"
     },
     {
       "nome": "RJC",
       "logo": "logo-rjc.jpg",
       "site": "https://www.rjc.com.br/",
-      "padding": "2em",
+      "padding": ".5em",
       "paddingMobile": ".7em"
     },
     {
       "nome": "Eloo",
       "logo": "eloo-logo.png",
       "site": "https://elootatico.com.br/",
-      "padding": "2em",
+      "padding": ".5em",
       "paddingMobile": "1em"
     },
     {
       "nome": "Polydefensor",
       "logo": "polydefensor-logo-2.png",
       "site": "https://www.polydefensor.com.br/",
-      "padding": "1em",
+      "padding": ".2em",
       "paddingMobile": ".5em"
     },
     {
       "nome": "Vortex",
       "logo": "logo-vortex.png",
       "site": "https://vortexoptics.com/",
-      "padding": "1em",
+      "padding": ".2em",
       "paddingMobile": ".5em"
     },
     {
       "nome": "Ultramar",
       "logo": "logo-ultramar.png",
       "site": "http://ultramar.com.br/",
-      "padding": "1em",
+      "padding": ".2em",
       "paddingMobile": ".5em"
     },
     {
       "nome": "Guartelá",
       "logo": "logo-guartela.jpeg",
       "site": "http://www.guartela.com.br/",
-      "padding": "1em",
+      "padding": ".2em",
       "paddingMobile": ".5em"
     },
     {
       "nome": "Fortline",
       "logo": "logo-fortline.png",
       "site": "http://www.fortlinecalcados.com.br/",
-      "padding": "1em",
+      "padding": ".2em",
       "paddingMobile": ".5em"
     },
     {
       "nome": "Gespi",
       "logo": "logo-gespi.png",
       "site": "http://gespi.com.br/",
-      "padding": "0",
+      "padding": ".2em",
       "paddingMobile": "0"
     },
     {
       "nome": "Imbel",
       "logo": "logo-imbel.png",
       "site": "http://imbel.gov.br/",
-      "padding": "1em",
+      "padding": ".2em",
       "paddingMobile": ".5em"
     },
     {
       "nome": "Triumph",
       "logo": "logo-triumph.jpeg",
       "site": "https://www.triumphmotorcycles.com/",
-      "padding": "1em",
+      "padding": ".2em",
       "paddingMobile": ".5em"
     },
     {
       "nome": "SOSSul Resgate",
       "logo": "logo-sossul.jpg",
       "site": "http://www.sossul.com.br",
-      "padding": "1em",
+      "padding": ".2em",
       "paddingMobile": ".5em"
     },
     {
       "nome": "Souza Cruz",
       "logo": "logo_souza-cruz.png",
       "site": "http://www.souzacruz.com.br/",
-      "padding": "1em",
+      "padding": ".2em",
       "paddingMobile": ".5em"
     },
     {
       "nome": "Steyer Arms",
       "logo": "logo-steyer01.png",
       "site": "https://www.steyr-arms.com/",
-      "padding": "1em",
+      "padding": ".2em",
       "paddingMobile": ".5em"
     },
     {
       "nome": "Team Group",
       "logo": "logo-team-group.png",
       "site": "https://team-group.eu/",
-      "padding": "1em",
+      "padding": ".2em",
       "paddingMobile": ".5em"
     },
     {
       "nome": "Universal Shields",
       "logo": "logo-universal-shield.jpg",
       "site": "https://universal-shield.com/",
-      "padding": "1em",
+      "padding": ".2em",
       "paddingMobile": ".5em"
     },
     {
       "nome": "AR500 Brasil",
       "logo": "logo-AR5003.png",
       "site": "https://ar500brasil.com.br/",
-      "padding": "2em",
+      "padding": ".5em",
       "paddingMobile": "1em"
     },
     {
       "nome": "BlackBird Armament",
       "logo": "logo-blackbird.jpg",
       "site": "https://www.facebook.com/blackbirdarmament/",
-      "padding": "1em",
+      "padding": ".2em",
       "paddingMobile": ".5em"
     },
     {
       "nome": "Devtac",
       "logo": "logo-devtacjpg.jpg",
       "site": "https://www.facebook.com/DEVTAC",
-      "padding": "1em",
+      "padding": ".2em",
       "paddingMobile": ".5em"
     }
   ]

@@ -3,30 +3,30 @@
     "nome": "DefesaNet",
     "logo": "logo-defesanet.png",
     "site": "https://www.defesanet.com.br/",
-    "padding": "1em"
+    "padding": ".2em"
   },
   {
     "nome": "SBT",
     "logo": "logo-scc-sbt.jpg",
     "site": "https://www.sbt.com.br/",
-    "padding": "1em"
+    "padding": ".2em"
   },
   {
     "nome": "SegNews",
     "logo": "logo-segnews.png",
     "site": "http://www.segnews.com.br/",
-    "padding": "2em"
+    "padding": ".2em"
   },
   {
     "nome": "Segurança e Defesa",
     "logo": "logo-seguranca-defesa.png",
     "site": "http://www.segnews.com.br/",
-    "padding": "1em"
+    "padding": ".2em"
   },
   {
     "nome": "Tecnologia e Defesa",
     "logo": "logo-tecnologia-defesa.png",
     "site": "http://www.segnews.com.br/",
-    "padding": "2em"
+    "padding": ".2em"
   }
 ]
