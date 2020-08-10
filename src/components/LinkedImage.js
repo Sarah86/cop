@@ -118,6 +118,7 @@ const LinkedImage = props =>
       target="_blank"
       rel="noopener noreferrer"
       noyellowlayer={props.noyellowlayer}
+      mixblendcolor={props.mixblendcolor}
       padding={props.padding}
     >
       <StyledImage
