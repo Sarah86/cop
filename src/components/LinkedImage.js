@@ -10,7 +10,7 @@ height: 100%;
 display: flex;
 flex-direction: column;
 justify-content: center;
-padding: ${props => props.padding && props.padding};
+padding: ${props => props.footer ? `calc(${props.padding}/3)` : props.padding};
 ${props =>
   props.mixblendcolor &&
   css`
@@ -52,7 +52,7 @@ ${props =>
     }
 `
 
-const ExternalStyledLink = styled.a`
+export const ExternalStyledLink = styled.a`
 position: relative;
 display: block;
 height: 100%;
@@ -60,7 +60,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 width: 100%;
-padding: ${props => props.padding && props.padding};
+padding: ${props => props.footer ? `calc(${props.padding}/3)` : props.padding};
 ${props =>
   props.mixblendcolor &&
   css`
@@ -120,6 +120,7 @@ const LinkedImage = props =>
       noyellowlayer={props.noyellowlayer}
       mixblendcolor={props.mixblendcolor}
       padding={props.padding}
+      footer={props.footer}
     >
       <StyledImage
         imgName={props.imgName}
@@ -133,6 +134,7 @@ const LinkedImage = props =>
       noyellowlayer={props.noyellowlayer}
       mixblendcolor={props.mixblendcolor}
       padding={props.padding}
+      footer={props.footer}
     >
       <StyledImage
         imgName={props.imgName}

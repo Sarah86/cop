@@ -146,9 +146,6 @@ const PatrocinadoresImage = styled(LinkedImage)`
   mix-blend-mode: darken;
   opacity: 0.7;
   height: 100%;
-  img {
-    padding: calc(${props => props.padding} / 3);
-  }
 `
 
 const StyledCol = styled(Col)`
@@ -319,6 +316,7 @@ const PatrocinadoresUnificado = props => {
         target="_blank"
         rel="noopener noreferrer"
         padding={expositor.padding}
+        footer={true}
       />
     </StyledCol>
   ))
@@ -369,6 +367,7 @@ const Apoiadores = props => {
         target="_blank"
         rel="noopener noreferrer"
         padding={apoiador.padding}
+        footer={true}
       />
     </StyledCol>
   ))
@@ -419,6 +418,7 @@ const ApoiadoresInstitucionais = props => {
         target="_blank"
         rel="noopener noreferrer"
         padding={apoiadorinstitucional.padding}
+        footer={true}
       />
     </StyledCol>
   ))
@@ -465,10 +465,11 @@ const ParceirosDeMidia = props => {
       <PatrocinadoresImage
         noyellowlayer="true"
         imgName={parceirodemidia.logo}
-        padding={parceirodemidia.padding}
         to={`${parceirodemidia.site}`}
         target="_blank"
         rel="noopener noreferrer"
+        padding={parceirodemidia.padding}
+        footer={true}
       />
     </StyledCol>
   ))
