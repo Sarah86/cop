@@ -1,9 +1,9 @@
 [
   {
-    "dia": "20.abr",
-    "diaLongo": "ter.20.abr",
-    "diaCompleto": "Terça, 20 de Abril",
-    "diaFooter": "Dia 01 - 20/04",
+    "dia": "Dia 01",
+    "diaLongo": "Dia 01",
+    "diaCompleto": "Dia 01",
+    "diaFooter": "Dia 01",
     "atividades": [
       {
         "hora": "11:00h",
@@ -31,10 +31,10 @@
     ]
   },
   {
-    "dia": "21.abr",
-    "diaLongo": "qua.21.abr",
-    "diaCompleto": "Quarta, 21 de Abril",
-    "diaFooter": "Dia 02 - 21/04",
+    "dia": "Dia 02",
+    "diaLongo": "Dia 02",
+    "diaCompleto": "Dia 02",
+    "diaFooter": "Dia 02",
     "atividades": [
       {
         "hora": "09:00h",
@@ -63,10 +63,10 @@
     ]
   },
   {
-    "dia": "22.abr",
-    "diaLongo": "qui.22.abr",
-    "diaCompleto": "Quinta, 22 de Abril",
-    "diaFooter": "Dia 03 - 22/04",
+    "dia": "Dia 03",
+    "diaLongo": "Dia 03",
+    "diaCompleto": "Dia 03",
+    "diaFooter": "Dia 03",
     "atividades": [
       {
         "hora": "09:00h",
